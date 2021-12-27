@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+.material-icons-sharp {
+    user-select: none;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -33,6 +37,7 @@ body, html {
     background-color: transparent;
     cursor: pointer;
     transition: box-shadow .2s ease-in-out;
+    user-select: none;
 }
 
 .btn--primary {
@@ -42,4 +47,11 @@ body, html {
 }
 .btn--primary:hover {
     box-shadow: 2px 1px 23px -7px var(--primary-color);
+}
+
+.btn--large {
+    height: 56px;
+    padding: 0 40px;
+    font-size: 16px;
+    border-radius: 28px;
 }
