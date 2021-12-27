@@ -10,7 +10,8 @@ $sizes = [
 $filename = $_GET['url'];
 $input = "./src/img/$filename";
 $size = $_GET['size'];
-$outputname = "./static/img/@{$sizes[$size]}__{$filename}.jpg";
+$filenameWithoutExtension = pathinfo($filename, PATHINFO_FILENAME);
+$outputname = "./static/img/@{$sizes[$size]}__{$filenameWithoutExtension}.jpg";
 
 if (!file_exists($outputname)) {   
     $info = getimagesize($input);
