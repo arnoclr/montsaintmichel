@@ -15,3 +15,5 @@
     </div>
     <div class="hero__shadow"></div>
 </div>
+
+<?php include "includes/components/covid.php"; ?>
