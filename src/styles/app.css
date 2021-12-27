@@ -1,0 +1,45 @@
+:root {
+    --padding: 16px;
+    --primary-color: #B94503;
+}
+
+@media screen and (min-width: 800px) {
+    :root {
+        --padding: 10vw;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    height: 42px;
+    padding: 0 32px;
+    border: 1px solid #000;
+    border-radius: 21px;
+    font: 700 12px Montserrat, sans-serif;
+    text-decoration: none;
+    color: #000;
+    background-color: transparent;
+    cursor: pointer;
+    transition: box-shadow .2s ease-in-out;
+}
+
+.btn--primary {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.btn--primary:hover {
+    box-shadow: 2px 1px 23px -7px var(--primary-color);
+}
