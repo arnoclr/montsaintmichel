@@ -11,7 +11,7 @@ $filename = $_GET['url'];
 $input = "./src/img/$filename";
 $size = $_GET['size'];
 $filenameWithoutExtension = pathinfo($filename, PATHINFO_FILENAME);
-$outputname = "./static/img/@{$sizes[$size]}__{$filenameWithoutExtension}.jpg";
+$outputname = "./static/img/@{$sizes[$size]}__{$filenameWithoutExtension}.webp";
 
 if (!file_exists($outputname)) {   
     $info = getimagesize($input);
@@ -36,7 +36,7 @@ if (!file_exists($outputname)) {
     imagecopyresampled($new_image, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
 
     // save image with given quality
-    imagejpeg($new_image, $outputname, 85);
+    imagewebp($new_image, $outputname, 85);
 }
 
 header("location: $outputname");
