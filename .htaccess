@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteRule ^$ pages/index.php [L]
+RewriteRule ^([^\.]+)$ /pages/$1.php [NC,L] 

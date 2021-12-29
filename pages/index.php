@@ -1,10 +1,10 @@
-<?php include "includes/head.php"; ?>
+<?php include "../includes/head.php"; ?>
 
 <link rel="stylesheet" href="/src/styles/pages/index.css?v=<?= md5(filemtime($_SERVER['DOCUMENT_ROOT'] . '/src/styles/pages/index.css')) ?>">
 
 <div class="hero">
     <div class="hero__navbar">
-        <?php $navbar_classes = "navbar--white"; include "includes/components/navbar.php"; ?>
+        <?php $navbar_classes = "navbar--white"; include "../includes/components/navbar.php"; ?>
     </div>
     <img class="hero__banner" src="/image.php?url=index__couverture.jpg&size=xlarge" alt="Photo d'ensemble du Mont-Saint-Michel">
     <div class="hero__content">
@@ -16,7 +16,7 @@
     <div class="hero__shadow"></div>
 </div>
 
-<?php include "includes/components/covid.php"; ?>
+<?php include "../includes/components/covid.php"; ?>
 
 <?php
 $activities = [
@@ -45,7 +45,7 @@ $activities = [
     <h1 class="activities__title">Activités phares</h1>
     <div class="activities__grid">
         <?php $css = true; foreach ($activities as $key => $activity): ?>
-            <?php include "includes/components/activity_card.php"; $css = false; ?>
+            <?php include "../includes/components/activity_card.php"; $css = false; ?>
         <?php endforeach; ?>
     </div>
 </div>
