@@ -50,3 +50,29 @@
     background: linear-gradient(180deg, rgba(255, 199, 167, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
     z-index: 1;
 }
+
+.activities {
+    padding: 32px var(--padding);
+}
+
+.activities__title {
+    font: 400 28px Ibarra Real Nova, serif;
+    text-transform: uppercase;
+}
+
+.activities__grid {
+    display: grid;
+    grid-template-areas: 
+        "g0 g0"
+        "g1 g2";
+    gap: 32px;
+}
+
+@media screen and (max-width: 800px) {
+    .activities__grid {
+        grid-template-areas: 
+            "g0"
+            "g1"
+            "g2";
+    }
+}

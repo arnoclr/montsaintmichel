@@ -10,8 +10,8 @@ $sizes = [
 $filename = $_GET['url'];
 $input = "./src/img/$filename";
 $size = $_GET['size'];
-$filenameWithoutExtension = pathinfo($filename, PATHINFO_FILENAME);
-$outputname = "./static/img/@{$sizes[$size]}__{$filenameWithoutExtension}.webp";
+$hashfile = hash_file('sha256', $input);
+$outputname = "./static/img/@{$sizes[$size]}__{$hashfile}.webp";
 
 if (!file_exists($outputname)) {   
     $info = getimagesize($input);
@@ -25,12 +25,12 @@ if (!file_exists($outputname)) {
     elseif ($info['mime'] == 'image/png') 
         $image = imagecreatefrompng($input);
 
-    // resize image with given height size
+    // resize image with given width size
     $width = imagesx($image);
     $height = imagesy($image);
     
-    $new_height = $sizes[$size];
-    $new_width = ($new_height / $height) * $width;
+    $new_width = $sizes[$size];
+    $new_height = ($new_width / $width) * $height;
 
     $new_image = imagecreatetruecolor($new_width, $new_height);
     imagecopyresampled($new_image, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
