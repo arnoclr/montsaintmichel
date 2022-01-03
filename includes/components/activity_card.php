@@ -20,6 +20,7 @@
             overflow: hidden;
             width: 100%;
             height: 350px;
+            border-radius: 4px;
         }
 
         .activity-card__media-img {
@@ -39,6 +40,7 @@
             position: absolute;
             inset: 0;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 49.27%, rgba(0, 0, 0, 0.8) 100%);
+            border-radius: 4px;
         }
 
         .activity-card__text {
