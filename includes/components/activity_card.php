@@ -16,7 +16,6 @@
         }
 
         .activity-card__media {
-            display: inline-flex;
             overflow: hidden;
             width: 100%;
             height: 350px;

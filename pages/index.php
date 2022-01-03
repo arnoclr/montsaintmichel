@@ -49,3 +49,16 @@ $activities = [
         <?php endforeach; ?>
     </div>
 </div>
+
+<div style="height: 64px;"></div>
+
+<?php 
+
+$event = (object) [
+    "title" => "Marché de Noël",
+    "text" => "Un marché de Noël pour aider les frères et sœurs de l'abbaye du Mont-Saint-Michel",
+    "link" => "#",
+    "image" => "events/marche_noel.png",
+];
+
+include "../includes/components/event.php"; ?>
