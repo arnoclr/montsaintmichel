@@ -4,7 +4,7 @@
     </div>
     <div class="activity-card__shadow"></div>
     <div class="activity-card__text">
-        <span class="activity-card__text_label"><?= $activity->label ?></span>
+        <span class="activity-card__text-label"><?= $activity->label ?></span>
         <h2 class="activity-card__text-title"><?= $activity->title ?></h2>
     </div>
 </div>
@@ -50,7 +50,7 @@
             color: #fff;
         }
 
-        .activity-card__text_label {
+        .activity-card__text-label {
             font: 700 11px Montserrat, sans-serif;
             text-transform: uppercase;
         }
