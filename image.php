@@ -13,6 +13,10 @@ $size = $_GET['size'];
 $hashfile = hash_file('sha256', $input);
 $outputname = "./static/img/@{$sizes[$size]}__{$hashfile}.webp";
 
+if (!file_exists('./static/img/')) {
+    mkdir('./static/img/', 0777, true);
+}
+
 if (!file_exists($outputname)) {   
     $info = getimagesize($input);
 
