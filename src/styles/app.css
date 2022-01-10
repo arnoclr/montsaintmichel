@@ -41,6 +41,29 @@ body, html {
     padding: 0;
 }
 
+/* Menu d'accessibilité */
+.accessibility-menu {
+    position: absolute;
+    top: -10em;
+    z-index: 100;
+}
+
+.accessibility-menu a {
+    position: absolute;
+    left: 16px;
+    padding: 16px;
+    width: 250px;
+    background: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
+    border-radius: 2px;
+    font: 400 16px Noto Sans, sans-serif;
+}
+
+.accessibility-menu a:focus {
+    top: 10em;
+    outline-offset: -8px;
+}
+
 /* buttons */
 .btn {
     display: inline-flex;

@@ -13,3 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp&family=Ibarra+Real+Nova&family=Montserrat:wght@700&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
+
+<body>
+    <ul class="accessibility-menu">
+        <li>
+            <a href="#skip-content">Passer directement au contenu principal</a>
+        </li>
+    </ul>
