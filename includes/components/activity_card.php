@@ -1,4 +1,4 @@
-<div class="activity-card" style="grid-area: g<?= $key ?>;">
+<a href="<?= $activity->link ?? '#' ?>" class="activity-card" style="grid-area: g<?= $key ?>;">
     <div class="activity-card__media">
         <img loading="lazy" src="/image.php?url=<?= $activity->image ?>&size=<?= $activity->size ?>" alt="<?= $activity->title ?>" class="activity-card__media-img">
     </div>
@@ -7,11 +7,12 @@
         <span class="activity-card__text-label"><?= $activity->label ?></span>
         <h2 class="activity-card__text-title"><?= $activity->title ?></h2>
     </div>
-</div>
+</a>
 
 <?php if ($css): ?>
     <style>
         .activity-card {
+            display: block;
             position: relative;
         }
 

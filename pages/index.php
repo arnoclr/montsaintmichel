@@ -10,7 +10,7 @@
     <div class="hero__content">
         <h1 class="hero__content-title">Bienvenue au Mont-Saint-Michel</h1>
         <div class="hero__content-cta">
-            <div class="btn btn--primary btn--large">Démarrer la visite</div>
+            <a href="#" class="btn btn--primary btn--large">Démarrer la visite</a>
         </div>
     </div>
     <div class="hero__shadow"></div>
@@ -62,3 +62,5 @@ $event = (object) [
 ];
 
 include "../includes/components/event.php"; ?>
+
+<?php include "../includes/components/footer.php"; ?>

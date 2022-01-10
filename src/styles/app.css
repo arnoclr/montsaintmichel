@@ -20,6 +20,17 @@
     color: #fff;
 }
 
+*:focus {
+    outline: 2px dotted #000;
+    outline-offset: 2px;
+}
+
+/* Mise en forme texte par défaut */
+p {
+    font: 400 16px Noto Sans, sans-serif;
+    color: #515151;
+}
+
 .material-icons-sharp {
     user-select: none;
 }
@@ -66,4 +77,8 @@ body, html {
 .btn--white {
     border-color: #fff;
     color: #fff;
+}
+
+.btn--white:hover {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
 }

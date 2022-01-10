@@ -30,6 +30,7 @@
     .event__text-details {
         font: 400 16px Noto Sans, sans-serif;
         margin-bottom: 48px;
+        color: #fff;
     }
 
     @media screen and (min-width: 800px) {
