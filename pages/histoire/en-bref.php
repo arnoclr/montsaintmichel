@@ -13,7 +13,7 @@
     <div class="faq__qst">
         <h2>Quand a t-il été construit ?</h2>
         <p>Sa construction s'est déroulée sur plusieurs siècles. La première construction daterait du VIIIe siècle, il s'agirait de la chapelle Notre-Dame-Sous-Terre. </p>
-        <details>
+        <details id="skip-content">
             <summary>
                 <i class="material-icons-sharp">chevron_right</i>
                 Voir plus
