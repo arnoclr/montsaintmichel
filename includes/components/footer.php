@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="footer__col">
-        <h3 class="footer__col-title">Mont-Saint-Michel</h3>
+        <img width="80" height="80" src="/image.php?url=logos/logo_mont_saint_michel.png&as=png" alt="Logo mont saint michel">
         <p class="footer__col-text">Projet étudiant, BUT Informatique, en partenariat avec le Forum UNESCO.</p>
     </div>
     <div class="footer__col footer__col--links">

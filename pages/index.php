@@ -6,14 +6,17 @@
     <div class="hero__navbar">
         <?php $navbar_classes = "navbar--white"; include "../includes/components/navbar.php"; ?>
     </div>
-    <img class="hero__banner" src="/image.php?url=index__couverture.jpg&size=xlarge" alt="Photo d'ensemble du Mont-Saint-Michel">
+    <!-- <img class="hero__banner" src="/image.php?url=index__couverture.jpg&size=xlarge" alt="Photo d'ensemble du Mont-Saint-Michel"> -->
+    <video class="hero__banner" loop autoplay muted>
+        <source src="https://i.imgur.com/kd2ur78.mp4" type="video/mp4">
+    </video>
     <div class="hero__content">
         <h1 class="hero__content-title">Bienvenue au Mont-Saint-Michel</h1>
         <div class="hero__content-cta">
             <a href="#" class="btn btn--primary btn--large">Démarrer la visite</a>
         </div>
     </div>
-    <div class="hero__shadow"></div>
+    <!-- <div class="hero__shadow"></div> -->
 </div>
 
 <?php include "../includes/components/covid.php"; ?>

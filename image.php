@@ -9,9 +9,10 @@ $sizes = [
 
 $filename = $_GET['url'];
 $input = "./src/img/$filename";
-$size = $_GET['size'];
+$size = $_GET['size'] ?? "default";
+$format = $_GET['as'] ?? "webp";
 $hashfile = hash_file('sha256', $input);
-$outputname = "./static/img/@{$sizes[$size]}__{$hashfile}.webp";
+$outputname = "./static/img/@{$sizes[$size]}__{$hashfile}.$format";
 
 if (!file_exists('./static/img/')) {
     mkdir('./static/img/', 0777, true);
@@ -33,14 +34,23 @@ if (!file_exists($outputname)) {
     $width = imagesx($image);
     $height = imagesy($image);
     
-    $new_width = $sizes[$size];
-    $new_height = ($new_width / $width) * $height;
+    if ($size == "default") {
+        $new_width = imagesx($image);
+        $new_height = imagesy($image);
+    } else {
+        $new_width = $sizes[$size];
+        $new_height = ($new_width / $width) * $height;
+    }
 
     $new_image = imagecreatetruecolor($new_width, $new_height);
     imagecopyresampled($new_image, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
 
     // save image with given quality
-    imagewebp($new_image, $outputname, 85);
+    if ($format == "webp") {
+        imagewebp($new_image, $outputname, 80);
+    } else if ($format == "png") {
+        copy($input, $outputname);
+    }
 }
 
 header("location: $outputname");
