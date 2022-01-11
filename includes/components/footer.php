@@ -49,4 +49,10 @@
     .footer__col-link:hover {
         border-bottom: 2px dotted #515151;
     }
+
+    @media screen and (max-width: 800px) {
+        .footer {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
