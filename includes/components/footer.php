@@ -22,6 +22,7 @@
         padding: 48px var(--padding) 32px var(--padding);
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        align-items: end;
         gap: 32px;
         background-color: #eee;
     }
@@ -30,6 +31,10 @@
         font: 400 28px Ibarra Real Nova, serif;
         text-transform: uppercase;
         margin-top: 0;
+    }
+
+    .footer__col-text {
+        margin-bottom: 0;
     }
 
     .footer__col--links {
