@@ -21,8 +21,8 @@
 }
 
 *:focus {
-    outline: 2px dotted #000;
-    outline-offset: 2px;
+    outline: 2px dashed #000;
+    outline-offset: 6px;
 }
 
 /* Mise en forme texte par défaut */

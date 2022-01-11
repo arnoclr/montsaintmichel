@@ -1,0 +1,66 @@
+.faq {
+    padding: 32px var(--padding);
+}
+
+.faq__qst {
+    margin-bottom: 86px;
+}
+
+.faq__qst h2 {
+    font: 600 42px Montserrat, sans-serif;
+}
+
+.faq__qst-details {
+    color: #828282;
+    background: #f1f1f1;
+    padding: 16px;
+    border-radius: 2px;
+}
+
+.faq__qst details {
+    padding-top: 16px;
+}
+
+.faq__qst details i {
+    transform: rotate(0deg);
+    transition: transform .3s ease;
+}
+
+.faq__qst details[open] i {
+    transform: rotate(90deg);
+}
+
+.faq__qst details summary {
+    font: 400 20px Noto Sans, sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: color .15s ease;
+}
+
+.faq__qst details summary:hover {
+    color: var(--primary-color-light);
+}
+
+.faq__qst details summary:focus {
+    outline: none;
+}
+
+details > summary {
+    list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary ~ * {
+    animation: sweep .4s cubic-bezier(.31,.03,.32,.9);
+}
+  
+@keyframes sweep {
+    0%    {opacity: 0; transform: translateY(-30px)}
+    100%  {opacity: 1; transform: translateY(0)}
+}
+  

@@ -28,6 +28,7 @@
     .navbar__links-link {
         text-decoration: none;
         font: 400 18px Noto Sans, sans-serif;
+        color: #000;
     }
 
     .navbar--white .navbar__links-link {
