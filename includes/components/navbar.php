@@ -7,8 +7,21 @@
     </div>
     <div class="navbar__locale">
         <i class="material-icons-sharp">translate</i>
+        <form method="get" id="language-select">
+            <select name="hl" onchange="handleLangChange();">
+                <option value="fr" <?= (isset($_GET['hl']) && $_GET['hl'] == 'fr') ? 'selected' : '' ?>>Français</option>
+                <option value="en" <?= (isset($_GET['hl']) && $_GET['hl'] == 'en') ? 'selected' : '' ?>>Anglais</option>
+            </select>
+        </form>
     </div>
 </div>
+
+<script>
+function handleLangChange() {
+    const languageForm = document.getElementById('language-select');
+    languageForm.submit();
+}
+</script>
 
 <?php 
 
@@ -80,7 +93,26 @@ include dirname(__DIR__) . '/components/menu.php'; ?>
         color: #fff;
     }
 
+    .navbar--white .navbar__locale {
+        position: relative;
+    }
+
     .navbar--white .navbar__locale i {
         color: #fff;
+    }
+
+    #language-select {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        cursor: pointer;
+        text-indent: 5px;
+    }
+
+    #language-select option {
+        font-size: 24px;
+        background-color: #eee;
     }
 </style>
