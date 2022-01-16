@@ -6,21 +6,42 @@
         <a href="#" class="navbar__links-link">Architecture</a>
     </div>
     <div class="navbar__locale">
-        <i class="material-icons-sharp">translate</i>
-        <form method="get" id="language-select">
-            <select name="hl" onchange="handleLangChange();">
-                <option value="fr" <?= (isset($_GET['hl']) && $_GET['hl'] == 'fr') ? 'selected' : '' ?>>Français</option>
-                <option value="en" <?= (isset($_GET['hl']) && $_GET['hl'] == 'en') ? 'selected' : '' ?>>Anglais</option>
-            </select>
-        </form>
+        <i class="material-icons-sharp js-open-locale-selector">translate</i>
+        <ul id="js-locale-selector" class="locale-selector">
+            <li class="locale-selector__region">
+                <a href="/fr" class="locale-selector__clickable">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931958%29.svg" alt="French flag" class="locale-selector__region-flag">
+                    <span class="locale-selector__region-name">Français</span>
+                </a>
+            </li>
+            <li class="locale-selector__region">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="British flag" class="locale-selector__region-flag">
+                <span class="locale-selector__region-name">English</span>
+            </li>
+        </ul>
     </div>
 </div>
 
 <script>
-function handleLangChange() {
-    const languageForm = document.getElementById('language-select');
-    languageForm.submit();
-}
+var localeSelector = document.getElementById('js-locale-selector');
+var localeBtn = document.querySelector('.js-open-locale-selector');
+var isLocaleSelectorOpen = false;
+
+localeBtn.addEventListener('click', e => {
+    e.preventDefault();
+    localeSelector.classList.add('js-open');
+    setTimeout(() => {
+        isLocaleSelectorOpen = true;
+    }, 200);
+});
+
+document.addEventListener('click', e => {
+    var isClickInsideElement = localeSelector.contains(e.target);
+    if (!isClickInsideElement && isLocaleSelectorOpen) {
+        localeSelector.classList.remove('js-open');
+        isLocaleSelectorOpen = false;
+    }
+});
 </script>
 
 <?php 
@@ -99,20 +120,66 @@ include dirname(__DIR__) . '/components/menu.php'; ?>
 
     .navbar--white .navbar__locale i {
         color: #fff;
+        cursor: pointer;
     }
 
-    #language-select {
+    .locale-selector {
+        margin: 0;
+        padding: 0;
         position: absolute;
         top: 0;
-        bottom: 0;
         right: 0;
-        opacity: 0;
-        cursor: pointer;
-        text-indent: 5px;
+        background-color: #fff;
+        list-style: none;
+        border-radius: 2px;
+        transform-origin: top right;
+        transform: scale(0);
+        transition: transform .2s ease;
     }
 
-    #language-select option {
-        font-size: 24px;
-        background-color: #eee;
+    .locale-selector.js-open {
+        transform: scale(1);
+    }
+
+    .locale-selector.js-open .locale-selector__region {
+        animation: delayed-fadein .2s ease-in-out .15s forwards;
+    }
+
+    @keyframes delayed-fadein {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .locale-selector__region {
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity .2s ease;
+    }
+
+    .locale-selector__clickable {
+        display: contents;
+        text-decoration: none;
+    }
+
+    .locale-selector__region:hover {
+        background-color: #f5f5f5;
+    }
+
+    .locale-selector__region-flag {
+        width: 22px;
+        height: auto;
+    }
+
+    .locale-selector__region-name {
+        font: 400 18px Noto Sans, sans-serif;
+        color: #000;
     }
 </style>
