@@ -9,14 +9,16 @@
         <i class="material-icons-sharp js-open-locale-selector">translate</i>
         <ul id="js-locale-selector" class="locale-selector">
             <li class="locale-selector__region">
-                <a href="/fr" class="locale-selector__clickable">
+                <a href="<?= $_SERVER['REQUEST_URI'] ?>?hl=fr" class="locale-selector__clickable">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931958%29.svg" alt="French flag" class="locale-selector__region-flag">
                     <span class="locale-selector__region-name">Français</span>
                 </a>
             </li>
             <li class="locale-selector__region">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="British flag" class="locale-selector__region-flag">
-                <span class="locale-selector__region-name">English</span>
+                <a href="<?= $_SERVER['REQUEST_URI'] ?>?hl=en" class="locale-selector__clickable">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="British flag" class="locale-selector__region-flag">
+                    <span class="locale-selector__region-name">English</span>
+                </a>
             </li>
         </ul>
     </div>
@@ -110,12 +112,16 @@ include dirname(__DIR__) . '/components/menu.php'; ?>
         color: #000;
     }
 
-    .navbar--white .navbar__links-link {
-        color: #fff;
+    .navbar__locale {
+        position: relative;
     }
 
-    .navbar--white .navbar__locale {
-        position: relative;
+    .navbar__locale i {
+        cursor: pointer;
+    }
+
+    .navbar--white .navbar__links-link {
+        color: #fff;
     }
 
     .navbar--white .navbar__locale i {
@@ -135,6 +141,7 @@ include dirname(__DIR__) . '/components/menu.php'; ?>
         transform-origin: top right;
         transform: scale(0);
         transition: transform .2s ease;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
     }
 
     .locale-selector.js-open {
