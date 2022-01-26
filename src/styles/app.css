@@ -105,3 +105,375 @@ body, html {
 .btn--white:hover {
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
 }
+
+/* cartes activités */
+.activity-card {
+    display: block;
+    position: relative;
+}
+
+.activity-card__media {
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+    border-radius: 4px;
+}
+
+.activity-card__media-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform .35s cubic-bezier(.31,.28,.19,.92);
+    user-select: none;
+}
+
+.activity-card:hover .activity-card__media-img {
+    transform: scale(1);
+}
+
+.activity-card__shadow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 49.27%, rgba(0, 0, 0, 0.8) 100%);
+    border-radius: 4px;
+}
+
+.activity-card__text {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    color: #fff;
+}
+
+.activity-card__text-label {
+    font: 700 11px Montserrat, sans-serif;
+    text-transform: uppercase;
+}
+
+.activity-card__text-title {
+    font: 400 28px Ibarra Real Nova, serif;
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+/* bannière covid */
+.covid {
+    background-color: #CF4845;
+    padding: 22px var(--padding) 22px 0;
+    display: grid;
+    grid-template-columns: var(--padding) 1fr;
+}
+
+.covid__icon {
+    position: relative;
+}
+
+.covid__icon i {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+}
+
+.covid__content-title {
+    font: 700 18px Montserrat, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.covid__content-text {
+    font: 400 14px Noto Sans, sans-serif;
+    color: #fff;
+}
+
+/* événements */
+.event {
+    position: relative;
+    padding: 12px var(--padding);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.event__text {
+    color: #fff;
+    padding-bottom: 22px;
+}
+
+.event__text-title {
+    font: 400 42px Ibarra Real Nova, serif;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.event__text-details {
+    font: 400 16px Noto Sans, sans-serif;
+    margin-bottom: 48px;
+    color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+    .event__text {
+        width: 50%;
+    }
+}
+
+/* navbar */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 48px var(--padding);
+}
+
+.navbar__links {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--padding);
+}
+
+.navbar__links-link {
+    text-decoration: none;
+    font: 400 18px Noto Sans, sans-serif;
+    color: #000;
+}
+
+.navbar__locale {
+    position: relative;
+}
+
+.navbar__locale i {
+    cursor: pointer;
+}
+
+.navbar--white .navbar__links-link {
+    color: #fff;
+}
+
+.navbar--white .navbar__locale i {
+    color: #fff;
+    cursor: pointer;
+}
+
+.locale-selector {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    list-style: none;
+    border-radius: 2px;
+    transform-origin: top right;
+    transform: scale(0);
+    transition: transform .2s ease;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
+}
+
+.locale-selector.js-open {
+    transform: scale(1);
+}
+
+.locale-selector.js-open .locale-selector__region {
+    animation: delayed-fadein .2s ease-in-out .15s forwards;
+}
+
+@keyframes delayed-fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.locale-selector__region {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+.locale-selector__clickable {
+    display: contents;
+    text-decoration: none;
+}
+
+.locale-selector__region:hover {
+    background-color: #f5f5f5;
+}
+
+.locale-selector__region-flag {
+    width: 22px;
+    height: auto;
+}
+
+.locale-selector__region-name {
+    font: 400 18px Noto Sans, sans-serif;
+    color: #000;
+}
+
+/* footer */
+.footer {
+    padding: 48px var(--padding) 32px var(--padding);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+    gap: 32px;
+    background-color: #eee;
+}
+
+.footer__col-title {
+    font: 400 28px Ibarra Real Nova, serif;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.footer__col-text {
+    margin-bottom: 0;
+}
+
+.footer__col--links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer__col-link {
+    width: fit-content;
+    text-decoration: none;
+    font: 400 16px Noto Sans, sans-serif;
+    color: #515151;
+    border-bottom: 2px dotted transparent;
+}
+
+.footer__col-link:hover {
+    border-bottom: 2px dotted #515151;
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* menus */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 320px;
+    background: #000;
+    z-index: 100;
+    transform: translate3D(0, -100%, 0);
+    transition: transform .25s cubic-bezier(.42,.1,.13,.98);
+}
+
+.menu__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+}
+
+.menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 22px;
+    padding-bottom: 16px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 16px;
+    justify-content: center;
+    height: 100%;
+}
+
+.menu__list-item {
+    margin-left: 16px;
+    display: inline-block;
+    flex-shrink: 0;
+    position: relative;
+    height: 100%;
+    width: 450px;
+}
+
+.menu__list-item:first-child {
+    margin-left: 32px;
+}
+
+.menu__list-item:last-child {
+    margin-right: 32px;
+}
+
+.menu__list-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.menu__list-item-shadow {
+    position: absolute;
+    inset: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    border-radius: 2px;
+    opacity: 1;
+    transition: opacity .2s ease;
+}
+
+.menu__list-item:hover .menu__list-item-shadow {
+    opacity: 0.5;
+}
+
+.menu__list-item-title {
+    display: block;
+    margin: 0;
+    position: absolute;
+    bottom: 18px;
+    left: 18px;
+    color: #fff;
+    font: 400 36px Ibarra Real Nova, serif;
+    white-space: normal;
+    text-transform: uppercase;
+    text-align: left;
+    z-index: 101;
+}
+
+.menu__list::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+.menu__list::-webkit-scrollbar-thumb {
+    background: #676767;
+    border-radius: 8px;
+    border: 4px solid #000;
+}
+
+.menu__list::-webkit-scrollbar-thumb:hover {
+    background: #898989;
+    border-radius: 8px;
+    border: 4px solid #000;
+}
+
+.menu__list::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.open+.menu__backdrop {
+    display: block;
+}
+
+.open.menu {
+    transform: translate3D(0, 0, 0);
+}

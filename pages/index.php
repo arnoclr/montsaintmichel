@@ -47,8 +47,8 @@ $activities = [
 <div class="activities">
     <h1 class="activities__title">Activités phares</h1>
     <div class="activities__grid">
-        <?php $css = true; foreach ($activities as $key => $activity): ?>
-            <?php include "../includes/components/activity_card.php"; $css = false; ?>
+        <?php foreach ($activities as $key => $activity): ?>
+            <?php include "../includes/components/activity_card.php"; ?>
         <?php endforeach; ?>
     </div>
 </div>
