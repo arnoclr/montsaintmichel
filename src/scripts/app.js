@@ -30,4 +30,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const menu = document.getElementById(id);
         menu.classList.remove('open');
     }
+
+    // quizz
+    const allQuizz = document.querySelectorAll('.js-quizz');
+
+    allQuizz.forEach(quizz => {
+        const buttons = quizz.querySelectorAll('.js-quizz-button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', e => {
+                e.preventDefault();
+                const correct = button.dataset.correct;
+
+                if (correct == "1") {
+                    console.log(correct);
+                } else {
+                    // add a incorrect class if answer is wrong
+                    button.classList.add('incorrect');
+                }
+
+                // add correct label to good answer
+                buttons.forEach(button2 => {
+                    if (button2.dataset.correct == "1") {
+                        button2.classList.add('correct');
+                    }
+                });
+
+                // show detailed answer
+                const answer = quizz.querySelector('.js-quizz-answer');
+                answer.classList.add('open')
+            });
+        });
+    });
 });
