@@ -10,7 +10,7 @@
         <ul id="js-locale-selector" class="locale-selector">
             <li class="locale-selector__region">
                 <a href="<?= $_SERVER['REQUEST_URI'] ?>?hl=fr" class="locale-selector__clickable">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931958%29.svg" alt="French flag" class="locale-selector__region-flag">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="French flag" class="locale-selector__region-flag">
                     <span class="locale-selector__region-name">Français</span>
                 </a>
             </li>
