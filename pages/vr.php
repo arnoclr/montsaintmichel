@@ -38,14 +38,15 @@
 
     let currentLocation = 0;
 
-    const nextLocation = async () => {
+    const switchLocation = async (increment) => {
         for (let i = 0; i <= IMAGES_GAP; i++) {
             let r = i/IMAGES_GAP;
             let diffToMiddle = Math.abs(r - 0.5) * 2.3;
             let ms = (1000/IMAGES_GAP /2) * ((diffToMiddle + 0.5)**2);
             await sleep(ms);
-            mainImg.src = BASE_URL + `photo (${currentLocation*IMAGES_GAP + i}).webp`;
+            let photoId = currentLocation*IMAGES_GAP + (i * increment);
+            mainImg.src = BASE_URL + `photo (${photoId}).webp`;
         }
-        currentLocation++;
+        currentLocation += increment;
     }
 </script>
