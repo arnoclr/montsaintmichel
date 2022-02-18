@@ -30,24 +30,54 @@
     Plus l’on gravit le mont, plus les bâtiments deviennent symboliques dans la religion jusqu'à arriver à la Merveille, se situant tout en haut du Mont. La hauteur était signe de foi, mais aussi de pouvoir, là où le clergé avait de grands pouvoirs. <br><br>
 
     Plus à l’ouest se trouve la partie habitation. Elle a la fonction d’hôtellerie de par ses hôtels, ses logis, son infirmerie et sa chapelle Saint-Étienne. Le tout présent au premier et second niveaux. <br><br>
-    </p>
 
+    <figure>
+        <img src="/image.php?url=archi/Chapelle_Saint-Etienne.jpg&size=medium" alt="La Chapelle Saint-Etienne">
+        <figcaption>
+            Chapelle Saint-Etienne / &#169; Wikicommons -
+            <a href="https://commons.wikimedia.org/wiki/User:Gzen92" target="_blank">Gzen92</a>
+        </figcaption>
+    </figure>
+
+    </p>
+    
+
+    <!-- ----- LA MERVEILLE ----- -->
     <h2>La Merveille</h2>
 
-    <p>
+    <p> 
     En 1203, durant la guerre opposant le roi d’Angleterre et le roi de France, Philippe Auguste, l’abbaye fût attaquée et fut incendiée, ce qui la dégrada fortement. C’est ainsi qu’après la guerre, Philippe Auguste prit l’initiative de payer les frais de la reconstruction de l’abbaye. Une partie de cette fortune est investie dans la construction d’une église au Nord-Est, la Merveille, en guise de dédommagement. <br>
     Sous ses 80 mètres d’altitude, l’église abbatiale du Mont-Saint-Michel possède 3 étages, ce qui reflète l’architecture romane de l’époque. <br>
     Elle est constituée du cellier au premier niveau, de la salle des Chevaliers au second qui était utilisé comme scriptorium qui était d’ailleurs la seule pièce chauffée, ainsi que le célèbre cloître et son jardin donnant face à la mer, dans la partie ouest. À l’est se trouve l’aumônerie au premier niveau, la salle des Hôtes au second et le réfectoire au troisième niveau. Certains bâtiments devaient être construits à côté de la Merveille, mais cela n’a jamais abouti. <br><br>
+    </p>
 
+    <figure>
+        <img src="/image.php?url=archi/merveille.jpg&size=medium" alt="La Merveille du Mont-Saint-Michel">
+        <figcaption>
+            la Merveille / Émile Sagot (1805-1888)
+        </figcaption>
+    </figure>
+
+    <p>
     L’équilibre de l’église est rendue possible par la force descendante de la nef qui contre la force montante des tribunes. L’église est principalement construite sur du porte à faux. Sur la plateforme de la roche y repose naturellement la partie subsistante et la croisée du transept de l’église, sans avoir recours aux mains d’œuvres de l’homme. En revanche, le chœur et les parties nord et sud du transept étaient soutenues par les cryptes qui se trouvaient au niveau inférieur, en partie celles de Notre-Dame-Des-Trente-Cierges à l’ouest et celles de la chapelle Saint-Martin au sud. <br><br>
 
     Les 3 travées occidentales de la nef étaient soutenues par l’église de Notre-Dame-Sous-Terre. Le chœur a été construit dans le style roman. Il fût détruit en 1421. Il a été reconstruit sur les piliers colossaux de la crypte, qui viennent refléter le style gothique par ses voûtes sur croisées d’ogives.  Leur particularité est qu’ils sont plus précis, et plus complexes ce qui ajoute un côté gothique flamboyant. La nef de l’église était constituée de trois vaisseaux. Les collatéraux venaient entourer l’allée centrale de l’église. Elle est composée de grandes arcades, des tribunes et des fenêtres hautes. Le transept est voûté en berceau plein cintre. <br><br>
+    </p>
 
+    <figure>
+        <img src="/image.php?url=archi/voutes_sur_croisee_ogives.jpg&size=medium" alt="La Chapelle Saint-Etienne">
+        <figcaption>
+            Voûtes sur croisée d'ogives de la Cathédrale Saint-Gatien de Tours / &#169; Wikicommons - Guillaume Piolle
+        </figcaption>
+    </figure>
+
+    <p>
     Enfin, la partie avant de la Merveille soit le chevet, est composé du chœur, du déambulatoire, le triforium, les fenêtres hautes ainsi que quatre chapelles. Le chœur est très spacieux ce qui lui permet d’être la zone la plus éclairée de l’église, contrairement à la nef qui est la zone la plus sombre. Les fenêtres hautes ont aussi des motifs dentelés. Les colonnes étaient plus complexes par leurs détails et leurs décorations que les piliers, ce qui renforce la beauté architecturale de cette Merveille. Les colonnes ainsi que les piliers soutenaient tous les étages ce qui relève d’un exploit architectural. Le cloître a été construit en forme de trapèze avec un jardin au centre, délimité par sa colonnade qui possède des frises et écoinçons d’un thème végétal ce qui renvoie à l’art gothique normand de l’époque. <br><br>
 
     Les colonnes sont ainsi disposées en quinconce. Le plafond est constitué de voûtes en bois. De même pour le réfectoire des moines, le plafond est constitué de voûtes en bois en berceau plein cintre, mais sa grande spécificité est qu’il ne possède ni de pilier ni de colonne. La superficie de la salle est plutôt restreinte, car la hauteur sous plafond est plus grande que la largeur. À l’inverse de ce que peut faire penser la Merveille  de l'extérieur, de par ses murs massifs, ses contreforts et ses piliers colossaux, l'intérieur paraît simple, agile et léger. <br><br>
     </p>
 
+    <!-- ----- NOTRE-DAME SOUS TERRE ----- -->
     <h2>Notre-Dame-Sous-Terre</h2>
 
     <p>
@@ -62,6 +92,7 @@
         </figcaption>
     </figure>
 
+    <!-- ----- LE VILLAGE ----- -->
     <h2>Le village</h2>
 
     <p>
@@ -69,20 +100,32 @@
     </p>
 
     <figure>
-        <img src="/image.php?url=archi/porte_entree.jpg&size=small" alt="Porte d'entrée du Mont-Saint-Michel">
-        <figcaption> la porte d’entrée principale </figcaption>
+        <img src="/image.php?url=archi/porte_entree.jpg&size=medium" alt="Porte d'entrée du Mont-Saint-Michel">
+        <figcaption> Porte d’entrée principale du Mont-Saint-Michel / &#169; Wikicommons - Nono vlf </figcaption>
     </figure>
 
     <p>
         On peut retrouver 2 bombardes anglaises près de cette porte dû à la défaite des Anglais en 1434. Cette défaite face à cette porte montre que l’entrée était infranchissable pour l’époque. Les portes mènent à La Grande Rue qui est la seule rue du mont. Elle conduit au village, puis au Grand Degré Extérieur en direction de l’abbaye. Malheureusement, le village ne compte plus beaucoup d’habitations, car beaucoup ont été détruites au fil des époques. Les seules habitations restantes sont des maisons anciennes en pierre ainsi que l’église Saint-Pierre datant du XVe siècle. <br><br>
     </p>
 
+    <!-- ----- LA SALLE DES HÔTES ----- -->
     <h2>La Salle des Hôtes</h2>
 
     <p>
         Dans l’abbatiale se trouve la salle des Hôtes qui était destinée à recevoir les invités les plus nobles (Rois, seigneurs, ...) pour manger un bon repas. Les tables étaient allongées dans les deux nefs qui coupaient la salle, afin d’y séparer la cuisine de la salle à manger où attendaient les seigneurs. La salle est répartie en plusieurs parties divisées par des voûtes quadripartites sur croisée d’ogives, ce qui reflète le style gothique. Elle est constituée d’une rangée de colonnes à base octogonale, afin de soutenir la salle du réfectoire. Le plafond paraît immense de par la hauteur démesurée des voûtes qui est plus grande que la largeur et la longueur. De plus, elle était décorée de végétation autour des façades. Cette salle a tout du stylisme gothique de l’époque. <br><br>
 
-        À côté de la salle des Hôtes se trouve la salle des chevaliers. Elle possède trois rangées de colonnes afin de soutenir la cour du cloître et sa colonnade. <br><br><br>
+    </p>
+        
+        <figure>
+            <img src="/image.php?url=archi/Salle_des_Hotes.jpg&size=medium" alt="Salle des Hôtes du Mont-Saint-Michel">
+            <figcaption>
+            Salle des Hôtes du Mont-Saint-Michel / &#169; Wikicommons - 
+                <a href="https://commons.wikimedia.org/wiki/User:Ptyx" target="_blank">Ptyx</a> 
+            </figcaption>
+        </figure>
+
+    <p class="end">
+        À côté de la salle des Hôtes se trouve la salle des chevaliers. Elle possède trois rangées de colonnes afin de soutenir la cour du cloître et sa colonnade. <br><br>
 
         L’archange Michel était respecté par sa bravoure et son commandement. Une légende raconte qu’il affronta Satan sous forme de dragon au Mont ce qui le rendit inoubliable. De ce fait, lorsqu’une personne voulait se protéger de démons, elle faisait appel à Saint-Michel. Par la suite, l’archange Saint-Michel aurait demandé à l'évêque Aubert, de marquer ce lieu devenu sacré en construisant une église sur ce Mont. C’est ainsi que le Mont-Saint-Michel prit son nom, et qu’il repose tout en haut du Mont, au sommet de la Merveille sous forme de statue dorée. <br><br>
 

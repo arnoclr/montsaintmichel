@@ -25,6 +25,7 @@ figure {
 
 figure img {
     width: auto;
+    border-radius: 3px;
 }
 
 figcaption {
@@ -40,5 +41,9 @@ figure + p {
 
 figcaption a {
     text-decoration: none;
-    color: rgb(92, 0, 134);
+    color: #656565;
+}
+
+.end {
+    margin-bottom: 86px;
 }
