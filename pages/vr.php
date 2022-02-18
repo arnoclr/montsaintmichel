@@ -56,7 +56,6 @@
             let ms = (1000/IMAGES_GAP /6) * ((diffToMiddle + 0.5)**6);
             await sleep(ms);
             let photoId = currentLocation*IMAGES_GAP + (i * increment) + 1;
-            console.log(photoId);
             mainImg.src = BASE_URL + `photo (${photoId}).webp`;
         }
 
