@@ -25,12 +25,17 @@
     const IMAGES_GAP = 30; // nombre d'images entre 2 lieux
 
     // preload images
-    const images = [];
-    for (let i = 1; i <= IMAGES_NUMBER; i++) {
-        const img = new Image();
-        img.src = BASE_URL + `photo (${i}).webp`;
-        images.push(img);
+    const preloadSetOfImages = (from, to) => {
+        for (let i = from; i <= to; i++) {
+            let l = document.createElement('link')
+            l.rel = 'preload'
+            l.as = 'image'
+            l.href = BASE_URL + `photo (${i}).webp`
+            document.head.appendChild(l)
+        }
     }
+
+    preloadSetOfImages(1, 31);
 
     const sleep = (milliseconds) => {
         return new Promise(resolve => setTimeout(resolve, milliseconds))
@@ -57,6 +62,8 @@
 
         currentLocation += increment;
         inAnimation = false;
+
+        preloadSetOfImages(currentLocation * IMAGES_GAP, (currentLocation + 1) * IMAGES_GAP);
     }
     
     document.addEventListener('keydown', (e) => {
