@@ -12,6 +12,8 @@
     </div>
 </main>
 
+<a id="js-hashlink" style="display: none;" href=""></a>
+
 <style>
 .vr {
     height: 100vh;
@@ -198,6 +200,7 @@
     let currentLocation = 0;
     let inAnimation = false;
     const modal = document.querySelector('.vr__modal');
+    const hashlink = document.getElementById('js-hashlink');
 
     const updateModalUI = (locId) => {
         locId--
@@ -217,6 +220,8 @@
 
         inAnimation = true;
         modal.classList.remove('show');
+        hashlink.href = `#${currentLocation + increment}`;
+        hashlink.click();
 
         for (let i = 0; i <= IMAGES_GAP; i++) {
             let r = i/IMAGES_GAP;
@@ -241,6 +246,17 @@
             switchLocation(-1);
         } else if (e.keyCode === 39) {
             switchLocation(1);
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // detecter si on est sur une page avec un hash
+        if (window.location.hash) {
+            let hash = window.location.hash.substring(1);
+            currentLocation = parseInt(hash);
+            switchLocation(0);
+            updateModalUI(currentLocation);
+            modal.classList.add('show');
         }
     });
 </script>
