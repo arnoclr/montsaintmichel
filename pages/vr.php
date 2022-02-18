@@ -44,7 +44,8 @@
             let diffToMiddle = Math.abs(r - 0.5) * 2.3;
             let ms = (1000/IMAGES_GAP /2) * ((diffToMiddle + 0.5)**2);
             await sleep(ms);
-            let photoId = currentLocation*IMAGES_GAP + (i * increment);
+            let photoId = currentLocation*IMAGES_GAP + (i * increment) + 1;
+            console.log(photoId);
             mainImg.src = BASE_URL + `photo (${photoId}).webp`;
         }
         currentLocation += increment;
