@@ -1,7 +1,7 @@
 <?php include "../includes/head.php"; ?>
 
 <main class="vr">
-    <img class="vr__3D js-vr-3D-img" src="https://cdn.arnocellarier.fr/s/iut/msm/vv/photo (1).webp" alt="Vue en 3D du Mont-Saint-Michel issue de Google Earth">
+    <img class="vr__3D js-vr-3D-img" src="https://cdn.arnocellarier.fr/s/iut/msm/vv/1080/photo (1).webp" alt="Vue en 3D du Mont-Saint-Michel issue de Google Earth">
 
     <div class="vr__modal">
         <h2 id="js-vr-modal-name" class="vr__modal-title">Chapelle Saint-Aubert</h2>
