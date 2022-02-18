@@ -1,0 +1,44 @@
+
+.architecture {
+    padding: 32px var(--padding);
+}
+
+h1 {
+    font-family: "Montserrat", "Serif";
+    margin-bottom: 8vh;
+}
+
+p {
+    font-family: "Noto Sans", "Serif";
+}
+
+h2 {
+    font-family: "Ibarra Real Nova", "Serif";
+}
+
+figure {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+figure img {
+    width: auto;
+}
+
+figcaption {
+    margin: 10px 0;
+    font-family: "Ibarra Real Nova";
+    color: #656565;
+    font-style: italic;
+}
+
+figure + p {
+    margin-top: 10px;
+}
+
+figcaption a {
+    text-decoration: none;
+    color: rgb(92, 0, 134);
+}
