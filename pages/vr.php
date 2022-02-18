@@ -10,6 +10,11 @@
         <div id="js-vr-modal-images" class="vrslider">
         </div>
     </div>
+
+    <div class="vr__buttons">
+        <button class="vr__buttons-button material-icons-sharp" onclick="switchLocation(-1);" title="Naviguer vers l'endroit précédent">navigate_before</button>
+        <button class="vr__buttons-button material-icons-sharp" onclick="switchLocation(1);" title="Naviguer vers l'endroit suivant">navigate_next</button>
+    </div>
 </main>
 
 <a id="js-hashlink" style="display: none;" href=""></a>
@@ -69,6 +74,33 @@
 .vrslider__img {
     height: 100%;
     width: auto;
+}
+
+.vr__buttons {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.vr__buttons-button {
+    font-size: 32px;
+    color: #fff;
+    background-color: #343434;
+    border-radius: 50%;
+    border: none;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.vr__buttons-button:hover, .vr__buttons-button:active, .vr__buttons-button:focus {
+    background-color: #444;
+    outline: none;
 }
 </style>
 
@@ -216,7 +248,7 @@
     const switchLocation = async (increment) => {
         if (inAnimation) return;
         if (currentLocation + increment < 0) return;
-        if (currentLocation + increment >= IMAGES_NUMBER) return;
+        if (currentLocation + increment >= IMAGES_NUMBER / IMAGES_GAP) return;
 
         inAnimation = true;
         modal.classList.remove('show');
