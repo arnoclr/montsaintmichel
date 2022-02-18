@@ -37,8 +37,14 @@
     }
 
     let currentLocation = 0;
+    let inAnimation = false;
 
     const switchLocation = async (increment) => {
+        if (inAnimation) return;
+        if (currentLocation + increment < 0) return;
+        if (currentLocation + increment >= IMAGES_NUMBER) return;
+
+        inAnimation = true;
         for (let i = 0; i <= IMAGES_GAP; i++) {
             let r = i/IMAGES_GAP;
             let diffToMiddle = Math.abs(r - 0.5) * 2.3;
@@ -48,6 +54,16 @@
             console.log(photoId);
             mainImg.src = BASE_URL + `photo (${photoId}).webp`;
         }
+
         currentLocation += increment;
+        inAnimation = false;
     }
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.keyCode === 37) {
+            switchLocation(-1);
+        } else if (e.keyCode === 39) {
+            switchLocation(1);
+        }
+    });
 </script>
