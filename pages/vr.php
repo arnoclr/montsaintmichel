@@ -19,10 +19,10 @@
 </style>
 
 <script>
-    const BASE_URL = "https://cdn.arnocellarier.fr/s/iut/msm/vv/";
-    const IMAGES_NUMBER = 361;
+    const BASE_URL = "https://cdn.arnocellarier.fr/s/iut/msm/vv/1080/";
+    const IMAGES_GAP = 90; // nombre d'images entre 2 lieux
+    const IMAGES_NUMBER = 12 * IMAGES_GAP + 1; // nombre d'images total
     const mainImg = document.querySelector('.js-vr-3D-img');
-    const IMAGES_GAP = 30; // nombre d'images entre 2 lieux
 
     // preload images
     const preloadSetOfImages = (from, to) => {
@@ -53,7 +53,7 @@
         for (let i = 0; i <= IMAGES_GAP; i++) {
             let r = i/IMAGES_GAP;
             let diffToMiddle = Math.abs(r - 0.5) * 2.3;
-            let ms = (1000/IMAGES_GAP /2) * ((diffToMiddle + 0.5)**2);
+            let ms = (1000/IMAGES_GAP /6) * ((diffToMiddle + 0.5)**6);
             await sleep(ms);
             let photoId = currentLocation*IMAGES_GAP + (i * increment) + 1;
             console.log(photoId);
