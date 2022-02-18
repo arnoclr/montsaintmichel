@@ -1,0 +1,17 @@
+
+.architecture {
+    padding: 32px var(--padding);
+}
+
+h1 {
+    font-family: "Montserrat", "Serif";
+    margin-bottom: 8vh;
+}
+
+p {
+    font-family: "Noto Sans", "Serif";
+}
+
+h2 {
+    font-family: "Ibarra Real Nova", "Serif";
+}
