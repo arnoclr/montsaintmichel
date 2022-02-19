@@ -6,8 +6,8 @@
     <div class="vr__modal">
         <div class="vr__modal-header">
             <button class="vr__modal-header-button material-icons-sharp hide-on-large" onclick="switchLocation(-1);">arrow_back</button>
-            <h2 id="js-vr-modal-name" class="vr__modal-header-title">Chapelle Saint-Aubert</h2>
-            <span id="js-vr-modal-progress" class="vr__modal-header-progress">0</span>
+            <h2 id="js-vr-modal-name" class="vr__modal-header-title">Appuyez pour commencer</h2>
+            <span id="js-vr-modal-progress" class="vr__modal-header-progress"></span>
             <button class="vr__modal-header-button material-icons-sharp hide-on-large" onclick="switchLocation(1);">arrow_forward</button>
         </div>
         <p id="js-vr-modal-desc">La chapelle Saint-Aubert est une chapelle catholique. Elle est située sur une excroissance rocheuse à l'extrémité nord-ouest du Mont-Saint-Michel.</p>
@@ -319,8 +319,6 @@
         }
     }
 
-    preloadSetOfImages(1, IMAGES_GAP + 1);
-
     const sleep = (milliseconds) => {
         return new Promise(resolve => setTimeout(resolve, milliseconds))
     }
@@ -379,6 +377,15 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
+        // prévenir que la visite consomme beaucoup de données
+        const lotOfDataMessage = "Attention, la visite virtuelle peut consommer beaucoup de données, des frais de connexion peuvent s'appliquer. \n\nTaille estimée : 140 Mo. \n\nVoulez-vous continuer ?"
+
+        if (localStorage.getItem('vr__data_confirmed') != 1 && !confirm(lotOfDataMessage)) {
+            return history.back();
+        } else {
+            localStorage.setItem('vr__data_confirmed', 1);
+        }
+
         // detecter si on est sur une page avec un hash
         if (window.location.hash) {
             let hash = window.location.hash.substring(1);
@@ -386,6 +393,8 @@
             switchLocation(0);
             updateModalUI(currentLocation);
             modal.classList.add('show');
+        } else {
+            preloadSetOfImages(1, IMAGES_GAP + 1);
         }
     });
 </script>
