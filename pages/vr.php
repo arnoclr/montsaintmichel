@@ -4,14 +4,19 @@
     <img class="vr__3D js-vr-3D-img" src="https://cdn.arnocellarier.fr/s/iut/msm/vv/1080/photo (1).webp" alt="Vue en 3D du Mont-Saint-Michel issue de Google Earth">
 
     <div class="vr__modal">
-        <h2 id="js-vr-modal-name" class="vr__modal-title">Chapelle Saint-Aubert</h2>
+        <div class="vr__modal-header">
+            <button class="vr__modal-header-button material-icons-sharp hide-on-large" onclick="switchLocation(-1);">arrow_back</button>
+            <h2 id="js-vr-modal-name" class="vr__modal-header-title">Chapelle Saint-Aubert</h2>
+            <span id="js-vr-modal-progress" class="vr__modal-header-progress">0</span>
+            <button class="vr__modal-header-button material-icons-sharp hide-on-large" onclick="switchLocation(1);">arrow_forward</button>
+        </div>
         <p id="js-vr-modal-desc">La chapelle Saint-Aubert est une chapelle catholique. Elle est située sur une excroissance rocheuse à l'extrémité nord-ouest du Mont-Saint-Michel.</p>
 
         <div id="js-vr-modal-images" class="vrslider">
         </div>
     </div>
 
-    <div class="vr__buttons">
+    <div class="vr__buttons hide-on-small">
         <button class="vr__buttons-button material-icons-sharp" onclick="switchLocation(-1);" title="Naviguer vers l'endroit précédent">navigate_before</button>
         <button class="vr__buttons-button material-icons-sharp" onclick="switchLocation(1);" title="Naviguer vers l'endroit suivant">navigate_next</button>
     </div>
@@ -59,8 +64,19 @@
     opacity: 1;
 }
 
-.vr__modal-title {
+.vr__modal-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;   
+}
+
+.vr__modal-header-title {
     font: 500 22px Montserrat, sans-serif;
+}
+
+.vr__modal-header-progress {
+    font: 500 14px Montserrat, sans-serif;
+    color: #aaa;
 }
 
 .vrslider {
@@ -118,6 +134,69 @@
 
 .vr__attribution:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 799px) {
+    .hide-on-small {
+        display: none;
+    }
+
+    .vr__modal, .vr__modal.show {
+        top: unset;
+        left: 0;
+        bottom: 0;
+        padding-top: 0;
+        min-width: unset;
+        max-width: unset;
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+        opacity: 1;
+        transform: translateY(calc(100% - 64px));
+    }
+
+    .vr__modal.show:hover, .vr__modal.show:active, .vr__modal.show:focus {
+        transform: translateY(0);
+    }
+
+    .vrslider {
+        height: 180px;
+    }
+
+    .vr__attribution {
+        top: 32px;
+        bottom: unset;
+    }
+
+    .vr__modal-header {
+        display: grid;
+        align-items: center;
+        height: 64px;
+        grid-template-columns: 48px 1fr 48px 48px;
+    }
+
+    .vr__modal-header-title {
+        font-size: 18px;
+    }
+
+    .vr__modal-header-button {
+        height: 28px;
+        width: 28px;
+        font-size: 28px;
+        color: #898989;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .vr__modal-header-button:focus {
+        outline: none;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .hide-on-large {
+        display: none;
+    }
 }
 </style>
 
@@ -260,6 +339,7 @@
             imagesHTML += `<img class="vrslider__img" src="${LOCATIONS[locId].images[i]}" alt="${LOCATIONS[locId].name}">`
         }
         document.getElementById("js-vr-modal-images").innerHTML = imagesHTML
+        document.getElementById("js-vr-modal-progress").innerText = `${locId + 1}/${LOCATIONS.length}`
     } 
 
     const switchLocation = async (increment) => {
