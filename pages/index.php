@@ -13,7 +13,7 @@
     <div class="hero__content">
         <h1 class="hero__content-title">Bienvenue au Mont-Saint-Michel</h1>
         <div class="hero__content-cta">
-            <a id="skip-content" href="#" class="btn btn--primary btn--large">Démarrer la visite</a>
+            <a id="skip-content" href="/vr" class="btn btn--primary btn--large">Démarrer la visite</a>
         </div>
     </div>
     <!-- <div class="hero__shadow"></div> -->
