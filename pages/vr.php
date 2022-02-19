@@ -15,6 +15,8 @@
         <button class="vr__buttons-button material-icons-sharp" onclick="switchLocation(-1);" title="Naviguer vers l'endroit précédent">navigate_before</button>
         <button class="vr__buttons-button material-icons-sharp" onclick="switchLocation(1);" title="Naviguer vers l'endroit suivant">navigate_next</button>
     </div>
+
+    <a href="javascript:alert('Images &copy; Google Earth Studio. Landsat / Copernicus, Data SIO, NOAA, U.S. Navy, NGA, GEBCO, TerraMetrics');" class="vr__attribution">&copy; Google Earth :: informations</a>
 </main>
 
 <a id="js-hashlink" style="display: none;" href=""></a>
@@ -101,6 +103,21 @@
 .vr__buttons-button:hover, .vr__buttons-button:active, .vr__buttons-button:focus {
     background-color: #444;
     outline: none;
+}
+
+.vr__attribution {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    font: 400 14px Noto Sans, sans-serif;
+    color: #fff;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    cursor: help;
+}
+
+.vr__attribution:hover {
+    text-decoration: underline;
 }
 </style>
 
