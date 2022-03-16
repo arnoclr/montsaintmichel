@@ -15,7 +15,12 @@ $quizz->id = "quizz__" . md5($quizz->question);
         </div>
         <div class="quizz__content-readmore js-quizz-answer">
             <p class="quizz__content-readmore-summary"><?= $quizz->read_more_summary ?></p>
-            <a href="<?= $quizz->read_more ?>" class=" btn">En savoir plus</a>
+            <div class="quizz__content-readmore-buttons">
+                <a href="<?= $quizz->read_more ?>" class=" btn">En savoir plus</a>
+                <?php if (isset($_next_qst_btn) && $_next_qst_btn): ?>
+                    <button class="btn btn--iconright js-next-qst">Question suivante <i class="material-icons-sharp">arrow_forward</i></button>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
     <img src="/image.php?url=<?= $quizz->image ?>&size=small" alt="" class="quizz__image">
