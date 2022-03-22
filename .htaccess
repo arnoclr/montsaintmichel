@@ -1,3 +1,4 @@
-RewriteEngine on
-RewriteRule ^$ pages/index.php [L]
-RewriteRule ^([^\.]+)$ /pages/$1.php [NC,L] 
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ router.php?url=$1 [QSA,L]

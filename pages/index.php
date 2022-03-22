@@ -1,10 +1,6 @@
-<?php include "../includes/head.php"; ?>
-
-<link rel="stylesheet" href="/src/styles/pages/index.css?v=<?= md5(filemtime($_SERVER['DOCUMENT_ROOT'] . '/src/styles/pages/index.css')) ?>">
-
 <div class="hero">
     <div class="hero__navbar">
-        <?php $navbar_classes = "navbar--white"; include "../includes/components/navbar.php"; ?>
+        <?php $navbar_classes = "navbar--white"; include "{$basepath}/includes/components/navbar.php"; ?>
     </div>
     <!-- <img class="hero__banner" src="/image.php?url=index__couverture.jpg&size=xlarge" alt="Photo d'ensemble du Mont-Saint-Michel"> -->
     <video class="hero__banner" loop autoplay muted>
@@ -19,7 +15,7 @@
     <!-- <div class="hero__shadow"></div> -->
 </div>
 
-<?php include "../includes/components/covid.php"; ?>
+<?php include "$basepath/includes/components/covid.php"; ?>
 
 <?php
 $activities = [
@@ -48,7 +44,7 @@ $activities = [
     <h1 class="activities__title">Activités phares</h1>
     <div class="activities__grid">
         <?php foreach ($activities as $key => $activity): ?>
-            <?php include "../includes/components/activity_card.php"; ?>
+            <?php include "$basepath/includes/components/activity_card.php"; ?>
         <?php endforeach; ?>
     </div>
 </div>
@@ -72,7 +68,7 @@ $quizz = (object) [
 ?>
 
 <div class="main-padding">
-    <?php include "../includes/components/quizz.php"; ?>
+    <?php include "$basepath/includes/components/quizz.php"; ?>
 </div>
 
 <?php 
@@ -86,6 +82,6 @@ $event = (object) [
 
 ?>
 
-<?php include "../includes/components/event.php"; ?>
+<?php include "$basepath/includes/components/event.php"; ?>
 
-<?php include "../includes/components/footer.php"; ?>
+<?php include "$basepath/includes/components/footer.php"; ?>

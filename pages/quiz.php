@@ -1,5 +1,4 @@
-<?php include "../includes/head.php"; ?>
-<?php include "../includes/components/navbar.php"; ?>
+<?php include "$basepath/includes/components/navbar.php"; ?>
 
 <style>
 .quiz-box {
@@ -24,7 +23,7 @@
     $_next_qst_btn = true;
 
     // récupérer les questions du json
-    $json = file_get_contents("../src/scripts/quiz.json");
+    $json = file_get_contents("$basepath/src/scripts/quiz.json");
 
     // selectionner 2 questions pour chaque catégorie
     $data = json_decode($json);
@@ -51,7 +50,7 @@
         ?>
 
         <div class="quiz-box__section">
-            <?php include "../includes/components/quizz.php"; ?>
+            <?php include "$basepath/includes/components/quizz.php"; ?>
         </div>
 
         <?php
@@ -74,4 +73,4 @@
     });
 </script>
 
-<?php include "../includes/components/footer.php"; ?>
+<?php include "$basepath/includes/components/footer.php"; ?>
