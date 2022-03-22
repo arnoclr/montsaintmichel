@@ -112,6 +112,14 @@ body, html {
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
+.btn--iconleft i {
+    margin-right: 8px;
+}
+
+.btn--iconright i {
+    margin-left: 8px;
+}
+
 /* cartes activités */
 .activity-card {
     display: block;
@@ -486,9 +494,12 @@ body, html {
 
 /* quizz */
 .quizz {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 32px;
+}
+
+.quizz__content {
+    max-width: 560px;
 }
 
 .quizz__content-question {
@@ -528,6 +539,14 @@ body, html {
     margin-top: 32px;
     opacity: 0;
     transition: opacity .2s ease;
+}
+
+.quizz__content-readmore-buttons {
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
 }
 
 .quizz__content-readmore.open {

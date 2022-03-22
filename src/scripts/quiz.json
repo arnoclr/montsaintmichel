@@ -1,0 +1,19 @@
+{
+    "histoire": [
+        {
+            "q": "Quel homme d'épée a habité au Mont-Saint-Michel ?",
+            "a": "Le Chevalier Du Guesclin",
+            "o": ["Lancelot du lac", "Zoro", "Jeanne d’Arc"]
+        },
+        {
+            "q": "Comment appelle-t-on le métier qui consiste à récolter les algues avec des chevaux ?",
+            "a": "Goémonier",
+            "o": ["Chevalier", "Paludier", "C’est un métier qui n’existe pas"]
+        },
+        {
+            "q": "Le Mont est une presqu'île ?",
+            "a": "Vrai",
+            "o": ["Faux"]
+        }
+    ]
+}
