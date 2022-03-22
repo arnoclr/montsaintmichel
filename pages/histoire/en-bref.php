@@ -1,4 +1,4 @@
-<?php include "$basepath/includes/components/navbar.php"; ?>
+<?php include "./includes/components/navbar.php"; ?>
 
 <div class="faq">
     <div class="faq__qst">
@@ -92,4 +92,4 @@
     </div>
 </div>
 
-<?php include "$basepath/includes/components/footer.php"; ?>
+<?php include "./includes/components/footer.php"; ?>

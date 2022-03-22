@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@dev</title>
 
-    <link rel="stylesheet" href="/src/styles/app.css?v=<?= md5(filemtime($_SERVER['DOCUMENT_ROOT'] . '/src/styles/app.css')) ?>">
-    <script src="/src/scripts/app.js?v=<?= md5(filemtime($_SERVER['DOCUMENT_ROOT'] . '/src/scripts/app.js')) ?>" defer></script>
+    <link rel="stylesheet" href="<?= $basepath ?>/src/styles/app.css?v=<?= md5(filemtime("./src/styles/app.css")) ?>">
+    <script src="<?= $basepath ?>/src/scripts/app.js?v=<?= md5(filemtime("./src/scripts/app.js")) ?>" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

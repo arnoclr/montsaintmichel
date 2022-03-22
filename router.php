@@ -1,9 +1,10 @@
 <?php
 
 // global vars
+$basepath = "."; // ex: "/app"
 $request = $_SERVER['REQUEST_URI'];
 $request = explode('?', $request)[0];
-$basepath = "."; // ex: "app"
+$request = str_replace($basepath, '', $request);
 
 function loadAssets($page) {
     global $basepath;

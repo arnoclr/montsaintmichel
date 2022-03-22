@@ -1,4 +1,4 @@
-<?php include "$basepath/includes/components/navbar.php"; ?>
+<?php include "./includes/components/navbar.php"; ?>
 
 <style>
 .quiz-box {
@@ -50,7 +50,7 @@
         ?>
 
         <div class="quiz-box__section">
-            <?php include "$basepath/includes/components/quizz.php"; ?>
+            <?php include "./includes/components/quizz.php"; ?>
         </div>
 
         <?php
@@ -73,4 +73,4 @@
     });
 </script>
 
-<?php include "$basepath/includes/components/footer.php"; ?>
+<?php include "./includes/components/footer.php"; ?>

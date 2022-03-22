@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /app/
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ router.php [QSA,L]
+</IfModule>

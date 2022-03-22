@@ -1,4 +1,4 @@
-<div class="event" style="background-image: url('/image.php?url=<?= $event->image ?>&size=xlarge');">
+<div class="event" style="background-image: url('<?= $basepath ?>/image.php?url=<?= $event->image ?>&size=xlarge');">
     <div class="event__text">
         <h2 class="event__text-title"><?= $event->title ?></h2>
         <p class="event__text-details"><?= $event->text ?></p>

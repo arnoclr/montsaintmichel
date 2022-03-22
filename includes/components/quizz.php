@@ -23,5 +23,5 @@ $quizz->id = "quizz__" . md5($quizz->question);
             </div>
         </div>
     </div>
-    <img src="/image.php?url=<?= $quizz->image ?>&size=small" alt="" class="quizz__image">
+    <img src="<?= $basepath ?>/image.php?url=<?= $quizz->image ?>&size=small" alt="" class="quizz__image">
 </div>
