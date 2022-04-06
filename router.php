@@ -6,6 +6,20 @@ $request = $_SERVER['REQUEST_URI'];
 $request = explode('?', $request)[0];
 $request = str_replace($basepath, '', $request);
 
+// database
+try {
+    $pdo = new PDO('sqlite:'.dirname(__FILE__).'/data.sqlite');
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // ERRMODE_WARNING | ERRMODE_EXCEPTION | ERRMODE_SILENT
+} catch(Exception $e) {
+    die("database error");
+}
+
+// $q = $pdo->query('SELECT * FROM lieux WHERE id = 1');
+// $r = $q->fetch();
+
+// var_dump($r);
+
 function loadAssets($page) {
     global $basepath;
     if (file_exists("src/styles/pages/" . $page . ".css")) {
