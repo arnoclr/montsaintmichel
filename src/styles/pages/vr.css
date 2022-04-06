@@ -76,7 +76,7 @@
     gap: 22px;
 }
 
-.vr__buttons-button {
+.vr__buttons-button, .vr__back-button{
     font-size: 32px;
     color: #fff;
     background-color: #343434;
@@ -105,6 +105,14 @@
 
 .vr__attribution:hover {
     text-decoration: underline;
+}
+
+.vr__back-button{
+    position: fixed;
+    top: 32px;
+    left: 32px;
+    background-color: white;
+    color: black;
 }
 
 @media screen and (max-width: 799px) {
@@ -136,6 +144,8 @@
     .vr__attribution {
         top: 32px;
         bottom: unset;
+        left: unset;
+        right: 32px;
     }
 
     .vr__modal-header {
@@ -163,6 +173,8 @@
         outline: none;
     }
 }
+
+
 
 @media screen and (min-width: 800px) {
     .hide-on-large {

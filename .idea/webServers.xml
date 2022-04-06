@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="88a9fec2-e388-49a9-87be-e68541a3cce1" name="IONOS UNESCO" url="https://montsaintmichel.christopherbeaurain.com/">
+        <fileTransfer accessType="SFTP" host="access872320787.webspace-data.io" port="22" sshConfigId="a7be2285-8dfc-4e1a-a5f8-febc4334b709" sshConfig="u104816273-arno@access872320787.webspace-data.io:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
