@@ -9,16 +9,21 @@ $request = str_replace($basepath, '', $request);
 // database
 try {
     $pdo = new PDO('sqlite:'.dirname(__FILE__).'/data.sqlite');
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // ERRMODE_WARNING | ERRMODE_EXCEPTION | ERRMODE_SILENT
 } catch(Exception $e) {
     die("database error");
 }
 
-// $q = $pdo->query('SELECT * FROM lieux WHERE id = 1');
-// $r = $q->fetch();
+function t($translation_id) {
+    global $pdo;
+    $stmt = $pdo->prepare('SELECT * FROM traductions WHERE id = :id LIMIT 1');
+    $stmt->execute([':id' => $translation_id]);
+    // TODO: retourner dans la langue chioisie par l'utilisateur / ou la langue par défaut du navigateur
+    return $stmt->fetch()->fr;
+}
 
-// var_dump($r);
+// var_dump(t("sirene.lochet.desc"));
 
 function loadAssets($page) {
     global $basepath;
