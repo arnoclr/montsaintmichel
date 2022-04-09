@@ -3,7 +3,7 @@
         <?php foreach ($menu->items as $item): ?>
             <li class="menu__list-item">
                 <a href="<?= $item->link ?>">
-                    <img class="menu__list-item-img" loading="lazy" src="<?= $basepath ?>/image.php?url=<?= $item->image ?>&size=small" alt="<?= $item->title ?>">
+                    <img class="menu__list-item-img" loading="lazy" src="<?= i($item->image, 'small') ?>" alt="<?= $item->title ?>">
                     <h3 class="menu__list-item-title"><?= $item->title ?></h3>
                     <div class="menu__list-item-shadow"></div>
                 </a>

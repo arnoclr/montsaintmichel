@@ -10,7 +10,7 @@
     L’architecture du Mont-Saint-Michel est très particulière, mais très intéressante. Elle mélange le style roman et le style gothique. Le plus passionnant, c'est la structure de l’abbaye qui est soutenue par un seul rocher. <br><br>
 
     <figure>
-        <img src="<?= $basepath ?>/image.php?url=archi/Vue_Sur_Le_Mont-Saint-Michel.jpg&size=medium" alt="Mont-Saint-Michel">
+        <img src="<?= i('archi/Vue_Sur_Le_Mont-Saint-Michel.jpg', 'medium') ?>" alt="Mont-Saint-Michel">
         <figcaption>
             Vue sur le Mont-Saint-Michel / &#169; Wikicommons -
             <a href="https://commons.wikimedia.org/wiki/User:Gzen92" target="_blank">Gzen92</a>
@@ -28,7 +28,7 @@
     Plus à l’ouest se trouve la partie habitation. Elle a la fonction d’hôtellerie de par ses hôtels, ses logis, son infirmerie et sa chapelle Saint-Étienne. Le tout présent au premier et second niveaux. <br><br>
 
     <figure>
-        <img src="<?= $basepath ?>/image.php?url=archi/Chapelle_Saint-Etienne.jpg&size=medium" alt="La Chapelle Saint-Etienne">
+        <img src="<?= i('archi/Chapelle_Saint-Etienne.jpg', 'medium') ?>" alt="La Chapelle Saint-Etienne">
         <figcaption>
             Chapelle Saint-Etienne / &#169; Wikicommons -
             <a href="https://commons.wikimedia.org/wiki/User:Gzen92" target="_blank">Gzen92</a>
@@ -48,7 +48,7 @@
     </p>
 
     <figure>
-        <img src="<?= $basepath ?>/image.php?url=archi/merveille.jpg&size=medium" alt="La Merveille du Mont-Saint-Michel">
+        <img src="<?= i('archi/merveille.jpg', 'medium') ?>" alt="La Merveille du Mont-Saint-Michel">
         <figcaption>
             la Merveille / Émile Sagot (1805-1888)
         </figcaption>
@@ -61,7 +61,7 @@
     </p>
 
     <figure>
-        <img src="<?= $basepath ?>/image.php?url=archi/voutes_sur_croisee_ogives.jpg&size=medium" alt="La Chapelle Saint-Etienne">
+        <img src="<?= i('archi/voutes_sur_croisee_ogives.jpg', 'medium') ?>" alt="La Chapelle Saint-Etienne">
         <figcaption>
             Voûtes sur croisée d'ogives de la Cathédrale Saint-Gatien de Tours / &#169; Wikicommons - Guillaume Piolle
         </figcaption>
@@ -81,7 +81,7 @@
     </p>
 
     <figure>
-        <img src="<?= $basepath ?>/image.php?url=archi/Notre-Dame_sous_Terre.jpg&size=medium" alt="Notre-Dame sous Terre">
+        <img src="<?= i('archi/Notre-Dame_sous_Terre.jpg', 'medium') ?>" alt="Notre-Dame sous Terre">
         <figcaption>
             Notre-Dame sous Terre / &#169; Wikicommons - 
             <a href="https://commons.wikimedia.org/wiki/User:Ptyx" target="_blank">Ptyx</a> 
@@ -96,7 +96,7 @@
     </p>
 
     <figure>
-        <img src="<?= $basepath ?>/image.php?url=archi/porte_entree.jpg&size=medium" alt="Porte d'entrée du Mont-Saint-Michel">
+        <img src="<?= i('archi/porte_entree.jpg', 'medium') ?>" alt="Porte d'entrée du Mont-Saint-Michel">
         <figcaption> Porte d’entrée principale du Mont-Saint-Michel / &#169; Wikicommons - Nono vlf </figcaption>
     </figure>
 
@@ -113,7 +113,7 @@
     </p>
         
         <figure>
-            <img src="<?= $basepath ?>/image.php?url=archi/Salle_des_Hotes.jpg&size=medium" alt="Salle des Hôtes du Mont-Saint-Michel">
+            <img src="<?= i('archi/Salle_des_Hotes.jpg', 'medium') ?>" alt="Salle des Hôtes du Mont-Saint-Michel">
             <figcaption>
             Salle des Hôtes du Mont-Saint-Michel / &#169; Wikicommons - 
                 <a href="https://commons.wikimedia.org/wiki/User:Ptyx" target="_blank">Ptyx</a> 

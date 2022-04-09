@@ -1,6 +1,6 @@
 <a href="<?= $activity->link ?? '#' ?>" class="activity-card" style="grid-area: g<?= $key ?>;">
     <div class="activity-card__media">
-        <img loading="lazy" src="<?= $basepath ?>/image.php?url=<?= $activity->image ?>&size=<?= $activity->size ?>" alt="<?= $activity->title ?>" class="activity-card__media-img">
+        <img loading="lazy" src="<?= i($activity->image, $activity->size) ?>" alt="<?= $activity->title ?>" class="activity-card__media-img">
     </div>
     <div class="activity-card__shadow"></div>
     <div class="activity-card__text">

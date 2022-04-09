@@ -16,6 +16,7 @@ try {
 }
 
 require 'includes/functions/translations.php';
+require 'includes/functions/images.php';
 
 // var_dump(t("sirene.lochet.desc"));
 
