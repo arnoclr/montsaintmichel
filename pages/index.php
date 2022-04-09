@@ -7,7 +7,7 @@
         <source src="https://i.imgur.com/kd2ur78.mp4" type="video/mp4">
     </video>
     <div class="hero__content">
-        <h1 class="hero__content-title">Bienvenue au Mont-Saint-Michel</h1>
+        <h1 class="hero__content-title"><?= t('index.hero.title') ?></h1>
         <div class="hero__content-cta">
             <a id="skip-content" href="/vr" class="btn btn--primary btn--large">Démarrer la visite</a>
         </div>

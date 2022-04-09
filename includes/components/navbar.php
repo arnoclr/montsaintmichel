@@ -9,13 +9,13 @@
         <i class="material-icons-sharp js-open-locale-selector">translate</i>
         <ul id="js-locale-selector" class="locale-selector">
             <li class="locale-selector__region">
-                <a href="<?= $_SERVER['REQUEST_URI'] ?>?hl=fr" class="locale-selector__clickable">
+                <a href="<?= swicthLangTo('fr') ?>" class="locale-selector__clickable">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="French flag" class="locale-selector__region-flag">
                     <span class="locale-selector__region-name">Français</span>
                 </a>
             </li>
             <li class="locale-selector__region">
-                <a href="<?= $_SERVER['REQUEST_URI'] ?>?hl=en" class="locale-selector__clickable">
+                <a href="<?= swicthLangTo('en') ?>" class="locale-selector__clickable">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="British flag" class="locale-selector__region-flag">
                     <span class="locale-selector__region-name">English</span>
                 </a>
