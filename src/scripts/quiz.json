@@ -3,17 +3,74 @@
         {
             "q": "Quel homme d'épée a habité au Mont-Saint-Michel ?",
             "a": "Le Chevalier Du Guesclin",
-            "o": ["Lancelot du lac", "Zoro", "Jeanne d’Arc"]
+            "o": ["Lancelot du lac", "Zoro", "Jeanne d’Arc"],
+            "d": "Le Chevalier du Guesclin était le chef de la Garnison durant la Guerre de Cent Ans. C'est notament grâce à lui que le Mont resista à plusieurs attaques Anglaise",
+            "l": "blabla",
+            "i": "img"
         },
         {
             "q": "Comment appelle-t-on le métier qui consiste à récolter les algues avec des chevaux ?",
             "a": "Goémonier",
-            "o": ["Chevalier", "Paludier", "C’est un métier qui n’existe pas"]
+            "o": ["Chevalier", "Paludier", "C’est un métier qui n’existe pas"],
+            "d": "Le Goémonier ou pigoulier, bezinear en breton léonard, est un pêcheur spécialisé dans la récolte des algues marines, plus précisément du goémon.",
+            "l": "blabla",
+            "i": "img"
         },
         {
             "q": "Le Mont est une presqu'île ?",
             "a": "Vrai",
-            "o": ["Faux"]
+            "o": ["Faux"],
+            "d": "Oui le Mont est une Presqu'île. En effet le pont que vous avez traversé pour le rejoindre le relie à la terre et donc ce n'est pas une île",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Saint-Michel a terrassé :",
+            "a": "Un Dragon",
+            "o": ["Un Chat","Un Minotaure","Le Basilic"],
+            "d": "Saint Michel à terrassé Satan, sous forme de Dragon, sous les yeux de l'évêque Aubert",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Saint-Michel est un personnage de :",
+            "a": "La Bible",
+            "o": ["Game of Thrones","Gulli","La Torah"],
+            "d": "En effet Saint Michel est un personnage qui apparait dans la Bible",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Comment a été placée la statue de Saint-Michel au sommet de la Flèche (Lors de sa rénovation) ? ",
+            "a": "En Hélicoptère",
+            "o": ["Par la Force du Saint Esprit","Une Grue","Un système ingénieux de poulie installé dans la flèche"],
+            "d": "En effet cela peut paraître incroyable mais deux helicoptère ont été nécéssaire pour la rénovation de la statue, le 15 mars 2016 ",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Le Mont-Saint-Michel a été :",
+            "a": "Les 4 à la fois",
+            "o": ["Un Château Fort","Une Abbaye","Une Église","Une Prison"],
+            "d": "Durant sa vie, le mont Saint Michel à remplit ces 4 rôle, selon la volonté des differents dirigeant de l'Abbaye",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "L’abbaye est le bâtiment qui a inspiré le château de Poudlard dans la Saga de film Harry Potter :",
+            "a": "Faux",
+            "o": ["Vrai"],
+            "d": "C'est Faux, le batiment ayant inspiré Poudlard est l'Université d'Oxford en Angleterre",
+            "l": "blabla",
+            "i": "img"
+        },
+        {
+            "q": "Le Mont a-t-il déjà appartenu à un fabricant de chapeaux ?",
+            "a": "Faux",
+            "o": ["Vrai"],
+            "d": "Faux, bien qu'il y ai eu des fabrique de chapeaux dans l'Abbaye, le Mont n'a jamais appartenu à un fabricant de chapeaux",
+            "l": "blabla",
+            "i": "img"
         }
     ]
 }
