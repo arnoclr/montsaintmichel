@@ -72,5 +72,587 @@
             "l": "blabla",
             "i": "img"
         }
+    ],
+
+    "junior": [
+        {
+            "q": "L’abbaye est le bâtiment qui a inspiré le château de Poudlard dans la Saga de film Harry Potter :\n",
+            "a": "Faux",
+            "o": ["Vrai"],
+            "d": "C'est Faux, le batiment ayant inspiré Poudlard est l'Université d'Oxford en Angleterre",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Saint-Michel a terrassé :",
+            "a": "Un Dragon",
+            "o": ["Un Chat", "Un Minotaure", "Le Basilic"],
+            "d": "Saint Michel à terrassé Satan, sous forme de Dragon, sous les yeux de l'évêque Aubert",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Pourquoi le mont s’appelle Saint-Michel ?",
+            "a": "Pour faire honneur à l’Archange Saint-Michel",
+            "o": ["Le meilleur ami du Roi de France s’appelait Michel", "Car la marque de biscuit Saint-Michel fabriquait leurs produits au Mont", "C’est l’Archange Saint-Michel qui l’a construit"],
+            "d": "Le Mont s'appelle Saint Michel car, c'est Saint Michel, qui après son combat contre Satan, à demandé à l'évêque Aubert de construire un lieu de culte à son nom",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel est le bâtiment situé au plus haut de l’abbaye ?",
+            "a": "La Merveille",
+            "o": ["La Tour Gabriel", "La cour du Roi", "La salle des chevaliers"],
+            "d": "La Merveille, de part ses 80 mètres est le batiment le plus haut du Mont Saint Michel ",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quels sont les animaux qu’on peut voir au Mont-Saint-Michel ?",
+            "a": "Des chevaux, des moutons, des poissons et des oiseaux",
+            "o": ["Le Mont est envahit par des lapins", "Des Dragons de Komodo, Komodo étant un des abbés historiques du mont.", "Aucun"],
+            "d": "De part sa proximité avec la mer, le Mont Saint Michel abrite une importante diversité de poisson et oiseaux marin. Grâce à l'élevage on compte aussi beaucoup de chevaux et moutons",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Combien d’habitants vivent sur le Mont-Saint-Michel ?",
+            "a": "30",
+            "o": ["250", "137", "Aucun"],
+            "d": "En effet, le Mont Saint Michel est habité, par 30 résidents, au dernier recensement de 2016, ce qui en fait la commune la plus petite de France",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "À quoi sert le Cloître de la merveille ?",
+            "a": "C’est un jardin de promenade pour la prière des moines",
+            "o": ["C’est un potager", "C’est une pièce avec de géantes marelles", "Il n’a aucune utilité"],
+            "d": "Le Cloitre est un endroit très important pour les moines, car c'est non seulement là qu'on lieux certaine prière, mais c'est aussi à cet endroit qu'ils peuvent cultiver leur legumes pour se nourrir",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel est le titre de celui qui dirige le mont ?",
+            "a": "Abbé",
+            "o": ["Maire", "Propriétaire", "Archange"],
+            "d": "Le Mont Saint Michel est une Abbaye, donc celui qui la dirige est un Abbé",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quelle religion suit le Mont-Saint-Michel ?",
+            "a": "Christianisme",
+            "o": ["l’Islam", "Judaïsme", "Bouddhisme "],
+            "d": "Le Mont Saint Michel est un batiment Chretien, bien que durant son histoire, des protestants voulurent se l'approprier",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel est le symbole de cette religion ?",
+            "a": "Une Croix",
+            "o": ["Un Croissant de Lune", "Une Étoile de David", "Un Taijitu ou symbole du Yin et du Yang"],
+            "d": "Le symbole de la religion Chretienne est une croix, en reference à l'outil utilisé pour crucifier Jesus, Messi de cette religion",
+            "l": "",
+            "i": ""
+        }
+    ],
+
+    "culinaire": [
+        {
+            "q": "Quelle est la spécialité du Mont ?",
+            "a": "L'Omelette",
+            "o": ["Le Bœuf Bourguignon", "Les Galettes de Sarrasin", "La Salade Niçoise"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Comment s'appelait la première personne à avoir cuisiné la fameuse Omelette du Mont ?",
+            "a": "La mère Poulard",
+            "o": ["La mère Boyard", "Mère Cott", "On ne sait pas"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Combien y a-t-il de restaurants sur le Mont-Saint-Michel ?",
+            "a": "41",
+            "o": ["22", "123", "Aucun"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "La particularité de l’agneau sur le Mont-Saint-Michel est son goût salé dû à leur alimentation à base d'algues ?",
+            "a": "Vrai",
+            "o": ["Faux"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Qu’est-ce qui donne son goût caractéristique à l'omelette de la mère poularde ?",
+            "a": "Son processus de préparation dans des poêles en fonte et des culs de poule en cuivre",
+            "o": ["Un ingrédient secret transmis de génération en génération", "La sauce à base de caramel beurre salé", "Il n’y a aucune différence entre une omelette de la mère poulard et une autre"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quelle spécialité sucrée est très présente au Mont ?",
+            "a": "Le Kouing Amman",
+            "o": ["Les Bêtises de Cambrai", "Le Paris Brest", "Le Far Breton"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Peut-on manger l’Omelette de la mère Poulard de façon sucrée également ?",
+            "a": "Vrai",
+            "o": ["Faux"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel mollusque est élevé et cuisiné spécialement au Mont ?",
+            "a": "Les Moules",
+            "o": ["Les Bulots", "Les Huîtres", "Les Bigorneaux"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Où sont élevés les agneaux du Mont ?",
+            "a": "Directement dans la Baie",
+            "o": ["Sur les champs sur la côte du Mont", "Dans le Cloître", "Ils ne sont pas élevés au mont, juste préparé"],
+            "d": "",
+            "l": "",
+            "i": ""
+        }
+    ],
+    "architecture":[
+        {
+            "q": "Le Mont-Saint-Michel représente",
+            "a": "13 siècles d’architecture",
+            "o": ["20 ans d’architecture", "3 siècles d’architecture", "3508 ans d’architecture"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "La première église qui fût construite au Mont est",
+            "a": "Notre-Dame-Sous-Terre",
+            "o": ["L’église Abbatiale", "Notre-Dame-Des-Trente-Cierges", "La chapelle Saint-Martin"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Le premier sanctuaire fût fondé par",
+            "a": "L’Évêque d'Avranches Saint Aubert",
+            "o": ["Richard Ier", "Robert de Thorigny", "Philippe Auguste"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel style d'architecture représente l’abbaye ?",
+            "a": "Architecture Romane",
+            "o": ["Architecture Classique", "Architecture Baroque", "Architecture Victorienne"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel bâtiment fût construit en dédommagement de la guerre de 1203 ?",
+            "a": "La Merveille",
+            "o": ["Le Cimetière", "Église Saint-Pierre", "Chapelle Saint-Aubert"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Le cloître est en forme de trapèze avec un jardin au centre de la Merveille :",
+            "a": "Vrai",
+            "o": ["Faux"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Les rangs de piliers soutenant Notre-Dame-Sous-Terre soutiennent également :",
+            "a": "La Merveille",
+            "o": ["Le Cloître","La Chapelle Saint Aubert","Uniquement Notre-Dame-Sous-Terre"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Le Mont-Saint-Michel est entouré de rempart et de",
+            "a": "7 Tours défensives",
+            "o": ["2 Tours jumelles","5 Tours d’attaque","25 Tours défensives"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "La Merveille repose sur",
+            "a": "3 étages",
+            "o": ["1 étage","2 étages","4 étages"],
+            "d": "",
+            "l": "",
+            "i": ""
+        }
+    ],
+
+    "religion": [
+        {
+            "q": "Quelle branche du Christianisme le Mont-Saint-Michel vénère-t-il ?",
+            "a": "Catholicisme",
+            "o": ["Orthodoxie", "Protestantisme", "Aucune des trois"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "L’Archange Saint-Michel apparaît dans l'Ancien Testament ?",
+            "a": "Faux",
+            "o": ["Vrai"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Qui est juste en dessous de l’Abbé dans la hiérarchie de l'Église Catholique ?",
+            "a": "Aucun, abbé est un titre à part de la hiérarchie",
+            "o": ["Le Prêtre", "Le Pape", "L’Évêque"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Comment devient-on abbé du Mont ?",
+            "a": "On est élu par les autres moines",
+            "o": ["Par tirage au sort parmi les moines du Mont", "Le Pape choisit le nouvel abbé", "En remportant des combats à mort avec les autres prétendants, d’après le souhait de Saint-Michel"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "L’archange Saint-Michel a combattu Lucifer sous la forme d’un dragon sur le Mont ?",
+            "a": "Vrai",
+            "o": ["Faux"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel est le nom de la première prière que doivent réaliser les moines ?",
+            "a": "Les matines",
+            "o": ["La matinale", "L’abbatial", "Elle n’a pas de nom"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Combien de prières les moines doivent faire dans la journée ?",
+            "a": "5",
+            "o": ["1", "24", "12"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "À quelle heure les matines sont elles ?",
+            "a": "5h",
+            "o": ["10h", "9h", "12h"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Combien de temps durait le règne d’un abbé ?",
+            "a": "Toute la vie de l’abbé",
+            "o": ["4 ans", "7 ans", "10 ans"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Qu’est-ce qu’un Archange chez les Chrétiens ?",
+            "a": "Un ange supérieur",
+            "o": ["Un ange armé d’un arc comme Cupidon", "C’est un synonyme du mot d’ange", "C’est l’autre nom de Dieu"],
+            "d": "",
+            "l": "",
+            "i": ""
+        }
+    ],
+    "personnalité": [
+        {
+            "q": "Qui était le 7ᵉ Roi des Capétiens ?",
+            "a": "Philippe Auguste",
+            "o": ["Saint Aubert", "Louis VII", "Robert Jolivet"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Qui fût l’un des meilleurs commandants sous les ordres de l’amiral de Coligny ?",
+            "a": "Gabriel de Lorges",
+            "o": ["Edouard Corroyer", "Bertrand du Guesclin", "Pierre le Roy"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Comment s’appelle le grand Chevalier qui à vécu au Mont-Saint-Michel ?",
+            "a": "Du Guesclin",
+            "o": ["Richard Cœur de Lion.", "Jean de Chastenay", "Jean Bonbeurre"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel acteur s’est marié au Mont-Saint-Michel en 2021 ?",
+            "a": "Arnaud Ducret",
+            "o": ["Johnny Depp", "François-Xavier Demaison", "Jean Dujardin"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel président français à inauguré le Pont-passerelle en 2015 ?",
+            "a": "François Mitterrand",
+            "o": ["Emmanuel Macron", "Nicolas Sarkozy", "François Hollande"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Qui est l’unique chanteur à avoir eu le droit de faire un concert géant sur le Mont-Saint-Michel ?",
+            "a": "Jean-Michel Jarre",
+            "o": ["Johnny Hallyday", "Daniel Balavoine", "Serge Gainsbourg"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel peintre célèbre à visiter le Mont-Saint-Michel en 1836 ?",
+            "a": "Victor Hugo",
+            "o": ["Antoine-Jean Gros", "Camille Pissarro", "Alexandre Antigna"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Qui a racheté la célèbre auberge de la mère Poulard ?",
+            "a": "Eric Vannier",
+            "o": ["Christophe Fermeture", "Jean-eude De La Marne", "Philippe Etchebest"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel roi à détruit les célèbres Cage de fer du Mont-Saint-Michel ?",
+            "a": "Louis Philippe Ier",
+            "o": ["Louis XVI", "Louis XIV", "Philippe II"],
+            "d": "",
+            "l": "",
+            "i": ""
+        }
+    ],
+
+    "faune & flore": [
+        {
+            "q": "Quel est le nom de l’îlot granitique situé sur la baie ?",
+            "a": "Tombelaine",
+            "o": ["Gratique", "Beulone", "Menez"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Combien y a-t-il d’espèces animales et végétales dans la baie ?",
+            "a": "480",
+            "o": ["145", "265", "1540"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quelle est la fonction du Mont pour les oiseaux migrateur ?",
+            "a": "Une zone de repos",
+            "o": ["Une zone de pêche idéale", "Une zone de reproduction", "Aucune des réponses"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "La roche la plus présente au mont est :",
+            "a": "Le granite",
+            "o": ["Le basalte", "Le grès", "Du calcaire"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "De combien de km² est entouré la dépression du Mont-Saint-Michel ?",
+            "a": "500 km²",
+            "o": ["275 km²", "580 km²", "150 km²"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel animal a été habitait la baie durant le XIXe siècle ?",
+            "a": "Des phoques",
+            "o": ["Des crocodiles", "Des furets", "Des girafes"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "La conchyliculture est :",
+            "a": "L’élevage de coquillages",
+            "o": ["L’élevage de daurades", "L’élevage de mouettes", "Ce mot n’existe pas"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Laquelle parmi ces fleurs est protégée sur la baie du Mont ?",
+            "a": "La crételle hérissée",
+            "o": ["La Chicorée scabre", "Les pivoines", "Les Clématites"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "La laine de mouton au Mont-Saint-Michel était autrefois utilisée comme :",
+            "a": "Aucune des réponses",
+            "o": ["Combustible pour les cheminées", "Fil pour faire de la couture", "Corde pour des instruments de musique"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Qu’est-ce qui rend la viande des agneaux salée ?",
+            "a": "Leur alimentation en algues",
+            "o": ["Le sable", "Leur alimentation en moules", "C’est leur espèce qui donne ce goût salé"],
+            "d": "",
+            "l": "",
+            "i": ""
+        }
+    ],
+
+    "guerre": [
+        {
+            "q": "Pendant quelle guerre le Mont a-t-il le plus souffert ?",
+            "a": "La Guerre de Cent Ans",
+            "o": ["La Première Guerre Mondiale", "La Seconde Guerre Mondiale", "Il n’a connu aucune guerre"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel était le nom du chevalier qui a longuement défendu le Mont durant la Guerre de Cent Ans ?",
+            "a": "480",
+            "o": ["145", "265", "1540"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Qui était le chef des protestants ayant essayé de prendre le Mont durant les guerres de religion ?",
+            "a": "Général Montgomery",
+            "o": ["Martin Luther", "Marquis de Lafayette", "Childebert V"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Qui a incendié le Mont en 1204 ?",
+            "a": "Les Bretons",
+            "o": ["Le royaume de France", "Les Normands", "Les Anglais"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Le Mont-Saint-Michel n'est-il jamais tombé aux mains des Anglais ?",
+            "a": "Faux",
+            "o": ["Vrai"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "En quelle année les Bretons ont-ils définitivement perdu le Mont-Saint-Michel ?",
+            "a": "En 1009",
+            "o": ["En 966", "En 1204", "En 716"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Le Mont fut menacé de destruction pendant la Première Guerre Mondiale ?",
+            "a": "Faux",
+            "o": ["Vrai"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel fut la situation du Mont durant la Seconde Guerre mondiale ?",
+            "a": "Il fut occupé par les Allemands",
+            "o": ["Il fut occupé par les Anglais", "Ce fut un des derniers territoires encore Français en Europe", "C’était un territoire neutre, car culturel"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Que s’est-il passé lors des incursions Viking dans le Royaume de France pour le Mont-Saint-Michel ?",
+            "a": "Il servit de refuge pour les civils",
+            "o": ["Il fut en partie détruit", "Il fut complètement ignoré par les Vikings", "Les vikings s’en sont emparé afin d’établir une colonie"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Deux machines de guerre Anglaise trônent à l’entrée du Mont, quel est leur nom ?",
+            "a": "Bombardes",
+            "o": ["Canons", "Trébuchets", "Couillards"],
+            "d": "",
+            "l": "",
+            "i": ""
+        }
+    ],
+
+    "difficile": [
+        {
+            "q": "Quels étaient les moines présents sur le mont du temps de l’évêque Aubert ?",
+            "a": "Les Chanoines",
+            "o": ["Les Bénédictins", "Les Shaolin", "Aubert était seul sur le Mont"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Comment appelle-t-on les habitants du Mont ?",
+            "a": "Les Montois",
+            "o": ["Les Saint-Michelin", "Les Montgoles", "Les Michels"],
+            "d": "",
+            "l": "",
+            "i": ""
+        },
+        {
+            "q": "Quel dirigeant décida de prendre Saint-Michel en tant que symbole protecteur de son empire ?",
+            "a": "Charlemagne",
+            "o": ["Jules César", "Napoléon", "Louis XIV"],
+            "d": "",
+            "l": "",
+            "i": ""
+        }
     ]
 }
