@@ -1,9 +1,9 @@
 <div class="navbar <?= $navbar_classes ?? '' ?>">
     <div class="navbar__links">
-        <a href="#" class="navbar__links-link">A faire sur place</a>
-        <a href="#" class="navbar__links-link">Le village</a>
-        <a href="#" class="navbar__links-link" data-menu="menu-histoire">Histoire</a>
-        <a href="#" class="navbar__links-link">Architecture</a>
+        <a href="#" class="navbar__links-link"><?= t('navbar.tab.onSite') ?></a>
+        <a href="#" class="navbar__links-link"><?= t('navbar.tab.village') ?></a>
+        <a href="#" class="navbar__links-link" data-menu="menu-histoire"><?= t('navbar.tab.history') ?></a>
+        <a href="#" class="navbar__links-link"><?= t('navbar.tab.architecture') ?></a>
     </div>
     <div class="navbar__locale">
         <i class="material-icons-sharp js-open-locale-selector">translate</i>

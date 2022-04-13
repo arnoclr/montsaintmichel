@@ -9,7 +9,7 @@
     <div class="hero__content">
         <h1 class="hero__content-title"><?= t('index.hero.title') ?></h1>
         <div class="hero__content-cta">
-            <a id="skip-content" href="/vr" class="btn btn--primary btn--large">Démarrer la visite</a>
+            <a id="skip-content" href="/vr" class="btn btn--primary btn--large"><?= t('index.hero.visit') ?></a>
         </div>
     </div>
     <!-- <div class="hero__shadow"></div> -->
@@ -41,7 +41,7 @@ $activities = [
 ?>
 
 <div class="activities">
-    <h1 class="activities__title">Activités phares</h1>
+    <h1 class="activities__title"><?= t('index.activities.title') ?></h1>
     <div class="activities__grid">
         <?php foreach ($activities as $key => $activity): ?>
             <?php include "./includes/components/activity_card.php"; ?>
@@ -74,8 +74,8 @@ $quizz = (object) [
 <?php 
 
 $event = (object) [
-    "title" => "Marché de Noël",
-    "text" => "Un marché de Noël pour aider les frères et sœurs de l'abbaye du Mont-Saint-Michel",
+    "title" => t('index.event.title'),
+    "text" => t('index.event.desc'),
     "link" => "#",
     "image" => "events/marche_noel.png",
 ];
