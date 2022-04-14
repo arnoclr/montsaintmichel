@@ -21,7 +21,7 @@ $quizz->id = "quizz__" . md5($quizz->question);
                     <button class="btn btn--iconright js-next-qst">Question suivante <i class="material-icons-sharp">arrow_forward</i></button>
                 <?php endif; ?>
                 <?php if (isset($_open_quiz_btn) && $_open_quiz_btn): ?>
-                    <a class="btn btn--iconright js-next-qst" href="/quiz?seed=<?= md5(rand(0, 99999)) ?>&from=index">Plus de questions <i class="material-icons-sharp">launch</i></a>
+                    <a class="btn btn--iconright js-next-qst" href="/quiz?seed=<?= rand(0, 99999) ?>&from=index">Plus de questions <i class="material-icons-sharp">launch</i></a>
                 <?php endif; ?>
             </div>
         </div>
