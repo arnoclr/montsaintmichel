@@ -20,6 +20,9 @@ $quizz->id = "quizz__" . md5($quizz->question);
                 <?php if (isset($_next_qst_btn) && $_next_qst_btn): ?>
                     <button class="btn btn--iconright js-next-qst">Question suivante <i class="material-icons-sharp">arrow_forward</i></button>
                 <?php endif; ?>
+                <?php if (isset($_open_quiz_btn) && $_open_quiz_btn): ?>
+                    <a class="btn btn--iconright js-next-qst" href="/quiz?from=index">Plus de questions <i class="material-icons-sharp">launch</i></a>
+                <?php endif; ?>
             </div>
         </div>
     </div>

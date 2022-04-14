@@ -52,19 +52,25 @@ $activities = [
 <div style="height: 64px;"></div>
 
 <?php
+$json = file_get_contents("$basepath/src/scripts/quiz.json");
+
+// select random key of json object
+$key = array_rand(json_decode($json, true));
+$data = json_decode($json)->$key;
+
+// get random entry of object
+$data = $data[array_rand($data)];
+
 $quizz = (object) [
-    "question" => "Comment a été posée la flèche ?",
-    "answers" => [
-        "En helicoptère",
-        "En avion",
-        "En train",
-        "En bateau"
-    ],
-    "correct_answer" => "En helicoptère",
-    "read_more" => "https://fr.wikipedia.org/wiki/Mont-Saint-Michel",
-    "read_more_summary" => "La flèche de Mont-Saint-Michel est une flèche de la ville de Mont-Saint-Michel, en France. Elle a été posée par le préfet de la région de l'Aquitaine, Philippe de la Rochefoucauld, en 1891.",
-    "image" => "quizz/fleche.jpg"
+    "question" => $data->q,
+    "answers" => $data->o,
+    "correct_answer" => $data->a,
+    "read_more" => $data->l,
+    "read_more_summary" => $data->d,
+    "image" => $data->i
 ];
+
+$_open_quiz_btn = true;
 ?>
 
 <div class="main-padding">
