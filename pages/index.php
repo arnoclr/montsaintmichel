@@ -20,20 +20,20 @@
 <?php
 $activities = [
     (object) [
-        'title' => "Visite de l'abbaye",
-        'label' => 'Bon plan',
+        'title' => t('index.activities.abbey.main'),
+        'label' => t('index.activities.abbey.label'),
         'image' => 'activites/abbaye.jpg',
         'size' => 'large'
     ],
     (object) [
-        'title' => 'Découvrir la baie',
-        'label' => 'Parfait pour les photographes',
+        'title' => t('index.activities.bay.main'),
+        'label' => t('index.activities.bay.label'),
         'image' => 'activites/baie.jpg',
         'size' => 'medium'
     ],
     (object) [
-        'title' => 'Le train marin',
-        'label' => 'à faire en famille',
+        'title' => t('index.activities.train.main'),
+        'label' => t('index.activities.train.label'),
         'image' => 'activites/train_marin.jpg',
         'size' => 'medium'
     ]

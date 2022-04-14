@@ -52,37 +52,37 @@ $menu = (object) [
     'id' => 'menu-histoire',
     'items' => [
         (object) [
-            'title' => 'En bref',
+            'title' => t('navbar.history.nutshell'),
             'link' => '/histoire/en-bref',
             'image' => 'menu/histoire/en_bref.png'
         ],
         (object) [
-            'title' => 'Les débuts',
+            'title' => t('navbar.history.beginning'),
             'link' => '/histoire/frise#date=',
             'image' => 'menu/histoire/les_debuts.png'
         ],
         (object) [
-            'title' => 'Son apogée',
+            'title' => t('navbar.history.peak'),
             'link' => '/histoire/frise#date=',
             'image' => 'menu/histoire/apogee.png'
         ],
         (object) [
-            'title' => 'La guerre de 100 ans',
+            'title' => t('navbar.history.100war'),
             'link' => '/histoire/frise#date=',
             'image' => 'menu/histoire/guerre_100_ans.png'
         ],
         (object) [
-            'title' => 'La révolution française',
+            'title' => t('navbar.history.revolution'),
             'link' => '/histoire/frise#date=',
             'image' => 'menu/histoire/revolution_fr.png'
         ],
         (object) [
-            'title' => 'Première et seconde guerre mondiale',
+            'title' => t('navbar.history.worldWars'),
             'link' => '/histoire/frise#date=',
             'image' => 'menu/histoire/1gm.png'
         ],
         (object) [
-            'title' => "De la fin du XXe siècle à aujourd'hui",
+            'title' => t('navbar.history.20century'),
             'link' => '/histoire/frise#date=',
             'image' => 'menu/histoire/ajd.png'
         ],
