@@ -42,9 +42,9 @@
             "question" => $value->q,
             "answers" => $answers,
             "correct_answer" => $value->a,
-            "read_more" => "https://fr.wikipedia.org/wiki/Mont-Saint-Michel",
-            "read_more_summary" => "La flèche de Mont-Saint-Michel est une flèche de la ville de Mont-Saint-Michel, en France. Elle a été posée par le préfet de la région de l'Aquitaine, Philippe de la Rochefoucauld, en 1891.",
-            "image" => "quizz/fleche.jpg"
+            "read_more" => $value->l,
+            "read_more_summary" => $value->d,
+            "image" => $value->i
         ];
 
         ?>
