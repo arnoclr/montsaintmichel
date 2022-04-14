@@ -21,6 +21,7 @@
     <?php
 
     $_next_qst_btn = true;
+    $seed = isset($_GET['seed']) ? $_GET['seed'] : rand(0, 99999);
 
     // récupérer les questions du json
     $json = file_get_contents("$basepath/src/scripts/quiz.json");
@@ -29,14 +30,14 @@
     $data = json_decode($json);
     $questions = [];
     foreach ($data as $key => $array) {
-        shuffle($array);
+        seededShuffle($array, $seed);
         array_push($questions, $array[0], $array[1]);
     }
 
     foreach ($questions as $key => $value) {
         $answers = $value->o;
         array_push($answers, $value->a);
-        shuffle($answers);
+        seededShuffle($answers, $seed);
 
         $quizz = (object) [
             "question" => $value->q,

@@ -15,6 +15,7 @@ try {
     die("database error");
 }
 
+require 'includes/functions/arrays.php';
 require 'includes/functions/translations.php';
 require 'includes/functions/images.php';
 
