@@ -8,6 +8,14 @@ switch ($action) {
         $results = $pdo->query("SELECT id, nom, note, lat, lng, photos FROM lieux");
         $response["places"] = $results->fetchAll();
         break;
+
+    case "details":
+        $id = $_GET["id"];
+        $req = $pdo->prepare("SELECT * FROM lieux WHERE id = ? LIMIT 1");
+        $req->execute([$id]);
+        $response = $req->fetch();
+        $response->description = t($response->description);
+        break;
     
     default:
         # code...
