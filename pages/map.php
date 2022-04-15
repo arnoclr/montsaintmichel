@@ -6,9 +6,9 @@
 
 <script>
     var map = L.map('map').setView([
-        <?= $_GET['lat'] ? htmlspecialchars($_GET['lat']) : 48.6360 ?>,
-        <?= $_GET['lng'] ? htmlspecialchars($_GET['lng']) : -1.5116 ?>
-    ], <?= $_GET['zoom'] ? htmlspecialchars($_GET['zoom']) : 18 ?>);
+        <?= isset($_GET['lat']) ? htmlspecialchars($_GET['lat']) : 48.6360 ?>,
+        <?= isset($_GET['lng']) ? htmlspecialchars($_GET['lng']) : -1.5116 ?>
+    ], <?= isset($_GET['zoom']) ? htmlspecialchars($_GET['zoom']) : 18 ?>);
 
     var mapModal = document.querySelector(".map-modal");
 
