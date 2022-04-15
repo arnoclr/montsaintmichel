@@ -11,6 +11,7 @@
     ], <?= isset($_GET['zoom']) ? htmlspecialchars($_GET['zoom']) : 18 ?>);
 
     var mapModal = document.querySelector(".map-modal");
+    var openedPlaceId = <?= isset($_GET['place']) ? htmlspecialchars($_GET['place']) : "null" ?>;
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -19,7 +20,11 @@
     function writeUrl() {
         const zoom = map.getZoom()
         const pos = map.getCenter()
-        window.history.replaceState({}, document.title, '/map?zoom=' + zoom + '&lat=' + pos.lat + '&lng=' + pos.lng)
+        var url = '/map?zoom=' + zoom + '&lat=' + pos.lat + '&lng=' + pos.lng
+        if (openedPlaceId) {
+            url += '&place=' + openedPlaceId
+        }
+        window.history.replaceState({}, document.title, url)
     }
 
     function htmlModal(data) {
@@ -70,17 +75,36 @@
     }
 
     async function openPlace(id, event) {
+        openedPlaceId = id;
         map.setView(event.target.getLatLng(), map.getZoom())
         var data = await loadPlaceDetails(id)
         mapModal.innerHTML = htmlModal(data)
         mapModal.classList.add('map-modal--open')
     }
 
+    function closePlace() {
+        openedPlaceId = null;
+        mapModal.classList.remove('map-modal--open')
+        writeUrl()
+    }
+
     map.on('moveend', writeUrl);
     map.on('zoomend', writeUrl);
     map.on('click', () => {
-        mapModal.classList.remove('map-modal--open')
+        closePlace()
     });
+
+    if (openedPlaceId) {
+        loadPlaceDetails(openedPlaceId).then(data => {
+            openPlace(openedPlaceId, {
+                target: {
+                    getLatLng: () => {
+                        return L.latLng(data.lat, data.lng)
+                    }
+                }
+            })
+        })
+    }
 
     fetch('/ajax/map?action=all')
     .then(res => res.json())
@@ -90,8 +114,8 @@
                 title: place.nom,
                 riseOnHover: true
             })
-                .on('click', e => { openPlace(place.id, e) })
-                .addTo(map);
+            .on('click', e => { openPlace(place.id, e) })
+            .addTo(map);
         });
     });
 </script>
