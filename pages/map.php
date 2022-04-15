@@ -47,6 +47,9 @@
 
     map.on('moveend', writeUrl);
     map.on('zoomend', writeUrl);
+    map.on('click', () => {
+        mapModal.classList.remove('map-modal--open')
+    });
 
     fetch('/ajax/map?action=all')
     .then(res => res.json())
