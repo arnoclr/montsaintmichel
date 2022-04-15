@@ -31,3 +31,64 @@
     width: auto;
     height: 100%;
 }
+
+.map-modal__title {
+    margin: 16px;
+    margin-bottom: 4px;
+    font-size: 22px;
+}
+
+.map-modal__review-box {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.map-modal__review-note {
+    font-size: 12px;
+    font-family: Noto Sans, sans-serif;
+    color: #828282;
+}
+
+.map-modal__stars {
+    width: fit-content;
+    position: relative;
+}
+
+.map-modal__stars-row {
+    display: flex;
+}
+
+.map-modal__stars-row--filled {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.map-modal__star {
+    color: rgba(150,150,150,.2);
+    font-size: 12px;
+}
+
+.map-modal__star--filled {
+    color: #fbbc04;
+}
+
+.map-modal__description {
+    margin: 16px;
+}
+
+.map-modal__buttons {
+    margin: 0 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.map-modal__notice {
+    margin: 16px;
+    font-size: 12px;
+    font-family: Noto Sans, sans-serif;
+    color: #828282;
+}

@@ -33,6 +33,11 @@ p {
     color: #515151;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat, Arial, sans-serif;
+    color: #212121;
+}
+
 .material-icons-sharp {
     user-select: none;
 }

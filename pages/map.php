@@ -27,7 +27,38 @@
         data.photos.forEach(photo => {
             html += `<img class="map-modal__image" src="${photo}" alt="">`
         })
-        html += `</div>`
+        html += `</div>
+        <h1 class="map-modal__title">${data.nom}</h1>
+        <div class="map-modal__review-box">
+            <span class="map-modal__review-note">${data.note}</span>
+            <div class="map-modal__stars">
+                <div class="map-modal__stars-row">
+                    <i class="material-icons-sharp map-modal__star">star</i>
+                    <i class="material-icons-sharp map-modal__star">star</i>
+                    <i class="material-icons-sharp map-modal__star">star</i>
+                    <i class="material-icons-sharp map-modal__star">star</i>
+                    <i class="material-icons-sharp map-modal__star">star</i>
+                </div>
+                <div class="map-modal__stars-row map-modal__stars-row--filled" style="width: ${data.note * 20}%">
+                    <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                    <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                    <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                    <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                    <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                </div>
+            </div>
+        </div>
+        <p class="map-modal__description">${data.description}</p>
+        <div class="map-modal__buttons">`
+
+        if (data.vvid) {
+            html += `<a href="/vr?from=map#${data.vvid}" class="map-modal__btn-vv btn btn--primary">Voir en 3D</a>`
+        }
+
+        html += `<a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${data.lat},${data.lng}" class="map-modal__btn-web btn">Ouvrir dans plan</a>
+        </div>
+        <br><small class="map-modal__notice">Notes issues de &copy; Google Maps et &copy; Tripadvisor.</small>
+        `
 
         return html
     }
