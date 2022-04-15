@@ -22,17 +22,26 @@
         window.history.replaceState({}, document.title, '/map?zoom=' + zoom + '&lat=' + pos.lat + '&lng=' + pos.lng)
     }
 
-    function loadPlaceDetails(id) {
-        fetch('/ajax/map?action=details&id=' + id)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data)
-            })
+    function htmlModal(data) {
+        html = `<div class="map-modal__images">`
+        data.photos.forEach(photo => {
+            html += `<img class="map-modal__image" src="${photo}" alt="">`
+        })
+        html += `</div>`
+
+        return html
     }
 
-    function openPlace(id, event) {
+    async function loadPlaceDetails(id) {
+        var res = await fetch('/ajax/map?action=details&id=' + id)
+        var data = await res.json()
+        return data;
+    }
+
+    async function openPlace(id, event) {
         map.setView(event.target.getLatLng(), map.getZoom())
-        loadPlaceDetails(id)
+        var data = await loadPlaceDetails(id)
+        mapModal.innerHTML = htmlModal(data)
         mapModal.classList.add('map-modal--open')
     }
 

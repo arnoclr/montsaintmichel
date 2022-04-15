@@ -20,3 +20,14 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transform: translateX(0);
 }
+
+.map-modal__images {
+    display: flex;
+    overflow-x: scroll;
+    height: 220px;
+}
+
+.map-modal__image {
+    width: auto;
+    height: 100%;
+}
