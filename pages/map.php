@@ -3,6 +3,7 @@
 
 <div id="map"></div>
 <div class="map-modal"></div>
+<button class="map-cta btn btn--primary btn--large">Trouver un parcours</button>
 
 <script>
     var map = L.map('map').setView([

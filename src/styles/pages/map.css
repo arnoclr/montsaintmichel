@@ -3,6 +3,13 @@
     width: 100%;
 }
 
+.map-cta {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9998;
+}
+
 .map-modal {
     position: fixed;
     top: 0;
