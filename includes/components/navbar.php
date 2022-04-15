@@ -1,6 +1,6 @@
 <div class="navbar <?= $navbar_classes ?? '' ?>">
     <div class="navbar__links">
-        <a href="#" class="navbar__links-link"><?= t('navbar.tab.onSite') ?></a>
+        <a href="/map?from=navbar" class="navbar__links-link"><?= t('navbar.tab.onSite') ?></a>
         <a href="#" class="navbar__links-link"><?= t('navbar.tab.village') ?></a>
         <a href="#" class="navbar__links-link" data-menu="menu-histoire"><?= t('navbar.tab.history') ?></a>
         <a href="#" class="navbar__links-link"><?= t('navbar.tab.architecture') ?></a>
