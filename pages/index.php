@@ -60,6 +60,7 @@ $data = json_decode($json)->$key;
 
 // get random entry of object
 $data = $data[array_rand($data)];
+$data->o[] = $data->a;
 
 $quizz = (object) [
     "question" => $data->q,
