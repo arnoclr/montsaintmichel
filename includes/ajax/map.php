@@ -15,6 +15,7 @@ switch ($action) {
         $req->execute([$id]);
         $response = $req->fetch();
         $response->description = t($response->description);
+        $response->photos = explode("\n", $response->photos);
         break;
     
     default:
