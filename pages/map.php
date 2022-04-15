@@ -13,6 +13,7 @@
 
     var mapModal = document.querySelector(".map-modal");
     var openedPlaceId = <?= isset($_GET['place']) ? htmlspecialchars($_GET['place']) : "null" ?>;
+    const isOnMobile = window.innerWidth < 768;
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -77,7 +78,15 @@
 
     async function openPlace(id, event) {
         openedPlaceId = id;
-        map.setView(event.target.getLatLng(), map.getZoom())
+        let pixelPosition = map.latLngToLayerPoint(event.target.getLatLng());
+        if (isOnMobile) {
+            pixelPosition.y += (window.innerHeight - 340) / 2
+        } else {
+            pixelPosition.x -= 350 / 2
+        }
+        let latLng = map.layerPointToLatLng(pixelPosition);
+        console.log(latLng)
+        map.panTo(latLng);
         var data = await loadPlaceDetails(id)
         mapModal.innerHTML = htmlModal(data)
         mapModal.classList.add('map-modal--open')
