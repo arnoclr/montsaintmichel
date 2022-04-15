@@ -15,7 +15,7 @@ function t($translation_id) {
     $stmt = $pdo->prepare('SELECT * FROM traductions WHERE id = :id LIMIT 1');
     $stmt->execute([':id' => $translation_id]);
     // TODO: retourner dans la langue chioisie par l'utilisateur / ou la langue par défaut du navigateur
-    return $stmt->fetch()->$lang;
+    return $stmt->fetch()->$lang ?? $translation_id;
 }
 
 function swicthLangTo($lang) {

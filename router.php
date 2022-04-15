@@ -59,6 +59,12 @@ switch ($request) {
     case "/quiz":
         loadPage("quiz");
         break;
+    case "/map":
+        loadPage("map");
+        break;
+    case "/ajax/map":
+        include "includes/ajax/map.php";
+        break;
     default:
         // retourner le fichier par défaut
         return false;
