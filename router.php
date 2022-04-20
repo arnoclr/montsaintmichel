@@ -51,7 +51,7 @@ switch ($request) {
         loadPage("vr");
         break;
     case "/histoire":
-        loadPage("histoire");
+        loadPage("histoire/en-bref");
         break;
     case "/architecture":
         loadPage("architecture/architecture");
