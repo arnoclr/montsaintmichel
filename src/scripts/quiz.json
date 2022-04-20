@@ -546,15 +546,15 @@
             "q": "Pendant quelle guerre le Mont a-t-il le plus souffert ?",
             "a": "La Guerre de Cent Ans",
             "o": ["La Première Guerre Mondiale", "La Seconde Guerre Mondiale", "Il n’a connu aucune guerre"],
-            "d": "",
+            "d": "Le grand conflit durant lequel le Mont à le plus souffert est la Guerre de Cent Ans, de part sa position strategique entre les deux beligérant de cette guerre",
             "l": "",
             "i": ""
         },
         {
             "q": "Quel était le nom du chevalier qui a longuement défendu le Mont durant la Guerre de Cent Ans ?",
-            "a": "480",
-            "o": ["145", "265", "1540"],
-            "d": "",
+            "a": "Le Chevalier Du Guesclin",
+            "o": ["Jeanne d’Arc", "Lancelot du Lac", "Zoro"],
+            "d": "En effet Le Chevalier Du Guesclin etait le chef de la garnison chargée de defendre le Mont durant la guerre",
             "l": "",
             "i": ""
         },
@@ -562,7 +562,7 @@
             "q": "Qui était le chef des protestants ayant essayé de prendre le Mont durant les guerres de religion ?",
             "a": "Général Montgomery",
             "o": ["Martin Luther", "Marquis de Lafayette", "Childebert V"],
-            "d": "",
+            "d": "Le Général Montgomery, était un général de foi protestantes. C'est lui qui a guidé une troupe de 90 soldat pour essayer de prendre le Mont",
             "l": "",
             "i": ""
         },
@@ -570,7 +570,7 @@
             "q": "Qui a incendié le Mont en 1204 ?",
             "a": "Les Bretons",
             "o": ["Le royaume de France", "Les Normands", "Les Anglais"],
-            "d": "",
+            "d": "Le Mont fut incendié en 1204 par les Bretons, pour protester contre le duc de Normandie",
             "l": "",
             "i": ""
         },
@@ -578,7 +578,7 @@
             "q": "Le Mont-Saint-Michel n'est-il jamais tombé aux mains des Anglais ?",
             "a": "Faux",
             "o": ["Vrai"],
-            "d": "",
+            "d": "Faux, le Mont est devenu Anglais lors de la débacle de l'armée Française après la defaite",
             "l": "",
             "i": ""
         },
