@@ -162,7 +162,7 @@
             "q": "Quelle est la spécialité du Mont ?",
             "a": "L'Omelette",
             "o": ["Le Bœuf Bourguignon", "Les Galettes de Sarrasin", "La Salade Niçoise"],
-            "d": "",
+            "d": "En effet, l'omelette est le plat typique du Mont Saint Michel, popularisé par La Mère Poulard au 19 ème siècle",
             "l": "",
             "i": ""
         },
@@ -170,7 +170,7 @@
             "q": "Comment s'appelait la première personne à avoir cuisiné la fameuse Omelette du Mont ?",
             "a": "La mère Poulard",
             "o": ["La mère Boyard", "Mère Cott", "On ne sait pas"],
-            "d": "",
+            "d": "De son vrai nom Anne Boutiaut, c'est bien elle qui a inventée la recette de l'omelette du Mont Saint Michel",
             "l": "",
             "i": ""
         },
@@ -178,7 +178,7 @@
             "q": "Combien y a-t-il de restaurants sur le Mont-Saint-Michel ?",
             "a": "41",
             "o": ["22", "123", "Aucun"],
-            "d": "",
+            "d": "Il y a actuellement 41 restaurants au Mont Saint Michel",
             "l": "",
             "i": ""
         },
@@ -186,7 +186,7 @@
             "q": "La particularité de l’agneau sur le Mont-Saint-Michel est son goût salé dû à leur alimentation à base d'algues ?",
             "a": "Vrai",
             "o": ["Faux"],
-            "d": "",
+            "d": "Les agneaux utilisé pour les recettes des differents restaurants du Mont sont nourrit dans la Baie, avec des algues, d'où le goût salé de la viande",
             "l": "",
             "i": ""
         },
@@ -194,7 +194,7 @@
             "q": "Qu’est-ce qui donne son goût caractéristique à l'omelette de la mère poularde ?",
             "a": "Son processus de préparation dans des poêles en fonte et des culs de poule en cuivre",
             "o": ["Un ingrédient secret transmis de génération en génération", "La sauce à base de caramel beurre salé", "Il n’y a aucune différence entre une omelette de la mère poulard et une autre"],
-            "d": "",
+            "d": "Dans les cuisines du restaurants de la mère Poulard, les cuisiniers utilise des techniques traditionnelle, avec des poêles en fonte et des culs de poule en cuivre",
             "l": "",
             "i": ""
         },
@@ -202,7 +202,7 @@
             "q": "Quelle spécialité sucrée est très présente au Mont ?",
             "a": "Le Kouing Amman",
             "o": ["Les Bêtises de Cambrai", "Le Paris Brest", "Le Far Breton"],
-            "d": "",
+            "d": "De part sa proximité avec la Bretagne, et son appartenance d'antan à celle ci, il est normal que la patisserie la plus présente sur le Mont soit la patisserie emblématique de la Bretagne",
             "l": "",
             "i": ""
         },
@@ -210,7 +210,7 @@
             "q": "Peut-on manger l’Omelette de la mère Poulard de façon sucrée également ?",
             "a": "Vrai",
             "o": ["Faux"],
-            "d": "",
+            "d": "Cela peut paraitre surprenant mais on peut manger l'omelette de la mère Poulard de façon sucrée aussi, avec du caramel au beurre salé",
             "l": "",
             "i": ""
         },
@@ -218,7 +218,7 @@
             "q": "Quel mollusque est élevé et cuisiné spécialement au Mont ?",
             "a": "Les Moules",
             "o": ["Les Bulots", "Les Huîtres", "Les Bigorneaux"],
-            "d": "",
+            "d": "Grace au nombreux rocher présent autours du Mont, un elevage de moule est facile et peu onéreux à mettre en place",
             "l": "",
             "i": ""
         },
@@ -226,7 +226,7 @@
             "q": "Où sont élevés les agneaux du Mont ?",
             "a": "Directement dans la Baie",
             "o": ["Sur les champs sur la côte du Mont", "Dans le Cloître", "Ils ne sont pas élevés au mont, juste préparé"],
-            "d": "",
+            "d": "Les agneaux sont élevés directement dans la Baie du Mont par des eleveur locaux",
             "l": "",
             "i": ""
         }
@@ -236,7 +236,7 @@
             "q": "Le Mont-Saint-Michel représente",
             "a": "13 siècles d’architecture",
             "o": ["20 ans d’architecture", "3 siècles d’architecture", "3508 ans d’architecture"],
-            "d": "",
+            "d": "En effet la construction du Mont a commencé il y a 13 siècles, et rassemble donc plusieurs style d'architecture ",
             "l": "",
             "i": ""
         },
@@ -244,7 +244,7 @@
             "q": "La première église qui fût construite au Mont est",
             "a": "Notre-Dame-Sous-Terre",
             "o": ["L’église Abbatiale", "Notre-Dame-Des-Trente-Cierges", "La chapelle Saint-Martin"],
-            "d": "",
+            "d": "D'après des études archéologiques,le batiment le plus vieux du Mont Saint Michel est Notre-Dame-Sous-Terre",
             "l": "",
             "i": ""
         },
@@ -252,7 +252,7 @@
             "q": "Le premier sanctuaire fût fondé par",
             "a": "L’Évêque d'Avranches Saint Aubert",
             "o": ["Richard Ier", "Robert de Thorigny", "Philippe Auguste"],
-            "d": "",
+            "d": "Le premier sanctuaire fût fondé par le fondateur même du Mont Saint Michel, à savoir L’Évêque d'Avranches Saint Aubert, en 708",
             "l": "",
             "i": ""
         },
@@ -260,7 +260,7 @@
             "q": "Quel style d'architecture représente l’abbaye ?",
             "a": "Architecture Romane",
             "o": ["Architecture Classique", "Architecture Baroque", "Architecture Victorienne"],
-            "d": "",
+            "d": "Le Mont Saint Michel est un entremêlement de plusieurs style d'architecture, néanmoins le style Roman est le plus présent",
             "l": "",
             "i": ""
         },
@@ -268,7 +268,7 @@
             "q": "Quel bâtiment fût construit en dédommagement de la guerre de 1203 ?",
             "a": "La Merveille",
             "o": ["Le Cimetière", "Église Saint-Pierre", "Chapelle Saint-Aubert"],
-            "d": "",
+            "d": "En effet après l'incendie de 1204, la Merveille fût construit avec les fonds donnés en compensation par le Roi de France",
             "l": "",
             "i": ""
         },
@@ -276,7 +276,7 @@
             "q": "Le cloître est en forme de trapèze avec un jardin au centre de la Merveille :",
             "a": "Vrai",
             "o": ["Faux"],
-            "d": "",
+            "d": "Vue du ciel, le cloitre est en forme de trapèze, pour coller à la forme du rocher sur lequel il est construit",
             "l": "",
             "i": ""
         },
@@ -284,7 +284,7 @@
             "q": "Les rangs de piliers soutenant Notre-Dame-Sous-Terre soutiennent également :",
             "a": "La Merveille",
             "o": ["Le Cloître","La Chapelle Saint Aubert","Uniquement Notre-Dame-Sous-Terre"],
-            "d": "",
+            "d": "Les piliers soutenant Notre-Dame-Sous-Terre se prolonge pour soutenir aussi la Merveille, toujours dans l'optique de gain de place",
             "l": "",
             "i": ""
         },
@@ -292,7 +292,7 @@
             "q": "Le Mont-Saint-Michel est entouré de rempart et de",
             "a": "7 Tours défensives",
             "o": ["2 Tours jumelles","5 Tours d’attaque","25 Tours défensives"],
-            "d": "",
+            "d": "Sa position strategique, entre le Royaume de France, le Duché de Bretagne, et le Royaume d'Angleterre en fond une cible de choix, ce qui force les propriétaire à construire une défense solide, prête garder le Mont",
             "l": "",
             "i": ""
         },
@@ -300,7 +300,7 @@
             "q": "La Merveille repose sur",
             "a": "3 étages",
             "o": ["1 étage","2 étages","4 étages"],
-            "d": "",
+            "d": "La taille de ce magnifique batiment peut le laisser penser, mais en effet, la Merveille repose sur 3 étages, pour au final mesurer 80m de hauteur",
             "l": "",
             "i": ""
         }
@@ -311,7 +311,7 @@
             "q": "Quelle branche du Christianisme le Mont-Saint-Michel vénère-t-il ?",
             "a": "Catholicisme",
             "o": ["Orthodoxie", "Protestantisme", "Aucune des trois"],
-            "d": "",
+            "d": "Le Mont-Saint-Michel est un batiment Catohlique bien que des Protestant ait essayé de le prendre",
             "l": "",
             "i": ""
         },
@@ -319,7 +319,7 @@
             "q": "L’Archange Saint-Michel apparaît dans l'Ancien Testament ?",
             "a": "Faux",
             "o": ["Vrai"],
-            "d": "",
+            "d": " En effet l'Archange Saint Michel apparaît dans l'Ancien Testament",
             "l": "",
             "i": ""
         },
@@ -327,7 +327,7 @@
             "q": "Qui est juste en dessous de l’Abbé dans la hiérarchie de l'Église Catholique ?",
             "a": "Aucun, abbé est un titre à part de la hiérarchie",
             "o": ["Le Prêtre", "Le Pape", "L’Évêque"],
-            "d": "",
+            "d": "Le titre d'Abbé est un titre a part dans la hiérarchie de l'Eglise Catholique",
             "l": "",
             "i": ""
         },
@@ -335,7 +335,7 @@
             "q": "Comment devient-on abbé du Mont ?",
             "a": "On est élu par les autres moines",
             "o": ["Par tirage au sort parmi les moines du Mont", "Le Pape choisit le nouvel abbé", "En remportant des combats à mort avec les autres prétendants, d’après le souhait de Saint-Michel"],
-            "d": "",
+            "d": "Pour devenir Abbé du Mont, il faut être élu par les autres moine, à la mort du précédent Abbé, bien que dans l'histoire du Mont, ce système d'élection à plusieurs fois été retiré",
             "l": "",
             "i": ""
         },
@@ -343,7 +343,7 @@
             "q": "L’archange Saint-Michel a combattu Lucifer sous la forme d’un dragon sur le Mont ?",
             "a": "Vrai",
             "o": ["Faux"],
-            "d": "",
+            "d": "Vrai, dans la bible, il est écrit que Saint Michel a combattu Lucifer sous la forme d'un dragon à l'endroit exact ou le Mont est construit aujourd'hui",
             "l": "",
             "i": ""
         },
@@ -351,7 +351,7 @@
             "q": "Quel est le nom de la première prière que doivent réaliser les moines ?",
             "a": "Les matines",
             "o": ["La matinale", "L’abbatial", "Elle n’a pas de nom"],
-            "d": "",
+            "d": "La journée des moines est rythmée par differente prières, la première s'appelant les matines",
             "l": "",
             "i": ""
         },
@@ -359,7 +359,7 @@
             "q": "Combien de prières les moines doivent faire dans la journée ?",
             "a": "5",
             "o": ["1", "24", "12"],
-            "d": "",
+            "d": "Les moines doivent faire 5 prière dans la journée, d'après les textes de la Bible",
             "l": "",
             "i": ""
         },
@@ -367,7 +367,7 @@
             "q": "À quelle heure les matines sont elles ?",
             "a": "5h",
             "o": ["10h", "9h", "12h"],
-            "d": "",
+            "d": "Les differentes prière des moines se déroule à des heures très précise dans la journée, les matines se déroulant à 5h du matin",
             "l": "",
             "i": ""
         },
@@ -375,7 +375,7 @@
             "q": "Combien de temps durait le règne d’un abbé ?",
             "a": "Toute la vie de l’abbé",
             "o": ["4 ans", "7 ans", "10 ans"],
-            "d": "",
+            "d": "Les Abbé reignent, comme les Rois, à vie",
             "l": "",
             "i": ""
         },
@@ -383,7 +383,7 @@
             "q": "Qu’est-ce qu’un Archange chez les Chrétiens ?",
             "a": "Un ange supérieur",
             "o": ["Un ange armé d’un arc comme Cupidon", "C’est un synonyme du mot d’ange", "C’est l’autre nom de Dieu"],
-            "d": "",
+            "d": "Le nom peu porter à confusion, mais un Archange est un ange supérieur, et non pas un ange armé d'un arc",
             "l": "",
             "i": ""
         }
@@ -393,7 +393,7 @@
             "q": "Qui était le 7ᵉ Roi des Capétiens ?",
             "a": "Philippe Auguste",
             "o": ["Saint Aubert", "Louis VII", "Robert Jolivet"],
-            "d": "",
+            "d": "Le 7eme roi des Capétiens, est Philippe Auguste, ayant regné de 1179 à 1223",
             "l": "",
             "i": ""
         },
