@@ -1,6 +1,9 @@
+
+
 .vr {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 .vr__3D {
@@ -27,7 +30,7 @@
     opacity: 0;
     transform: scale(0);
     transform-origin: 80% 20%;
-    transition: transform .3s cubic-bezier(.72,.06,.56,1.15), opacity .3s ease;
+    transition: transform .3s cubic-bezier(.72, .06, .56, 1.15), opacity .3s ease;
 }
 
 .vr__modal.show {
@@ -38,7 +41,7 @@
 .vr__modal-header {
     display: flex;
     align-items: center;
-    gap: 12px;   
+    gap: 12px;
 }
 
 .vr__modal-header-title {
@@ -76,7 +79,7 @@
     gap: 22px;
 }
 
-.vr__buttons-button, .vr__back-button{
+.vr__buttons-button, .vr__back-button {
     font-size: 32px;
     color: #fff;
     background-color: #343434;
@@ -107,12 +110,21 @@
     text-decoration: underline;
 }
 
-.vr__back-button{
+.vr__back-button {
     position: fixed;
     top: 32px;
     left: 32px;
     background-color: white;
     color: black;
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    padding: 0px;
+    line-height: 24px;
+}
+
+.vr__back-button-span {
+    vertical-align: -25%;
 }
 
 @media screen and (max-width: 799px) {
@@ -155,6 +167,15 @@
         grid-template-columns: 48px 1fr 48px 48px;
     }
 
+    .vr__back-button {
+        top: 16px;
+        left: 16px;
+        height: 48px;
+        width: 48px;
+        padding: unset;
+        font-size: 26px;
+    }
+
     .vr__modal-header-title {
         font-size: 18px;
     }
@@ -173,7 +194,6 @@
         outline: none;
     }
 }
-
 
 
 @media screen and (min-width: 800px) {
