@@ -37,7 +37,7 @@
     foreach ($questions as $key => $value) {
         $answers = $value->o;
         array_push($answers, $value->a);
-        shuffle($answers, $seed);
+        shuffle($answers);
 
         $quizz = (object) [
             "question" => $value->q,
