@@ -40,7 +40,7 @@
 }
 
 .faq__qst details summary:hover {
-    color: var(--primary-color-light);
+    color: var(--primary-color);
 }
 
 .faq__qst details summary:focus {

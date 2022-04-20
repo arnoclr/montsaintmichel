@@ -41,6 +41,14 @@ h1, h2, h3, h4, h5, h6 {
     user-select: none;
 }
 
+.translation-icon {
+    transition: color 0.25s ease-in-out;
+    color: #000;
+}
+.translation-icon:hover {
+    color: var(--primary-color);
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -255,7 +263,12 @@ body, html {
 .navbar__links-link {
     text-decoration: none;
     font: 400 18px Noto Sans, sans-serif;
+    transition: color .25s ease-in-out;
     color: #000;
+}
+
+.navbar__links-link:hover {
+    color: var(--primary-color);
 }
 
 .navbar__locale {

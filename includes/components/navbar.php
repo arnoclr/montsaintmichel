@@ -6,7 +6,7 @@
         <a href="/architecture" class="navbar__links-link"><?= t('navbar.tab.architecture') ?></a>
     </div>
     <div class="navbar__locale">
-        <i class="material-icons-sharp js-open-locale-selector">translate</i>
+        <i class="material-icons-sharp js-open-locale-selector translation-icon">translate</i>
         <ul id="js-locale-selector" class="locale-selector">
             <li class="locale-selector__region">
                 <a href="<?= swicthLangTo('fr') ?>" class="locale-selector__clickable">
