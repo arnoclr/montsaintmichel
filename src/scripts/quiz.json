@@ -73,7 +73,6 @@
             "i": "img"
         }
     ],
-
     "junior": [
         {
             "q": "L’abbaye est le bâtiment qui a inspiré le château de Poudlard dans la Saga de film Harry Potter :\n",
@@ -156,7 +155,6 @@
             "i": ""
         }
     ],
-
     "culinaire": [
         {
             "q": "Quelle est la spécialité du Mont ?",
@@ -305,7 +303,6 @@
             "i": ""
         }
     ],
-
     "religion": [
         {
             "q": "Quelle branche du Christianisme le Mont-Saint-Michel vénère-t-il ?",
@@ -319,7 +316,7 @@
             "q": "L’Archange Saint-Michel apparaît dans l'Ancien Testament ?",
             "a": "Faux",
             "o": ["Vrai"],
-            "d": " En effet l'Archange Saint Michel apparaît dans l'Ancien Testament",
+            "d": "En effet l'Archange Saint Michel apparaît dans l'Ancien Testament",
             "l": "",
             "i": ""
         },
@@ -383,7 +380,7 @@
             "q": "Qu’est-ce qu’un Archange chez les Chrétiens ?",
             "a": "Un ange supérieur",
             "o": ["Un ange armé d’un arc comme Cupidon", "C’est un synonyme du mot d’ange", "C’est l’autre nom de Dieu"],
-            "d": "Le nom peu porter à confusion, mais un Archange est un ange supérieur, et non pas un ange armé d'un arc",
+            "d": "Le nom peut porter à confusion, mais un Archange est un ange supérieur, et non pas un ange armé d'un arc",
             "l": "",
             "i": ""
         }
@@ -401,7 +398,7 @@
             "q": "Qui fût l’un des meilleurs commandants sous les ordres de l’amiral de Coligny ?",
             "a": "Gabriel de Lorges",
             "o": ["Edouard Corroyer", "Bertrand du Guesclin", "Pierre le Roy"],
-            "d": "",
+            "d": "Gabriel de Lorges était un noble français d'origine écossaise et capitaine de la garde écossaise du roi Henri II de France .",
             "l": "",
             "i": ""
         },
@@ -409,7 +406,7 @@
             "q": "Comment s’appelle le grand Chevalier qui à vécu au Mont-Saint-Michel ?",
             "a": "Du Guesclin",
             "o": ["Richard Cœur de Lion.", "Jean de Chastenay", "Jean Bonbeurre"],
-            "d": "",
+            "d": "Bertrand du Gesclin fût chevalier au XIVe siècle et protégea le Mont Saint-Michel lors de la Guerre de Cents ans.",
             "l": "",
             "i": ""
         },
@@ -417,15 +414,15 @@
             "q": "Quel acteur s’est marié au Mont-Saint-Michel en 2021 ?",
             "a": "Arnaud Ducret",
             "o": ["Johnny Depp", "François-Xavier Demaison", "Jean Dujardin"],
-            "d": "",
+            "d": "Arnaud Ducret est un humoriste et acteur français qui s'est marié au Mont Saint-Michel en 2021",
             "l": "",
             "i": ""
         },
         {
-            "q": "Quel président français à inauguré le Pont-passerelle en 2015 ?",
+            "q": "Quel président français a inauguré le Pont-passerelle en 2015 ?",
             "a": "François Mitterrand",
             "o": ["Emmanuel Macron", "Nicolas Sarkozy", "François Hollande"],
-            "d": "",
+            "d": "François Mitterrand inaugura le Pont-passerelle en 2015",
             "l": "",
             "i": ""
         },
@@ -433,7 +430,7 @@
             "q": "Qui est l’unique chanteur à avoir eu le droit de faire un concert géant sur le Mont-Saint-Michel ?",
             "a": "Jean-Michel Jarre",
             "o": ["Johnny Hallyday", "Daniel Balavoine", "Serge Gainsbourg"],
-            "d": "",
+            "d": "Jean-Michel Jarre fît le seul chanteur ayant eu les droits d'organisé un concert au Mont Saint-Michel le 28 Juillet 1993",
             "l": "",
             "i": ""
         },
@@ -441,7 +438,7 @@
             "q": "Quel peintre célèbre à visiter le Mont-Saint-Michel en 1836 ?",
             "a": "Victor Hugo",
             "o": ["Antoine-Jean Gros", "Camille Pissarro", "Alexandre Antigna"],
-            "d": "",
+            "d": "Le 27 Juin 1836, le cébèbre Victor Hugo se rendit au Mont Saint-Michel qui est le plus beau lieu du monde selon sa lettre envoyé à Louise Bertin",
             "l": "",
             "i": ""
         },
@@ -449,7 +446,7 @@
             "q": "Qui a racheté la célèbre auberge de la mère Poulard ?",
             "a": "Eric Vannier",
             "o": ["Christophe Fermeture", "Jean-eude De La Marne", "Philippe Etchebest"],
-            "d": "",
+            "d": "Eric Vannier est le propriétaire de la célèbre auberge de la mère Poulard. Il la racheta en 1986 ainsi que des Hôtels au Mont Saint-Michel.",
             "l": "",
             "i": ""
         },
@@ -457,18 +454,17 @@
             "q": "Quel roi à détruit les célèbres Cage de fer du Mont-Saint-Michel ?",
             "a": "Louis Philippe Ier",
             "o": ["Louis XVI", "Louis XIV", "Philippe II"],
-            "d": "",
+            "d": "Louis Philippe Ier a détruit les Cage de fer installé par Louis XI avant lui.",
             "l": "",
             "i": ""
         }
     ],
-
     "faune & flore": [
         {
             "q": "Quel est le nom de l’îlot granitique situé sur la baie ?",
             "a": "Tombelaine",
             "o": ["Gratique", "Beulone", "Menez"],
-            "d": "",
+            "d": "Tombelaine est une petite île située sur la baie de Mont-Saint-Michel",
             "l": "",
             "i": ""
         },
@@ -476,15 +472,15 @@
             "q": "Combien y a-t-il d’espèces animales et végétales dans la baie ?",
             "a": "480",
             "o": ["145", "265", "1540"],
-            "d": "",
+            "d": "La baie regorge d'espèces animales et végétales. Il y a 480 espèces différentes que vous pouvez voir au Mont-Saint-Michel.",
             "l": "",
             "i": ""
         },
         {
-            "q": "Quelle est la fonction du Mont pour les oiseaux migrateur ?",
+            "q": "Quelle est la fonction principale du Mont pour les oiseaux migrateur ?",
             "a": "Une zone de repos",
             "o": ["Une zone de pêche idéale", "Une zone de reproduction", "Aucune des réponses"],
-            "d": "",
+            "d": "En effet, les oiseaux revenant souvent des mers, se reposent sur la baie du Mont Saint-Michel.",
             "l": "",
             "i": ""
         },
@@ -492,7 +488,7 @@
             "q": "La roche la plus présente au mont est :",
             "a": "Le granite",
             "o": ["Le basalte", "Le grès", "Du calcaire"],
-            "d": "",
+            "d": "Le rocher du Mont Saint-Michel est principalement constitué de granite. Il est composé également de calcaire et de grès.",
             "l": "",
             "i": ""
         },
@@ -500,15 +496,15 @@
             "q": "De combien de km² est entouré la dépression du Mont-Saint-Michel ?",
             "a": "500 km²",
             "o": ["275 km²", "580 km²", "150 km²"],
-            "d": "",
+            "d": "La baie du Mont Saint-Michel, occupe, entre Cancale et Granville, une dépression d'environ 500 km²",
             "l": "",
             "i": ""
         },
         {
-            "q": "Quel animal a été habitait la baie durant le XIXe siècle ?",
+            "q": "Quel animal a habité la baie durant le XIXe siècle ?",
             "a": "Des phoques",
             "o": ["Des crocodiles", "Des furets", "Des girafes"],
-            "d": "",
+            "d": "En effet, des phoques habitaient et habitent toujours la baie du Mont Saint-Michel. Malheureusement, ils fûrent chassé pour leur viande, mais nous pouvons toujours en apercevoir de temps en temps.",
             "l": "",
             "i": ""
         },
@@ -516,7 +512,7 @@
             "q": "La conchyliculture est :",
             "a": "L’élevage de coquillages",
             "o": ["L’élevage de daurades", "L’élevage de mouettes", "Ce mot n’existe pas"],
-            "d": "",
+            "d": "Ce mot existe bel et bien; il s'agit de l'élevage de coquillages qui sont très présent sur la baie.",
             "l": "",
             "i": ""
         },
@@ -524,7 +520,7 @@
             "q": "Laquelle parmi ces fleurs est protégée sur la baie du Mont ?",
             "a": "La crételle hérissée",
             "o": ["La Chicorée scabre", "Les pivoines", "Les Clématites"],
-            "d": "",
+            "d": "En effet, la crételle hérissé est une des fleurs les plus présente au Mont Saint-Michel mais aussi l'une des espèces la plus protégée.",
             "l": "",
             "i": ""
         },
@@ -532,7 +528,7 @@
             "q": "La laine de mouton au Mont-Saint-Michel était autrefois utilisée comme :",
             "a": "Aucune des réponses",
             "o": ["Combustible pour les cheminées", "Fil pour faire de la couture", "Corde pour des instruments de musique"],
-            "d": "",
+            "d": "En effet, la laine de mouton n'était pas spécialement utile. Les moutons étaient exploités principalement pour leur viande.",
             "l": "",
             "i": ""
         },
@@ -540,12 +536,11 @@
             "q": "Qu’est-ce qui rend la viande des agneaux salée ?",
             "a": "Leur alimentation en algues",
             "o": ["Le sable", "Leur alimentation en moules", "C’est leur espèce qui donne ce goût salé"],
-            "d": "",
+            "d": "En effet, si la viande des agneaux sont salée, c'est du à leur alimentation en algues.",
             "l": "",
             "i": ""
         }
     ],
-
     "guerre": [
         {
             "q": "Pendant quelle guerre le Mont a-t-il le plus souffert ?",
@@ -628,7 +623,6 @@
             "i": ""
         }
     ],
-
     "difficile": [
         {
             "q": "Quels étaient les moines présents sur le mont du temps de l’évêque Aubert ?",
