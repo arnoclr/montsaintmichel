@@ -3,7 +3,7 @@
         <a href="/map?from=navbar" class="navbar__links-link"><?= t('navbar.tab.onSite') ?></a>
         <a href="#" class="navbar__links-link"><?= t('navbar.tab.village') ?></a>
         <a href="#" class="navbar__links-link" data-menu="menu-histoire"><?= t('navbar.tab.history') ?></a>
-        <a href="#" class="navbar__links-link"><?= t('navbar.tab.architecture') ?></a>
+        <a href="/architecture" class="navbar__links-link"><?= t('navbar.tab.architecture') ?></a>
     </div>
     <div class="navbar__locale">
         <i class="material-icons-sharp js-open-locale-selector">translate</i>
