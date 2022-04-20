@@ -53,7 +53,7 @@ $menu = (object) [
     'items' => [
         (object) [
             'title' => t('navbar.history.nutshell'),
-            'link' => '/histoire/en-bref',
+            'link' => '/histoire',
             'image' => 'menu/histoire/en_bref.png'
         ],
         (object) [
