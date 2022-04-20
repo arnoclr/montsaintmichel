@@ -578,7 +578,7 @@
             "q": "Le Mont-Saint-Michel n'est-il jamais tombé aux mains des Anglais ?",
             "a": "Faux",
             "o": ["Vrai"],
-            "d": "Faux, le Mont est devenu Anglais lors de la débacle de l'armée Française après la defaite",
+            "d": "Faux, le Mont est devenu Anglais lors de la débacle de l'armée Française après la defaite de Crecy",
             "l": "",
             "i": ""
         },
@@ -586,7 +586,7 @@
             "q": "En quelle année les Bretons ont-ils définitivement perdu le Mont-Saint-Michel ?",
             "a": "En 1009",
             "o": ["En 966", "En 1204", "En 716"],
-            "d": "",
+            "d": "En effet la propriété du Mont Saint Michel fut longuement débattue durant son histoire, étant un temps Breton, puis Normand, puis Breton a nouveau. Mais il devint bien Normand définitivement à partir de 1009",
             "l": "",
             "i": ""
         },
@@ -594,7 +594,7 @@
             "q": "Le Mont fut menacé de destruction pendant la Première Guerre Mondiale ?",
             "a": "Faux",
             "o": ["Vrai"],
-            "d": "",
+            "d": "Faux, la plupart des combats destructeur de la Première Guerre Mondiale avait lieu à l'Est du pays, bien loin du Mont.",
             "l": "",
             "i": ""
         },
@@ -602,7 +602,7 @@
             "q": "Quel fut la situation du Mont durant la Seconde Guerre mondiale ?",
             "a": "Il fut occupé par les Allemands",
             "o": ["Il fut occupé par les Anglais", "Ce fut un des derniers territoires encore Français en Europe", "C’était un territoire neutre, car culturel"],
-            "d": "",
+            "d": "En effet le Mont Saint Michel n'a pas échappé à l'occupation Allemande, et il servit d'avant poste pour ces dernier, et de lieu de repos pour les soldats en permission",
             "l": "",
             "i": ""
         },
@@ -610,7 +610,7 @@
             "q": "Que s’est-il passé lors des incursions Viking dans le Royaume de France pour le Mont-Saint-Michel ?",
             "a": "Il servit de refuge pour les civils",
             "o": ["Il fut en partie détruit", "Il fut complètement ignoré par les Vikings", "Les vikings s’en sont emparé afin d’établir une colonie"],
-            "d": "",
+            "d": "Lorsque le Royaume Franc fut attaqué par les Vikings, la population cherchait un endroit ou se cacher, et le Mont permettait cela.",
             "l": "",
             "i": ""
         },
@@ -618,7 +618,7 @@
             "q": "Deux machines de guerre Anglaise trônent à l’entrée du Mont, quel est leur nom ?",
             "a": "Bombardes",
             "o": ["Canons", "Trébuchets", "Couillards"],
-            "d": "",
+            "d": "Ancetre des canons, c'est machine de guerre était néanmoins lourde difficile a manipuler, ce qui fait qu'elle était souvent abandonnées en cas de retraite",
             "l": "",
             "i": ""
         }
@@ -628,7 +628,7 @@
             "q": "Quels étaient les moines présents sur le mont du temps de l’évêque Aubert ?",
             "a": "Les Chanoines",
             "o": ["Les Bénédictins", "Les Shaolin", "Aubert était seul sur le Mont"],
-            "d": "",
+            "d": "L'ordre des Chanoines etait l'ordre présent sur le Mont sous le règne de l'évêque Aubert",
             "l": "",
             "i": ""
         },
@@ -636,7 +636,7 @@
             "q": "Comment appelle-t-on les habitants du Mont ?",
             "a": "Les Montois",
             "o": ["Les Saint-Michelin", "Les Montgoles", "Les Michels"],
-            "d": "",
+            "d": "Bien que Saint Michelin semble être une réponse évidente, les habitant du Mont s'appelle les Montois",
             "l": "",
             "i": ""
         },
@@ -644,7 +644,7 @@
             "q": "Quel dirigeant décida de prendre Saint-Michel en tant que symbole protecteur de son empire ?",
             "a": "Charlemagne",
             "o": ["Jules César", "Napoléon", "Louis XIV"],
-            "d": "",
+            "d": "Charlemagne, ou Charles Ier est le successeur de Pepin le Bref sur le trône des Francs, c'est lui qui decidera de prendre Saint Michel comme protecteur de son empire en 800",
             "l": "",
             "i": ""
         }
