@@ -3,10 +3,10 @@
         <a href="/map?from=navbar" class="navbar__links-link"><?= t('navbar.tab.onSite') ?></a>
         <a href="#" class="navbar__links-link"><?= t('navbar.tab.village') ?></a>
         <a href="#" class="navbar__links-link" data-menu="menu-histoire"><?= t('navbar.tab.history') ?></a>
-        <a href="#" class="navbar__links-link"><?= t('navbar.tab.architecture') ?></a>
+        <a href="/architecture" class="navbar__links-link"><?= t('navbar.tab.architecture') ?></a>
     </div>
     <div class="navbar__locale">
-        <i class="material-icons-sharp js-open-locale-selector">translate</i>
+        <i class="material-icons-sharp js-open-locale-selector translation-icon">translate</i>
         <ul id="js-locale-selector" class="locale-selector">
             <li class="locale-selector__region">
                 <a href="<?= swicthLangTo('fr') ?>" class="locale-selector__clickable">
@@ -53,7 +53,7 @@ $menu = (object) [
     'items' => [
         (object) [
             'title' => t('navbar.history.nutshell'),
-            'link' => '/histoire/en-bref',
+            'link' => '/histoire',
             'image' => 'menu/histoire/en_bref.png'
         ],
         (object) [

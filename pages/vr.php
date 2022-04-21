@@ -1,5 +1,5 @@
 <main class="vr">
-    <button class="vr__back-button material-icons-sharp"> arrow_back </button>
+    <a href="https://montsaintmichel.christopherbeaurain.com"><button title="Retour" class="vr__back-button"><span class="vr__back-button-span material-icons-sharp">arrow_back</span></button> </a>
     <img class="vr__3D js-vr-3D-img" src="https://cdn.arnocellarier.fr/s/iut/msm/vv/1080/photo (1).webp"
          alt="Vue en 3D du Mont-Saint-Michel issue de Google Earth">
 
