@@ -3,8 +3,8 @@
     --primary-color: #B94503;
     --primary-color-light: #db8a3f;
     --primary-color-light-transparent: #db8a3f30;
-    --valid: #4caf50;
-    --error: #f44336;
+    --valid: #A4DB56;
+    --error: #DB5E40;
 }
 
 @media screen and (min-width: 800px) {
