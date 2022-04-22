@@ -6,6 +6,8 @@ $request = $_SERVER['REQUEST_URI'];
 $request = explode('?', $request)[0];
 $request = str_replace($basepath, '', $request);
 
+define('ROOT', __DIR__);
+
 // database
 try {
     $pdo = new PDO('sqlite:'.dirname(__FILE__).'/data.sqlite');
@@ -15,11 +17,11 @@ try {
     die("database error");
 }
 
-require 'includes/functions/arrays.php';
-require 'includes/functions/translations.php';
-require 'includes/functions/images.php';
-
-// var_dump(t("sirene.lochet.desc"));
+// load all files in functions folder
+$functions = glob(dirname(__FILE__).'/includes/functions/*.php');
+foreach ($functions as $function) {
+    require_once $function;
+}
 
 function loadAssets($page) {
     global $basepath;
