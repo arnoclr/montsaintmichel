@@ -552,6 +552,11 @@ body, html {
     border: 1px solid var(--error);
 }
 
+.quizz__content-answers-btn[aria-disabled=true] {
+    pointer-events: none;
+    user-select: none;
+}
+
 .quizz__content-readmore {
     margin-top: 32px;
     opacity: 0;
@@ -568,4 +573,17 @@ body, html {
 
 .quizz__content-readmore.open {
     opacity: 1;
+}
+
+.quizz__image {
+    max-height: 380px;
+    max-width: 50%;
+    flex-grow: 1;
+    object-fit: cover;
+    border-radius: 2px;
+    background-color: #eee;
+}
+
+.js-blur {
+    filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1'%3E%3CfeGaussianBlur stdDeviation='8' result='b'/%3E%3CfeMorphology operator='dilate' radius='8'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E%3C/svg%3E#a");
 }

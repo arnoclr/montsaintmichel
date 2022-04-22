@@ -36,11 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     allQuizz.forEach(quizz => {
         const buttons = quizz.querySelectorAll('.js-quizz-button');
+        const image = quizz.querySelector('img.js-blur');
 
         buttons.forEach(button => {
             button.addEventListener('click', e => {
                 e.preventDefault();
                 const correct = button.dataset.correct;
+                image.classList.remove('js-blur');
 
                 if (correct == "1") {
                     console.log(correct);
@@ -51,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // add correct label to good answer
                 buttons.forEach(button2 => {
+                    button2.setAttribute('aria-disabled', 'true');
                     if (button2.dataset.correct == "1") {
                         button2.classList.add('correct');
                     }
