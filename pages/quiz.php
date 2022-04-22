@@ -10,10 +10,36 @@
 
 .quiz-box__section {
     min-width: 100%;
+    padding: 16px var(--padding);
     display: grid;
     place-items: center;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+}
+
+.quiz-progress {
+    display: grid;
+    place-items: center;
+    height: 32px;
+}
+
+#js-quiz-progress {
+    width: 90%;
+    height: 8px;
+    max-width: 590px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#js-quiz-progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+#js-quiz-progress::-webkit-progress-value {
+    background-color: var(--primary-color);
+    border-radius: 2px;
 }
 </style>
 
@@ -59,9 +85,14 @@
     ?>
 </main>
 
+<aside class="quiz-progress">
+    <progress id="js-quiz-progress" value="1" min="1" max="<?= count($questions) ?>"></progress>
+</aside>
+
 <script>
     const quizBox = document.querySelector(".js-quiz-box");
     const nextBtns = document.querySelectorAll(".js-next-qst");
+    const quizProgress = document.getElementById("js-quiz-progress");
 
     nextBtns.forEach(function(btn) {
         btn.addEventListener("click", function() {
@@ -70,6 +101,7 @@
                 left: window.innerWidth,
                 behavior: "smooth"
             });
+            quizProgress.value = quizProgress.value + 1;
         });
     });
 </script>

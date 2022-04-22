@@ -16,7 +16,9 @@ $quizz->id = "quizz__" . md5($quizz->question);
         <div class="quizz__content-readmore js-quizz-answer">
             <p class="quizz__content-readmore-summary"><?= $quizz->read_more_summary ?></p>
             <div class="quizz__content-readmore-buttons">
-                <a href="<?= $quizz->read_more ?>" class=" btn">En savoir plus</a>
+                <?php if (isset($quizz->read_more) && $quizz->read_more != ""): ?>
+                    <a href="<?= $quizz->read_more ?>" class=" btn">En savoir plus</a>
+                <?php endif; ?>
                 <?php if (isset($_next_qst_btn) && $_next_qst_btn): ?>
                     <button class="btn btn--iconright js-next-qst">Question suivante <i class="material-icons-sharp">arrow_forward</i></button>
                 <?php endif; ?>
@@ -26,5 +28,5 @@ $quizz->id = "quizz__" . md5($quizz->question);
             </div>
         </div>
     </div>
-    <img src="<?= $quizz->image ?>" alt="image d'illustration du quiz" class="quizz__image js-blur">
+    <img src="<?= str_replace('.jpg', 't.jpg', $quizz->image) ?>" data-src="<?= $quizz->image ?>" alt="image d'illustration du quiz" class="quizz__image js-blur">
 </div>

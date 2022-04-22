@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const correct = button.dataset.correct;
                 image.classList.remove('js-blur');
+                image.src = image.dataset.src;
 
                 if (correct == "1") {
                     console.log(correct);
