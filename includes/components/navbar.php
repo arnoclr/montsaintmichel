@@ -1,4 +1,5 @@
 <div class="navbar <?= $navbar_classes ?? '' ?> js-navbar">
+    <button class="navbar__menu material-icons-sharp">menu</button>
     <div class="navbar__links">
         <a href="/" class="navbar__links-link"><?= t('navbar.tab.home') ?></a>
         <a href="/map?from=navbar" class="navbar__links-link"><?= t('navbar.tab.village') ?></a>
