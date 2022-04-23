@@ -360,6 +360,12 @@ body, html {
     
     .navbar__menu {
         display: block;
+        transition: transform .2s ease-in-out;
+    }
+
+    .navbar__menu:hover {
+        transform: rotate(90deg);
+        outline: none;
     }
 
     .navbar__links {
