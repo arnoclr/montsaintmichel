@@ -24,6 +24,7 @@
         </ul>
     </div>
 </div>
+<aside class="js-navbar-placeholder"></aside>
 
 <script>
 var localeSelector = document.getElementById('js-locale-selector');

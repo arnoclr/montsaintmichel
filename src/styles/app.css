@@ -285,6 +285,12 @@ body, html {
     padding: 48px var(--padding);
 }
 
+.js-navbar-placeholder {
+    width: 100%;
+    height: 124px;
+    display: none;
+}
+
 .navbar--white .navbar__links-link {
     color: #fff;
 }
@@ -302,6 +308,10 @@ body, html {
     background-color: #fff;
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
     animation: navbar-enter .3s ease-in-out forwards;
+}
+
+.navbar--open+.js-navbar-placeholder {
+    display: block;
 }
 
 .navbar--open .navbar__links-link, .navbar--open .navbar__locale i, .navbar--open .navbar__menu {
@@ -356,6 +366,10 @@ body, html {
         gap: 12px;
         padding-top: 12px;
         padding-bottom: 12px;
+    }
+
+    .js-navbar-placeholder {
+        height: 52px;
     }
     
     .navbar__menu {
