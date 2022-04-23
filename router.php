@@ -34,7 +34,7 @@ function loadAssets($page) {
 }
 
 function loadPage($page, $with_head = true) {
-    global $basepath;
+    global $basepath, $og;
     $path =  "pages" . DIRECTORY_SEPARATOR . $page . ".php";
     if (file_exists($path)) {
         if ($with_head) {
@@ -47,6 +47,11 @@ function loadPage($page, $with_head = true) {
 
 switch ($request) {
     case "/" :
+        $og = (object) [
+            "title" => t('index.og.title'),
+            "description" => t('index.og.description'),
+            "image" => "https://i.makeagif.com/media/4-23-2022/l8bRjC.gif"
+        ];
         loadPage("index");
         break;
     case "/vr":

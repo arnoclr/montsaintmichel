@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@dev</title>
+    <title><?= isset($og) ? $og->title : t('og.title') ?></title>
+
+    <?php if (isset($og)): ?>
+        <meta property="og:title" content="<?= $og->title ?>">
+        <meta property="og:description" content="<?= $og->description ?>">
+        <meta property="og:image" content="<?= $og->image ?>">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:site_name" content="Mont-Saint-Michel UNESCO" />
+        <meta property="og:locale" content="fr_FR">
+        <meta property="og:locale:alternate" content="en_US">
+        <meta property="og:locale:alternate" content="zh_CN">
+    <?php endif; ?>
+    <meta name="theme-color" content="#B94503">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#B94503">
 
     <link rel="stylesheet" href="<?= $basepath ?>/src/styles/app.css?v=<?= md5(filemtime("./src/styles/app.css")) ?>">
     <script src="<?= $basepath ?>/src/scripts/app.js?v=<?= md5(filemtime("./src/scripts/app.js")) ?>" defer></script>
