@@ -56,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
-    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
     font-variation-settings:
     'FILL' 0,
@@ -124,12 +124,26 @@ body, html {
 }
 
 .btn--primary {
-    border-color: var(--primary-color);
-    background-color: var(--primary-color);
+    border: none;
+    background: var(--primary-color);
+    background: linear-gradient(135deg, #B94503 0%, #B94503 48%, #BD5012 48%, #BD5012 50%, #C15A20 50%, #C15A20 55%, #B94503 55%, #B94503 100%);
     color: #fff;
+    background-position: 90% 0%;
+    background-size: 300% 100%;
 }
+
 .btn--primary:hover {
     box-shadow: 0 0 0 5px var(--primary-color-light-transparent);
+    animation: btn-primary-hover .8s ease-in-out forwards;
+}
+
+@keyframes btn-primary-hover {
+    from {
+        background-position: 90% 0%;
+    }
+    to {
+        background-position: 10% 0%;
+    }
 }
 
 .btn--large {
