@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" integrity="sha256-BPfK9M5v34c2XP6p0cxVz1mUQLst0gTLk0mlc7kuodA=" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js" integrity="sha256-yDc0eil8GjWFKqN1OSzHSVCiuGghTosZCcRje4tj7iQ=" crossorigin="anonymous"></script>
 
+<button onclick="window.history.back();" title="Retour" class="map-back-button"><span class="material-icons-sharp">arrow_back</span></button>
 <div id="map"></div>
 <div class="map-modal"></div>
 <button class="map-cta btn btn--primary btn--large">Trouver un parcours</button>
 
 <script>
-    var map = L.map('map').setView([
+    var map = L.map('map', {zoomControl: false}).setView([
         <?= isset($_GET['lat']) ? htmlspecialchars($_GET['lat']) : 48.6360 ?>,
         <?= isset($_GET['lng']) ? htmlspecialchars($_GET['lng']) : -1.5116 ?>
     ], <?= isset($_GET['zoom']) ? htmlspecialchars($_GET['zoom']) : 18 ?>);
@@ -14,6 +15,10 @@
     var mapModal = document.querySelector(".map-modal");
     var openedPlaceId = <?= isset($_GET['place']) ? htmlspecialchars($_GET['place']) : "null" ?>;
     var isOnMobile = window.innerWidth < 768;
+
+    L.control.zoom({
+        position: 'topright'
+    }).addTo(map);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -59,7 +64,7 @@
         <div class="map-modal__buttons">`
 
         if (data.vvid) {
-            html += `<a href="/vr?from=map#${data.vvid}" class="map-modal__btn-vv btn btn--primary">Voir en 3D</a>`
+            html += `<a href="/vr?step=${data.vvid}" class="map-modal__btn-vv btn btn--primary">Voir en 3D</a>`
         }
 
         html += `<a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${data.lat},${data.lng}" class="map-modal__btn-web btn">Ouvrir dans plan</a>

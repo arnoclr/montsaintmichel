@@ -123,7 +123,6 @@ const sleep = (milliseconds) => {
 let currentLocation = 0;
 let inAnimation = false;
 const modal = document.querySelector('.vr__modal');
-const hashlink = document.getElementById('js-hashlink');
 
 const updateModalUI = (locId) => {
     locId--
@@ -144,8 +143,8 @@ const switchLocation = async (increment) => {
 
     inAnimation = true;
     modal.classList.remove('show');
-    hashlink.href = `#${currentLocation + increment}`;
-    hashlink.click();
+    const step = currentLocation + increment;
+    window.history.replaceState({}, document.title, `?step=${step}`);
 
     for (let i = 0; i <= IMAGES_GAP; i++) {
         let r = i/IMAGES_GAP;

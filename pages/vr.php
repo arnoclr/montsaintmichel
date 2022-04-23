@@ -33,5 +33,3 @@
     <a href="javascript:alert('Images &copy; Google Earth Studio. Landsat / Copernicus, Data SIO, NOAA, U.S. Navy, NGA, GEBCO, TerraMetrics');"
        class="vr__attribution">&copy; Google Earth :: informations</a>
 </main>
-
-<a id="js-hashlink" style="display: none;" href=""></a>

@@ -90,6 +90,12 @@
     cursor: pointer;
 }
 
+.vr__back-button {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+}
+
 .vr__buttons-button:hover, .vr__buttons-button:active, .vr__buttons-button:focus {
     background-color: #444;
     outline: none;
@@ -121,10 +127,6 @@
     font-size: 18px;
     padding: 0px;
     line-height: 24px;
-}
-
-.vr__back-button span {
-    vertical-align: -25%;
 }
 
 @media screen and (max-width: 799px) {
