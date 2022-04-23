@@ -182,10 +182,10 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('vr__data_confirmed', 1);
     }
 
-    // detecter si on est sur une page avec un hash
-    if (window.location.hash) {
-        let hash = window.location.hash.substring(1);
-        currentLocation = parseInt(hash);
+    const urlParams = new URLSearchParams(window.location.search);
+    const step = urlParams.get('step');
+    if (step) {
+        currentLocation = parseInt(step);
         switchLocation(0);
         updateModalUI(currentLocation);
         modal.classList.add('show');
