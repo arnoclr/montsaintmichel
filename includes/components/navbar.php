@@ -1,4 +1,4 @@
-<div class="navbar <?= $navbar_classes ?? '' ?>">
+<div class="navbar <?= $navbar_classes ?? '' ?> js-navbar">
     <div class="navbar__links">
         <a href="/" class="navbar__links-link"><?= t('navbar.tab.home') ?></a>
         <a href="/map?from=navbar" class="navbar__links-link"><?= t('navbar.tab.village') ?></a>

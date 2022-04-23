@@ -285,6 +285,38 @@ body, html {
     padding: 48px var(--padding);
 }
 
+.navbar--white .navbar__links-link {
+    color: #fff;
+}
+
+.navbar--white .navbar__locale i {
+    color: #fff;
+    cursor: pointer;
+}
+
+.navbar--open {
+    position: fixed;
+    top: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
+    animation: navbar-enter .3s ease-in-out forwards;
+}
+
+.navbar--open .navbar__links-link, .navbar--open .navbar__locale i {
+    color: #545454;
+}
+
+@keyframes navbar-enter {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .navbar__links {
     width: 100%;
     display: flex;
@@ -308,15 +340,6 @@ body, html {
 }
 
 .navbar__locale i {
-    cursor: pointer;
-}
-
-.navbar--white .navbar__links-link {
-    color: #fff;
-}
-
-.navbar--white .navbar__locale i {
-    color: #fff;
     cursor: pointer;
 }
 

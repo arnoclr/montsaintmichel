@@ -66,4 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    const navbar = document.querySelector('.js-navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('navbar--open');
+        } else {
+            navbar.classList.remove('navbar--open');
+        }
+    });
 });
