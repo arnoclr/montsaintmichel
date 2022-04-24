@@ -215,12 +215,17 @@ video.addEventListener('loadeddata', function() {
 
 video.addEventListener('waiting', () => {
     if (videoLoaded) {
-        loaderFadeIn();
+        setTimeout(() => {
+            loaderFadeIn();
+        }, 150);
     }
 })
 
 video.addEventListener('playing', () => {
     loaderFadeOut();
+    setTimeout(() => {
+        loaderFadeOut();
+    }, 150);
 })
 
 document.addEventListener('keydown', (e) => {
@@ -247,7 +252,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const step = urlParams.get('step') || 1;
+    var step = urlParams.get('step') || 1;
+
+    if (step < 1 || step > LOCATIONS.length) {
+        step = 1;
+    }
+
     currentLocation = parseInt(step) - 1;
     video.poster = getPosterFor(currentLocation);
     switchLocation(1);
