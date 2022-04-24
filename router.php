@@ -57,7 +57,12 @@ switch ($request) {
         ];
         loadPage("index");
         break;
-    case "/vr":
+    case "/visite-virtuelle":
+        $og = (object) [
+            "title" => t('vv.og.title'),
+            "description" => t('vv.og.description'),
+            "image" => "https://i.imgur.com/ixsUaBg.jpg"
+        ];
         loadPage("vr");
         break;
     case "/histoire":

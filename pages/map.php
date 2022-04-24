@@ -64,7 +64,7 @@
         <div class="map-modal__buttons">`
 
         if (data.vvid) {
-            html += `<a href="/vr?step=${data.vvid}" class="map-modal__btn-vv btn btn--primary">Voir en 3D</a>`
+            html += `<a href="/visite-virtuelle?step=${data.vvid}" class="map-modal__btn-vv btn btn--primary">Voir en 3D</a>`
         }
 
         html += `<a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${data.lat},${data.lng}" class="map-modal__btn-web btn">Ouvrir dans plan</a>

@@ -52,7 +52,7 @@ $articles = getOrCache('index.articles', 60 * 12, function() {
     <div class="hero__content">
         <h1 class="hero__content-title"><?= t('index.hero.title') ?></h1>
         <div class="hero__content-cta">
-            <a id="skip-content" href="/vr" class="btn btn--primary btn--large"><?= t('index.hero.visit') ?></a>
+            <a id="skip-content" href="/visite-virtuelle" class="btn btn--primary btn--large"><?= t('index.hero.visit') ?></a>
         </div>
     </div>
     <small class="hero__attribution">&copy; <a target="_blank" href="https://www.mathieurivrin.com/?utm_source=BUT_INFO_MSM_UNESCO">Mathieu Rivrin</a> • <a target="_blank" href="https://youtu.be/Ay38geQlMDQ">voir sur youtube</a></small>
