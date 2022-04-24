@@ -3,6 +3,7 @@
 function i($filename, $size = "default", $format = "webp") {
 
     $sizes = [
+        "xsmall" => 220,
         "small" => 340,
         "medium" => 640,
         "large" => 1024,

@@ -69,11 +69,11 @@
     z-index: 1;
 }
 
-.activities, .articles {
+.activities, .articles, .collection__title {
     padding: 32px var(--padding);
 }
 
-.activities__title, .articles__title {
+.activities__title, .articles__title, .collection__title {
     font: 400 28px Ibarra Real Nova, serif;
     text-transform: uppercase;
 }
@@ -94,6 +94,25 @@
         "g2 g3 g4";
     grid-template-rows: 20vw 20vw;
     gap: 32px;
+}
+
+
+.collection__grid {
+    
+    /* display: flex;
+    align-items: center;
+    flex-wrap: nowrap; --- J'ai du mettre ces propriétés dans le php, ça ne marche pas ici pour je ne sais quelle raison */ 
+    overflow-x: hidden;
+    animation: slide 0.5s linear infinite;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 @media screen and (max-width: 800px) {

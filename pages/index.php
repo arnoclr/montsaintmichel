@@ -42,6 +42,7 @@ $_open_quiz_btn = true;
 $articles = getOrCache('index.articles', 60 * 12, function() {
     return parseXML("https://news.google.com/rss/topics/CAAqIggKIhxDQkFTRHdvSkwyMHZNREZ3T0dnMkVnSm1jaWdBUAE?hl=fr&gl=FR&ceid=FR:fr");
 })
+
 ?>
 
 <div class="hero">
@@ -93,6 +94,16 @@ document.getElementById("main-video").appendChild(source);
         <?php foreach ($articles as $key => $activity): ?>
             <?php $activity->label = timeAgo(strtotime($activity->pubDate)) ?>
             <?php include "./includes/components/card.php"; ?>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+<div class="collection">
+    <h1 class="collection__title"><!-- <?= t('index.articles.title') ?> -->Collection d'images</h1>
+    <div class="collections__grid" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 32px; overflow-x: hidden;">
+        <?php foreach (glob("src/img/collections/*") as $image): ?>
+            <?php $image = "collections/".basename($image) ?>
+            <img loading="lazy" src="<?= i($image, 'xsmall') ?>" alt="" style="height: auto;">
         <?php endforeach; ?>
     </div>
 </div>
