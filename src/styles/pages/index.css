@@ -40,6 +40,24 @@
 .hero__content-cta {
     margin-top: 64px;
 }
+.hero__attribution {
+    position: absolute;
+    bottom: 8px;
+    right: var(--padding);
+    color: #bbb;
+    font: 12px Noto Sans, sans-serif;
+    z-index: 2;
+}
+
+.hero__attribution a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.hero__attribution a:hover {
+    color: #eee;
+    text-decoration: none;
+}
 
 .hero__shadow {
     position: absolute;

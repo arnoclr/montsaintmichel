@@ -48,17 +48,29 @@ $articles = getOrCache('index.articles', 60 * 12, function() {
     <div class="hero__navbar">
         <?php $navbar_classes = "navbar--white"; include "./includes/components/navbar.php"; ?>
     </div>
-    <video class="hero__banner" loop autoplay muted>
-        <source src="https://i.imgur.com/kd2ur78.mp4" type="video/mp4">
-    </video>
+    <video id="main-video" class="hero__banner" poster="https://i.imgur.com/33UIruK.webp" loop autoplay muted></video>
     <div class="hero__content">
         <h1 class="hero__content-title"><?= t('index.hero.title') ?></h1>
         <div class="hero__content-cta">
             <a id="skip-content" href="/vr" class="btn btn--primary btn--large"><?= t('index.hero.visit') ?></a>
         </div>
     </div>
-    <!-- <div class="hero__shadow"></div> -->
+    <small class="hero__attribution">&copy; <a target="_blank" href="https://www.mathieurivrin.com/?utm_source=BUT_INFO_MSM_UNESCO">Mathieu Rivrin</a> • <a target="_blank" href="https://youtu.be/Ay38geQlMDQ">voir sur youtube</a></small>
+    <div class="hero__shadow"></div>
 </div>
+
+<script>
+const videos = [
+    "https://i.imgur.com/xPQR4yw.mp4",
+    "https://i.imgur.com/33UIruK.mp4"
+];
+
+let source = document.createElement("source");
+source.src = videos[window.innerWidth > 720 ? 1 : 0];
+source.type = "video/mp4";
+
+document.getElementById("main-video").appendChild(source);
+</script>
 
 <div class="activities">
     <h1 class="activities__title"><?= t('index.activities.title') ?></h1>
