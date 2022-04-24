@@ -732,3 +732,81 @@ body, html {
         grid-row-start: 1;
     }
 }
+
+.loader {
+    display: inline-block;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 4rem solid var(--primary-color);
+    clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    animation: 1.6s to-loader linear infinite;
+    background: none !important;
+}
+
+.loader.small {
+    width: 24px;
+    height: 24px;
+    border-width: 3px;
+}
+
+.loader.medium {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+}
+
+.loader.large {
+    width: 56px;
+    height: 56px;
+    border-width: 5px;
+}
+
+.loader.white {
+    border-color: #ffffff !important;
+}
+
+@keyframes to-loader {
+    0% {
+        transform: rotate(0deg);
+        clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    }
+
+    20% {
+        clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%);
+    }
+
+    30% {
+        clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 50% 100%, 50% 100%);
+    }
+
+    40% {
+        clip-path: polygon(50% 50%, 0% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%);
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%);
+    }
+
+    60% {
+        clip-path: polygon(50% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%);
+    }
+
+    70% {
+        clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%, 0% 50%);
+    }
+
+    80% {
+        clip-path: polygon(50% 50%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 50%);
+    }
+
+    90% {
+        transform: rotate(360deg);
+        clip-path: polygon(50% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%);
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%, 0% 50%);
+    }
+}

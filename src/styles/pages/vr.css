@@ -31,6 +31,7 @@
     transform: scale(0);
     transform-origin: 80% 20%;
     transition: transform .3s cubic-bezier(.72, .06, .56, 1.15), opacity .3s ease;
+    z-index: 3;
 }
 
 .vr__modal.show {
@@ -68,6 +69,21 @@
     width: auto;
 }
 
+.vr__loader {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity .2s ease;
+    z-index: 1;
+}
+
+.vr__loader.show {
+    opacity: 1;
+}
+
 .vr__buttons {
     position: fixed;
     left: 0;
@@ -94,6 +110,7 @@
     display: grid;
     place-items: center;
     text-decoration: none;
+    z-index: 3;
 }
 
 .vr__buttons-button:hover, .vr__buttons-button:active, .vr__buttons-button:focus {

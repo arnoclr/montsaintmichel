@@ -1,7 +1,13 @@
 <main class="vr">
     <button onclick="window.history.back();" title="Retour" class="vr__back-button"><span class="material-icons-sharp">arrow_back</span></button>
-    <img class="vr__3D js-vr-3D-img" src="https://cdn.arnocellarier.fr/s/iut/msm/vv/1080/photo (1).webp"
-         alt="Vue en 3D du Mont-Saint-Michel issue de Google Earth">
+
+    <aside class="vr__loader" style="display: none;">
+        <i class="loader medium white"></i>
+    </aside>
+
+    <video class="vr__3D js-video" poster="https://cdn.arnocellarier.fr/s/iut/msm/vv/1080/photo%20(1).webp" autoplay muted disablepictureinpicture>
+        <source class="js-source" src="" type="video/mp4">
+    </video>
 
     <div class="vr__modal">
         <div class="vr__modal-header">

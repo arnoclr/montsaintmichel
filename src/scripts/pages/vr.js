@@ -1,8 +1,3 @@
-const BASE_URL = "https://cdn.arnocellarier.fr/s/iut/msm/vv/1080/";
-const IMAGES_GAP = 90; // nombre d'images entre 2 lieux
-const IMAGES_NUMBER = 12 * IMAGES_GAP + 1; // nombre d'images total
-const mainImg = document.querySelector('.js-vr-3D-img');
-
 const LOCATIONS = [
     {
         "name": "Chapelle Saint-Aubert",
@@ -105,24 +100,45 @@ const LOCATIONS = [
     }
 ]
 
-// preload images
-const preloadSetOfImages = (from, to) => {
-    for (let i = from; i <= to; i++) {
-        let l = document.createElement('link')
-        l.rel = 'preload'
-        l.as = 'image'
-        l.href = BASE_URL + `photo (${i}).webp`
-        document.head.appendChild(l)
-    }
+const videos = {
+    "1": [
+        "https://i.imgur.com/DMYmFJD.mp4",
+        "https://i.imgur.com/klAVGkb.mp4",
+        "https://i.imgur.com/uspzUc4.mp4",
+        "https://i.imgur.com/bKLtpUD.mp4",
+        "https://i.imgur.com/olKMSi5.mp4",
+        "https://i.imgur.com/NUAt9mH.mp4",
+        "https://i.imgur.com/3tVqriy.mp4",
+        "https://i.imgur.com/kOgH8r7.mp4",
+        "https://i.imgur.com/fVdPvwJ.mp4",
+        "https://i.imgur.com/nOYoqjh.mp4",
+        "https://i.imgur.com/g9Olyp3.mp4",
+        "https://i.imgur.com/Eip24fK.mp4"
+    ],
+    "-1": [
+        "https://i.imgur.com/Gn0griF.mp4",
+        "https://i.imgur.com/Vag1fWT.mp4",
+        "https://i.imgur.com/UhKH3IO.mp4",
+        "https://i.imgur.com/Q66dDUz.mp4",
+        "https://i.imgur.com/KYdIIwU.mp4",
+        "https://i.imgur.com/vxNqQGo.mp4",
+        "https://i.imgur.com/jJO7ot4.mp4",
+        "https://i.imgur.com/doZrSTd.mp4",
+        "https://i.imgur.com/OXYaMvB.mp4",
+        "https://i.imgur.com/u19lgZU.mp4",
+        "https://i.imgur.com/fbhRXuL.mp4",
+        "https://i.imgur.com/cSMMa6E.mp4"
+    ]
 }
 
-const sleep = (milliseconds) => {
-    return new Promise(resolve => setTimeout(resolve, milliseconds))
-}
+const video = document.querySelector('.js-video');
+const source = document.querySelector('.js-source');
+const modal = document.querySelector('.vr__modal');
+const loader = document.querySelector('.vr__loader');
 
 let currentLocation = 0;
 let inAnimation = false;
-const modal = document.querySelector('.vr__modal');
+let videoLoaded = false;
 
 const updateModalUI = (locId) => {
     locId--
@@ -138,31 +154,74 @@ const updateModalUI = (locId) => {
 
 const switchLocation = async (increment) => {
     if (inAnimation) return;
-    if (currentLocation + increment < 0) return;
-    if (currentLocation + increment >= IMAGES_NUMBER / IMAGES_GAP) return;
 
     inAnimation = true;
     modal.classList.remove('show');
     const step = currentLocation + increment;
     window.history.replaceState({}, document.title, `?step=${step}`);
 
-    for (let i = 0; i <= IMAGES_GAP; i++) {
-        let r = i/IMAGES_GAP;
-        let diffToMiddle = Math.abs(r - 0.5) * 2.3;
-        let ms = (1000/IMAGES_GAP /6) * ((diffToMiddle + 0.5)**6);
-        await sleep(ms);
-        let photoId = currentLocation*IMAGES_GAP + (i * increment) + 1;
-        mainImg.src = BASE_URL + `photo (${photoId}).webp`;
+    currentLocation += increment;
+
+    if (currentLocation > 0 && currentLocation < LOCATIONS.length) {
+        updateModalUI(currentLocation);
     }
 
-    currentLocation += increment;
-    inAnimation = false;
+    source.src = videos[increment][currentLocation - Math.max(0, increment)];
+    videoLoaded = false;
+    video.load();
+    video.play();
 
-    updateModalUI(currentLocation);
-    modal.classList.add('show');
-
-    preloadSetOfImages(currentLocation * IMAGES_GAP, (currentLocation + 1) * IMAGES_GAP);
+    setTimeout(() => {
+        if (!videoLoaded) {
+            loaderFadeIn();
+        }
+    }, 350);
 }
+
+const getPosterFor = (locId) => {
+    return `https://cdn.arnocellarier.fr/s/iut/msm/vv/1080/photo%20(${1 + locId * 90}).webp`;
+}
+
+const loaderFadeIn = () => {
+    loader.classList.add('show');
+    loader.style.display = 'grid';
+    setTimeout(() => {
+        loader.style.display = 'grid';
+    }, 200);
+}
+
+const loaderFadeOut = () => {
+    loader.classList.remove('show');
+    setTimeout(() => {
+        loader.style.display = 'none';
+    }, 200);
+}
+
+video.addEventListener('ended', () => {
+    inAnimation = false;
+    source.src = "";
+    video.load(); 
+
+    if (currentLocation <= LOCATIONS.length) {
+        modal.classList.add('show');
+    }
+}, false);
+
+video.addEventListener('loadeddata', function() {
+    videoLoaded = true;
+    loaderFadeOut();
+    video.poster = getPosterFor(currentLocation);
+}, false);
+
+video.addEventListener('waiting', () => {
+    if (videoLoaded) {
+        loaderFadeIn();
+    }
+})
+
+video.addEventListener('playing', () => {
+    loaderFadeOut();
+})
 
 document.addEventListener('keydown', (e) => {
     if (e.keyCode === 37) {
@@ -174,22 +233,24 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     // prévenir que la visite consomme beaucoup de données
-    const lotOfDataMessage = "Attention, la visite virtuelle peut consommer beaucoup de données, des frais de connexion peuvent s'appliquer. \n\nTaille estimée : 140 Mo. \n\nVoulez-vous continuer ?"
+    var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const lotOfDataMessage = "Attention, la visite virtuelle peut consommer beaucoup de données, des frais de connexion peuvent s'appliquer. \n\nTaille estimée : 40 Mo. \n\nVoulez-vous continuer ?"
 
-    if (localStorage.getItem('vr__data_confirmed') != 1 && !confirm(lotOfDataMessage)) {
-        return history.back();
-    } else {
-        localStorage.setItem('vr__data_confirmed', 1);
+    if (connection) {
+        if (connection.effectiveType === 'cellular') {
+            if (localStorage.getItem('vr__data_confirmed') != 1 && !confirm(lotOfDataMessage)) {
+                return history.back();
+            } else {
+                localStorage.setItem('vr__data_confirmed', 1);
+            }
+        }
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const step = urlParams.get('step');
-    if (step) {
-        currentLocation = parseInt(step);
-        switchLocation(0);
-        updateModalUI(currentLocation);
-        modal.classList.add('show');
-    } else {
-        preloadSetOfImages(1, IMAGES_GAP + 1);
-    }
+    const step = urlParams.get('step') || 1;
+    currentLocation = parseInt(step) - 1;
+    video.poster = getPosterFor(currentLocation);
+    switchLocation(1);
+    updateModalUI(currentLocation);
+    modal.classList.add('show');
 });
