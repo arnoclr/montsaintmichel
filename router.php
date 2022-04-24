@@ -42,6 +42,9 @@ function loadPage($page, $with_head = true) {
         }
         loadAssets($page);
         include($path);
+        if ($with_head) {
+            include "includes/endbody.php";
+        }
     }
 }
 
