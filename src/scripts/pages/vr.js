@@ -162,7 +162,7 @@ const switchLocation = async (increment) => {
 
     currentLocation += increment;
 
-    if (currentLocation > 0 && currentLocation < LOCATIONS.length) {
+    if (currentLocation > 0 && currentLocation <= LOCATIONS.length) {
         updateModalUI(currentLocation);
     }
 
