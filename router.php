@@ -53,7 +53,7 @@ switch ($request) {
         $og = (object) [
             "title" => t('index.og.title'),
             "description" => t('index.og.description'),
-            "image" => "https://i.makeagif.com/media/4-23-2022/l8bRjC.gif"
+            "image" => "https://i.imgur.com/L35opDg.gif"
         ];
         loadPage("index");
         break;
