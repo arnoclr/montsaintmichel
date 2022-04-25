@@ -292,7 +292,7 @@
             "o": ["2 Tours jumelles","5 Tours d’attaque","25 Tours défensives"],
             "d": "Sa position strategique, entre le Royaume de France, le Duché de Bretagne, et le Royaume d'Angleterre en fond une cible de choix, ce qui force les propriétaire à construire une défense solide, prête garder le Mont",
             "l": "",
-            "i": "" 
+            "i": "https://i.imgur.com/6xvIRsj.png" 
         },
         {
             "q": "La Merveille repose sur",
@@ -300,7 +300,7 @@
             "o": ["1 étage","2 étages","4 étages"],
             "d": "La taille de ce magnifique batiment peut le laisser penser, mais en effet, la Merveille repose sur 3 étages, pour au final mesurer 80m de hauteur",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/dRdAsBi.png"
         }
     ],
     "religion": [
@@ -310,15 +310,15 @@
             "o": ["Orthodoxie", "Protestantisme", "Aucune des trois"],
             "d": "Le Mont-Saint-Michel est un batiment Catohlique bien que des Protestant ait essayé de le prendre",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/lXFq1DB.jpg"
         },
         {
             "q": "L’Archange Saint-Michel apparaît dans l'Ancien Testament ?",
-            "a": "Faux",
-            "o": ["Vrai"],
+            "a": "Vrai",
+            "o": ["Faux"],
             "d": "En effet l'Archange Saint Michel apparaît dans l'Ancien Testament",
             "l": "",
-            "i": ""
+            "i": "i.https://i.imgur.com/wujG1OU.png"
         },
         {
             "q": "Qui est juste en dessous de l’Abbé dans la hiérarchie de l'Église Catholique ?",
@@ -326,7 +326,7 @@
             "o": ["Le Prêtre", "Le Pape", "L’Évêque"],
             "d": "Le titre d'Abbé est un titre a part dans la hiérarchie de l'Eglise Catholique",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/ubExsSF.png"
         },
         {
             "q": "Comment devient-on abbé du Mont ?",
@@ -334,7 +334,7 @@
             "o": ["Par tirage au sort parmi les moines du Mont", "Le Pape choisit le nouvel abbé", "En remportant des combats à mort avec les autres prétendants, d’après le souhait de Saint-Michel"],
             "d": "Pour devenir Abbé du Mont, il faut être élu par les autres moine, à la mort du précédent Abbé, bien que dans l'histoire du Mont, ce système d'élection à plusieurs fois été retiré",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/7aV7uaf.png"
         },
         {
             "q": "L’archange Saint-Michel a combattu Lucifer sous la forme d’un dragon sur le Mont ?",
@@ -342,7 +342,7 @@
             "o": ["Faux"],
             "d": "Vrai, dans la bible, il est écrit que Saint Michel a combattu Lucifer sous la forme d'un dragon à l'endroit exact ou le Mont est construit aujourd'hui",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/wujG1OU.png"
         },
         {
             "q": "Quel est le nom de la première prière que doivent réaliser les moines ?",
@@ -350,7 +350,7 @@
             "o": ["La matinale", "L’abbatial", "Elle n’a pas de nom"],
             "d": "La journée des moines est rythmée par differente prières, la première s'appelant les matines",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/zk6Kcka.png"
         },
         {
             "q": "Combien de prières les moines doivent faire dans la journée ?",
@@ -358,7 +358,7 @@
             "o": ["1", "24", "12"],
             "d": "Les moines doivent faire 5 prière dans la journée, d'après les textes de la Bible",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/f8Chs05.png"
         },
         {
             "q": "À quelle heure les matines sont elles ?",
@@ -366,7 +366,7 @@
             "o": ["10h", "9h", "12h"],
             "d": "Les differentes prière des moines se déroule à des heures très précise dans la journée, les matines se déroulant à 5h du matin",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/hrrNGk5.png"
         },
         {
             "q": "Combien de temps durait le règne d’un abbé ?",
@@ -374,7 +374,7 @@
             "o": ["4 ans", "7 ans", "10 ans"],
             "d": "Les Abbé reignent, comme les Rois, à vie",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/5Ez4fYd.png"
         },
         {
             "q": "Qu’est-ce qu’un Archange chez les Chrétiens ?",
@@ -382,7 +382,7 @@
             "o": ["Un ange armé d’un arc comme Cupidon", "C’est un synonyme du mot d’ange", "C’est l’autre nom de Dieu"],
             "d": "Le nom peut porter à confusion, mais un Archange est un ange supérieur, et non pas un ange armé d'un arc",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/4pyyGKG.png"
         }
     ],
     "personnalité": [
@@ -392,7 +392,7 @@
             "o": ["Saint Aubert", "Louis VII", "Robert Jolivet"],
             "d": "Le 7eme roi des Capétiens, est Philippe Auguste, ayant regné de 1179 à 1223",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/HR9qijZ.png"
         },
         {
             "q": "Qui fût l’un des meilleurs commandants sous les ordres de l’amiral de Coligny ?",
@@ -400,7 +400,8 @@
             "o": ["Edouard Corroyer", "Bertrand du Guesclin", "Pierre le Roy"],
             "d": "Gabriel de Lorges était un noble français d'origine écossaise et capitaine de la garde écossaise du roi Henri II de France .",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/yLemtyz.png",
+            "c": "Wikipédia"
         },
         {
             "q": "Comment s’appelle le grand Chevalier qui à vécu au Mont-Saint-Michel ?",
@@ -408,7 +409,7 @@
             "o": ["Richard Cœur de Lion.", "Jean de Chastenay", "Jean Bonbeurre"],
             "d": "Bertrand du Gesclin fût chevalier au XIVe siècle et protégea le Mont Saint-Michel lors de la Guerre de Cents ans.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/Hh7B0KG.png"
         },
         {
             "q": "Quel acteur s’est marié au Mont-Saint-Michel en 2021 ?",
@@ -416,7 +417,7 @@
             "o": ["Johnny Depp", "François-Xavier Demaison", "Jean Dujardin"],
             "d": "Arnaud Ducret est un humoriste et acteur français qui s'est marié au Mont Saint-Michel en 2021",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/5jMJGx9.png"
         },
         {
             "q": "Quel président français a inauguré le Pont-passerelle en 2015 ?",
@@ -424,7 +425,7 @@
             "o": ["Emmanuel Macron", "Nicolas Sarkozy", "François Hollande"],
             "d": "François Mitterrand inaugura le Pont-passerelle en 2015",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/TJyIXgT.png"
         },
         {
             "q": "Qui est l’unique chanteur à avoir eu le droit de faire un concert géant sur le Mont-Saint-Michel ?",
@@ -432,7 +433,7 @@
             "o": ["Johnny Hallyday", "Daniel Balavoine", "Serge Gainsbourg"],
             "d": "Jean-Michel Jarre fît le seul chanteur ayant eu les droits d'organisé un concert au Mont Saint-Michel le 28 Juillet 1993",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/gVtWar2.png"
         },
         {
             "q": "Quel peintre célèbre à visiter le Mont-Saint-Michel en 1836 ?",
@@ -440,7 +441,7 @@
             "o": ["Antoine-Jean Gros", "Camille Pissarro", "Alexandre Antigna"],
             "d": "Le 27 Juin 1836, le cébèbre Victor Hugo se rendit au Mont Saint-Michel qui est le plus beau lieu du monde selon sa lettre envoyé à Louise Bertin",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/858BIyd.png"
         },
         {
             "q": "Qui a racheté la célèbre auberge de la mère Poulard ?",
@@ -448,7 +449,8 @@
             "o": ["Christophe Fermeture", "Jean-eude De La Marne", "Philippe Etchebest"],
             "d": "Eric Vannier est le propriétaire de la célèbre auberge de la mère Poulard. Il la racheta en 1986 ainsi que des Hôtels au Mont Saint-Michel.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/lAP8em1.png",
+            "c": "Marie Etchegoyen"
         },
         {
             "q": "Quel roi à détruit les célèbres Cage de fer du Mont-Saint-Michel ?",
@@ -456,7 +458,7 @@
             "o": ["Louis XVI", "Louis XIV", "Philippe II"],
             "d": "Louis Philippe Ier a détruit les Cage de fer installé par Louis XI avant lui.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/gcCZXFc.png"
         }
     ],
     "faune & flore": [
@@ -466,7 +468,7 @@
             "o": ["Gratique", "Beulone", "Menez"],
             "d": "Tombelaine est une petite île située sur la baie de Mont-Saint-Michel",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/ThrCG6w.png"
         },
         {
             "q": "Combien y a-t-il d’espèces animales et végétales dans la baie ?",
@@ -474,7 +476,7 @@
             "o": ["145", "265", "1540"],
             "d": "La baie regorge d'espèces animales et végétales. Il y a 480 espèces différentes que vous pouvez voir au Mont-Saint-Michel.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/7Ey6qjL.png"
         },
         {
             "q": "Quelle est la fonction principale du Mont pour les oiseaux migrateur ?",
@@ -482,7 +484,7 @@
             "o": ["Une zone de pêche idéale", "Une zone de reproduction", "Aucune des réponses"],
             "d": "En effet, les oiseaux revenant souvent des mers, se reposent sur la baie du Mont Saint-Michel.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/jpcZlm2.png"
         },
         {
             "q": "La roche la plus présente au mont est :",
@@ -490,7 +492,7 @@
             "o": ["Le basalte", "Le grès", "Du calcaire"],
             "d": "Le rocher du Mont Saint-Michel est principalement constitué de granite. Il est composé également de calcaire et de grès.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/CvBRT6A.png"
         },
         {
             "q": "De combien de km² est entouré la dépression du Mont-Saint-Michel ?",
@@ -498,7 +500,7 @@
             "o": ["275 km²", "580 km²", "150 km²"],
             "d": "La baie du Mont Saint-Michel, occupe, entre Cancale et Granville, une dépression d'environ 500 km²",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/iFgzA7v.png"
         },
         {
             "q": "Quel animal a habité la baie durant le XIXe siècle ?",
@@ -506,7 +508,7 @@
             "o": ["Des crocodiles", "Des furets", "Des girafes"],
             "d": "En effet, des phoques habitaient et habitent toujours la baie du Mont Saint-Michel. Malheureusement, ils fûrent chassé pour leur viande, mais nous pouvons toujours en apercevoir de temps en temps.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/Xr2AKmb.png"
         },
         {
             "q": "La conchyliculture est :",
@@ -514,7 +516,7 @@
             "o": ["L’élevage de daurades", "L’élevage de mouettes", "Ce mot n’existe pas"],
             "d": "Ce mot existe bel et bien; il s'agit de l'élevage de coquillages qui sont très présent sur la baie.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/IsAD52G.png"
         },
         {
             "q": "Laquelle parmi ces fleurs est protégée sur la baie du Mont ?",
@@ -522,15 +524,16 @@
             "o": ["La Chicorée scabre", "Les pivoines", "Les Clématites"],
             "d": "En effet, la crételle hérissé est une des fleurs les plus présente au Mont Saint-Michel mais aussi l'une des espèces la plus protégée.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/1FZetnp.png",
+            "c": "Tigerente"
         },
         {
             "q": "La laine de mouton au Mont-Saint-Michel était autrefois utilisée comme :",
-            "a": "Aucune des réponses",
-            "o": ["Combustible pour les cheminées", "Fil pour faire de la couture", "Corde pour des instruments de musique"],
-            "d": "En effet, la laine de mouton n'était pas spécialement utile. Les moutons étaient exploités principalement pour leur viande.",
+            "a": "Pour faire des couvertures",
+            "o": ["Combustible pour les cheminées", "Pour faire des couvertures", "Corde pour des instruments de musique"],
+            "d": "En effet, la laine de mouton était utilisée pour faire des couvertures. Mais les moutons étaient surtout exploités pour leur viande.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/93bGLzZ.png"
         },
         {
             "q": "Qu’est-ce qui rend la viande des agneaux salée ?",
@@ -538,7 +541,7 @@
             "o": ["Le sable", "Leur alimentation en moules", "C’est leur espèce qui donne ce goût salé"],
             "d": "En effet, si la viande des agneaux sont salée, c'est du à leur alimentation en algues.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/LYtcnQW.png"
         }
     ],
     "guerre": [
@@ -548,7 +551,7 @@
             "o": ["La Première Guerre Mondiale", "La Seconde Guerre Mondiale", "Il n’a connu aucune guerre"],
             "d": "Le grand conflit durant lequel le Mont à le plus souffert est la Guerre de Cent Ans, de part sa position strategique entre les deux beligérant de cette guerre",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/6lpogmR.png"
         },
         {
             "q": "Quel était le nom du chevalier qui a longuement défendu le Mont durant la Guerre de Cent Ans ?",
@@ -556,7 +559,7 @@
             "o": ["Jeanne d’Arc", "Lancelot du Lac", "Zoro"],
             "d": "En effet Le Chevalier Du Guesclin etait le chef de la garnison chargée de defendre le Mont durant la guerre",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/fhlPsiM.jpg"
         },
         {
             "q": "Qui était le chef des protestants ayant essayé de prendre le Mont durant les guerres de religion ?",
@@ -564,7 +567,7 @@
             "o": ["Martin Luther", "Marquis de Lafayette", "Childebert V"],
             "d": "Le Général Montgomery, était un général de foi protestantes. C'est lui qui a guidé une troupe de 90 soldat pour essayer de prendre le Mont",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/jvoFILE.jpg"
         },
         {
             "q": "Qui a incendié le Mont en 1204 ?",
@@ -572,7 +575,7 @@
             "o": ["Le royaume de France", "Les Normands", "Les Anglais"],
             "d": "Le Mont fut incendié en 1204 par les Bretons, pour protester contre le duc de Normandie",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/7Vr0kr7.png"
         },
         {
             "q": "Le Mont-Saint-Michel n'est-il jamais tombé aux mains des Anglais ?",
@@ -580,7 +583,7 @@
             "o": ["Vrai"],
             "d": "Faux, le Mont est devenu Anglais lors de la débacle de l'armée Française après la defaite de Crecy",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/q13FxmS.png"
         },
         {
             "q": "En quelle année les Bretons ont-ils définitivement perdu le Mont-Saint-Michel ?",
@@ -588,7 +591,8 @@
             "o": ["En 966", "En 1204", "En 716"],
             "d": "En effet la propriété du Mont Saint Michel fut longuement débattue durant son histoire, étant un temps Breton, puis Normand, puis Breton a nouveau. Mais il devint bien Normand définitivement à partir de 1009",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/t20UR4h.png",
+            "c": "JB Pattier"
         },
         {
             "q": "Le Mont fut menacé de destruction pendant la Première Guerre Mondiale ?",
@@ -596,7 +600,7 @@
             "o": ["Vrai"],
             "d": "Faux, la plupart des combats destructeur de la Première Guerre Mondiale avait lieu à l'Est du pays, bien loin du Mont.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/h4GaB6C.png"
         },
         {
             "q": "Quel fut la situation du Mont durant la Seconde Guerre mondiale ?",
@@ -604,7 +608,7 @@
             "o": ["Il fut occupé par les Anglais", "Ce fut un des derniers territoires encore Français en Europe", "C’était un territoire neutre, car culturel"],
             "d": "En effet le Mont Saint Michel n'a pas échappé à l'occupation Allemande, et il servit d'avant poste pour ces dernier, et de lieu de repos pour les soldats en permission",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/h4GaB6C.png"
         },
         {
             "q": "Que s’est-il passé lors des incursions Viking dans le Royaume de France pour le Mont-Saint-Michel ?",
@@ -612,7 +616,8 @@
             "o": ["Il fut en partie détruit", "Il fut complètement ignoré par les Vikings", "Les vikings s’en sont emparé afin d’établir une colonie"],
             "d": "Lorsque le Royaume Franc fut attaqué par les Vikings, la population cherchait un endroit ou se cacher, et le Mont permettait cela.",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/HunxdR5.png",
+            "c": "CHARLES DARRIGAN"
         },
         {
             "q": "Deux machines de guerre Anglaise trônent à l’entrée du Mont, quel est leur nom ?",
@@ -620,7 +625,8 @@
             "o": ["Canons", "Trébuchets", "Couillards"],
             "d": "Ancetre des canons, c'est machine de guerre était néanmoins lourde difficile a manipuler, ce qui fait qu'elle était souvent abandonnées en cas de retraite",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/VWHBO0I.png",
+            "c": "Wikipedia"
         }
     ],
     "difficile": [
@@ -630,7 +636,7 @@
             "o": ["Les Bénédictins", "Les Shaolin", "Aubert était seul sur le Mont"],
             "d": "L'ordre des Chanoines etait l'ordre présent sur le Mont sous le règne de l'évêque Aubert",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/KpA1tDt.png"
         },
         {
             "q": "Comment appelle-t-on les habitants du Mont ?",
@@ -638,7 +644,7 @@
             "o": ["Les Saint-Michelin", "Les Montgoles", "Les Michels"],
             "d": "Bien que Saint Michelin semble être une réponse évidente, les habitant du Mont s'appelle les Montois",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/6wXJLcp.png"
         },
         {
             "q": "Quel dirigeant décida de prendre Saint-Michel en tant que symbole protecteur de son empire ?",
@@ -646,7 +652,7 @@
             "o": ["Jules César", "Napoléon", "Louis XIV"],
             "d": "Charlemagne, ou Charles Ier est le successeur de Pepin le Bref sur le trône des Francs, c'est lui qui decidera de prendre Saint Michel comme protecteur de son empire en 800",
             "l": "",
-            "i": ""
+            "i": "https://i.imgur.com/bSge4Hw.png"
         }
     ]
 }
