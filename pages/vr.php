@@ -31,7 +31,7 @@
         <button class="vr__buttons-button material-icons-sharp" onclick="switchLocation(-1);"
                 title="Naviguer vers l'endroit précédent">navigate_before
         </button>
-        <button class="vr__buttons-button material-icons-sharp" onclick="switchLocation(1);"
+        <button id="skip-content" class="vr__buttons-button material-icons-sharp" onclick="switchLocation(1);"
                 title="Naviguer vers l'endroit suivant">navigate_next
         </button>
     </div>

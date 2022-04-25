@@ -114,8 +114,13 @@
     z-index: 3;
 }
 
-.vr__buttons-button:hover, .vr__buttons-button:active, .vr__buttons-button:focus {
-    background-color: #444;
+.vr__buttons-button:hover {
+    background-color: #4a4a4a;
+    outline: none;
+}
+
+.vr__buttons-button:active, .vr__buttons-button:focus {
+    background-color: #777;
     outline: none;
 }
 
