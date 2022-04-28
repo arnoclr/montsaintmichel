@@ -8,8 +8,12 @@
 
     <?php if (isset($og)): ?>
         <meta property="og:title" content="<?= $og->title ?>">
+        <?php if (isset($og->description)): ?>
         <meta property="og:description" content="<?= $og->description ?>">
+        <?php endif; ?>
+        <?php if (isset($og->image)): ?>
         <meta property="og:image" content="<?= $og->image ?>">
+        <?php endif; ?>
         <meta name="twitter:card" content="summary_large_image">
         <meta property="og:site_name" content="Mont-Saint-Michel UNESCO" />
         <meta property="og:locale" content="fr_FR">
