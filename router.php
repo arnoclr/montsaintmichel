@@ -1,7 +1,7 @@
 <?php
 
 // global vars
-$basepath = "."; // ex: "/app"
+$basepath = ""; // ex: "/app"
 $request = $_SERVER['REQUEST_URI'];
 $request = explode('?', $request)[0];
 $request = str_replace($basepath, '', $request);
@@ -67,6 +67,9 @@ switch ($request) {
         break;
     case "/histoire":
         loadPage("histoire/en-bref");
+        break;
+    case "/histoire/frise":
+        loadPage("histoire/frise");
         break;
     case "/architecture":
         loadPage("architecture/architecture");

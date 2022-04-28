@@ -17,7 +17,7 @@ $activities = [
     ]
 ];
 
-$json = file_get_contents("$basepath/src/scripts/quiz.json");
+$json = file_get_contents("src/scripts/quiz.json");
 
 // select random key of json object
 $key = array_rand(json_decode($json, true));

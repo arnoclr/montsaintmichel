@@ -50,7 +50,7 @@
     $seed = isset($_GET['seed']) ? $_GET['seed'] : rand(0, 99999);
 
     // récupérer les questions du json
-    $json = file_get_contents("$basepath/src/scripts/quiz.json");
+    $json = file_get_contents("src/scripts/quiz.json");
 
     // selectionner 2 questions pour chaque catégorie
     $data = json_decode($json);
