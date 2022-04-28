@@ -69,6 +69,9 @@ switch ($request) {
         loadPage("histoire/en-bref");
         break;
     case "/histoire/frise":
+        $og = (object) [
+            "title" => "Frise chronologique",
+        ];
         loadPage("histoire/frise");
         break;
     case "/architecture":
