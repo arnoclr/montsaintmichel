@@ -3,13 +3,29 @@
     align-items: flex-end;
     list-style: none;
     gap: 15vw;
-    margin-top: 100px;
-    margin-bottom: 12px;
+    padding-top: 100px;
+    padding-bottom: 12px;
     max-width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
+}
+
+.frise__header {
+    position: sticky;
+    padding-top: 8px;
+    top: -100px;
+    z-index: 2;
+}
+
+.frise__timeline--date {
+    background-color: #fff;
+    margin: 0;
+}
+
+.frise__timeline--content {
+    margin-top: 50px;
 }
 
 .frise__timeline::-webkit-scrollbar {
@@ -19,16 +35,18 @@
 .frise__timeline-line {
     position: relative;
     width: calc(100% - var(--padding));
-    height: 4px;
+    height: 64px;
     margin-left: var(--padding);
-    background-color: #ddd;
+    border-top: 4px solid #ddd;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 
 .frise__timeline-line::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: 0;
+    top: -12px;
     left: 58px;
     width: 0; 
     height: 0; 
@@ -51,4 +69,32 @@
 .frise__timeline-date--active {
     color: var(--primary-color);
     font-size: 72px;
+}
+
+.frise__content {
+    position: relative;
+    width: 100vw;
+    padding: 12px var(--padding);
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    scroll-snap-align: start;
+}
+
+.frise__content-date {
+    font: 500 56px Montserrat, sans-serif;
+    color: #ddd;
+}
+
+.frise__content-card {
+    display: flex;
+    gap: 12px;
+}
+
+.frise__content-card-img {
+    height: 240px;
+    width: auto;
+}
+
+.frise__content-card-text {
+    min-width: 100%;
 }
