@@ -1,0 +1,50 @@
+.frise__timeline {
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+    gap: 15vw;
+    margin-top: 100px;
+    margin-bottom: 12px;
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+}
+
+.frise__timeline::-webkit-scrollbar {
+    display: none;
+}
+
+.frise__timeline-line {
+    position: relative;
+    width: calc(100% - var(--padding));
+    height: 4px;
+    margin-left: var(--padding);
+    background-color: #ddd;
+}
+
+.frise__timeline-line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 58px;
+    width: 0; 
+    height: 0; 
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #ddd;
+}
+
+.frise__timeline-date {
+    padding-left: var(--padding);
+    scroll-snap-align: start;
+    font: 500 56px Montserrat, sans-serif;
+    color: #ddd;
+}
+
+.frise__timeline-date--active {
+    color: var(--primary-color);
+    font-size: 72px;
+}
