@@ -81,49 +81,51 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.image-carousel').forEach(carousel => {
         let currentImage = 0;
         const images = JSON.parse(carousel.dataset.images);
-        console.log(images);
+        
+        if (images.length > 0) {
 
-        const img = new Image();
-        img.src = images[currentImage].src;
-        carousel.appendChild(img);
+            const img = new Image();
+            img.src = images[currentImage].src || "https://i.imgur.com/ONaqKlp.jpg";
+            carousel.appendChild(img);
 
-        const attributionSpan = document.createElement('span');
-        carousel.appendChild(attributionSpan);
+            const attributionSpan = document.createElement('span');
+            carousel.appendChild(attributionSpan);
 
-        attributionSpan.innerText = images[currentImage].attr || '';
+            attributionSpan.innerText = images[currentImage].attr || '';
 
-        if (images.length > 1) {
-            const prev = document.createElement('button');
-            const next = document.createElement('button');
+            if (images.length > 1) {
+                const prev = document.createElement('button');
+                const next = document.createElement('button');
 
-            prev.classList.add('image-carousel__button', 'material-icons-sharp', 'image-carousel__button--prev');
-            next.classList.add('image-carousel__button', 'material-icons-sharp', 'image-carousel__button--next');
+                prev.classList.add('image-carousel__button', 'material-icons-sharp', 'image-carousel__button--prev');
+                next.classList.add('image-carousel__button', 'material-icons-sharp', 'image-carousel__button--next');
 
-            prev.innerText = 'chevron_left';
-            next.innerText = 'chevron_right';
+                prev.innerText = 'chevron_left';
+                next.innerText = 'chevron_right';
 
-            carousel.appendChild(prev);
-            carousel.appendChild(next);
+                carousel.appendChild(prev);
+                carousel.appendChild(next);
 
-            function changeImage(direction) {
-                currentImage += direction;
-                if (currentImage < 0) {
-                    currentImage = images.length - 1;
+                function changeImage(direction) {
+                    currentImage += direction;
+                    if (currentImage < 0) {
+                        currentImage = images.length - 1;
+                    }
+                    if (currentImage > images.length - 1) {
+                        currentImage = 0;
+                    }
+                    img.src = images[currentImage].src;
+                    attributionSpan.innerText = images[currentImage].attr || '';
                 }
-                if (currentImage > images.length - 1) {
-                    currentImage = 0;
-                }
-                img.src = images[currentImage].src;
-                attributionSpan.innerText = images[currentImage].attr || '';
+
+                prev.addEventListener('click', () => {
+                    changeImage(-1);
+                });
+
+                next.addEventListener('click', () => {
+                    changeImage(1);
+                });
             }
-
-            prev.addEventListener('click', () => {
-                changeImage(-1);
-            });
-
-            next.addEventListener('click', () => {
-                changeImage(1);
-            });
         }
     });
 });
