@@ -28,7 +28,7 @@
                 <?php for ($j = 0; $j < 10; $j++) : ?>
                     <span class="frise__content-date">708</span>
                     <div class="frise__content-card">
-                        <img src="https://i.imgur.com/58Iltu3.jpg" alt="" class="frise__content-card-img">
+                        <div class="image-carousel frise__content-card-img" data-images='[{"src": "https://i.imgur.com/58Iltu3.jpg", "attr": "some copyright"}, {"src": "https://i.imgur.com/SDxoNPY.png"}]'></div>
                         <div class="frise__content-card-text">
                             <h3>Un titre</h3>
                             <p>l’évêque Aubert fait ériger sur ce Mont un Sanctuaire, en l’honneur de l’Archange Saint-Michel (qui, d’après la légende, lui serait apparu et lui aurait ordonné de le faire). Le crâne de l’abbé Aubert repose aujourd’hui dans la basilique d'Avranches. Ce sanctuaire avait en fait la forme d’une petite grotte, qui ne peut contenir qu’une centaine de fidèles.</p>

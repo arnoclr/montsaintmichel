@@ -93,13 +93,14 @@
 }
 
 .frise__content-card {
-    display: flex;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 56px;
 }
 
 .frise__content-card-img {
-    height: 240px;
-    width: auto;
+    height: 360px;
+    width: 100%;
 }
 
 .frise__content-card-text {
