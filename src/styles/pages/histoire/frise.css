@@ -1,6 +1,5 @@
 .frise__timeline {
     display: flex;
-    align-items: flex-end;
     list-style: none;
     padding-top: 100px;
     padding-bottom: 12px;
@@ -22,10 +21,12 @@
 .frise__timeline--date {
     background-color: #fff;
     margin: 0;
+    align-items: flex-end;
 }
 
 .frise__timeline--content {
     margin-top: 50px;
+    align-items: flex-start;
 }
 
 .frise__timeline::-webkit-scrollbar {

@@ -23,11 +23,13 @@ foreach ($lines as $line) {
     $imagesJSON = [];
 
     foreach ($images as $image) {
-        $data = explode('|', $image);
-        $imagesJSON[] = [
-            'src' => $data[0],
-            'attr' => isset($data[1]) ? $data[1] : null
-        ];
+        if (strpos($image, 'http') !== false) {
+            $data = explode('|', $image);
+            $imagesJSON[] = [
+                'src' => $data[0],
+                'attr' => isset($data[1]) ? $data[1] : null
+            ];
+        }
     }
 
     $frise[$century][] = (object) [
