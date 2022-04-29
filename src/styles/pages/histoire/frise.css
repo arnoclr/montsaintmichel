@@ -1,0 +1,109 @@
+.frise__timeline {
+    display: flex;
+    list-style: none;
+    padding-top: 100px;
+    padding-bottom: 12px;
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+}
+
+.frise__header {
+    position: sticky;
+    padding-top: 8px;
+    gap: 15vw;
+    top: -100px;
+    z-index: 2;
+}
+
+.frise__timeline--date {
+    background-color: #fff;
+    margin: 0;
+    align-items: flex-end;
+}
+
+.frise__timeline--content {
+    margin-top: 50px;
+    align-items: flex-start;
+}
+
+.frise__timeline::-webkit-scrollbar {
+    display: none;
+}
+
+.frise__timeline-line {
+    position: relative;
+    width: calc(100% - var(--padding));
+    height: 64px;
+    margin-left: var(--padding);
+    border-top: 4px solid #ddd;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.frise__timeline-line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 58px;
+    width: 0; 
+    height: 0; 
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #ddd;
+}
+
+.frise__timeline-date {
+    padding-left: var(--padding);
+    scroll-snap-align: start;
+    font: 500 56px Montserrat, sans-serif;
+    color: #ddd;
+    transition: font-size 0.4s ease;
+}
+
+.frise__timeline-date:last-child {
+    margin-right: 100vw;
+}
+
+.frise__timeline-date--active {
+    color: var(--primary-color);
+    font-size: 72px;
+}
+
+.frise__content {
+    position: relative;
+    min-width: 100vw;
+    padding: 12px var(--padding);
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    scroll-snap-align: start;
+}
+
+.frise__content-next {
+    height: 360px;
+    display: grid;
+    place-items: center;
+}
+
+.frise__content-date {
+    font: 500 56px Montserrat, sans-serif;
+    color: #ddd;
+}
+
+.frise__content-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 56px;
+}
+
+.frise__content-card-img {
+    height: 360px;
+    width: 100%;
+}
+
+.frise__content-card-text {
+    
+}
