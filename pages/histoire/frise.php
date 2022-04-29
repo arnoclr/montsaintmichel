@@ -1,7 +1,9 @@
+<?php include "./includes/components/navbar.php"; ?>
+
 <main class="frise">
 
     <div class="frise__header">
-        <ul class="frise__timeline frise__timeline--date">
+        <ul class="frise__timeline frise__timeline--date js-date-scroller">
             <li class="frise__timeline-date frise__timeline-date--active">700</li>
             <li class="frise__timeline-date">800</li>
             <li class="frise__timeline-date">900</li>
@@ -20,7 +22,7 @@
         <div class="frise__timeline-line"></div>
     </div>
 
-    <div class="frise__timeline frise__timeline--content">
+    <div class="frise__timeline frise__timeline--content js-content-scroller">
         <?php for ($i = 0; $i < 10; $i++) : ?>
             <div class="frise__content">
                 <?php for ($j = 0; $j < 10; $j++) : ?>
@@ -33,6 +35,9 @@
                         </div>
                     </div>
                 <?php endfor; ?>
+                <div class="frise__content-next">
+                    <span>Scrollez pour voir le siècle suivant</span>
+                </div>
             </div>
         <?php endfor; ?>
     </div>

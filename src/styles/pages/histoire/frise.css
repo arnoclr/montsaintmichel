@@ -2,7 +2,6 @@
     display: flex;
     align-items: flex-end;
     list-style: none;
-    gap: 15vw;
     padding-top: 100px;
     padding-bottom: 12px;
     max-width: 100%;
@@ -15,6 +14,7 @@
 .frise__header {
     position: sticky;
     padding-top: 8px;
+    gap: 15vw;
     top: -100px;
     z-index: 2;
 }
@@ -60,6 +60,7 @@
     scroll-snap-align: start;
     font: 500 56px Montserrat, sans-serif;
     color: #ddd;
+    transition: font-size 0.4s ease;
 }
 
 .frise__timeline-date:last-child {
@@ -73,11 +74,17 @@
 
 .frise__content {
     position: relative;
-    width: 100vw;
+    min-width: 100vw;
     padding: 12px var(--padding);
     display: grid;
     grid-template-columns: 220px 1fr;
     scroll-snap-align: start;
+}
+
+.frise__content-next {
+    height: 360px;
+    display: grid;
+    place-items: center;
 }
 
 .frise__content-date {
@@ -96,5 +103,5 @@
 }
 
 .frise__content-card-text {
-    min-width: 100%;
+    
 }
