@@ -114,6 +114,41 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (currentImage > images.length - 1) {
                         currentImage = 0;
                     }
+                    const currentHeight = img.clientHeight;
+                    img.style.height = currentHeight + 'px';
+                    img.style.transform = `translateX(${-direction * 33}%)`;
+                    img.style.opacity = 0;
+                    img.style.transition = "height .3s ease-out, transform .3s ease-in-out, opacity .3s ease";
+
+                    let onloadEvent = false;
+                    let timeoutEvent = false;
+
+                    let onloadHandler = function() {
+                        img.style.height = 'auto';
+                        const newHeight = img.clientHeight;
+                        img.style.height = currentHeight + 'px';
+                        img.style.transition = "height .3s ease-out, transform 0s ease-in-out, opacity .3s ease";
+                        img.offsetWidth;
+                        img.style.height = newHeight + 'px';
+                        img.style.transform = `translateX(0%)`;
+                        img.style.opacity = 1;
+                    };
+
+                    img.onload = function() {
+                        onloadEvent = true;
+                        if (timeoutEvent) {
+                            onloadHandler();
+                        }
+                    }
+
+                    setTimeout(() => {
+                        timeoutEvent = true;
+                        if (onloadEvent) {
+                            onloadHandler();
+                        }
+                    }, 300);
+                    
+                    img.offsetWidth;
                     img.src = images[currentImage].src;
                     attributionSpan.innerText = images[currentImage].attr || '';
                 }

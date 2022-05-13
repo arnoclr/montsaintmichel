@@ -826,12 +826,14 @@ body, html {
 .image-carousel {
     position: relative;
     width: 100%;
+    overflow-y: hidden;
 }
 
 .image-carousel img {
-    object-fit: contain;
+    object-fit: fill;
     width: 100%;
     height: 100%;
+    transform: height .3s ease-out, transform .3s ease-in-out, opacity .3s ease;
 }
 
 .image-carousel__button {
