@@ -332,6 +332,18 @@ body, html {
     color: #545454;
 }
 
+.navbar--open.navbar--open-black {
+    background-color: #131313;
+}
+
+.navbar--open.navbar--open-black a:hover {
+    color: var(--primary-color-light);
+}
+
+.navbar--open.navbar--open-black .navbar__links-link, .navbar--open.navbar--open-black .navbar__locale i, .navbar--open.navbar--open-black .navbar__menu {
+    color: #fff;
+}
+
 @keyframes navbar-enter {
     0% {
         transform: translateY(-100%);

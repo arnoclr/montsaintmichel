@@ -26,7 +26,7 @@ foreach ($lines as $line) {
         if (strpos($image, 'http') !== false) {
             $data = explode('|', $image);
             $imagesJSON[] = [
-                'src' => $data[0],
+                'src' => preg_replace('/.jpg|.png/', 'h.jpg', $data[0]),
                 'attr' => isset($data[1]) ? $data[1] : null
             ];
         }
@@ -40,37 +40,28 @@ foreach ($lines as $line) {
 }
 ?>
 
-<?php include "./includes/components/navbar.php"; ?>
+<?php $navbar_classes = "navbar--open navbar--open-black navbar--white"; include "./includes/components/navbar.php"; ?>
 
 <main class="frise">
-
-    <div class="frise__header">
-        <ul class="frise__timeline frise__timeline--date js-date-scroller">
-            <?php for ($i = $centuryStart; $i <= $centuryEnd; $i += 100): ?>
-                <li class="frise__timeline-date <?= $i == $centuryStart ? 'frise__timeline-date--active' : '' ?>"><?= $i ?></li>
-            <?php endfor; ?>
-        </ul>
-        <div class="frise__timeline-line"></div>
-    </div>
 
     <div class="frise__timeline frise__timeline--content js-content-scroller">
 
         <?php foreach ($frise as $century => $events): ?>
             <div class="frise__content">
-                <?php foreach ($events as $event): ?>
-                    <span class="frise__content-date"><?= $event->year ?></span>
-                    <div class="frise__content-card">
-                        <div class="image-carousel frise__content-card-img" data-images='<?= $event->images ?>'></div>
-                        <div class="frise__content-card-text">
+                <span class="frise__content-century"><?= $century ?></span>
+                <div class="frise__content-details">
+                    <?php foreach ($events as $event): ?>
+                        <div class="frise__content-text">
+                            <span class="frise__content-date"><?= $event->year ?></span>
                             <p><?= $event->text ?></p>
                         </div>
-                    </div>
-                <?php endforeach; ?>
-                <div class="frise__content-next">
-                    <span>Scrollez pour voir le siècle suivant</span>
+                        <div class="image-carousel" data-images='<?= $event->images ?>'></div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
         
 </main>
+
+<?php include "./includes/components/footer.php"; ?>
