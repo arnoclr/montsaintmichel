@@ -61,6 +61,8 @@ foreach ($lines as $line) {
             </div>
         <?php endforeach; ?>
     </div>
+
+    <button title="Revenir en haut" class="back-to-top js-btt"><i class="material-icons-sharp">arrow_upward</i></button>
         
 </main>
 
