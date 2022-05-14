@@ -26,10 +26,10 @@ foreach ($functions as $function) {
 function loadAssets($page) {
     global $basepath;
     if (file_exists("src/styles/pages/" . $page . ".css")) {
-        echo "<link rel=\"stylesheet\" href=\"$basepath/src/styles/pages/" . $page . ".css?v=" . md5(filemtime("src/styles/pages/" . $page . ".css")) . "\">";
+        echo "<link rel=\"stylesheet\" href=\"$basepath/src/styles/pages/" . $page . ".css?v=" . md5_file("src/styles/pages/" . $page . ".css") . "\">";
     }
     if (file_exists("src/scripts/pages/" . $page . ".js")) {
-        echo "<script src=\"$basepath/src/scripts/pages/" . $page . ".js?v=" . md5(filemtime("src/scripts/pages/" . $page . ".js")) . "\" defer></script>";
+        echo "<script src=\"$basepath/src/scripts/pages/" . $page . ".js?v=" . md5_file("src/scripts/pages/" . $page . ".js") . "\" defer></script>";
     }
 }
 

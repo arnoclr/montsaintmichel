@@ -23,8 +23,8 @@
     <meta name="theme-color" content="#B94503">
     <meta name="apple-mobile-web-app-status-bar-style" content="#B94503">
 
-    <link rel="stylesheet" href="<?= $basepath ?>/src/styles/app.css?v=<?= md5(filemtime("./src/styles/app.css")) ?>">
-    <script src="<?= $basepath ?>/src/scripts/app.js?v=<?= md5(filemtime("./src/scripts/app.js")) ?>" defer></script>
+    <link rel="stylesheet" href="<?= $basepath ?>/src/styles/app.css?v=<?= md5_file("./src/styles/app.css") ?>">
+    <script src="<?= $basepath ?>/src/scripts/app.js?v=<?= md5_file("./src/scripts/app.js") ?>" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
