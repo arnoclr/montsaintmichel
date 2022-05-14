@@ -446,6 +446,10 @@ body, html {
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
 }
 
+.locale-selector--black {
+    background-color: #131313;
+}
+
 .locale-selector.js-open {
     transform: scale(1);
 }
@@ -453,6 +457,7 @@ body, html {
 .locale-selector.js-open .locale-selector__region {
     animation: delayed-fadein .2s ease-in-out .15s forwards;
 }
+
 
 @keyframes delayed-fadein {
     0% {
@@ -482,6 +487,11 @@ body, html {
     background-color: #f5f5f5;
 }
 
+.locale-selector__region--black:hover {
+    background-color: #0a0a0a;
+}
+
+
 .locale-selector__region-flag {
     width: 22px;
     height: auto;
@@ -490,6 +500,10 @@ body, html {
 .locale-selector__region-name {
     font: 400 18px Noto Sans, sans-serif;
     color: #000;
+}
+
+.locale-selector__region-name--black {
+    color: #fff;
 }
 
 /* footer */

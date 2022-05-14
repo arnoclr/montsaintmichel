@@ -40,7 +40,13 @@ foreach ($lines as $line) {
 }
 ?>
 
-<?php $navbar_classes = "navbar--open navbar--open-black navbar--white"; include "./includes/components/navbar.php"; ?>
+<?php 
+$navbar_classes = "navbar--open navbar--open-black navbar--white"; 
+$selector_classes = "locale-selector--black";
+$region_name = "locale-selector__region-name--black";
+$selector_region = "locale-selector__region--black";
+include "./includes/components/navbar.php"; 
+?>
 
 <main class="frise">
 
