@@ -68,6 +68,9 @@ switch ($request) {
         loadPage("vr");
         break;
     case "/histoire":
+        $og = (object) [
+            "title" => t('nutshell.og.title'),
+        ];
         loadPage("histoire/en-bref");
         break;
     case "/histoire/frise":

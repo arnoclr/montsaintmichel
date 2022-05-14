@@ -21,6 +21,12 @@
                     <span class="locale-selector__region-name">English</span>
                 </a>
             </li>
+            <li class="locale-selector__region">
+                <a href="<?= swicthLangTo('ar') ?>" class="locale-selector__clickable">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Flag_of_the_Arabic_language.svg" alt="Arabic flag" class="locale-selector__region-flag">
+                    <span class="locale-selector__region-name">العربية</span>
+                </a>
+            </li>
         </ul>
     </div>
 </div>

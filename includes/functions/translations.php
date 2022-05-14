@@ -2,7 +2,7 @@
 
 const COOKIE_LANG = "__hl";
 const GET_LANG_PARAM = "hl";
-const SUPPORTED_LANGAGES = ["fr", "en", "zh"];
+const SUPPORTED_LANGAGES = ["fr", "en", "zh", "ar"];
 
 if (isset($_GET[GET_LANG_PARAM]) && !empty($_GET[GET_LANG_PARAM])) {
     $lang = $_GET[GET_LANG_PARAM];
