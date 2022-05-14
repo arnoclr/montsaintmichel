@@ -11,7 +11,10 @@ window.addEventListener('scroll', () => {
     dates.forEach(date => {
         const rect = date.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-            window.history.replaceState(null, null, `#${date.id}`);
+            const urlDate = window.location.hash.substr(1);
+            if (date.id != urlDate) {
+                window.history.replaceState(null, null, `#${date.id}`);
+            }
             return;
         }
     });
