@@ -74,11 +74,17 @@ main p {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
     color: #eee;
     transform: translateX(100px);
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
 }
 
 .back-to-top.visible {
     transform: translateX(0);
+}
+
+.back-to-top:hover, .back-to-top.visible:hover {
+    transform: scale(1.1);
+    background-color: #292929;
 }
 
 .back-to-top:focus, .back-to-top:active {
