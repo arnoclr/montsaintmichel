@@ -48,11 +48,11 @@ foreach ($lines as $line) {
 
         <?php foreach ($frise as $century => $events): ?>
             <div class="frise__content">
-                <span class="frise__content-century"><?= $century ?></span>
+                <span id="<?= $century ?>" class="frise__content-century"><?= $century ?></span>
                 <div class="frise__content-details">
                     <?php foreach ($events as $event): ?>
                         <div class="frise__content-text">
-                            <span class="frise__content-date"><?= $event->year ?></span>
+                            <span id="<?= $event->year ?>" class="frise__content-date js-date"><?= $event->year ?></span>
                             <p><?= $event->text ?></p>
                         </div>
                         <div class="image-carousel" data-images='<?= $event->images ?>'></div>

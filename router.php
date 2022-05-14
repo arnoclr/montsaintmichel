@@ -23,14 +23,15 @@ foreach ($functions as $function) {
     require_once $function;
 }
 
-function loadAssets($page) {
+function loadAsset($page, $type) {
     global $basepath;
-    if (file_exists("src/styles/pages/" . $page . ".css")) {
-        echo "<link rel=\"stylesheet\" href=\"$basepath/src/styles/pages/" . $page . ".css?v=" . md5_file("src/styles/pages/" . $page . ".css") . "\">";
+    if ($type == 'css' && file_exists("src/styles/pages/" . $page . ".css")) {
+        return "<link rel=\"stylesheet\" href=\"$basepath/src/styles/pages/" . $page . ".css?v=" . md5_file("src/styles/pages/" . $page . ".css") . "\">";
     }
-    if (file_exists("src/scripts/pages/" . $page . ".js")) {
-        echo "<script src=\"$basepath/src/scripts/pages/" . $page . ".js?v=" . md5_file("src/scripts/pages/" . $page . ".js") . "\" defer></script>";
+    if ($type == 'js' && file_exists("src/scripts/pages/" . $page . ".js")) {
+        return "<script src=\"$basepath/src/scripts/pages/" . $page . ".js?v=" . md5_file("src/scripts/pages/" . $page . ".js") . "\" defer></script>";
     }
+    return "";
 }
 
 function loadPage($page, $with_head = true) {
@@ -38,11 +39,12 @@ function loadPage($page, $with_head = true) {
     $path =  "pages" . DIRECTORY_SEPARATOR . $page . ".php";
     if (file_exists($path)) {
         if ($with_head) {
+            $appendHead = loadAsset($page, 'css');
             include "includes/head.php";
         }
-        loadAssets($page);
         include($path);
         if ($with_head) {
+            $appendBody = loadAsset($page, 'js');
             include "includes/endbody.php";
         }
     }
