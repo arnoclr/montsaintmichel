@@ -27,6 +27,11 @@ function t($translation_id) {
     return $stmt->fetch()->$lang ?? $translation_id;
 }
 
+function lang() {
+    global $lang;
+    return $lang;
+}
+
 function swicthLangTo($lang) {
     $url = $_SERVER['REQUEST_URI'];
     $path = explode("?", $url)[0];

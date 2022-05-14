@@ -39,8 +39,9 @@ $quizz = (object) [
 $_open_quiz_btn = true;
 
 // mise en cache de 12 heures
-$articles = getOrCache('index.articles', 60 * 12, function() {
-    return parseXML("https://news.google.com/rss/topics/CAAqIggKIhxDQkFTRHdvSkwyMHZNREZ3T0dnMkVnSm1jaWdBUAE?hl=fr&gl=FR&ceid=FR:fr");
+$lang = lang();
+$articles = getOrCache("index.articles.$lang", 60 * 12, function() use ($lang) {
+    return parseXML("https://news.google.com/rss/topics/CAAqIggKIhxDQkFTRHdvSkwyMHZNREZ3T0dnMkVnSm1jaWdBUAE?hl=$lang");
 })
 ?>
 
