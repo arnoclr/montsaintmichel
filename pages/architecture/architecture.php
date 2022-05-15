@@ -57,6 +57,7 @@ include "./includes/components/navbar.php";
     <p><?= t("archi.p3.wonder") ?></p>
 
 
+    
     <!-- ----- NOTRE-DAME SOUS TERRE ----- -->
     <h2><?= t("archi.h2.ndst") ?></h2>
 
