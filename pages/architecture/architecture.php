@@ -18,10 +18,6 @@ include "./includes/components/navbar.php";
         </figcaption>
     </figure>
 
-    <!-- TODO: retirer le lien de test -->
-    <a preview href="https://en.m.wikipedia.org/wiki/Sjafruddin_Prawiranegara">lien à supprimer</a>
-    <a preview href="https://en.m.wikipedia.org/wiki/The_Archives_of_the_Planet">autre lien à supprimer</a>
-
     </p>
 
     <p><?= t("archi.p.abbey") ?>
@@ -50,7 +46,8 @@ include "./includes/components/navbar.php";
     </figure>
 
     <p><?= t("archi.p2.wonder") ?></p>
-
+    
+    
     <figure>
         <img src="<?= i('archi/voutes_sur_croisee_ogives.jpg', 'medium') ?>" alt="La Chapelle Saint-Etienne">
         <figcaption>
@@ -59,6 +56,10 @@ include "./includes/components/navbar.php";
     </figure>
 
     <p><?= t("archi.p3.wonder") ?></p>
+    
+    
+    
+    
 
     <!-- ----- NOTRE-DAME SOUS TERRE ----- -->
     <h2><?= t("archi.h2.ndst") ?></h2>

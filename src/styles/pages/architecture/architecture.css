@@ -49,7 +49,12 @@ figcaption a {
     margin-bottom: 86px;
 }
 
-p > a {
-    color: #6b1616;
+span > a {
+    /* color: #6b1616; */
+    color: var(--primary-color);
     font-weight: bold;
+}
+
+span > a:hover {
+    color: #6b1616;
 }
