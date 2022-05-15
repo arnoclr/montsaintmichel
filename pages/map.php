@@ -6,15 +6,45 @@
 <div class="map-modal"></div>
 <button class="map-cta btn btn--primary btn--large"><?= t('map.route.btn') ?></button>
 
+<div class="bottom-sheat js-itinerary-modal">
+    <div class="empty-state">
+        <p>Combien d'heures avez vous pour visiter le Mont ?</p>
+        <select class="js-itinerary-select">
+            <option value="" disabled selected hidden>Choisissez le nombre d'heures</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </div>
+</div>
+
 <script>
-    var map = L.map('map', {zoomControl: false}).setView([
+    let map = L.map('map', {zoomControl: false}).setView([
         <?= isset($_GET['lat']) ? htmlspecialchars($_GET['lat']) : 48.6360 ?>,
         <?= isset($_GET['lng']) ? htmlspecialchars($_GET['lng']) : -1.5116 ?>
     ], <?= isset($_GET['zoom']) ? htmlspecialchars($_GET['zoom']) : 18 ?>);
 
-    var mapModal = document.querySelector(".map-modal");
-    var openedPlaceId = <?= isset($_GET['place']) ? htmlspecialchars($_GET['place']) : "null" ?>;
-    var isOnMobile = window.innerWidth < 768;
+    const mapModal = document.querySelector(".map-modal");
+    const itineraryModal = document.querySelector(".js-itinerary-modal");
+    const itineraryCTA = document.querySelector(".map-cta");
+    const itinerarySelect = document.querySelector(".js-itinerary-select");
+
+    let openedPlaceId = <?= isset($_GET['place']) ? htmlspecialchars($_GET['place']) : "null" ?>;
+    let isOnMobile = window.innerWidth < 768;
+
+    const symbols = {
+        "attraction": "attractions",
+        "nature": "park",
+        "restaurant": "restaurant",
+        "visite": "tour",
+        "monument": "castle"
+    }
 
     L.control.zoom({
         position: 'topright'
@@ -74,6 +104,88 @@
         return html
     }
 
+    function itineraryPlaceDetails(place) {
+        html = `<details class="itinerary-place">
+            <summary>
+                <div class="it__summary">
+                    <div class="it__summary-text">
+                        <i class="material-icons-sharp">${symbols[place.type]}</i>
+                        <span>${place.nom}</span>
+                    </div>
+                    <span>est. ${place.duree_moyenne} min.</span>
+                </div>
+            </summary>
+            <div class="itinerary-place__content">`
+                
+                html += `<div class="it__photos">`
+                    place.photos.forEach(photo => {
+                    html += `<img height="120" src="${photo}" alt="">`
+                })
+                html += `</div>`
+                
+                if (place.note) {
+                    html += `<div class="it__review">
+                        <span class="map-modal__review-note">${place.note}</span>
+                        <div class="map-modal__stars">
+                            <div class="map-modal__stars-row">
+                                <i class="material-icons-sharp map-modal__star">star</i>
+                                <i class="material-icons-sharp map-modal__star">star</i>
+                                <i class="material-icons-sharp map-modal__star">star</i>
+                                <i class="material-icons-sharp map-modal__star">star</i>
+                                <i class="material-icons-sharp map-modal__star">star</i>
+                            </div>
+                            <div class="map-modal__stars-row map-modal__stars-row--filled" style="width: ${place.note * 20}%">
+                                <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                                <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                                <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                                <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                                <i class="material-icons-sharp map-modal__star map-modal__star--filled">star</i>
+                            </div>
+                        </div>
+                    </div>`
+                }
+
+                html += `<p class="it__desc">${place.description}</p>`
+
+                if (place.pour == "enfants") {
+                    html += `<p class="it__icon-table">
+                        <i class="material-icons-sharp">escalator_warning</i>
+                        <span>Adapté pour les enfants</span>
+                    </p>`
+                }
+
+                if (place.horaires) {
+                    html += `<div class="it__icon-table">
+                        <i class="material-icons-sharp">access_time</i>
+                        <span>${place.horaires.replaceAll('\n', '<br>')}</span>
+                    </div>`
+                }
+                
+            html += `</div>
+        </details>`
+        return html;
+    }
+
+    function itineraryPlacesHTML(places) {
+        html = "";
+
+        places.forEach(place => {
+            html += itineraryPlaceDetails(place)
+        })
+
+        return html;
+    }
+
+    async function loadItinerary(duration) {
+        itineraryModal.innerHTML = `<div style="display: grid; place-items: center; width: 100%; height: 100%;"><i class="loader medium"></i></div>`;
+
+        const req = await fetch("/ajax/map?action=itinerary&h=" + new Date().getHours() + "&duree=" + duration);
+        const places = await req.json();
+
+        const html = itineraryPlacesHTML(places);
+        itineraryModal.innerHTML = html;
+    }
+
     async function loadPlaceDetails(id) {
         var res = await fetch('/ajax/map?action=details&id=' + id)
         var data = await res.json()
@@ -109,10 +221,19 @@
     map.on('zoomend', writeUrl);
     map.on('click', () => {
         closePlace()
+        itineraryModal.classList.remove('bottom-sheat--open')
     });
 
     window.addEventListener('resize', () => {
         isOnMobile = window.innerWidth < 768;
+    })
+
+    itineraryCTA.addEventListener('click', () => {
+        itineraryModal.classList.add('bottom-sheat--open')
+    })
+
+    itinerarySelect.addEventListener('change', () => {
+        loadItinerary(itinerarySelect.value * 60)
     })
 
     if (openedPlaceId) {
