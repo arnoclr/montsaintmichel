@@ -97,6 +97,9 @@ switch ($request) {
     case "/ajax/map":
         include "includes/ajax/map.php";
         break;
+    case "/ajax/linkPreview":
+        include "includes/ajax/linkPreview.php";
+        break;
     default:
         // retourner le fichier par défaut
         return false;
