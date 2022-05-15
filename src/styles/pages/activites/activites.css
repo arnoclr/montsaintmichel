@@ -1,0 +1,105 @@
+
+.architecture {
+    padding: 32px var(--padding);
+}
+
+h1 {
+    font-family: "Montserrat", "Serif";
+    margin-bottom: 8vh;
+}
+
+p {
+    font-family: "Noto Sans", "Serif";
+}
+
+h2 {
+    font-family: "Ibarra Real Nova", "Serif";
+}
+
+h5 {
+    font-family: "Ibarra Real Nova", "Serif";
+}
+
+figure {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+figure img {
+    width: auto;
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+figcaption {
+    margin: 10px 0;
+    font-family: "Ibarra Real Nova";
+    color: #656565;
+    font-style: italic;
+}
+
+figure + p {
+    margin-top: 10px;
+}
+
+figcaption a {
+    text-decoration: none;
+    color: #656565;
+}
+
+.end {
+    margin-bottom: 86px;
+}
+
+p > a {
+    color: #6b1616;
+    font-weight: bold;
+}
+
+.tr-header {
+    background-color: #dadada;
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+th {
+    font-family: "Ibarra Real Nova";
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.tr {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.txt-bold {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.txt-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.txt {
+    font-size: 15px;
+}
+
+
+
+td {
+    padding: 10px;
+    background-color: #F3F4F5;
+}
+
+
+
