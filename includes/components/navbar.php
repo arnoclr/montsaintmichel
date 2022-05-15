@@ -9,24 +9,24 @@
     <div class="navbar__locale">
         <i class="material-icons-sharp js-open-locale-selector translation-icon">translate</i>
         <ul id="js-locale-selector" class="locale-selector <?= $selector_classes ?? '' ?>">
-            <li class="locale-selector__region <?= $selector_region ?? '' ?>">
-                <a href="<?= swicthLangTo('fr') ?>" class="locale-selector__clickable">
+            <a href="<?= swicthLangTo('fr') ?>" class="locale-selector__clickable">
+                <li class="locale-selector__region <?= $selector_region ?? '' ?>">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="French flag" class="locale-selector__region-flag">
                     <span class="locale-selector__region-name  <?= $region_name ?? '' ?>">Français</span>
-                </a>
-            </li>
-            <li class="locale-selector__region <?= $selector_region ?? '' ?>">
-                <a href="<?= swicthLangTo('en') ?>" class="locale-selector__clickable">
+                </li>
+            </a>
+            <a href="<?= swicthLangTo('en') ?>" class="locale-selector__clickable">
+                <li class="locale-selector__region <?= $selector_region ?? '' ?>">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="British flag" class="locale-selector__region-flag">
                     <span class="locale-selector__region-name  <?= $region_name ?? '' ?>">English</span>
-                </a>
-            </li>
-            <li class="locale-selector__region <?= $selector_region ?? '' ?>">
-                <a href="<?= swicthLangTo('ar') ?>" class="locale-selector__clickable">
+                </li>
+            </a>
+            <a href="<?= swicthLangTo('ar') ?>" class="locale-selector__clickable">
+                <li class="locale-selector__region <?= $selector_region ?? '' ?>">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Flag_of_the_Arabic_language.svg" alt="Arabic flag" class="locale-selector__region-flag">
                     <span class="locale-selector__region-name  <?= $region_name ?? '' ?>">العربية</span>
-                </a>
-            </li>
+                </li>
+            </a>
         </ul>
     </div>
 </div>
