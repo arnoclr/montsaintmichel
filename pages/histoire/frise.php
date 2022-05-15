@@ -8,7 +8,9 @@ for ($i = $centuryStart; $i <= $centuryEnd; $i += 100) {
     $frise[$i] = [];
 }
 
-$tsv = file_get_contents('src/data/frise.tsv');
+$langFrise = in_array(lang(), ['en', 'fr']) ? lang() : 'en';
+
+$tsv = file_get_contents("src/data/frise.$langFrise.tsv");
 $lines = explode("\n", $tsv);
 // ignore first line
 array_shift($lines);
