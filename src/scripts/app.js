@@ -181,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     previewLinks.forEach(a => {
         let linkLoaded = false;
         let launch = true;
+        let opened = false;
 
         const card = document.createElement('div');
         card.classList.add('card');
@@ -201,6 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     fill: 'forwards',
                     easing: 'ease'
                 });
+
+                setTimeout(() => {
+                    opened = true;
+                }, 250);
             }
         
             launch = false;
@@ -216,6 +221,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         card.addEventListener('mouseleave', e => {
+            if (!opened) return;
+            
+            opened = false;
+
             card.animate([
                 { opacity: 1, transform: 'translateY(0)' },
                 { opacity: 0, transform: 'translateY(10px)' },
