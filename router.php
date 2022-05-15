@@ -85,6 +85,24 @@ switch ($request) {
         ];
         loadPage("architecture/architecture");
         break;
+    case "/bons-plans":
+        $og = (object) [
+            "title" => t('bonsplans.og.title'),
+        ];
+        loadPage("activites/bon-plan");
+        break;
+    case "/a-faire":
+        $og = (object) [
+            "title" => t('bonsplans.og.title'),
+        ];
+        loadPage("activites/a-faire");
+        break;
+    case "/discover":
+        $og = (object) [
+            "title" => t('bonsplans.og.title'),
+        ];
+        loadPage("activites/discover");
+        break;
     case "/quiz":
         loadPage("quiz");
         break;
@@ -96,9 +114,6 @@ switch ($request) {
         break;
     case "/ajax/map":
         include "includes/ajax/map.php";
-        break;
-    case "/ajax/linkPreview":
-        include "includes/ajax/linkPreview.php";
         break;
     default:
         // retourner le fichier par défaut
