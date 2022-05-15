@@ -54,6 +54,12 @@ body {
     color: #575757;
 }
 
+.card-url-tbl {
+    font-size: 13px;
+    font-weight: bold;
+    color: #EC764E;
+}
+
 .nav {
     /* border: 3px solid rgb(31, 172, 62); */
     display: flex;
