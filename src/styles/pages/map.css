@@ -42,6 +42,7 @@
     transform-origin: top left;
     transition: transform 0.35s cubic-bezier(.21,.03,0,.96);
     z-index: 9999;
+    border-radius: 10px;
 }
 
 .map-modal--open {
@@ -53,6 +54,7 @@
     display: flex;
     overflow-x: scroll;
     height: 220px;
+    border-radius: 10px;
 }
 
 .map-modal__image {

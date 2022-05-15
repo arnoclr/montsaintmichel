@@ -4,7 +4,7 @@
 <button onclick="window.history.back();" title="Retour" class="map-back-button"><span class="material-icons-sharp">arrow_back</span></button>
 <div id="map"></div>
 <div class="map-modal"></div>
-<button class="map-cta btn btn--primary btn--large">Trouver un parcours</button>
+<button class="map-cta btn btn--primary btn--large"><?= t('map.route.btn') ?></button>
 
 <script>
     var map = L.map('map', {zoomControl: false}).setView([
@@ -64,14 +64,13 @@
         <div class="map-modal__buttons">`
 
         if (data.vvid) {
-            html += `<a href="/visite-virtuelle?step=${data.vvid}" class="map-modal__btn-vv btn btn--primary">Voir en 3D</a>`
+            html += `<a href="/visite-virtuelle?step=${data.vvid}" class="map-modal__btn-vv btn btn--primary"><?= t('map.place.3d.btn') ?></a>`
         }
 
-        html += `<a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${data.lat},${data.lng}" class="map-modal__btn-web btn">Ouvrir dans plan</a>
+        html += `<a target="_blank" href="https://www.google.com/maps/search/?api=1&query=${data.lat},${data.lng}" class="map-modal__btn-web btn"><?= t('map.place.map.btn') ?></a>
         </div>
-        <br><small class="map-modal__notice">Notes issues de &copy; Google Maps et &copy; Tripadvisor.</small>
+        <br><small class="map-modal__notice"><?= t('map.modal.notice') ?></small>
         `
-
         return html
     }
 

@@ -80,12 +80,18 @@ switch ($request) {
         loadPage("histoire/frise");
         break;
     case "/architecture":
+        $og = (object) [
+            "title" => t('archi.og.title'),
+        ];
         loadPage("architecture/architecture");
         break;
     case "/quiz":
         loadPage("quiz");
         break;
     case "/map":
+        $og = (object) [
+            "title" => t('map.og.title'),
+        ];
         loadPage("map");
         break;
     case "/ajax/map":
@@ -95,3 +101,4 @@ switch ($request) {
         // retourner le fichier par défaut
         return false;
 }
+

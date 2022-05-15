@@ -48,3 +48,8 @@ figcaption a {
 .end {
     margin-bottom: 86px;
 }
+
+p > a {
+    color: #6b1616;
+    font-weight: bold;
+}
