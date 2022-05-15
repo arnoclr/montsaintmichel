@@ -163,4 +163,74 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    
+    // preview liens
+    const previewLinks = document.querySelectorAll("a[preview]");
+
+    function getOffset( el ) {
+        var _x = 0;
+        var _y = 0;
+        while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
+              _x += el.offsetLeft - el.scrollLeft;
+              _y += el.offsetTop - el.scrollTop;
+              el = el.offsetParent;
+        }
+        return { top: _y, left: _x };
+    }
+
+    previewLinks.forEach(a => {
+        let linkLoaded = false;
+        let launch = true;
+
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `<div style="display: grid; place-items: center; width: 100%; height: 100%;"><i class="loader medium"></i></div>`
+        a.insertAdjacentElement('afterend', card);
+
+        a.addEventListener('mouseover', async e => {
+            if (launch) {
+                const linkOffset = getOffset(a);
+                card.style.top = linkOffset.top + 'px';
+                card.style.left = linkOffset.left + 'px';
+
+                card.animate([
+                    { opacity: 0, transform: 'translateY(10px)' },
+                    { opacity: 1, transform: 'translateY(0)' },
+                ], {
+                    duration: 250,
+                    fill: 'forwards',
+                    easing: 'ease'
+                });
+            }
+
+            launch = false;
+            card.style.display = 'flex';
+            card.classList.add('active');
+
+            if (!linkLoaded) {
+                linkLoaded = true;
+                const req = await fetch("/ajax/linkPreview?url=" + a.href)
+                const html = await req.text();
+                card.innerHTML = html;
+            }
+        });
+
+        card.addEventListener('mouseleave', e => {
+            card.animate([
+                { opacity: 1, transform: 'translateY(0)' },
+                { opacity: 0, transform: 'translateY(10px)' },
+            ], {
+                duration: 250,
+                fill: 'forwards',
+                easing: 'ease'
+            });
+
+            setTimeout(() => {
+                card.style.display = 'none';
+            }, 600);
+
+            launch = true;
+        })
+    })
 });
