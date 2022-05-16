@@ -81,9 +81,8 @@
 .activities__grid {
     display: grid;
     grid-template-areas: 
-        "g0 g0"
-        "g1 g2";
-    grid-template-rows: 20vw 20vw;
+        "g0 g1 g2";
+    grid-template-rows: 30vw;
     gap: 32px;
 }
 

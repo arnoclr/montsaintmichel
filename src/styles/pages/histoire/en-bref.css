@@ -85,20 +85,30 @@ details[open] summary ~ * {
     margin-top: 64px;
 }
 
-.discover {
-    margin-top: 32px;
-    padding: 0 var(--padding);
+.activities {
+    padding: 32px var(--padding);
 }
 
-.discover h3 {
-    font-size: 32px;
+.activities__title {
+    font: 400 28px Ibarra Real Nova, serif;
+    text-transform: uppercase;
 }
 
-.discover__grid {
+.activities__grid {
     display: grid;
-    grid-template-areas:
+    grid-template-areas: 
         "g0 g1 g2";
-    grid-gap: 32px;
+    grid-template-rows: 30vw;
+    gap: 32px;
+}
+
+.articles__grid {
+    display: grid;
+    grid-template-areas: 
+        "g0 g0 g1"
+        "g2 g3 g4";
+    grid-template-rows: 20vw 20vw;
+    gap: 32px;
 }
 
 @media (max-width: 768px) {
@@ -108,8 +118,9 @@ details[open] summary ~ * {
         max-width: 100%;
     }
 
-    .discover__grid {
-        grid-template-areas:
+    .activities__grid {
+        grid-template-rows: repeat(3, 180px);
+        grid-template-areas: 
             "g0"
             "g1"
             "g2";
