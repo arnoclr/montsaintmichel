@@ -556,10 +556,6 @@ body, html {
     width: 50%;
 }
 
-.footer__row {
-    padding: 0 30px;
-}
-
 .bar {
     border: 1px dashed #000;
 }
