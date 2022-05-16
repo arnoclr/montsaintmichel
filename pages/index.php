@@ -16,7 +16,7 @@ $activities = [
         'title' => t('index.activities.train.main'),
         'label' => t('index.activities.train.label'),
         'image' => i('activites/train_marin.jpg', 'medium'),
-        'link' => '/train-marin'
+        'link' => '/a-faire'
     ]
 ];
 
