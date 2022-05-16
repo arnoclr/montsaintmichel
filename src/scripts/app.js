@@ -242,4 +242,61 @@ document.addEventListener('DOMContentLoaded', () => {
             launch = true;
         })
     })
+
+    // image gallery
+    const imageGallery = document.querySelector('.js-collection__img-wrap');
+
+    document.addEventListener('mouseover', function (event) {
+        if (imageGallery !== event.target && !imageGallery.contains(event.target)) {
+            imageGallery.classList.remove('pause');
+
+        } else {
+            setTimeout(() => {
+                imageGallery.classList.add('pause');
+            }, 50);
+        }
+    }, true);
+
+    function setupModal() {
+        const el = {
+            wrapper: document.getElementById('modal-wrapper'),
+            modal: document.getElementById('modal')
+        };
+        el.image = el.modal.getElementsByTagName('img')[0];
+        el.caption = el.modal.getElementsByClassName('caption')[0];
+        el.close = el.modal.querySelector('button.close');
+        el.wrapper.addEventListener('click', () => hideModal(el));
+        return el;
+    }
+
+    function showModal(el, imgSrc, caption) {
+
+        el.modal.style.display = "block";
+        el.wrapper.style.display = "block";
+        el.image.setAttribute('src', imgSrc);
+        el.caption.innerText = caption;
+        el.image.setAttribute('height', 500);
+    }
+    function hideModal(el) {
+        el.modal.style.display = "none";
+        el.wrapper.style.display = "none";
+    }
+
+    window.onload = function () {
+        const modal = setupModal();
+        console.log('modal', modal);
+
+        document.querySelectorAll('img.imgs')
+            .forEach((img) => {
+                img.addEventListener('click', (e) => {
+                    console.log('click', e);
+                    const img = e.target,
+                        src = img.getAttribute('src'),
+                        caption = img.getAttribute('alt');
+                    showModal(modal, src, caption);
+                    
+                });
+            });
+    }
+
 });

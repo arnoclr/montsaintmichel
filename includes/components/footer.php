@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="footer__col col2">
-            <h3 class="footer_section">NOS AUTRES RÉALISATIONS </h3>
+            <h3 class="footer_section" style="font-size: 33px">NOS AUTRES RÉALISATIONS </h3>
             <div class="footer__links">
                 <a href="https://beta.yaelcoeffier.com/" target="_blank" class="footer__col-link">COËFFIER Yaël</a>
                 <a href="https://arnocellarier.fr/?utm_source=MSM_BUT1" target="_blank" class="footer__col-link">CELLARIER Arno</a>
