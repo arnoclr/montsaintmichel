@@ -1,0 +1,15 @@
+.baie_haut{
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+.button_map{
+    position: absolute;
+    bottom:419px;
+    right: 30px;
+    background-color: #EEEEEE;
+    border-radius: 75%;
+}

@@ -97,7 +97,7 @@ switch ($request) {
         ];
         loadPage("activites/a-faire");
         break;
-    case "/decouvrir-la-baie":
+    case "/discover":
         $og = (object) [
             "title" => t('bonsplans.og.title'),
         ];
