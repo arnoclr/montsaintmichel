@@ -34,7 +34,7 @@
             <h3 class="footer_section">NOS AUTRES RÉALISATIONS </h3>
             <div class="footer__links">
                 <a href="https://beta.yaelcoeffier.com/" target="_blank" class="footer__col-link">COËFFIER Yaël</a>
-                <a href="https://arnocellarier.fr/" target="_blank" class="footer__col-link">CELLARIER Arno</a>
+                <a href="https://arnocellarier.fr/?utm_source=MSM_BUT1" target="_blank" class="footer__col-link">CELLARIER Arno</a>
                 <a href="https://www.linkedin.com/in/cl%C3%A9ment-de-simon-71b632227/" target="_blank" class="footer__col-link">DE SIMON Clément</a>
                 <a href="https://www.linkedin.com/in/christopher-beaurain-a464b0173/" target="_blank" class="footer__col-link">BEAURAIN Christopher</a>
                 <a href="https://www.linkedin.com/in/gabriel-fran%C3%A7ois-855988222/" target="_blank" class="footer__col-link">FRANÇOIS Gabriel</a>
