@@ -87,7 +87,7 @@ document.getElementById("main-video").appendChild(source);
 
 <div style="height: 64px;"></div>
 
-<div class="main-padding">
+<div class="main-padding quiz-wrapper">
     <?php include "./includes/components/quizz.php"; ?>
 </div>
 

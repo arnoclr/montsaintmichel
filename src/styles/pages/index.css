@@ -96,6 +96,10 @@
     gap: 32px;
 }
 
+.quiz-wrapper {
+    background-color: var(--primary-color-light-transparent);
+}
+
 @media screen and (max-width: 800px) {
     .hero__content-title {
         font-size: 36px;

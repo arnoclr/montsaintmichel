@@ -50,6 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     // add a incorrect class if answer is wrong
                     button.classList.add('incorrect');
+                    const i = document.createElement('i');
+                    i.classList.add('material-icons-sharp')
+                    i.innerText = 'close';
+                    button.appendChild(i);
+                    console.log(i, button)
                 }
 
                 // add correct label to good answer
@@ -57,6 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     button2.setAttribute('aria-disabled', 'true');
                     if (button2.dataset.correct == "1") {
                         button2.classList.add('correct');
+                        const i = document.createElement('i');
+                        i.classList.add('material-icons-sharp')
+                        i.innerText = 'check';
+                        button2.appendChild(i);
                     }
                 });
 

@@ -10,7 +10,7 @@ $quizz->id = "quizz__" . md5($quizz->question);
             $answers = $quizz->answers;
             shuffle($answers);
             foreach($answers as $answer): ?>
-                <button data-correct="<?= $quizz->correct_answer == $answer ? '1' : '0' ?>" class="quizz__content-answers-btn js-quizz-button"><?= $answer ?></button>
+                <button data-correct="<?= $quizz->correct_answer == $answer ? '1' : '0' ?>" class="quizz__content-answers-btn js-quizz-button"><span><?= $answer ?></span></button>
             <?php endforeach; ?>
         </div>
         <div class="quizz__content-readmore js-quizz-answer">
