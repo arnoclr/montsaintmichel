@@ -1,4 +1,10 @@
-<?php include "./includes/components/navbar.php"; ?>
+<?php 
+
+if (!in_array(lang(), ['fr'])) {
+    include "./includes/components/languageDisclaimer.php";
+}
+
+include "./includes/components/navbar.php"; ?>
 
 <style>
 .quiz-box {
