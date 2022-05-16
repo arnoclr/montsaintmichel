@@ -107,5 +107,12 @@ details[open] summary ~ * {
         padding-right: 0;
         max-width: 100%;
     }
+
+    .discover__grid {
+        grid-template-areas:
+            "g0"
+            "g1"
+            "g2";
+    }
 }
   
