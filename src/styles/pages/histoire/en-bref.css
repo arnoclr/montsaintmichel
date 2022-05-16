@@ -63,4 +63,49 @@ details[open] summary ~ * {
     0%    {opacity: 0; transform: translateY(-30px)}
     100%  {opacity: 1; transform: translateY(0)}
 }
+
+.feature-box {
+    background-color: #000;
+    background-image: url('https://i.imgur.com/32g3723.jpg');
+    background-position: bottom right;
+}
+
+.feature-box__text {
+    padding: 32px var(--padding);
+    padding-right: 128px;
+    max-width: 40%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+}
+
+.feature-box__text h3, .feature-box__text p {
+    color: #fff;
+}
+
+.feature-box__text .btn {
+    margin-top: 64px;
+}
+
+.discover {
+    margin-top: 32px;
+    padding: 0 var(--padding);
+}
+
+.discover h3 {
+    font-size: 32px;
+}
+
+.discover__grid {
+    display: grid;
+    grid-template-areas:
+        "g0 g1 g2";
+    grid-gap: 32px;
+}
+
+@media (max-width: 768px) {
+    .feature-box__text {
+        padding: 32px var(--padding);
+        padding-right: 0;
+        max-width: 100%;
+    }
+}
   

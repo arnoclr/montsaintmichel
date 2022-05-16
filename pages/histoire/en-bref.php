@@ -80,4 +80,44 @@
     </div>
 </div>
 
+<div class="feature-box">
+    <div class="feature-box__text">
+        <h3>Envie d'en savoir plus ?</h3>
+        <p>Découvrez toute l'histoire du Mont-Saint-Michel au travers d'une frise chronologique retracant les événements marquants de l'Île.</p>
+        <a href="/histoire/frise" class="btn btn--white">Voir la frise</a>
+    </div>
+</div>
+
+<?php
+$activities = [
+    (object) [
+        'title' => t('index.activities.abbey.main'),
+        'label' => t('index.activities.abbey.label'),
+        'image' => i('activites/abbaye.jpg', 'large'),
+        'link' => '/bons-plans'
+    ],
+    (object) [
+        'title' => t('index.activities.bay.main'),
+        'label' => t('index.activities.bay.label'),
+        'image' => i('activites/baie.jpg', 'medium'),
+        'link' => '/decouvrir-la-baie'
+    ],
+    (object) [
+        'title' => t('index.activities.train.main'),
+        'label' => t('index.activities.train.label'),
+        'image' => i('activites/train_marin.jpg', 'medium'),
+        'link' => '/a-faire'
+    ]
+];
+?>
+
+<div class="discover">
+    <h3>Découvrir le Mont</h3>
+    <div class="discover__grid">
+        <?php foreach ($activities as $key => $activity): ?>
+            <?php include "./includes/components/card.php"; ?>
+        <?php endforeach; ?>
+    </div>
+</div>
+
 <?php include "./includes/components/footer.php"; ?>
