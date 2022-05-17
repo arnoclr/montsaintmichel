@@ -872,6 +872,10 @@ body, html {
     pointer-events: none;
 }
 
+progress::-webkit-progress-value {
+    transition: width 0.5s ease;
+}
+
 @media screen and (max-width: 768px) {
     .quizz {
         grid-template-columns: 1fr;
