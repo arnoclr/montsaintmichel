@@ -1,6 +1,3 @@
-<!-- <?php
- include "./includes/components/navbar.php"; 
-?> -->
 <?php
 include "./includes/components/navbar.php";
 ?>
@@ -27,21 +24,28 @@ include "./includes/components/navbar.php";
 
 <main>
 <div>
-    <img class="baie_haut" src="<?= i('activites\baie.png', 'small') ?>" alt="" height="50">
-    <a href="/map">
-    <button>click on</button> 
-    </a>
+    <div class="top_img">
+        <img class="img_bay_top" src="<?= i('activites\baie.png', 'medium') ?>" alt="">
+        <a class="button_map" href="/map">
+        <i class="material-icons-sharp">map</i> 
+        </a>
     </div>
 
-    <div>
+    <div class="page_presentation">
         <h1> Découvrir la baie du mont-saint-Michel </h1>
         <p>Entre Granville et Cancale, la baie du Mont Saint-Michel est le terrain des plus grandes marées d'Europe. Elles permettent chaque année d'admirer le Mont entouré d'eau. La baie c'est aussi un site naturel d'exception. La baie du Mont Saint-Michel est un site touristique incontournable dans la Manche. </p>
     </div>
 
-    <div>
-        <img>
-        <img>
-        <img>
+    <div class="picture_gallery">
+        <div class="picture_gallery_img">
+            <img class="first_img" src="<?=i('activites\Mt_ST_michel_07.JPG', 'medium') ?>">
+        </div>
+        <div class="picture_gallery_img">
+            <img src="<?=i('activites\IMG_7181.jpg', 'medium') ?>" alt="">
+        </div>
+        <div class="picture_gallery_img">
+            <img src="<?=i('activites\649c3c3c1f3a0dd3b775b45859aeb24d.jpg', 'medium') ?>" alt="">
+        </div>
     </div>
 
     <div>
@@ -99,6 +103,7 @@ En cherchant bien, d'ailleurs pour une fois c'était super rapide, y a moyen de 
 Mais la c'était tellement cool de prendre le petit dej avec cette vue 😍</p>
         </div>
     </div>
+</div>
 </main>
 
-<!-- <?php include "./includes/components/footer.php"; ?> -->
+<?php include "./includes/components/footer.php"; ?>

@@ -1,18 +1,69 @@
 /* Img top */
 
-.baie_haut{
+.top_img{
     position: relative;
-    /* width: 100%; */
-    /* height: auto;  */
+    width: 100%;
+    height: auto;
     object-fit: cover;
 
 }
 
+.img_bay_top{
+    width:100%;
+}
 
 .button_map{
     position: absolute;
-    bottom:419px;
-    right: 30px;
+    bottom:40px;
+    right: 40px;
     background-color: #EEEEEE;
-    border-radius: 75%;
+    height: 60px;
+    width: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.button_map:hover{
+    background-color: #d2d2d2;
+}
+
+/* Presentation text */
+
+.page_presentation{
+    margin: 32px var(--padding);
+}
+
+.page_presentation h1{
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32;
+    text-transform: uppercase;
+}
+
+.page_presentation p{
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16;
+}
+
+/* Bay Image insertion */
+
+.picture_gallery{
+    display: flex;
+    flex-direction: row;
+    gap: 2%; 
+    overflow-x:auto;
+}
+
+.first_img{
+    margin-left: var(--padding);
+}
+
+.picture_gallery_img{
+    position: relative;
 }
