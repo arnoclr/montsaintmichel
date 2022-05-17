@@ -64,6 +64,11 @@ $articles = getOrCache("index.articles.$lang", 60 * 12, function () use ($lang) 
     <?php include "./includes/components/quizz.php"; ?>
 </div>
 
+<div class="collections">
+    <h1 class="articles__title collection-h1">Gallerie d'images</h1>
+    <?php include "./includes/components/collections.php"; ?>
+</div>
+
 <div class="articles">
     <h1 class="articles__title"><?= t('index.articles.title') ?></h1>
     <div class="articles__grid">
@@ -72,11 +77,6 @@ $articles = getOrCache("index.articles.$lang", 60 * 12, function () use ($lang) 
             <?php include "./includes/components/card.php"; ?>
         <?php endforeach; ?>
     </div>
-</div>
-
-<div class="collections">
-    <h1 class="articles__title collection-h1">Gallerie d'images</h1>
-    <?php include "./includes/components/collections.php"; ?>
 </div>
 
 <?php include "./includes/components/footer.php"; ?>
