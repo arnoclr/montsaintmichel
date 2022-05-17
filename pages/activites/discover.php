@@ -1,12 +1,12 @@
-<?php
-include "./includes/components/navbar.php"; 
-?>
+<!-- <?php
+ include "./includes/components/navbar.php"; 
+?> -->
 
 <link rel="stylesheet" href="../../src/styles/pages/activites/discover.css">
 
 <main>
     <div>
-    <img class="baie_haut" src="<?= i('activites\baie.png', 'medium') ?>" alt="">
+    <img class="baie_haut" src="<?= i('activites\baie.png', 'small') ?>" alt="" height="50">
     <a href="/map">
         <div class="button_map">
     <button>click on</button>
@@ -15,4 +15,4 @@ include "./includes/components/navbar.php";
     </div>
 </main>
 
-<?php include "./includes/components/footer.php"; ?>
+<!-- <?php include "./includes/components/footer.php"; ?> -->
