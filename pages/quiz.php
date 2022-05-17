@@ -1,70 +1,77 @@
-<?php 
+<?php
 
 if (!in_array(lang(), ['fr'])) {
     include "./includes/components/languageDisclaimer.php";
 }
 
+$_next_qst_btn = true;
+$seed = isset($_GET['seed']) ? $_GET['seed'] : rand(0, 99999);
+
+// récupérer les questions du json
+$json = file_get_contents("src/scripts/quiz.json");
+
+// selectionner 2 questions pour chaque catégorie
+$data = json_decode($json);
+$questions = [];
+foreach ($data as $key => $array) {
+    seededShuffle($array, $seed);
+    array_push($questions, $array[0], $array[1]);
+}
+
+
 include "./includes/components/navbar.php"; ?>
 
 <style>
-.quiz-box {
-    display: flex;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    margin-bottom: 64px;
-}
+    .quiz-box {
+        display: flex;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        margin-bottom: 64px;
+    }
 
-.quiz-box__section {
-    min-width: 100%;
-    padding: 16px var(--padding);
-    display: grid;
-    place-items: center;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
+    .quiz-box__section {
+        min-width: 100%;
+        padding: 16px var(--padding);
+        display: grid;
+        place-items: center;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+    }
 
-.quiz-progress {
-    display: grid;
-    place-items: center;
-    height: 32px;
-}
+    .quiz-progress {
+        display: grid;
+        place-items: center;
+        height: 32px;
+    }
 
-#js-quiz-progress {
-    width: 90%;
-    height: 8px;
-    max-width: 590px;
-    -webkit-appearance: none;
-    appearance: none;
-}
+    #js-quiz-progress {
+        width: 90%;
+        height: 8px;
+        max-width: 590px;
+        -webkit-appearance: none;
+        appearance: none;
+    }
 
-#js-quiz-progress::-webkit-progress-bar {
-    background-color: #eee;
-    border-radius: 2px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) inset;
-}
+    #js-quiz-progress::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 2px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) inset;
+    }
 
-#js-quiz-progress::-webkit-progress-value {
-    background-color: var(--primary-color);
-    border-radius: 2px;
-}
+    #js-quiz-progress::-webkit-progress-value {
+        background-color: var(--primary-color);
+        border-radius: 2px;
+    }
 </style>
+
+<aside class="quiz-progress">
+    <progress id="js-quiz-progress" value="1" min="1" max="<?= count($questions) ?>"></progress>
+</aside>
 
 <main class="quiz-box js-quiz-box">
     <?php
 
-    $_next_qst_btn = true;
-    $seed = isset($_GET['seed']) ? $_GET['seed'] : rand(0, 99999);
-
-    // récupérer les questions du json
-    $json = file_get_contents("src/scripts/quiz.json");
-
-    // selectionner 2 questions pour chaque catégorie
-    $data = json_decode($json);
-    $questions = [];
-    foreach ($data as $key => $array) {
-        seededShuffle($array, $seed);
-        array_push($questions, $array[0], $array[1]);
-    }
+    
 
     foreach ($questions as $key => $value) {
         $answers = $value->o;
@@ -80,20 +87,16 @@ include "./includes/components/navbar.php"; ?>
             "image" => $value->i
         ];
 
-        ?>
+    ?>
 
         <div class="quiz-box__section">
             <?php include "./includes/components/quizz.php"; ?>
         </div>
 
-        <?php
+    <?php
     }
     ?>
 </main>
-
-<aside class="quiz-progress">
-    <progress id="js-quiz-progress" value="1" min="1" max="<?= count($questions) ?>"></progress>
-</aside>
 
 <script>
     const quizBox = document.querySelector(".js-quiz-box");
