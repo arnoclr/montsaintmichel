@@ -2,8 +2,6 @@
 include "./includes/components/navbar.php";
 ?>
 
-<link rel="stylesheet" href="../../src/styles/pages/activites/discover.css">
-
 <!-- TODO: retirer après finalisation de la page -->
 <div class="hl-disclaimer">
     <i class="material-icons-sharp">error</i>
@@ -27,7 +25,7 @@ include "./includes/components/navbar.php";
     <div class="top_img">
         <img class="img_bay_top" src="<?= i('activites/baie.png', 'medium') ?>" alt="">
         <a class="button_map" href="/map">
-        <i class="material-icons-sharp">map</i> 
+        <i class="material-icons-sharp">fullscreen</i> 
         </a>
     </div>
 
@@ -38,13 +36,25 @@ include "./includes/components/navbar.php";
 
     <div class="picture_gallery">
         <div class="picture_gallery_img">
-            <img class="first_img" src="<?=i('activites/Mt_ST_michel_07.JPG', 'medium') ?>">
+            <img src="<?=i('activites/Mt_ST_michel_07.JPG', 'medium') ?>" height=100% width=auto>
+            <div class="img_legend">
+                <i class="material-icons-sharp">search</i>
+                <p>petit phoque se baignant dans la baie</p>
+            </div>
         </div>
         <div class="picture_gallery_img">
-            <img src="<?=i('activites/IMG_7181.jpg', 'medium') ?>" alt="">
+            <img src="<?=i('activites/IMG_7181.jpg', 'medium') ?>" height=100% width=auto>
+            <div class="img_legend">
+                <i class="material-icons-sharp">search</i>
+                <p>Photo d'algue poussant à même le sable</p>
+            </div>
         </div>
         <div class="picture_gallery_img">
-            <img src="<?=i('activites/649c3c3c1f3a0dd3b775b45859aeb24d.jpg', 'medium') ?>" alt="">
+            <img src="<?=i('activites/649c3c3c1f3a0dd3b775b45859aeb24d.jpg', 'medium') ?>" height=100% width=auto>
+            <div class="img_legend">
+                <i class="material-icons-sharp">search</i>
+                <p>Photo de mouton broutant des algues dans la baie</p>
+            </div>
         </div>
     </div>
 
