@@ -25,7 +25,7 @@ include "./includes/components/navbar.php";
 <main>
 <div>
     <div class="top_img">
-        <img class="img_bay_top" src="<?= i('activites\baie.png', 'medium') ?>" alt="">
+        <img class="img_bay_top" src="<?= i('activites/baie.png', 'medium') ?>" alt="">
         <a class="button_map" href="/map">
         <i class="material-icons-sharp">map</i> 
         </a>
@@ -38,13 +38,13 @@ include "./includes/components/navbar.php";
 
     <div class="picture_gallery">
         <div class="picture_gallery_img">
-            <img class="first_img" src="<?=i('activites\Mt_ST_michel_07.JPG', 'medium') ?>">
+            <img class="first_img" src="<?=i('activites/Mt_ST_michel_07.JPG', 'medium') ?>">
         </div>
         <div class="picture_gallery_img">
-            <img src="<?=i('activites\IMG_7181.jpg', 'medium') ?>" alt="">
+            <img src="<?=i('activites/IMG_7181.jpg', 'medium') ?>" alt="">
         </div>
         <div class="picture_gallery_img">
-            <img src="<?=i('activites\649c3c3c1f3a0dd3b775b45859aeb24d.jpg', 'medium') ?>" alt="">
+            <img src="<?=i('activites/649c3c3c1f3a0dd3b775b45859aeb24d.jpg', 'medium') ?>" alt="">
         </div>
     </div>
 
