@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+include "includes/functions/accessAuthorization.php";
+
 // global vars
 $basepath = ""; // ex: "/app"
 $request = $_SERVER['REQUEST_URI'];
