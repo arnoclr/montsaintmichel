@@ -77,35 +77,31 @@
     align-items: center;
     top:50%;
     left:50%;
-    background: #0000;
+    background: #000;
     color:#FFFFFF;
     height: auto;
-    width: 206px;
+    width: auto;
     border-radius: 10px;
+    opacity: 0;
 }
 
 .img_legend p {
-    color: #FFF0;
+    color: #FFF;
+    opacity: 0;
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 30px;
 }
 
-.img_legend i {
-    margin-top: 30px;
+.img_legend:hover {
+    opacity: 0.5;
 }
 
-.img_legend:hover{
-    background: #0009;
+.img_legend:hover p{
+    color: #FFF;
+    opacity: 1;
     
-}
-
-.img_legend p:hover {
-    color: #FFFFFF;
 }
 
 
