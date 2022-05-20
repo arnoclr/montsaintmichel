@@ -38,21 +38,27 @@ include "./includes/components/navbar.php";
         <div class="picture_gallery_img">
             <img src="<?=i('activites/Mt_ST_michel_07.JPG', 'medium') ?>" height=100% width=auto>
             <div class="img_legend">
-                <i class="material-icons-sharp">search</i>
+                <div>
+                    <i class="material-icons-sharp">search</i>
+                </div>
                 <p>petit phoque se baignant dans la baie</p>
             </div>
         </div>
         <div class="picture_gallery_img">
             <img src="<?=i('activites/IMG_7181.jpg', 'medium') ?>" height=100% width=auto>
             <div class="img_legend">
-                <i class="material-icons-sharp">search</i>
+                <div>
+                    <i class="material-icons-sharp">search</i>
+                </div>
                 <p>Photo d'algue poussant à même le sable</p>
             </div>
         </div>
         <div class="picture_gallery_img">
             <img src="<?=i('activites/649c3c3c1f3a0dd3b775b45859aeb24d.jpg', 'medium') ?>" height=100% width=auto>
             <div class="img_legend">
-                <i class="material-icons-sharp">search</i>
+                <div>
+                    <i class="material-icons-sharp">search</i>
+                </div>
                 <p>Photo de mouton broutant des algues dans la baie</p>
             </div>
         </div>
