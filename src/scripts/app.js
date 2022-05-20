@@ -270,13 +270,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showModal(el, imgSrc, caption) {
-
         el.modal.style.display = "block";
         el.wrapper.style.display = "block";
-        el.image.setAttribute('src', imgSrc);
+        imgSrc.includes('.jpg') ? el.image.setAttribute('src', imgSrc.replace('l.jpg', '.jpg')) : el.image.setAttribute('src', imgSrc);
         el.caption.innerText = caption;
         el.image.setAttribute('height', 500);
     }
+
     function hideModal(el) {
         el.modal.style.display = "none";
         el.wrapper.style.display = "none";
