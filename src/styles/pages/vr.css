@@ -24,8 +24,8 @@
     width: 33%;
     min-width: 380px;
     max-height: calc(100% - 64px);
-    overflow-y: scroll;
-    background-color: #fff;
+    overflow-y: auto;
+    background-color: var(--modal-surface);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     opacity: 0;

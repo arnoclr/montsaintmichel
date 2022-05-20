@@ -5,6 +5,33 @@
     --primary-color-light-transparent: #db8a3f30;
     --valid: #34A853;
     --error: #EA4335;
+    --background-color: #fafafa;
+    --navbar-background: #fff;
+    --navbar-link: #545454;
+    --navbar-locale-hover: #eee;
+    --title-color: #000;
+    --text-color: #515151;
+    --btn-outlined: #000;
+    --footer-background: #fafafa;
+    --modal-surface: #EDE0DC;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #FFB595;
+        --primary-color-light: #FFB595;
+        --primary-color-light-transparent: #442A1F20;
+        --error: #930006;
+        --background-color: #161413;
+        --navbar-background: #201A18;
+        --navbar-link: #D8C2BA;
+        --navbar-locale-hover: #685752;
+        --title-color: #EDE0DC;
+        --text-color: #EDE0DC;
+        --btn-outlined: #D8C2BA;
+        --footer-background: #0e0d0d;
+        --modal-surface: #201A18;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -25,7 +52,7 @@
 
 *::selection {
     background-color: var(--primary-color-light);
-    color: #fff;
+    color: var(--background-color);
 }
 
 *:focus {
@@ -36,11 +63,12 @@
 /* Mise en forme texte par défaut */
 p {
     font: 400 16px Noto Sans, sans-serif;
-    color: #515151;
+    color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat, Arial, sans-serif;
+    color: var(--title-color);
 }
 
 .material-icons-sharp {
@@ -77,6 +105,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
 }
 
 .main-padding {
@@ -112,11 +141,11 @@ body, html {
     align-items: center;
     height: 42px;
     padding: 0 32px;
-    border: 1px solid #000;
+    border: 1px solid var(--btn-outlined);
     border-radius: 21px;
     font: 700 12px Montserrat, sans-serif;
     text-decoration: none;
-    color: #000;
+    color: var(--btn-outlined);
     background-color: transparent;
     cursor: pointer;
     transition: box-shadow .12s ease-in-out;
@@ -227,6 +256,7 @@ body, html {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #fff;
 }
 
 /* bannière covid */
@@ -319,7 +349,7 @@ body, html {
     top: 0;
     padding-top: 12px;
     padding-bottom: 12px;
-    background-color: #fff;
+    background-color: var(--navbar-background);
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
     animation: navbar-enter .3s ease-in-out forwards;
     z-index: 1;
@@ -330,7 +360,7 @@ body, html {
 }
 
 .navbar--open .navbar__links-link, .navbar--open .navbar__locale i, .navbar--open .navbar__menu {
-    color: #545454;
+    color: var(--navbar-link);
 }
 
 .navbar--open.navbar--open-black {
@@ -357,7 +387,7 @@ body, html {
 .navbar__menu {
     border: none;
     background: transparent;
-    color: #000;
+    color: var(--navbar-link);
     display: none;
 }
 
@@ -372,7 +402,7 @@ body, html {
     text-decoration: none;
     font: 400 18px Noto Sans, sans-serif;
     transition: color .25s ease-in-out;
-    color: #000;
+    color: var(--navbar-link);
 }
 
 .navbar__links-link:hover {
@@ -438,7 +468,7 @@ body, html {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #fff;
+    background-color: var(--navbar-background);
     list-style: none;
     border-radius: 2px;
     transform-origin: top right;
@@ -485,7 +515,7 @@ body, html {
 }
 
 .locale-selector__region:hover {
-    background-color: #f5f5f5;
+    background-color: var(--navbar-locale-hover);
 }
 
 .locale-selector__region--black:hover {
@@ -500,7 +530,7 @@ body, html {
 
 .locale-selector__region-name {
     font: 400 18px Noto Sans, sans-serif;
-    color: #000;
+    color: var(--navbar-link);
 }
 
 .locale-selector__region-name--black {
@@ -514,7 +544,7 @@ body, html {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    background-color: #eee;
+    background-color: var(--footer-background);
 }
 
 .footer__links {
@@ -557,7 +587,7 @@ body, html {
 }
 
 .bar {
-    border: 1px dashed #000;
+    border: 1px dashed var(--text-color);
 }
 
 .footer__col-title {
@@ -580,7 +610,7 @@ body, html {
     width: fit-content;
     text-decoration: none;
     font: 400 20px Noto Sans, sans-serif;
-    color: #5a5a5a;
+    color: var(--navbar-link);
 }
 
 .footer__col-link::after {
@@ -589,7 +619,7 @@ body, html {
     opacity: 0;
     transform: translateY(-10px);
     height: 3px;
-    border-bottom: 2px dotted #515151;
+    border-bottom: 2px dotted var(--navbar-link);
     transition: all .2s ease;
 }
 .footer__col-link:hover::after {
@@ -816,6 +846,7 @@ body, html {
     border-radius: 42px;
     gap: 12px;
     background-color: transparent;
+    color: var(--text-color);
     cursor: pointer;
     transition: background-color .2s ease;
     border: 2px solid rgba(0, 0, 0, 0.2);
