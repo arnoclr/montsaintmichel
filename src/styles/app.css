@@ -1035,7 +1035,7 @@ progress::-webkit-progress-value {
     width: fit-content;
     gap: 40px;
     padding-right: 20px;
-    animation: gallery 40s ease-in-out infinite alternate forwards;
+    animation: gallery 40s cubic-bezier(.3,0,.7,1) infinite alternate forwards;
 }
 
 .pause {
