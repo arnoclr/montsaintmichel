@@ -12,6 +12,10 @@
     width:100%;
 }
 
+.map-logo {
+    fill: gray;
+}
+
 .button_map {
     position: absolute;
     bottom:40px;
@@ -58,7 +62,12 @@
     display: flex;
     flex-direction: row;
     gap: 50px; 
-    overflow-x:auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.picture_gallery:hover {
+    overflow-x: auto;
 }
 
 .picture_gallery_img {
@@ -88,14 +97,17 @@
     display: flex;
     top:50%;
     left:50%;
-    background: #000;
+    background: #2c2c2c;
     color:#FFFFFF;
     height: 30px;
     width: 30px;
-    border-radius: 10px;
+    padding: 17px 17px 17px;
+    border-radius: 7px;
     opacity: 1;
     align-items: center;
     justify-content: center;
+    box-shadow:  0px 0px 3px #202020,
+             0px 0px 3px #303030;
 }
 
 .img_legend p {
@@ -108,14 +120,20 @@
 }
 
 .img_legend:hover {
-    background: #000;
+    background: #2c2c2c;
     opacity: 0.7;
 }
 
-.img_legend:hover p{
+.img_legend:hover p {
     color: #FFF;
     opacity: 1;
     
+}
+
+.img_legend:hover div {
+    box-shadow:  0px 0px 0px transparent,
+             0px 0px 0px transparent;
+
 }
 
 

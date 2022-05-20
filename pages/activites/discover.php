@@ -25,8 +25,7 @@ include "./includes/components/navbar.php";
     <div class="top_img">
         <img class="img_bay_top" src="<?= i('activites/baie.png', 'medium') ?>" alt="">
         <a class="button_map" href="/map">
-        <i class="material-icons-sharp">fullscreen</i> 
-        </a>
+        <svg class="map-logo" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9.65 38.35V28.15H13.05V34.95H19.85V38.35ZM9.65 19.85V9.65H19.85V13.05H13.05V19.85ZM28.15 38.35V34.95H34.95V28.15H38.35V38.35ZM34.95 19.85V13.05H28.15V9.65H38.35V19.85Z"/></svg>        </a>
     </div>
 
     <div class="page_presentation">
