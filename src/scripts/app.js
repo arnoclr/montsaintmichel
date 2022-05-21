@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 image.src = image.dataset.src;
 
                 if (correct == "1") {
-                    console.log(correct);
+                    quizz.classList.add('js-correct');
                 } else {
                     // add a incorrect class if answer is wrong
                     button.classList.add('incorrect');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     i.classList.add('material-icons-sharp')
                     i.innerText = 'close';
                     button.appendChild(i);
-                    console.log(i, button)
+                    quizz.classList.add('js-incorrect');
                 }
 
                 // add correct label to good answer
