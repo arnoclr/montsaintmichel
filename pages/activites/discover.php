@@ -1,30 +1,34 @@
 <?php
 include "./includes/components/navbar.php";
 
-$context = stream_context_create(
-    array(
-        "http" => array(
-            "header" => "User-Agent: " . $_SERVER['HTTP_USER_AGENT']
+$topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
+    $context = stream_context_create(
+        array(
+            "http" => array(
+                "header" => "User-Agent: " . $_SERVER['HTTP_USER_AGENT']
+            )
         )
-    )
-);
+    );
+    
+    $instaQuery = file_get_contents("https://www.instagram.com/explore/tags/baiemontsaintmichel/?__a=1", false, $context);
+    $instaJSON = json_decode($instaQuery);
+    
+    $topPostsApi = $instaJSON->graphql->hashtag->edge_hashtag_to_top_posts->edges;
+    
+    $res = [];
+    
+    for ($i = 0; $i < min(5, count($topPostsApi)); $i++) {
+        $filtered = (object) [
+            "thumbnail" => $topPostsApi[$i]->node->thumbnail_src,
+            "display" => $topPostsApi[$i]->node->display_url,
+            "caption" => $topPostsApi[$i]->node->edge_media_to_caption->edges[0]->node->text,
+        ];
+    
+        $res[] = $filtered;
+    }
 
-$instaQuery = file_get_contents("https://www.instagram.com/explore/tags/baiemontsaintmichel/?__a=1", false, $context);
-$instaJSON = json_decode($instaQuery);
-
-$topPostsApi = $instaJSON->graphql->hashtag->edge_hashtag_to_top_posts->edges;
-
-$topPosts = [];
-
-for ($i = 0; $i < min(5, count($topPostsApi)); $i++) {
-    $filtered = (object) [
-        "thumbnail" => $topPostsApi[$i]->node->thumbnail_src,
-        "display" => $topPostsApi[$i]->node->display_url,
-        "caption" => $topPostsApi[$i]->node->edge_media_to_caption->edges[0]->node->text,
-    ];
-
-    $topPosts[] = $filtered;
-}
+    return $res;
+});
 ?>
 
 <!-- TODO: retirer après finalisation de la page -->
