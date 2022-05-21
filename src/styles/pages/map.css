@@ -24,7 +24,6 @@
 .map-back-button:hover {
     background-color: #eeeeee;
 }
-
 .map-back-button:active {
     background-color: #d5d5d5;
 }
@@ -275,6 +274,16 @@
     padding: 0 12px;
     font-family: Noto Sans, Arial;
     background: var(--input-surface);
+}
+
+@media (prefers-color-scheme: dark) {
+    .map-back-button:hover {
+        background-color: #161414;
+    }
+    
+    .map-back-button:active {
+        background-color: var(--footer-background);
+    }
 }
 
 @media screen and (max-width: 768px) {
