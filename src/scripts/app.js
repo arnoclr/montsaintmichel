@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return el;
     }
 
-    function showModal(el, imgSrc, caption) {
+    function showModal(el, img, caption) {
         el.modal.style.cssText = `
             visibility: visible;
         `;
@@ -280,13 +280,19 @@ document.addEventListener('DOMContentLoaded', () => {
             display: block;
         `;
 
+        el.from = img;
+
         el.modal.classList.add('modal_active');
         el.wrapper.classList.add('modal-wrapper_active');
         inner.classList.add('modal-inner_active');
 
+        imgSrc = img.src;
         imgSrc.includes('.jpg') ? el.image.setAttribute('src', imgSrc.replace('l.jpg', '.jpg')) : el.image.setAttribute('src', imgSrc);
         el.caption.innerText = caption;
         el.image.setAttribute("style", "height: 30vw"); 
+
+        console.log(img, el.modal)
+        illusory(img, el.modal);
     }
 
     function hideModal(el) {
@@ -306,6 +312,8 @@ document.addEventListener('DOMContentLoaded', () => {
         el.modal.classList.remove('modal_active');
         el.wrapper.classList.remove('modal-wrapper_active');
         inner.classList.remove('modal-inner_active');
+
+        illusory(el.modal, el.from);
     }
 
     window.onload = function () {
@@ -317,9 +325,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.addEventListener('click', (e) => {
                     console.log('click', e);
                     const img = e.target,
-                        src = img.getAttribute('src'),
                         caption = img.getAttribute('alt');
-                    showModal(modal, src, caption);
+                    showModal(modal, img, caption);
 
                 });
             });

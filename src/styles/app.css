@@ -1080,12 +1080,12 @@ progress::-webkit-progress-value {
 }
 
 .modal_active {
-    animation: fadein-modal 0.4s cubic-bezier(.25,.75,.5,1.25) alternate;
+    /* animation: fadein-modal 0.4s cubic-bezier(.25,.75,.5,1.25) alternate; */
 }
 
 .modal-inner_active {
-    opacity: 0;
-    animation: inner 0.4s 0.2s ease forwards;
+    /* opacity: 0; */
+    /* animation: inner 0.4s 0.2s ease forwards; */
 }
 
 .modal {
