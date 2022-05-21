@@ -108,6 +108,9 @@ switch ($request) {
         loadPage("activites/discover");
         break;
     case "/quiz":
+        $og = (object) [
+            "title" => t('quiz.og.title'),
+        ];
         loadPage("quiz");
         break;
     case "/map":

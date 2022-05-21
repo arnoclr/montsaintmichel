@@ -46,9 +46,9 @@ include "./includes/components/navbar.php"; ?>
     <?php
     }
     ?>
-
+    
     <div class="quiz-box__section">
-        <div class="quiz__results">
+        <div class="quiz__results" id="quiz__results">
             <span class="quiz__results-score js-score"></span>
             <span class="quiz__results-streak js-streak"></span>
             <p class="quiz__results-text js-rtext"></p>
@@ -61,29 +61,95 @@ include "./includes/components/navbar.php"; ?>
     </div>
 </main>
 
+<!-- <script src="../src/scripts/app.js"></script> -->
 <script>
+    const navbar = document.querySelector('.js-navbar');
     const quizBox = document.querySelector(".js-quiz-box");
     const nextBtns = document.querySelectorAll(".js-next-qst");
     const quizProgress = document.getElementById("js-quiz-progress");
+    const quizProgressAside = document.querySelector(".quiz-progress");
+    const quizProgressAsideOpen = document.querySelector(".quiz-progress--open");
+    const quizProgressBar = document.getElementById("js-quiz-progress");
+
     const textarea = document.querySelector(".js-ta");
     const seed = <?= $seed ?>;
     const copyBtn = document.querySelector(".js-copy");
+    const questId = document.querySelectorAll(".js-quizz");
+
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            quizProgressAside.style.cssText = `
+                position: sticky;
+                top: calc(${navbar.offsetHeight}px);
+                height: 0px;
+                z-index: 1;
+            `;
+
+            quizProgressBar.style.cssText = `
+                width: 100%;
+                max-width: 100%;
+                animation: bar-enter .3s ease-in-out forwards;
+            `;
+            
+        } else {
+            quizProgressAside.style.cssText = ``;
+            quizProgressBar.style.cssText = ``;
+        }
+    });
+    
 
     function processScores() {
         let resultsString = '';
         let correctAnswers = 0;
         let total = 0;
+        let correctQuestions = [];
 
-        document.querySelectorAll('.js-quizz').forEach(quizz => {
+        // document.querySelectorAll('.js-quizz').forEach(quizz => {
+        questId.forEach(quizz => {
             if (quizz.classList.contains('js-correct')) {
                 resultsString += "✅";
                 correctAnswers++;
+                correctQuestions.push(1);
+
+
+                sessionStorage.setItem("correctAnswers", correctAnswers);
             } else {
                 resultsString += "❌";
+                correctQuestions.push(0);
             }
             total++;
         })
+        sessionStorage.setItem("correctQuestions", JSON.stringify(correctQuestions));
 
+        WriteScore(correctAnswers, total, resultsString);
+        if (correctAnswers / total >= 0.7) {
+            runFunctionXTimes(createEmoji, 350, 50)
+        }
+    }
+
+    function ScoreReload() {
+        let correctAnswers = sessionStorage.getItem("correctAnswers");
+        let correctQuestions = JSON.parse(sessionStorage.getItem("correctQuestions"));
+        let total = correctQuestions.length;
+        let resultsString = '';
+
+        for (let i = 0; i < total; i++) {
+            if (correctQuestions[i] == 1) {
+                resultsString += "✅";
+            } else {
+                resultsString += "❌";
+            }
+        }
+        WriteScore(correctAnswers, total, resultsString);
+        console.log(correctAnswers / total);
+        if (correctAnswers / total >= 0.7) {
+            runFunctionXTimes(createEmoji, 350, 50)
+        }
+    }
+
+    function WriteScore(correctAnswers, total, resultsString) {
+        
         document.querySelector('.js-score').innerHTML = `${correctAnswers}/${total}`;
         document.querySelector('.js-streak').innerHTML = resultsString;
 
@@ -94,12 +160,96 @@ include "./includes/components/navbar.php"; ?>
         textarea.innerHTML = `Quiz sur le Mont-Saint-Michel\n${correctAnswers}/${total} ${resultsString}\n\nhttps://arnocellarier.fr/tlei62?seed=${seed}`;
     }
 
+    function createEmoji() {
+        const emoji = document.createElement('div');
+        emoji.classList.add('emoji');
+
+        emoji.style.left = Math.random() * 95 + "vw";
+        emoji.style.animationDuration = Math.random() * 2 + 5 + "s";
+        emoji.style.fontSize = Math.random() * 30 + 40 + "px";
+
+        emoji.innerText = '👑';
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, 7000);
+    }
+
+    function runFunctionXTimes(callback, interval, repeatTimes) {
+    let repeated = 0;
+    const intervalTask = setInterval(doTask, interval)
+
+        function doTask() {
+            if ( repeated < repeatTimes ) {
+                callback()
+                repeated += 1
+            } else {
+                clearInterval(intervalTask)
+            }
+        }
+    } 
+
+    // runFunctionXTimes(createEmoji, 350, 50) ------------------- TODO: decommente avant de commit
+        
+
+
+    sessionStorage.setItem("quizId", seed);
+
+    if (!parseInt(sessionStorage.questionId)) {
+        sessionStorage.questionId = 0;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        if (sessionStorage.questionId && sessionStorage.quizProgress && sessionStorage.quizId && (!sessionStorage.correctAnswers || sessionStorage.correctAnswers == 0)) {
+            quizProgress.value = sessionStorage.quizProgress;
+            document.getElementById(questId[sessionStorage.questionId].id).scrollIntoView({
+                block: "end",
+                inline: "nearest"
+            });
+        }
+
+        if (sessionStorage.correctQuestions) {
+            quizProgress.value = sessionStorage.quizProgress;
+            document.getElementById("quiz__results").scrollIntoView({
+                block: "end",
+                inline: "nearest"
+            });
+            ScoreReload();
+        }
+    });
+
+    // sessionStorage.clear(); // ((((((((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))))))
+
     copyBtn.addEventListener('click', () => {
         textarea.focus();
         textarea.select();
         document.execCommand('copy');
         console.log("copy");
+        
+        fancyAlert("Copié dans le presse-papier", "done", "copy");
     });
+
+    // fancy alert
+    function fancyAlert(message, icon, type) { // CETTE FONCTION DEVRAIT ÊTRE DANS APP.JS MAIS COMME DIT DANS CE DERNIER ÇA NE MARCHE PAS
+        const alertwrapper = document.createElement('div');
+        const alert = document.createElement('div');
+        const i = document.createElement('i');
+
+        alertwrapper.classList.add('alertwrapper');
+
+        i.classList.add('material-icons-sharp');
+        i.innerText = icon;
+        
+        alert.classList.add('alert');
+        alert.classList.add(type);
+        alert.innerText = message;
+
+        document.body.appendChild(alertwrapper);
+        alertwrapper.appendChild(alert);
+        alert.appendChild(i);
+    }
 
     nextBtns.forEach(function(btn) {
         btn.addEventListener("click", function() {
@@ -109,6 +259,9 @@ include "./includes/components/navbar.php"; ?>
                 behavior: "smooth"
             });
             quizProgress.value = quizProgress.value + 1;
+            sessionStorage.setItem("quizProgress", quizProgress.value);
+
+            sessionStorage.setItem("questionId", parseInt(sessionStorage.questionId)+ 1);
 
             if (quizProgress.value >= quizProgress.max) {
                 processScores();

@@ -325,4 +325,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     }
 
+    // fancy alert
+    function fancyAlert(message, type) { // NE MARCHE PAS DANS QUIZ.PHP JE NE SAIS PAS POURQUOI (LE APP.JS EST PAS APPELÉ)
+        const alert = document.createElement('div');
+        alert.classList.add('alert');
+        alert.classList.add(type);
+        alert.innerText = message;
+        document.body.appendChild(alert);
+        // setTimeout(() => {
+        //     alert.remove();
+        // }, 3000);
+    }
 });

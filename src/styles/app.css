@@ -873,6 +873,10 @@ body, html {
     font-family: Noto Sans, Arial, sans-serif;
 }
 
+.quizz__content-answers-btn:hover, .btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
 .quizz__content-answers-btn.correct {
     background-color: var(--valid);
     border: 2px solid var(--valid);
