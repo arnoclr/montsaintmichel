@@ -19,7 +19,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --primary-color: #FFB595;
+        --primary-color: #fda984;
         --primary-color-light: #FFB595;
         --primary-color-light-transparent: #442A1F20;
         --error: #930006;
@@ -62,6 +62,13 @@
     outline-offset: 6px;
 }
 
+@media (prefers-color-scheme: dark) {
+    *:focus {
+        outline: 2px dashed #fff;
+        outline-offset: 6px;
+    }
+}
+
 /* Mise en forme texte par défaut */
 p {
     font: 400 16px Noto Sans, sans-serif;
@@ -97,8 +104,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .translation-icon {
     transition: color 0.25s ease-in-out;
-    color: #000;
+    color: var(--navbar-link);
 }
+
 .translation-icon:hover {
     color: var(--primary-color);
 }
@@ -663,6 +671,16 @@ body, html {
     filter: brightness(0%);
 }
 
+@media (prefers-color-scheme: dark) {
+    .img_row .noir {
+        filter: brightness(40%);
+    }
+    
+    .img_row .noir:hover {
+        filter: brightness(100%);
+    }
+}
+
 .copyright__footer {
     position: relative;
     bottom: 0;
@@ -1052,7 +1070,7 @@ progress::-webkit-progress-value {
     /* border: 2px solid rgb(206, 13, 196); */
 
     margin-top: 20px;
-    padding: 20px;
+    padding: 30px;
     display: block;
     overflow: hidden;
 }
@@ -1136,6 +1154,13 @@ progress::-webkit-progress-value {
     transition: all .3s ease;
 }
 
+.modal-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @keyframes fadein-modal {
     0% {
         opacity: 0;
@@ -1147,15 +1172,6 @@ progress::-webkit-progress-value {
         transform: translate(-50%, -50%);
     }
 }
-
-.modal-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
 
 @keyframes inner {
     0% {
@@ -1185,6 +1201,21 @@ progress::-webkit-progress-value {
     width: 100%;
     height: 1px;
     background: #cacaca;
+}
+
+@media (prefers-color-scheme: dark) {
+    .modal {
+        /* background: #131313; */
+        background: var(--navbar-background);
+    }
+
+    .modal-bar {
+        background: #000;
+    }
+
+    .caption {
+        color: var(--title-color);
+    }
 }
 
 @media (max-width: 1000px) {

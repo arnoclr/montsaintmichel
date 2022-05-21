@@ -80,6 +80,12 @@ span > a:hover {
     color: #6b1616;
 }
 
+@media (prefers-color-scheme: dark) {
+
+    figcaption, figcaption a {
+        color: #705345;
+    }
+}
 
 @media (max-width: 1000px) {
     

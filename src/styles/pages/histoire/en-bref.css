@@ -37,10 +37,15 @@
     align-items: center;
     gap: 12px;
     transition: color .15s ease;
+    width: fit-content;
 }
 
 .faq__qst details summary:hover {
     color: var(--primary-color);
+}
+
+.faq__qst details summary:active {
+    color: #923600;
 }
 
 .faq__qst details summary:focus {
@@ -109,6 +114,24 @@ details[open] summary ~ * {
         "g2 g3 g4";
     grid-template-rows: 20vw 20vw;
     gap: 32px;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .faq__qst details summary {
+        color: #fff;
+    }
+
+    .faq__qst details summary:active {
+        color: #ff9161;
+    }
+
+    .faq__qst-details {
+        color: #999;
+        background: var(--navbar-background);
+        padding: 16px;
+        border-radius: 2px;
+    }
 }
 
 @media (max-width: 768px) {
