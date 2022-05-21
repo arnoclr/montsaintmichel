@@ -115,7 +115,7 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
 
     <?php foreach ($topPosts as $post): ?>
         <div>
-            <img src="<?= $post->thumbnail ?>">
+            <img src="https://insta-images-proxy.arnoclr.workers.dev/?src=<?= urlencode($post->thumbnail) ?>">
             <p><?= $post->caption ?></p>
         </div>
     <?php endforeach; ?>
