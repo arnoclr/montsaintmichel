@@ -1,5 +1,34 @@
 <?php
 include "./includes/components/navbar.php";
+
+$topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
+    $context = stream_context_create(
+        array(
+            "http" => array(
+                "header" => "User-Agent: " . $_SERVER['HTTP_USER_AGENT']
+            )
+        )
+    );
+    
+    $instaQuery = file_get_contents("https://www.instagram.com/explore/tags/baiemontsaintmichel/?__a=1", false, $context);
+    $instaJSON = json_decode($instaQuery);
+    
+    $topPostsApi = $instaJSON->graphql->hashtag->edge_hashtag_to_top_posts->edges;
+    
+    $res = [];
+    
+    for ($i = 0; $i < min(5, count($topPostsApi)); $i++) {
+        $filtered = (object) [
+            "thumbnail" => $topPostsApi[$i]->node->thumbnail_src,
+            "display" => $topPostsApi[$i]->node->display_url,
+            "caption" => $topPostsApi[$i]->node->edge_media_to_caption->edges[0]->node->text,
+        ];
+    
+        $res[] = $filtered;
+    }
+
+    return $res;
+});
 ?>
 
 <!-- TODO: retirer après finalisation de la page -->
@@ -84,40 +113,12 @@ include "./includes/components/navbar.php";
         </div>
     </div>
 
-    <div>
+    <?php foreach ($topPosts as $post): ?>
         <div>
-            <div>
-                <img>
-                <p>lovevantour</p>
-            </div>
-        <img>
-        <p>Crazy spot.
-En cherchant bien, d'ailleurs pour une fois c'était super rapide, y a moyen de se trouver un bon spot pour la nuit. Bon on va pas se mentir ce n'est pas toujours le cas, ça peut aussi être souvent des galères, avec des habitants du coin que ça dérange, les interdictions...
-Mais la c'était tellement cool de prendre le petit dej avec cette vue 😍</p>
+            <img src="<?= $post->thumbnail ?>">
+            <p><?= $post->caption ?></p>
         </div>
-
-        <div>
-            <div>
-                <img>
-                <p>lovevantour</p>
-            </div>
-        <img>
-        <p>Crazy spot.
-En cherchant bien, d'ailleurs pour une fois c'était super rapide, y a moyen de se trouver un bon spot pour la nuit. Bon on va pas se mentir ce n'est pas toujours le cas, ça peut aussi être souvent des galères, avec des habitants du coin que ça dérange, les interdictions...
-Mais la c'était tellement cool de prendre le petit dej avec cette vue 😍</p>
-        </div>
-
-        <div>
-            <div>
-                <img>
-                <p>lovevantour</p>
-            </div>
-        <img>
-        <p>Crazy spot.
-En cherchant bien, d'ailleurs pour une fois c'était super rapide, y a moyen de se trouver un bon spot pour la nuit. Bon on va pas se mentir ce n'est pas toujours le cas, ça peut aussi être souvent des galères, avec des habitants du coin que ça dérange, les interdictions...
-Mais la c'était tellement cool de prendre le petit dej avec cette vue 😍</p>
-        </div>
-    </div>
+    <?php endforeach; ?>
 </div>
 </main>
 
