@@ -23,15 +23,35 @@ figure {
     flex-direction: column;
 }
 
-figure img {
+.media-container, .media-container img {
+    transition: all 0.4s ease;
+}
+
+.media-container img {
     width: auto;
     max-width: 100%;
+    display: block;
+}
+
+.media-container {
+    overflow: hidden;
     border-radius: 3px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.media-container:hover {
+    transform: translate(10px, -10px) rotate(1deg);
+    cursor: zoom-in;
+}
+
+.media-container:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0.9);
 }
 
 figcaption {
     font-size: 20px;
-    margin: 10px 0;
+    margin: 15px 0 10px 0;
     font-family: "Ibarra Real Nova";
     color: #656565;
     font-style: italic;
@@ -58,4 +78,12 @@ span > a {
 
 span > a:hover {
     color: #6b1616;
+}
+
+
+@media (max-width: 1000px) {
+    
+    figcaption {
+        font-size: 16px;
+    }
 }

@@ -1,5 +1,6 @@
 <?php
-include "./includes/components/navbar.php"; 
+include "./includes/components/navbar.php";
+include './includes/components/modal.php';
 ?>
 
 <link rel="stylesheet" href="../../src/styles/preview.css">
@@ -11,7 +12,9 @@ include "./includes/components/navbar.php";
     <p><?= t("archi.p.intro") ?><br><br>
 
     <figure>
-        <img src="<?= i('archi/Vue_Sur_Le_Mont-Saint-Michel.jpg', 'medium') ?>" alt="Mont-Saint-Michel">
+        <div class="media-container">
+            <img class="imgs" src="<?= i('archi/Vue_Sur_Le_Mont-Saint-Michel.jpg', 'medium') ?>" alt="Mont-Saint-Michel">
+        </div>
         <figcaption>
             <?= t("archi.figcaption.msm") ?> / &#169; Wikicommons -
             <a href="https://commons.wikimedia.org/wiki/User:Gzen92" target="_blank">Gzen92</a>
@@ -23,7 +26,9 @@ include "./includes/components/navbar.php";
     <p><?= t("archi.p.abbey") ?>
 
     <figure>
-        <img src="<?= i('archi/Chapelle_Saint-Etienne.jpg', 'medium') ?>" alt="La Chapelle Saint-Etienne">
+        <div class="media-container">
+            <img class="imgs" src="<?= i('archi/Chapelle_Saint-Etienne.jpg', 'medium') ?>" alt="La Chapelle Saint-Etienne">
+        </div>
         <figcaption>
             <?= t("archi.figcaption.stetienne") ?> / &#169; Wikicommons -
             <a href="https://commons.wikimedia.org/wiki/User:Gzen92" target="_blank">Gzen92</a>
@@ -39,16 +44,20 @@ include "./includes/components/navbar.php";
     <p><?= t("archi.p.wonder") ?></p>
 
     <figure>
-        <img src="<?= i('archi/merveille.jpg', 'medium') ?>" alt="La Merveille du Mont-Saint-Michel">
+        <div class="media-container">
+            <img class="imgs" src="<?= i('archi/merveille.jpg', 'medium') ?>" alt="La Merveille du Mont-Saint-Michel">
+        </div>
         <figcaption>
             <?= t("archi.figcaption.wonder") ?> / Émile Sagot (1805-1888)
         </figcaption>
     </figure>
 
     <p><?= t("archi.p2.wonder") ?></p>
-    
+
     <figure>
-        <img src="<?= i('archi/voutes_sur_croisee_ogives.jpg', 'medium') ?>" alt="La Chapelle Saint-Etienne">
+        <div class="media-container">
+            <img class="imgs" src="<?= i('archi/voutes_sur_croisee_ogives.jpg', 'medium') ?>" alt="La Chapelle Saint-Etienne">
+        </div>
         <figcaption>
             <?= t("archi.figcaption.ribbed") ?> / &#169; Wikicommons - Guillaume Piolle
         </figcaption>
@@ -57,14 +66,16 @@ include "./includes/components/navbar.php";
     <p><?= t("archi.p3.wonder") ?></p>
 
 
-    
+
     <!-- ----- NOTRE-DAME SOUS TERRE ----- -->
     <h2><?= t("archi.h2.ndst") ?></h2>
 
     <p><?= t("archi.p.ndst") ?></p>
 
     <figure>
-        <img src="<?= i('archi/Notre-Dame_sous_Terre.jpg', 'medium') ?>" alt="Notre-Dame sous Terre">
+        <div class="media-container">
+            <img class="imgs" src="<?= i('archi/Notre-Dame_sous_Terre.jpg', 'medium') ?>" alt="Notre-Dame sous Terre">
+        </div>
         <figcaption>
             <?= t("archi.figcaption.ndst") ?> / &#169; Wikicommons -
             <a href="https://commons.wikimedia.org/wiki/User:Ptyx" target="_blank">Ptyx</a>
@@ -78,7 +89,9 @@ include "./includes/components/navbar.php";
     <p><?= t("archi.p.village") ?></p>
 
     <figure>
-        <img src="<?= i('archi/porte_entree.jpg', 'medium') ?>" alt="Porte d'entrée du Mont-Saint-Michel">
+        <div class="media-container">
+            <img class="imgs" src="<?= i('archi/porte_entree.jpg', 'medium') ?>" alt="Porte d'entrée du Mont-Saint-Michel">
+        </div>
         <figcaption> <?= t("archi.figcaption.door") ?> / &#169; Wikicommons - Nono vlf </figcaption>
     </figure>
 
@@ -91,14 +104,17 @@ include "./includes/components/navbar.php";
     <p><?= t("archi.p.room") ?></p>
 
     <figure>
-        <img src="<?= i('archi/Salle_des_Hotes.jpg', 'medium') ?>" alt="Salle des Hôtes du Mont-Saint-Michel">
+        <div class="media-container">
+            <img class="imgs" src="<?= i('archi/Salle_des_Hotes.jpg', 'medium') ?>" alt="Salle des Hôtes du Mont-Saint-Michel">
+        </div>
         <figcaption>
             <?= t("archi.figcaption.room") ?> / &#169; Wikicommons -
             <a href="https://commons.wikimedia.org/wiki/User:Ptyx" target="_blank">Ptyx</a>
         </figcaption>
     </figure>
 
-    <p class="end"><?= t("archi.p2.room") ?></p></p>
+    <p class="end"><?= t("archi.p2.room") ?></p>
+    </p>
 
 </div>
 

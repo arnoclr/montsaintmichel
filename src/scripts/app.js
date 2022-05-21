@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.image-carousel').forEach(carousel => {
         let currentImage = 0;
         const images = JSON.parse(carousel.dataset.images);
-        
+
         if (images.length > 0) {
 
             const img = new Image();
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     let onloadEvent = false;
                     let timeoutEvent = false;
 
-                    let onloadHandler = function() {
+                    let onloadHandler = function () {
                         img.style.height = 'auto';
                         const newHeight = img.clientHeight;
                         img.style.height = currentHeight + 'px';
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         img.style.opacity = 1;
                     };
 
-                    img.onload = function() {
+                    img.onload = function () {
                         onloadEvent = true;
                         if (timeoutEvent) {
                             onloadHandler();
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             onloadHandler();
                         }
                     }, 300);
-                    
+
                     img.offsetWidth;
                     img.src = images[currentImage].src;
                     attributionSpan.innerText = images[currentImage].attr || '';
@@ -173,17 +173,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    
+
     // preview liens
     const previewLinks = document.querySelectorAll("a[preview]");
 
-    function getOffset( el ) {
+    function getOffset(el) {
         var _x = 0;
         var _y = 0;
-        while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-              _x += el.offsetLeft - el.scrollLeft;
-              _y += el.offsetTop - el.scrollTop;
-              el = el.offsetParent;
+        while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+            _x += el.offsetLeft - el.scrollLeft;
+            _y += el.offsetTop - el.scrollTop;
+            el = el.offsetParent;
         }
         return { top: _y, left: _x };
     }
@@ -245,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // image gallery
     const imageGallery = document.querySelector('.js-collection__img-wrap');
+    const inner = document.querySelector('.modal-inner');
 
     document.addEventListener('mouseover', function (event) {
         if (imageGallery !== event.target && !imageGallery.contains(event.target)) {
@@ -270,23 +271,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showModal(el, imgSrc, caption) {
-        el.modal.style.display = "block";
-        el.wrapper.style.display = "block";
+        el.modal.style.cssText = `
+            visibility: visible;
+        `;
+
+        el.wrapper.style.cssText = `
+            visibility: visible;
+            display: block;
+        `;
+
+        el.modal.classList.add('modal_active');
+        el.wrapper.classList.add('modal-wrapper_active');
+        inner.classList.add('modal-inner_active');
+
         imgSrc.includes('.jpg') ? el.image.setAttribute('src', imgSrc.replace('l.jpg', '.jpg')) : el.image.setAttribute('src', imgSrc);
         el.caption.innerText = caption;
-        el.image.setAttribute('height', 500);
+        el.image.setAttribute("style", "height: 30vw"); 
     }
 
     function hideModal(el) {
-        el.modal.style.display = "none";
-        el.wrapper.style.display = "none";
+        el.modal.style.cssText = `
+            visibility: hidden; 
+            opacity: 0; 
+            transition: all .2s ease;
+        `;
+
+        el.wrapper.style.cssText = `
+            visibility: hidden; 
+            opacity: 0; 
+            transition: all .2s ease;
+            display: none;
+        `;
+
+        el.modal.classList.remove('modal_active');
+        el.wrapper.classList.remove('modal-wrapper_active');
+        inner.classList.remove('modal-inner_active');
     }
 
     window.onload = function () {
         const modal = setupModal();
-        console.log('modal', modal);
+        // console.log('modal', modal);
 
-        document.querySelectorAll('img.imgs')
+        document.querySelectorAll('img.imgs') // Toute image possédant la classe "imgs" se verra cliquable avec un modal.
             .forEach((img) => {
                 img.addEventListener('click', (e) => {
                     console.log('click', e);
@@ -294,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         src = img.getAttribute('src'),
                         caption = img.getAttribute('alt');
                     showModal(modal, src, caption);
-                    
+
                 });
             });
     }

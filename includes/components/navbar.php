@@ -66,7 +66,7 @@ $menu = (object) [
         ],
         (object) [
             'title' => t('navbar.history.beginning'),
-            'link' => '/histoire/frise#date=',
+            'link' => '/histoire/frise',
             'image' => 'menu/histoire/les_debuts.png'
         ],
         (object) [
@@ -76,22 +76,22 @@ $menu = (object) [
         ],
         (object) [
             'title' => t('navbar.history.100war'),
-            'link' => '/histoire/frise#date=',
+            'link' => '/histoire/frise#1337',
             'image' => 'menu/histoire/guerre_100_ans.png'
         ],
         (object) [
             'title' => t('navbar.history.revolution'),
-            'link' => '/histoire/frise#date=',
+            'link' => '/histoire/frise#1789',
             'image' => 'menu/histoire/revolution_fr.png'
         ],
         (object) [
             'title' => t('navbar.history.worldWars'),
-            'link' => '/histoire/frise#date=',
+            'link' => '/histoire/frise#1914', // CES DEUX LA SONT PAREILS
             'image' => 'menu/histoire/1gm.png'
         ],
         (object) [
             'title' => t('navbar.history.20century'),
-            'link' => '/histoire/frise#date=',
+            'link' => '/histoire/frise#1914', // ^^^^^^^^^^^^^^^^^^^^^^
             'image' => 'menu/histoire/ajd.png'
         ],
     ],
