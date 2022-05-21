@@ -9,11 +9,12 @@
     --navbar-background: #fff;
     --navbar-link: #545454;
     --navbar-locale-hover: #eee;
-    --title-color: #000;
-    --text-color: #515151;
+    --title-color: #201A18;
+    --text-color: #52433E;
     --btn-outlined: #000;
-    --footer-background: #fafafa;
+    --footer-background: #fff5f1;
     --modal-surface: #EDE0DC;
+    --input-surface: #FFEDE6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,6 +32,7 @@
         --btn-outlined: #D8C2BA;
         --footer-background: #0e0d0d;
         --modal-surface: #201A18;
+        --input-surface: #260800;
     }
 }
 
