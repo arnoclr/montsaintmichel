@@ -62,12 +62,32 @@
     display: flex;
     flex-direction: row;
     gap: 50px; 
-    overflow-x: hidden;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 
-.picture_gallery:hover {
-    overflow-x: auto;
+.picture_gallery::-webkit-scrollbar {
+    width: 10%;
+}
+
+.picture_gallery::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.picture_gallery::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.picture_gallery:hover::-webkit-scrollbar-track {
+    background-color: #f1f1f1
+}
+
+.picture_gallery:hover::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+.picture_gallery:hover::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
 
 .picture_gallery_img {
@@ -131,11 +151,76 @@
 }
 
 .img_legend:hover div {
-    box-shadow:  0px 0px 0px transparent,
-             0px 0px 0px transparent;
+    box-shadow:  0px 0px 3px transparent,
+             0px 0px 3px transparent;
 
 }
 
+/* Picture Advice */
+
+.picture_advice {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    margin-top: 5%;
+    background-color: #1c1615;
+}
+
+.picture_advice img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.picture_advice div {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-left: 34%;
+}
+
+
+
+.picture_advice div h2 {
+    margin-left: 35%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #B94503;
+}
+
+.picture_advice_legend {
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 130px;
+    margin-bottom: 40px;
+}
+
+.special-espace {
+    gap: 25px;
+}
+
+.picture_advice_legend svg {
+    width: 100px;
+    height: 100px;
+    fill: grey;
+}
+
+.picture_advice_legend p {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+}
 
 
 
