@@ -5,7 +5,7 @@ if (!in_array(lang(), ['fr'])) {
 }
 
 $_next_qst_btn = true;
-$seed = isset($_GET['seed']) ? $_GET['seed'] : rand(0, 99999);
+$seed = intval($_GET['seed'] ?? rand(0, 99999));
 
 // récupérer les questions du json
 $json = file_get_contents("src/scripts/quiz.json");
@@ -15,54 +15,10 @@ $data = json_decode($json);
 $questions = [];
 foreach ($data as $key => $array) {
     seededShuffle($array, $seed);
-    array_push($questions, $array[0], $array[1]);
+    array_push($questions, $array[0]);
 }
 
-
 include "./includes/components/navbar.php"; ?>
-
-<style>
-    .quiz-box {
-        display: flex;
-        overflow-x: hidden;
-        scroll-snap-type: x mandatory;
-        margin-bottom: 64px;
-    }
-
-    .quiz-box__section {
-        min-width: 100%;
-        padding: 16px var(--padding);
-        display: grid;
-        place-items: center;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-    }
-
-    .quiz-progress {
-        display: grid;
-        place-items: center;
-        height: 32px;
-    }
-
-    #js-quiz-progress {
-        width: 90%;
-        height: 8px;
-        max-width: 590px;
-        -webkit-appearance: none;
-        appearance: none;
-    }
-
-    #js-quiz-progress::-webkit-progress-bar {
-        background-color: #eee;
-        border-radius: 2px;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1) inset;
-    }
-
-    #js-quiz-progress::-webkit-progress-value {
-        background-color: var(--primary-color);
-        border-radius: 2px;
-    }
-</style>
 
 <aside class="quiz-progress">
     <progress id="js-quiz-progress" value="1" min="1" max="<?= count($questions) ?>"></progress>
@@ -70,9 +26,6 @@ include "./includes/components/navbar.php"; ?>
 
 <main class="quiz-box js-quiz-box">
     <?php
-
-    
-
     foreach ($questions as $key => $value) {
         $answers = $value->o;
         array_push($answers, $value->a);
@@ -86,22 +39,67 @@ include "./includes/components/navbar.php"; ?>
             "read_more_summary" => $value->d,
             "image" => $value->i
         ];
-
     ?>
-
         <div class="quiz-box__section">
             <?php include "./includes/components/quizz.php"; ?>
         </div>
-
     <?php
     }
     ?>
+
+    <div class="quiz-box__section">
+        <div class="quiz__results">
+            <span class="quiz__results-score js-score"></span>
+            <span class="quiz__results-streak js-streak"></span>
+            <p class="quiz__results-text js-rtext"></p>
+            <textarea class="js-ta"></textarea>
+            <button class="quiz__results-btn js-copy">
+                <span>Copier les résultats</span>
+                <i class="material-icons-sharp">content_copy</i>
+            </button>
+        </div>
+    </div>
 </main>
 
 <script>
     const quizBox = document.querySelector(".js-quiz-box");
     const nextBtns = document.querySelectorAll(".js-next-qst");
     const quizProgress = document.getElementById("js-quiz-progress");
+    const textarea = document.querySelector(".js-ta");
+    const seed = <?= $seed ?>;
+    const copyBtn = document.querySelector(".js-copy");
+
+    function processScores() {
+        let resultsString = '';
+        let correctAnswers = 0;
+        let total = 0;
+
+        document.querySelectorAll('.js-quizz').forEach(quizz => {
+            if (quizz.classList.contains('js-correct')) {
+                resultsString += "✅";
+                correctAnswers++;
+            } else {
+                resultsString += "❌";
+            }
+            total++;
+        })
+
+        document.querySelector('.js-score').innerHTML = `${correctAnswers}/${total}`;
+        document.querySelector('.js-streak').innerHTML = resultsString;
+
+        document.querySelector('.js-rtext').innerHTML = correctAnswers / total >= 0.7 
+            ? "Félicitations ! Vous semblez bien connaître le Mont-Saint-Michel. Partagez ce score avec vos amis !"
+            : "Aïe ... Continuez à parcourir notre site pour trouver vos réponses."
+
+        textarea.innerHTML = `Quiz sur le Mont-Saint-Michel\n${correctAnswers}/${total} ${resultsString}\n\nhttps://arnocellarier.fr/tlei62?seed=${seed}`;
+    }
+
+    copyBtn.addEventListener('click', () => {
+        textarea.focus();
+        textarea.select();
+        document.execCommand('copy');
+        console.log("copy");
+    });
 
     nextBtns.forEach(function(btn) {
         btn.addEventListener("click", function() {
@@ -111,6 +109,10 @@ include "./includes/components/navbar.php"; ?>
                 behavior: "smooth"
             });
             quizProgress.value = quizProgress.value + 1;
+
+            if (quizProgress.value >= quizProgress.max) {
+                processScores();
+            }
         });
     });
 </script>
