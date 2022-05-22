@@ -1209,6 +1209,25 @@ progress::-webkit-progress-value {
     background: #cacaca;
 }
 
+.js-draggable::-webkit-scrollbar {
+    /* display: none; */
+}
+
+.draggable-area {
+    cursor: grab;
+}
+
+.draggable-area.grabbing {
+    cursor: grabbing;
+    user-select: none;
+}
+
+.draggable-area.grabbing * {
+    user-drag: none;
+    user-select: none;
+    pointer-events: none;
+}
+
 @media (prefers-color-scheme: dark) {
     .modal {
         /* background: #131313; */
