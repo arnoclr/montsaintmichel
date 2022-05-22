@@ -97,14 +97,14 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
     </div>
 
     <div class="picture_advice">
-        <img src="<?=i('activites/island-4420629_1920.jpg', 'large') ?>" height=100% width=auto>
+        <img src="<?=i('activites/island-4420629_1920.jpg', 'large') ?>">
         <div>
             <h2>conseils photo</h2>
             <div class="picture_advice_legend">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	            viewBox="0 0 525.153 525.153" style="enable-background:new 0 0 525.153 525.153;" xml:space="preserve">
                 <g>
-	            <path d="M137.502,103.586L94.527,60.852L60.852,94.527l42.734,42.712L137.502,103.586z M71.596,238.704H0v47.745h71.596V238.704z
+	            <path fill=var(--svg-color) d="M137.502,103.586L94.527,60.852L60.852,94.527l42.734,42.712L137.502,103.586z M71.596,238.704H0v47.745h71.596V238.704z
 		        M286.449,1.203h-47.745v70.414h47.745V1.203z M464.3,94.527l-33.675-33.675l-42.712,42.734l33.654,33.654L464.3,94.527z
 		        M387.672,421.566l42.691,42.975l33.675-33.675l-42.953-42.712L387.672,421.566z M453.557,238.704v47.745h71.596v-47.745H453.557z
 		        M262.576,119.341c-79.014,0-143.235,64.222-143.235,143.235s64.222,143.235,143.235,143.235s143.235-64.222,143.235-143.235
@@ -113,24 +113,17 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
                 </g>
                 </svg>
                 <p>Attendez le bon moment de la journée, et profitez de la météo pour prendre des photos uniques. Les nuages ou le brouillard peuvent donner des effets sympas.</p>
-            </div>
 
-            <div class="picture_advice_legend special-espace">
-                
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1920">
-                <style>
-                .st0{fill:#fff}.st1{fill:none;stroke:#000;stroke-width:50;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}
-                </style>
-                <path class="st0" d="M964.4 1027.4l274.7-340.6 464 600H216.9l484.2-600z" id="Layer_5"/>
-                <g id="STROKES">
-                <path class="st1" d="M964.4 1027.4l99.7 128.9"/>
-                <path class="st1" d="M216.9 1286.8l484.2-600 263.3 340.6 274.7-340.6 464 600"/>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	            width="561px" height="561px" viewBox="0 0 561 561" style="enable-background:new 0 0 561 561;" xml:space="preserve">
+                <g>
+	            <g id="landscape">
+		        <path fill=var(--svg-color) d="M331.5,127.5L234.6,255l73.95,96.9l-40.8,30.6C224.4,326.4,153,229.5,153,229.5L0,433.5h561L331.5,127.5z"/>
+	            </g>
                 </g>
                 </svg>
                 <p>Eloignez vous un maxium du Mont, afin d’avoir un cadre large et de bien montrer l’etendue de la baie.</p>
-            </div>
 
-            <div class="picture_advice_legend">
                 <svg width="13px" height="22px" viewBox="0 0 13 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">                <title>directions_walk</title>
                 <desc>Created with Sketch.</desc>
                 <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -139,7 +132,7 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
                 <g id="-Round-/-Maps-/-directions_walk" transform="translate(103.000000, 54.000000)">
                 <g>
                 <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
-                <path d="M13.5,5.5 C14.6,5.5 15.5,4.6 15.5,3.5 C15.5,2.4 14.6,1.5 13.5,1.5 C12.4,1.5 11.5,2.4 11.5,3.5 C11.5,4.6 12.4,5.5 13.5,5.5 Z M9.8,8.9 L7.24,21.81 C7.11,22.42 7.59,23 8.22,23 L8.3,23 C8.77,23 9.17,22.68 9.28,22.22 L10.9,15 L13,17 L13,22 C13,22.55 13.45,23 14,23 C14.55,23 15,22.55 15,22 L15,16.36 C15,15.81 14.78,15.29 14.38,14.91 L12.9,13.5 L13.5,10.5 C14.57,11.74 16.12,12.63 17.86,12.91 C18.46,13 19,12.52 19,11.91 C19,11.42 18.64,11.01 18.15,10.93 C16.63,10.68 15.37,9.78 14.7,8.6 L13.7,7 C13.14,6.11 12.02,5.75 11.05,6.16 L7.22,7.78 C6.48,8.1 6,8.82 6,9.63 L6,12 C6,12.55 6.45,13 7,13 C7.55,13 8,12.55 8,12 L8,9.6 L9.8,8.9 Z" id="🔹-Icon-Color" fill="#1D1D1D"></path>
+                <path fill=var(--svg-color) d="M13.5,5.5 C14.6,5.5 15.5,4.6 15.5,3.5 C15.5,2.4 14.6,1.5 13.5,1.5 C12.4,1.5 11.5,2.4 11.5,3.5 C11.5,4.6 12.4,5.5 13.5,5.5 Z M9.8,8.9 L7.24,21.81 C7.11,22.42 7.59,23 8.22,23 L8.3,23 C8.77,23 9.17,22.68 9.28,22.22 L10.9,15 L13,17 L13,22 C13,22.55 13.45,23 14,23 C14.55,23 15,22.55 15,22 L15,16.36 C15,15.81 14.78,15.29 14.38,14.91 L12.9,13.5 L13.5,10.5 C14.57,11.74 16.12,12.63 17.86,12.91 C18.46,13 19,12.52 19,11.91 C19,11.42 18.64,11.01 18.15,10.93 C16.63,10.68 15.37,9.78 14.7,8.6 L13.7,7 C13.14,6.11 12.02,5.75 11.05,6.16 L7.22,7.78 C6.48,8.1 6,8.82 6,9.63 L6,12 C6,12.55 6.45,13 7,13 C7.55,13 8,12.55 8,12 L8,9.6 L9.8,8.9 Z" id="🔹-Icon-Color" fill="#1D1D1D"></path>
                 </g>
                 </g>
                 </g>

@@ -15,6 +15,7 @@
     --footer-background: #fff5f1;
     --modal-surface: #EDE0DC;
     --input-surface: #FFEDE6;
+    --svg-color: #A87C63;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +34,7 @@
         --footer-background: #0e0d0d;
         --modal-surface: #201A18;
         --input-surface: #260800;
+        --svg-color: #875f47;
     }
 }
 

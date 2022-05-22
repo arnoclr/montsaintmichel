@@ -160,57 +160,41 @@
 
 .picture_advice {
     display: grid;
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-top: 5%;
-    background-color: #1c1615;
-}
-
-.picture_advice img {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    margin-bottom: 5%;
+    gap: 50px;
+    background-color: var(--primary-color-light-transparent);
 }
 
 .picture_advice div {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    margin-left: 34%;
+    margin-top: 30px;
 }
 
-
-
 .picture_advice div h2 {
-    margin-left: 35%;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
     line-height: 39px;
     text-transform: uppercase;
-    color: #B94503;
+    color: var(--primary-color);
+    margin-bottom: 50px;
 }
 
 .picture_advice_legend {
-    display: flex;
-    flex-direction: row;
-    gap: 45px;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-column-gap: 70px;
+    grid-row-gap: 50px;
     align-items: center;
     justify-content: center;
-    margin-right: 130px;
-    margin-bottom: 40px;
-}
-
-.special-espace {
-    gap: 25px;
+    margin-right: 160px;
 }
 
 .picture_advice_legend svg {
-    width: 100px;
-    height: 100px;
-    fill: grey;
+    width: 70px;
+    height: 70px;
 }
 
 .picture_advice_legend p {
@@ -219,7 +203,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    color: white;
+    color: var(--text-color);
 }
 
 
