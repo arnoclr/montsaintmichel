@@ -23,7 +23,7 @@
         <p id="js-vr-modal-desc">La chapelle Saint-Aubert est une chapelle catholique. Elle est située sur une
             excroissance rocheuse à l'extrémité nord-ouest du Mont-Saint-Michel.</p>
 
-        <div id="js-vr-modal-images" class="vrslider">
+        <div id="js-vr-modal-images" class="vrslider js-draggable">
         </div>
     </div>
 
