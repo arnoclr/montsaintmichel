@@ -144,8 +144,9 @@
     align-items: center;
     gap: 8px;
     pointer-events: none;
+    border-left: 4px solid;
 
-    animation: copy 1.7s 2 ease alternate forwards;
+    animation: copy 1.4s 2 ease alternate forwards;
 }
 
 @keyframes copy {

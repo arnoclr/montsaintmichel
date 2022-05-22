@@ -15,8 +15,11 @@ $data = json_decode($json);
 $questions = [];
 foreach ($data as $key => $array) {
     seededShuffle($array, $seed);
-    array_push($questions, $array[0]);
+    array_push($questions, $array[random_int(0,count($array)-1)]);
+    // dd($array);
 }
+
+// dd($questions);
 
 include "./includes/components/navbar.php"; ?>
 
@@ -123,8 +126,10 @@ include "./includes/components/navbar.php"; ?>
         sessionStorage.setItem("correctQuestions", JSON.stringify(correctQuestions));
 
         WriteScore(correctAnswers, total, resultsString);
-        if (correctAnswers / total >= 0.7) {
-            runFunctionXTimes(createEmoji, 350, 50)
+        if (correctAnswers / total >= 1) {
+            runFunctionXTimes(createEmoji, "👑", 350, 50)
+        } else if (correctAnswers / total >= 0.7) {
+            runFunctionXTimes(createEmoji, "😃", 350, 20)
         }
     }
 
@@ -142,25 +147,30 @@ include "./includes/components/navbar.php"; ?>
             }
         }
         WriteScore(correctAnswers, total, resultsString);
-        console.log(correctAnswers / total);
-        if (correctAnswers / total >= 0.7) {
-            runFunctionXTimes(createEmoji, 350, 50)
-        }
     }
-
+        
     function WriteScore(correctAnswers, total, resultsString) {
         
+        console.log("Score total de " + correctAnswers / total);
         document.querySelector('.js-score').innerHTML = `${correctAnswers}/${total}`;
         document.querySelector('.js-streak').innerHTML = resultsString;
 
-        document.querySelector('.js-rtext').innerHTML = correctAnswers / total >= 0.7 
+        document.querySelector('.js-rtext').innerHTML = 
+              correctAnswers / total >= 1
+            ? "Vous connaissez le Mont-Saint-Michel sur le bout des doigts ! N'hésitez pas à partager ce score avec vos amis !" 
+            : correctAnswers / total >= 0.7
             ? "Félicitations ! Vous semblez bien connaître le Mont-Saint-Michel. Partagez ce score avec vos amis !"
-            : "Aïe ... Continuez à parcourir notre site pour trouver vos réponses."
+            : correctAnswers / total >= 0.5
+            ? "Ce n'est pas mal ! Vous connaissez le Mont-Saint-Michel, mais vous pouvez en faire mieux."
+            : correctAnswers / total < 0.5
+            ? "Aïe ... Continuez à parcourir notre site pour trouver vos réponses."
+            : "";
+
 
         textarea.innerHTML = `Quiz sur le Mont-Saint-Michel\n${correctAnswers}/${total} ${resultsString}\n\nhttps://arnocellarier.fr/tlei62?seed=${seed}`;
     }
 
-    function createEmoji() {
+    function createEmoji(emojiString) {
         const emoji = document.createElement('div');
         emoji.classList.add('emoji');
 
@@ -168,7 +178,7 @@ include "./includes/components/navbar.php"; ?>
         emoji.style.animationDuration = Math.random() * 2 + 5 + "s";
         emoji.style.fontSize = Math.random() * 30 + 40 + "px";
 
-        emoji.innerText = '👑';
+        emoji.innerText = emojiString;
 
         document.body.appendChild(emoji);
 
@@ -177,22 +187,19 @@ include "./includes/components/navbar.php"; ?>
         }, 7000);
     }
 
-    function runFunctionXTimes(callback, interval, repeatTimes) {
+    function runFunctionXTimes(callback, param, interval, repeatTimes) {
     let repeated = 0;
     const intervalTask = setInterval(doTask, interval)
 
         function doTask() {
             if ( repeated < repeatTimes ) {
-                callback()
+                callback(param)
                 repeated += 1
             } else {
                 clearInterval(intervalTask)
             }
         }
-    } 
-
-    // runFunctionXTimes(createEmoji, 350, 50) ------------------- TODO: decommente avant de commit
-        
+    }
 
 
     sessionStorage.setItem("quizId", seed);
@@ -263,7 +270,7 @@ include "./includes/components/navbar.php"; ?>
 
             sessionStorage.setItem("questionId", parseInt(sessionStorage.questionId)+ 1);
 
-            if (quizProgress.value >= quizProgress.max) {
+            if (parseInt(sessionStorage.questionId) >= quizProgress.max) {
                 processScores();
             }
         });

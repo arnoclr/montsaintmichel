@@ -50,8 +50,8 @@
         },
         {
             "q": "Le Mont-Saint-Michel a été :",
-            "a": "Les 4 à la fois",
-            "o": ["Un Château Fort","Une Abbaye","Une Église","Une Prison"],
+            "a": "Les 3 à la fois",
+            "o": ["Un Château Fort","Une Abbaye","Une Prison"],
             "d": "Durant sa vie, le mont Saint Michel à remplit ces 4 rôle, selon la volonté des differents dirigeant de l'Abbaye",
             "l": "",
             "i": "https://i.imgur.com/MWFbazw.jpg"
@@ -318,7 +318,7 @@
             "o": ["Faux"],
             "d": "En effet l'Archange Saint Michel apparaît dans l'Ancien Testament",
             "l": "",
-            "i": "i.https://i.imgur.com/wujG1OU.png"
+            "i": "https://i.imgur.com/wujG1OU.png"
         },
         {
             "q": "Qui est juste en dessous de l’Abbé dans la hiérarchie de l'Église Catholique ?",
@@ -530,7 +530,7 @@
         {
             "q": "La laine de mouton au Mont-Saint-Michel était autrefois utilisée comme :",
             "a": "Pour faire des couvertures",
-            "o": ["Combustible pour les cheminées", "Pour faire des couvertures", "Corde pour des instruments de musique"],
+            "o": ["Combustible pour les cheminées", "Pour isoler les maisons", "Corde pour des instruments de musique"],
             "d": "En effet, la laine de mouton était utilisée pour faire des couvertures. Mais les moutons étaient surtout exploités pour leur viande.",
             "l": "",
             "i": "https://i.imgur.com/93bGLzZ.png"

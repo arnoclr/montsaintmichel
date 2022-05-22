@@ -1,3 +1,38 @@
+class DraggableScrollArea {
+    isGrabbed = false;
+    constructor(element){
+        this.element = element;
+        this.element.classList.add('draggable-area');
+        this.element.addEventListener('mousedown', this.onMouseDown);
+        this.element.addEventListener('mousemove', this.onMouseMove);
+        this.element.addEventListener('mouseup', this.onMouseUp);
+        this.element.addEventListener('mouseleave', this.onMouseUp);
+    }
+    forwards = ()=>{
+        this.changeStep(1);
+    };
+    backwards = ()=>{
+        this.changeStep(-1);
+    };
+    changeStep = (direction)=>{
+        this.element.scrollLeft += this.element.clientWidth / 1.5 * direction;
+        this.element.scrollTop += this.element.clientHeight / 1.5 * direction;
+    };
+    onMouseDown = ()=>{
+        this.element.classList.add('grabbing');
+        this.isGrabbed = true;
+    };
+    onMouseMove = (event)=>{
+        if (!this.isGrabbed) return;
+        this.element.scrollLeft = this.element.scrollLeft - event.movementX;
+        this.element.scrollTop = this.element.scrollTop - event.movementY;
+    };
+    onMouseUp = ()=>{
+        this.element.classList.remove('grabbing');
+        this.isGrabbed = false;
+    };
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // initialiser les menus
 
@@ -286,7 +321,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         imgSrc.includes('.jpg') ? el.image.setAttribute('src', imgSrc.replace('l.jpg', '.jpg')) : el.image.setAttribute('src', imgSrc);
         el.caption.innerText = caption;
-        el.image.setAttribute("style", "height: 30vw"); 
+
+        if (window.innerWidth >= 800) {
+            el.image.setAttribute("style", "height: 40vh;");
+        } else {
+            el.image.setAttribute("style", "");
+        }
+        
     }
 
     function hideModal(el) {
@@ -324,6 +365,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
     }
+
+    document.querySelectorAll('.js-draggable').forEach(el => {
+        const draggable = new DraggableScrollArea(el);
+    });
 
     // fancy alert
     function fancyAlert(message, type) { // NE MARCHE PAS DANS QUIZ.PHP JE NE SAIS PAS POURQUOI (LE APP.JS EST PAS APPELÉ)

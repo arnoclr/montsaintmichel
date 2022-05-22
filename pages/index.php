@@ -43,6 +43,7 @@ $articles = getOrCache("index.articles.$lang", 60 * 12, function () use ($lang) 
     <div class="hero__shadow"></div>
 </div>
 
+<!-- Vidéo de présentation du Mont-Saint-Michel -->
 <script>
     const videos = [
         "https://i.imgur.com/xPQR4yw.mp4",
@@ -56,19 +57,23 @@ $articles = getOrCache("index.articles.$lang", 60 * 12, function () use ($lang) 
     document.getElementById("main-video").appendChild(source);
 </script>
 
+<!-- Activités phares -->
 <?php include "./includes/components/activitiesRow.php"; ?>
 
 <div style="height: 64px;"></div>
 
+<!-- Petite partie du Quiz -->
 <div class="main-padding quiz-wrapper">
     <?php include "./includes/components/quizz.php"; ?>
 </div>
 
+<!-- Galerie d'images mouvantes -->
 <div class="collections">
     <h1 class="articles__title collection-h1">Gallerie d'images</h1>
     <?php include "./includes/components/collections.php"; ?>
 </div>
 
+<!-- Dernières actualités -->
 <div class="articles">
     <h1 class="articles__title"><?= t('index.articles.title') ?></h1>
     <div class="articles__grid">
