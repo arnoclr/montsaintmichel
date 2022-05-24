@@ -215,6 +215,7 @@
     max-width: 70%;
     color: var(--text-color);
 }
+
 @media (max-width: 768px) {
     .picture_advice {
         grid-template-columns: 1fr;
@@ -234,6 +235,114 @@
     .picture_advice_legend p {
         font-size: 10px;
 
+    }
+
+    .picture_advice div h2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 820px) {
+    .picture_advice {
+        grid-template-columns: 1fr;
+        margin-bottom: 10%;
+        padding-left: 50px;
+    }
+
+    .picture_advice_legend {
+        grid-row-gap: 0%;
+        gap: 20px;
+    }
+
+    .picture_advice_legend svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .picture_advice_legend p {
+        font-size: 10px;
+        padding-right: 50px;
+
+    }
+
+    .picture_advice div h2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .picture_advice_legend {
+        grid-row-gap: 1%;
+    }
+
+    .picture_advice_legend svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .picture_advice_legend p {
+        font-size: 14px;
+    }
+
+    .picture_advice div h2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .picture_advice_legend {
+        grid-row-gap: 1%;
+    }
+
+    .picture_advice_legend svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .picture_advice_legend p {
+        font-size: 14px;
+    }
+
+    .picture_advice div h2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1500px) {
+
+    .picture_advice_legend {
+        grid-row-gap: 1%;
+    }
+
+    .picture_advice_legend svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .picture_advice_legend p {
+        font-size: 15px;
+    }
+
+    .picture_advice div h2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1900px) {
+
+    .picture_advice_legend {
+        grid-row-gap: 15%;
+    }
+
+    .picture_advice_legend svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .picture_advice_legend p {
+        font-size: 16px;
     }
 
     .picture_advice div h2 {
