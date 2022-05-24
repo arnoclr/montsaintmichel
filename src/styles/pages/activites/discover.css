@@ -196,14 +196,14 @@
     display: grid;
     grid-template-columns: 48px 1fr;
     grid-column-gap: 70px;
-    grid-row-gap: 100px;
+    grid-row-gap: 22px;
     align-items: center;
     justify-content: center;
 }
 
 .picture_advice_legend svg {
-    width: 70px;
-    height: 70px;
+    width: 56px;
+    height: 56px;
 }
 
 .picture_advice_legend p {
@@ -224,21 +224,26 @@
     }
 
     .picture_advice_legend {
-        grid-row-gap: 0%;
-        gap: 30px
+        gap: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
     .picture_advice_legend svg {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
 
     .picture_advice_legend p {
-        font-size: 10px;
+        font-size: 16px;
 
     }
 
     .picture_advice div h2 {
+        font-size: 26px;
         margin-bottom: 30px;
+        padding-left: 30px;
     }
 }
+
+/* Flickr Post */
