@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+   
     const navbar = document.querySelector('.js-navbar');
 
     window.addEventListener('scroll', () => {
