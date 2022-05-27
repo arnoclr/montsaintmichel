@@ -247,3 +247,44 @@
 }
 
 /* Flickr Post */
+
+.flickrgallery {
+    display: flex;
+    flex-direction: row;
+    gap: 50px; 
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.flickrpost {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    width: 352px;
+    height: 522px;
+    max-height: 600px;
+    align-items: center;
+    justify-content: center;
+    background: var(--navbar-locale-hover);
+}
+
+.flickrpost p {
+    display: -webkit-box;
+    max-width: 200px;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    margin-top: 30px;
+
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 352;
+    width: auto;
+    height: auto;
+
+    color: var(--title-color);
+}

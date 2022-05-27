@@ -144,12 +144,14 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
         </div>
     </div>
 
-    <?php foreach ($topPosts as $post): ?>
-        <div>
-            <img src="https://insta-images-proxy.arnoclr.workers.dev/?src=<?= urlencode($post->thumbnail) ?> " width=200px>
-            <p><?= $post->caption ?></p>
-        </div>
-    <?php endforeach; ?>
+    <div class="flickrgallery">
+        <?php foreach ($topPosts as $post): ?>
+            <div class="flickrpost">
+                <img src="https://insta-images-proxy.arnoclr.workers.dev/?src=<?= urlencode($post->thumbnail) ?> " width=352px height=352px>
+                <p><?= $post->caption ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
 </div>
 </main>
 
