@@ -69,7 +69,7 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
     <div class="picture_gallery">
         <div class="picture_gallery_img">
             <img src="<?=i('activites/Mt_ST_michel_07.JPG', 'medium') ?>" height=100% width=auto>
-            <div class="img_legend">
+            <div class="img_legend" style="top:50%; left:50%;">
                 <div>
                     <i class="material-icons-sharp">search</i>
                 </div>
@@ -78,7 +78,7 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
         </div>
         <div class="picture_gallery_img">
             <img src="<?=i('activites/IMG_7181.jpg', 'medium') ?>" height=100% width=auto>
-            <div class="img_legend">
+            <div class="img_legend" style="top:20%; left:15%;">
                 <div>
                     <i class="material-icons-sharp">search</i>
                 </div>
@@ -87,7 +87,7 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
         </div>
         <div class="picture_gallery_img">
             <img src="<?=i('activites/649c3c3c1f3a0dd3b775b45859aeb24d.jpg', 'medium') ?>" height=100% width=auto>
-            <div class="img_legend">
+            <div class="img_legend" style="top:75%; left:5%;">
                 <div>
                     <i class="material-icons-sharp">search</i>
                 </div>
@@ -153,23 +153,14 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
         <?php endforeach; ?>
     </div>
     <?php
-    $json = file_get_contents("src/scripts/quiz.json");
-
-    // select random key of json object
-    $key = array_rand(json_decode($json, true));
-    $data = json_decode($json)->$key;
-
-    // get random entry of object
-    $data = $data[array_rand($data)];
-    $data->o[] = $data->a;
 
     $quizz = (object) [
-        "question" => $data->q,
-        "answers" => $data->o,
-        "correct_answer" => $data->a,
-        "read_more" => $data->l,
-        "read_more_summary" => $data->d,
-        "image" => $data->i
+        "question" => "Combien y a-t-il d’espèces animales et végétales dans la baie ?",
+        "answers" => ["145", "265", "1540"],
+        "correct_answer" => ["480"],
+        "read_more" => "",
+        "read_more_summary" => "La baie regorge d'espèces animales et végétales. Il y a 480 espèces différentes que vous pouvez voir au Mont-Saint-Michel.",
+        "image" => "https://i.imgur.com/7Ey6qjL.png"
 ];
 
 $_open_quiz_btn = true;?>
