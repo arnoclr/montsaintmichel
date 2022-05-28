@@ -14,20 +14,21 @@ define('ROOT', __DIR__);
 
 // database
 try {
-    $pdo = new PDO('sqlite:'.dirname(__FILE__).'/data.sqlite');
+    $pdo = new PDO('sqlite:' . dirname(__FILE__) . '/data.sqlite');
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // ERRMODE_WARNING | ERRMODE_EXCEPTION | ERRMODE_SILENT
-} catch(Exception $e) {
+} catch (Exception $e) {
     die("database error");
 }
 
 // load all files in functions folder
-$functions = glob(dirname(__FILE__).'/includes/functions/*.php');
+$functions = glob(dirname(__FILE__) . '/includes/functions/*.php');
 foreach ($functions as $function) {
     require_once $function;
 }
 
-function loadAsset($page, $type) {
+function loadAsset($page, $type)
+{
     global $basepath;
     if ($type == 'css' && file_exists("src/styles/pages/" . $page . ".css")) {
         return "<link rel=\"stylesheet\" href=\"$basepath/src/styles/pages/" . $page . ".css?v=" . md5_file("src/styles/pages/" . $page . ".css") . "\">";
@@ -38,7 +39,8 @@ function loadAsset($page, $type) {
     return "";
 }
 
-function loadPage($page, $with_head = true) {
+function loadPage($page, $with_head = true)
+{
     global $basepath, $og;
     $path =  "pages" . DIRECTORY_SEPARATOR . $page . ".php";
     if (file_exists($path)) {
@@ -55,7 +57,7 @@ function loadPage($page, $with_head = true) {
 }
 
 switch ($request) {
-    case "/" :
+    case "/":
         $og = (object) [
             "title" => t('index.og.title'),
             "description" => t('index.og.description'),
@@ -125,8 +127,10 @@ switch ($request) {
     case "/ajax/linkPreview":
         include "includes/ajax/linkPreview.php";
         break;
+    case "/ajax/search":
+        include "includes/ajax/search.php";
+        break;
     default:
         // retourner le fichier par défaut
         return false;
 }
-
