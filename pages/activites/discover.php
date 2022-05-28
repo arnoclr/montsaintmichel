@@ -152,6 +152,30 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
             </div>
         <?php endforeach; ?>
     </div>
+    <?php
+    $json = file_get_contents("src/scripts/quiz.json");
+
+    // select random key of json object
+    $key = array_rand(json_decode($json, true));
+    $data = json_decode($json)->$key;
+
+    // get random entry of object
+    $data = $data[array_rand($data)];
+    $data->o[] = $data->a;
+
+    $quizz = (object) [
+        "question" => $data->q,
+        "answers" => $data->o,
+        "correct_answer" => $data->a,
+        "read_more" => $data->l,
+        "read_more_summary" => $data->d,
+        "image" => $data->i
+];
+
+$_open_quiz_btn = true;?>
+<div class="main-padding quiz-wrapper">
+    <?php include "./includes/components/quizz.php"; ?>
+</div>
 </div>
 </main>
 
