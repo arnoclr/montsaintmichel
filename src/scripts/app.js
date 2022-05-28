@@ -170,7 +170,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const autoCompleteQuery = await fetch(`/ajax/search?action=autoComplete&word=${lastWord}`);
         const autoComplete = await autoCompleteQuery.json();
 
-        searchBarNextWord.innerHTML = autoComplete[0] || '';
+        if (searchBarInput.value.length > 0) {
+            searchBarNextWord.innerHTML = autoComplete[0] || '';
+        } else {
+            searchBarNextWord.innerHTML = '';
+        }
     }, 350));
 
     document.addEventListener('keydown', e => {
