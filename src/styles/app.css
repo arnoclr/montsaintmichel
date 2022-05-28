@@ -494,6 +494,8 @@ html {
     padding: 16px 0;
     font-family: Noto Sans, Arial, sans-serif;
     font-size: 16px;
+    z-index: 101;
+    background-color: transparent;
 }
 
 .search__input:focus,
@@ -520,13 +522,24 @@ html {
 }
 
 .search__textzone {
+    width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
 }
 
 .search__nextword {
+    position: absolute;
+    top: 16px;
+    left: 0;
     font: 400 16px Noto Sans, sans-serif;
     color: var(--navbar-link);
+    z-index: 100;
+}
+
+.search__placeholder {
+    opacity: 0;
+    display: inline-block;
 }
 
 .search__nextword i {
@@ -557,7 +570,8 @@ html {
     padding: 12px var(--padding);
 }
 
-.search__dropdown a:hover {
+.search__dropdown a:hover,
+.search__dropdown a:focus {
     background-color: var(--primary-color-light-transparent);
 }
 

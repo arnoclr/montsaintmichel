@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBarButton = document.querySelector('.js-search-btn');
     const searchBarDropdown = document.querySelector('.js-search-dropdown');
     const searchBarNextWord = document.querySelector('.js-search-autocompleted');
-    const searchBarNextWordIcon = document.querySelector('.js-search-autocompleted-indicator');
+    const searchBarNextPlaceholder = document.querySelector('.js-search-placeholder');
 
     searchBarTrigger.addEventListener('click', () => {
         searchBar.classList.add('search--open');
@@ -136,11 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     };
 
+    searchBarInput.addEventListener('keyup', e => {
+        searchBarNextPlaceholder.innerText = e.target.value;
+    });
+
     searchBarInput.addEventListener('keyup', debounce(async function (e) {
         const value = e.target.value;
-
-        // TODO: fix largeur texte
-        searchBarInput.style.width = (value.length) + 'ch';
 
         const results = await fetch(`/ajax/search?action=search&q=${value}`);
         const pages = await results.json();
@@ -169,14 +170,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const autoCompleteQuery = await fetch(`/ajax/search?action=autoComplete&word=${lastWord}`);
         const autoComplete = await autoCompleteQuery.json();
 
-        searchBarNextWord.innerHTML = autoComplete[0] || '';
-        searchBarNextWordIcon.style.display = autoComplete[0] ? 'inline' : 'none';
+        if (searchBarInput.value.length > 0) {
+            searchBarNextWord.innerHTML = autoComplete[0] || '';
+        } else {
+            searchBarNextWord.innerHTML = '';
+        }
     }, 350));
 
     document.addEventListener('keydown', e => {
-        if (e.key === 'Enter' && searchBar.classList.contains('search--open')) {
-            e.preventDefault();
-            searchBarInput.value = searchBarInput.value + " " + searchBarNextWord.innerText;
+        if (searchBarInput === document.activeElement) {
+            if (e.key === 'Tab') {
+                e.preventDefault();
+                searchBarInput.value = searchBarInput.value + " " + searchBarNextWord.innerText;
+            }
+        }
+
+        if (searchBar.classList.contains('search--open')) {
+            if (e.key === 'Escape') {
+                closeSearchBar();
+            }
+
+            if (e.key === 'ArrowDown') {
+                // TODO: fix focus
+                e.preventDefault();
+                searchBarDropdown.firstElementChild.focus();
+            }
         }
     });
 
