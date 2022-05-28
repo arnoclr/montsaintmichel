@@ -271,6 +271,20 @@ body, html {
     color: #fff;
 }
 
+/* scroll indicator */
+#js-scroll_indicator {
+    background: var(--primary-color);
+}
+
+@keyframes bar-enter {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 /* bannière covid */
 .covid {
     background-color: #CF4845;

@@ -35,7 +35,7 @@ class DraggableScrollArea {
 
 document.addEventListener('DOMContentLoaded', () => {
     // initialiser les menus
-
+    
     // trouver les boutons qui activent les menus
     const menubtns = document.querySelectorAll('[data-menu]');
 
