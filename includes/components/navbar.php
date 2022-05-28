@@ -41,8 +41,8 @@
         <div class="search__textzone">
             <input type="text" class="js-search-input search__input" placeholder="Rechercher sur le site ...">
             <span class="search__nextword">
-                <span class="js-search-autocompleted"></span>
-                <i style="display: none;" class="material-icons-sharp js-search-autocompleted-indicator">keyboard_return</i>
+                <span class="js-search-placeholder search__placeholder"></span>
+                <span class="js-search-autocompleted search__autoword"></span>
             </span>
         </div>
         <button class="js-search-btn search__btn">
