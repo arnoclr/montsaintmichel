@@ -50,6 +50,7 @@ $selector_region = "locale-selector__region--black";
 include "./includes/components/navbar.php"; 
 ?>
 
+<div id="js-scroll_indicator"></div>
 <main class="frise">
 
     <div class="frise__timeline frise__timeline--content js-content-scroller">
@@ -73,5 +74,5 @@ include "./includes/components/navbar.php";
     <button title="Revenir en haut" class="back-to-top js-btt"><i class="material-icons-sharp">arrow_upward</i></button>
         
 </main>
-
+<script src="../../src/scripts/app.js"></script>
 <?php include "./includes/components/footer.php"; ?>
