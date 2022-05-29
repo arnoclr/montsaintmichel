@@ -93,6 +93,7 @@
 .picture_gallery_img {
     position: relative;
     height: 500px;
+    max-width: 100vw;
 }
 
 .picture_gallery_img:first-child {
