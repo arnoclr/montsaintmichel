@@ -171,3 +171,4 @@ $_open_quiz_btn = true;?>
 </main>
 
 <?php include "./includes/components/footer.php"; ?>
+
