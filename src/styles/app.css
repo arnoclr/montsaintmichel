@@ -404,15 +404,16 @@ html {
     background-color: #131313;
 }
 
-.navbar--open.navbar--open-black a:hover {
-    color: var(--primary-color-light);
-}
-
 .navbar--open.navbar--open-black .navbar__links-link,
 .navbar--open.navbar--open-black .navbar__icons i,
 .navbar--open.navbar--open-black .navbar__menu {
     color: #fff;
 }
+
+.navbar--open.navbar--open-black a:hover, .navbar--open.navbar--open-black .navbar__icons i:hover {
+    color: var(--primary-color-light);
+}
+
 
 @keyframes navbar-enter {
     0% {
@@ -451,7 +452,7 @@ html {
     color: var(--navbar-link);
 }
 
-.navbar__links-link:hover {
+.navbar__links-link:hover, .navbar__icon i:hover {
     color: var(--primary-color);
 }
 
