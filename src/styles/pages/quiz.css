@@ -123,38 +123,6 @@
     }
 }
 
-.alertwrapper{
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    bottom: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font: 400 16px Noto Sans, Arial, sans-serif;
-}
-
-.copy {
-    width: fit-content;
-    padding: 15px 20px;
-    background: #f4e5d7;
-    border-radius: 5px;
-    color: #894200;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    pointer-events: none;
-    border-left: 4px solid;
-
-    animation: copy 1.4s 2 ease alternate forwards;
-}
-
-@keyframes copy {
-    
-      0% { transform: translateY(10vh); }
-     30% { transform: translateY(0); }
-    100% { transform: translateY(0); }
-}
 
 @media (prefers-color-scheme: dark) {
     .copy {
