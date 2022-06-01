@@ -109,12 +109,12 @@ h6 {
         'opsz' 40
 }
 
-.translation-icon {
+.translation-icon, .search-icon {
     transition: color 0.25s ease-in-out;
     color: var(--navbar-link);
 }
 
-.translation-icon:hover {
+.translation-icon:hover, .search-icon:hover {
     color: var(--primary-color);
 }
 
@@ -404,15 +404,16 @@ html {
     background-color: #131313;
 }
 
-.navbar--open.navbar--open-black a:hover {
-    color: var(--primary-color-light);
-}
-
 .navbar--open.navbar--open-black .navbar__links-link,
 .navbar--open.navbar--open-black .navbar__icons i,
 .navbar--open.navbar--open-black .navbar__menu {
     color: #fff;
 }
+
+.navbar--open.navbar--open-black a:hover, .navbar--open.navbar--open-black .navbar__icons i:hover {
+    color: var(--primary-color-light);
+}
+
 
 @keyframes navbar-enter {
     0% {
@@ -451,7 +452,7 @@ html {
     color: var(--navbar-link);
 }
 
-.navbar__links-link:hover {
+.navbar__links-link:hover, .navbar__icon i:hover {
     color: var(--primary-color);
 }
 
@@ -511,6 +512,7 @@ html {
     background-color: transparent;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color .1s ease;
 }
 
 .search__btn:hover {
@@ -1400,6 +1402,41 @@ progress::-webkit-progress-value {
     pointer-events: none;
 }
 
+/* FancyAlert */
+.alertwrapper{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 400 16px Noto Sans, Arial, sans-serif;
+}
+
+.copy {
+    width: fit-content;
+    padding: 15px 20px;
+    background: #f4e5d7;
+    border-radius: 5px;
+    color: #894200;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+    border-left: 4px solid;
+
+    animation: copy 1.4s 2 ease alternate forwards;
+}
+
+@keyframes copy {
+    
+      0% { transform: translateY(15vh); }
+     30% { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+/* MEDIA QUERIES */
 @media (prefers-color-scheme: dark) {
     .modal {
         /* background: #131313; */

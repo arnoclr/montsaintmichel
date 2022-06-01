@@ -110,7 +110,13 @@ function card_load($link_desc) {
         echo '<p class="">' . $dayweek . ' '.$day.' '.$month.' : '. $schedule . '</p>';
 
     ?>
-    <br><br><br>
+    <div class="ticketing">
+        <a href="https://www.decouvrirlabaie.com/tarifs-horaires-reservations/" target="_blank">
+        <button class="btn">
+                <p>Réserver</p>
+            </button>
+        </a>
+    </div><br><br>
 
     <!-- ---- Balade à cheval de la baie. Le centre équestre la Tanière ---- -->
     <h3>Balade à cheval de la baie : Le centre équestre la Tanière</h3>
@@ -146,6 +152,13 @@ Des sorties d’1h30 sont possibles pour découvrir la nature du Mont Saint Mich
             </td>
         </tr>
     </table></br>
+    <div class="ticketing">
+        <a href="http://www.club-taniere.fr/index.php/l-ecole-d-equitation-du-centre-equestre-la-taniere-au-mont-saint-michel/activites" target="_blank">
+            <button class="btn">
+                <p>Réserver</p>
+            </button>
+        </a></br></br>
+    </div>
 
     <!-- ---- Vol en ULM Autogire ---- -->
     <h3>Vol en ULM Autogire</h3>
@@ -179,6 +192,15 @@ Et c'est vous qui touchez du doigt, dans les airs, cette merveille de l'Occident
             </td>
         </tr>
     </table></br>
+    <div class="ticketing">
+        <a href="https://www.sport-decouverte.com/bapteme-gyrocoptere-baie-mont-saint-michel.html?gclid=CjwKCAjws8yUBhA1EiwAi_tpEcoakw6-oJ0tbho-6cP2Txb_70oZpf3a4Od2xGj7ug48YYeLUgsMShoCJAwQAvD_BwE" target="_blank">
+            <button class="btn">
+                <p>Réserver</p>
+            </button>
+        </a></br></br>
+    </div>
+    
+    
     
 </div>
 

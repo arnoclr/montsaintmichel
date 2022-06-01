@@ -45,6 +45,31 @@ function debounce(callback, delay) {
     };
 }
 
+// fancy alert - à utiliser de la façon suivante :
+    // yourActionButton.addEventListener('click', () => {
+        // Your actions here
+        
+        // fancyAlert("Your message", "the Icon", "the class you want");
+    // });
+function fancyAlert(message, icon, type) {
+    const alertwrapper = document.createElement('div');
+    const alert = document.createElement('div');
+    const i = document.createElement('i');
+
+    alertwrapper.classList.add('alertwrapper');
+
+    i.classList.add('material-icons-sharp');
+    i.innerText = icon;
+    
+    alert.classList.add('alert');
+    alert.classList.add(type);
+    alert.innerText = message;
+
+    document.body.appendChild(alertwrapper);
+    alertwrapper.appendChild(alert);
+    alert.appendChild(i);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // initialiser les menus
 
@@ -502,16 +527,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.js-draggable').forEach(el => {
         const draggable = new DraggableScrollArea(el);
     });
-
-    // fancy alert
-    function fancyAlert(message, type) { // NE MARCHE PAS DANS QUIZ.PHP JE NE SAIS PAS POURQUOI (LE APP.JS EST PAS APPELÉ)
-        const alert = document.createElement('div');
-        alert.classList.add('alert');
-        alert.classList.add(type);
-        alert.innerText = message;
-        document.body.appendChild(alert);
-        // setTimeout(() => {
-        //     alert.remove();
-        // }, 3000);
-    }
 });

@@ -31,7 +31,7 @@
             </ul>
         </div>
         <div class="navbar__icon">
-            <i class="material-icons-sharp js-search-trigger">search</i>
+            <i class="material-icons-sharp js-search-trigger search-icon">search</i>
         </div>
     </div>
 </div>

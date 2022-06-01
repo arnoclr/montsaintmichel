@@ -238,26 +238,6 @@ include "./includes/components/navbar.php"; ?>
         fancyAlert("Copié dans le presse-papier", "done", "copy");
     });
 
-    // fancy alert
-    function fancyAlert(message, icon, type) { // CETTE FONCTION DEVRAIT ÊTRE DANS APP.JS MAIS COMME DIT DANS CE DERNIER ÇA NE MARCHE PAS
-        const alertwrapper = document.createElement('div');
-        const alert = document.createElement('div');
-        const i = document.createElement('i');
-
-        alertwrapper.classList.add('alertwrapper');
-
-        i.classList.add('material-icons-sharp');
-        i.innerText = icon;
-        
-        alert.classList.add('alert');
-        alert.classList.add(type);
-        alert.innerText = message;
-
-        document.body.appendChild(alertwrapper);
-        alertwrapper.appendChild(alert);
-        alert.appendChild(i);
-    }
-
     nextBtns.forEach(function(btn) {
         btn.addEventListener("click", function() {
             quizBox.scrollBy({
