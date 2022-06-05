@@ -1,7 +1,7 @@
 <?php
 include "./includes/components/navbar.php";
 
-$topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
+$topPosts = getOrCache("flickr.photos.search.baiemontsaintmichel", 60 * 24, function () {
     $query = @file_get_contents("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=fc6f7621fe47f79722ee89b615eb792c&text=Baie+Mont+Saint+Michel&license=10,9,7,5,4,3,2,1&format=json&nojsoncallback=1&extras=url_l,url_o,description,owner_name");
     $json = json_decode($query);
 
