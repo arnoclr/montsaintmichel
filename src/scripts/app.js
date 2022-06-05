@@ -1,38 +1,3 @@
-class DraggableScrollArea {
-    isGrabbed = false;
-    constructor(element) {
-        this.element = element;
-        this.element.classList.add('draggable-area');
-        this.element.addEventListener('mousedown', this.onMouseDown);
-        this.element.addEventListener('mousemove', this.onMouseMove);
-        this.element.addEventListener('mouseup', this.onMouseUp);
-        this.element.addEventListener('mouseleave', this.onMouseUp);
-    }
-    forwards = () => {
-        this.changeStep(1);
-    };
-    backwards = () => {
-        this.changeStep(-1);
-    };
-    changeStep = (direction) => {
-        this.element.scrollLeft += this.element.clientWidth / 1.5 * direction;
-        this.element.scrollTop += this.element.clientHeight / 1.5 * direction;
-    };
-    onMouseDown = () => {
-        this.element.classList.add('grabbing');
-        this.isGrabbed = true;
-    };
-    onMouseMove = (event) => {
-        if (!this.isGrabbed) return;
-        this.element.scrollLeft = this.element.scrollLeft - event.movementX;
-        this.element.scrollTop = this.element.scrollTop - event.movementY;
-    };
-    onMouseUp = () => {
-        this.element.classList.remove('grabbing');
-        this.isGrabbed = false;
-    };
-}
-
 function debounce(callback, delay) {
     var timer;
     return function () {
@@ -46,11 +11,11 @@ function debounce(callback, delay) {
 }
 
 // fancy alert - à utiliser de la façon suivante :
-    // yourActionButton.addEventListener('click', () => {
-        // Your actions here
-        
-        // fancyAlert("Your message", "the Icon", "the class you want");
-    // });
+// yourActionButton.addEventListener('click', () => {
+// Your actions here
+
+// fancyAlert("Your message", "the Icon", "the class you want");
+// });
 function fancyAlert(message, icon, type) {
     const alertwrapper = document.createElement('div');
     const alert = document.createElement('div');
@@ -60,7 +25,7 @@ function fancyAlert(message, icon, type) {
 
     i.classList.add('material-icons-sharp');
     i.innerText = icon;
-    
+
     alert.classList.add('alert');
     alert.classList.add(type);
     alert.innerText = message;

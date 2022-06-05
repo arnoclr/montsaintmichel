@@ -2,30 +2,23 @@
 include "./includes/components/navbar.php";
 
 $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
-    $context = stream_context_create(
-        array(
-            "http" => array(
-                "header" => "User-Agent: " . $_SERVER['HTTP_USER_AGENT']
-            )
-        )
-    );
+    $query = @file_get_contents("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=fc6f7621fe47f79722ee89b615eb792c&text=Baie+Mont+Saint+Michel&license=10,9,7,5,4,3,2,1&format=json&nojsoncallback=1&extras=url_l,url_o,description,owner_name");
+    $json = json_decode($query);
 
-    $instaQuery = @file_get_contents("https://www.instagram.com/explore/tags/baiemontsaintmichel/?__a=1", false, $context);
-    $instaJSON = json_decode($instaQuery);
-
-    $topPostsApi = $instaJSON->graphql->hashtag->edge_hashtag_to_top_posts->edges;
+    $photos = $json->photos->photo;
 
     $res = [];
 
-    if (!is_countable($topPostsApi) || count($topPostsApi) == 0) {
+    if (!is_countable($photos) || count($photos) == 0) {
         return $res;
     }
 
-    for ($i = 0; $i < min(5, count($topPostsApi)); $i++) {
+    for ($i = 0; $i < min(5, count($photos)); $i++) {
         $filtered = (object) [
-            "thumbnail" => $topPostsApi[$i]->node->thumbnail_src,
-            "display" => $topPostsApi[$i]->node->display_url,
-            "caption" => $topPostsApi[$i]->node->edge_media_to_caption->edges[0]->node->text,
+            "thumbnail" => $photos[$i]->url_l,
+            "display" => $photos[$i]->url_o,
+            "caption" => $photos[$i]->title . " - " . $photos[$i]->description->_content,
+            "owner" => $photos[$i]->ownername,
         ];
 
         $res[] = $filtered;
@@ -35,28 +28,10 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
 });
 ?>
 
-<!-- TODO: retirer après finalisation de la page -->
-<div class="hl-disclaimer">
-    <i class="material-icons-sharp">error</i>
-    <span>Désolé, cette page est encore en construction.</span>
-</div>
-<style>
-    .hl-disclaimer {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        padding: 16px var(--padding);
-        background-color: #ffd600;
-        font-family: Noto Sans, Arial, sans-serif;
-        color: #000;
-    }
-</style>
-<!-- fin disclaimer -->
-
 <main>
     <div>
         <div class="top_img">
-            <img class="img_bay_top" src="<?= i('activites/baie.png', 'medium') ?>" alt="">
+            <img class="img_bay_top" src="<?= i('activites/baie.png', 'medium') ?>" alt="Vue satelitte de la baie du Mont-Saint-Michel">
             <a class="button_map" href="/map">
                 <svg class="map-logo" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
                     <path d="M9.65 38.35V28.15H13.05V34.95H19.85V38.35ZM9.65 19.85V9.65H19.85V13.05H13.05V19.85ZM28.15 38.35V34.95H34.95V28.15H38.35V38.35ZM34.95 19.85V13.05H28.15V9.65H38.35V19.85Z" />
@@ -148,8 +123,11 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
         <div class="flickrgallery">
             <?php foreach ($topPosts as $post) : ?>
                 <div class="flickrpost">
-                    <img src="https://insta-images-proxy.arnoclr.workers.dev/?src=<?= urlencode($post->thumbnail) ?> " width=352px height=352px>
-                    <p><?= $post->caption ?></p>
+                    <p class="owner"><?= $post->owner ?></p>
+                    <a target="_blank" href="<?= $post->display ?>">
+                        <img src="<?= $post->thumbnail ?> " height="375">
+                    </a>
+                    <p class="caption"><?= $post->caption ?></p>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -172,4 +150,3 @@ $topPosts = getOrCache("insta.tags.baiemontsaintmichel", 60 * 24, function () {
 </main>
 
 <?php include "./includes/components/footer.php"; ?>
-
