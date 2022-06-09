@@ -1,3 +1,11 @@
 .remerciements{
     margin: 32px var(--padding);
 }
+
+.remerciements div {
+    margin-bottom: 50px;
+}
+
+.remerciements div:first-child {
+    margin-bottom: 80px;
+}

@@ -1,31 +1,5 @@
 <?php
 include "./includes/components/navbar.php";
-
-$topPosts = getOrCache("flickr.photos.search.baiemontsaintmichel", 60 * 24, function () {
-    $query = @file_get_contents("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=fc6f7621fe47f79722ee89b615eb792c&text=Baie+Mont+Saint+Michel&license=10,9,7,5,4,3,2,1&format=json&nojsoncallback=1&extras=url_l,url_o,description,owner_name");
-    $json = json_decode($query);
-
-    $photos = $json->photos->photo;
-
-    $res = [];
-
-    if (!is_countable($photos) || count($photos) == 0) {
-        return $res;
-    }
-
-    for ($i = 0; $i < min(5, count($photos)); $i++) {
-        $filtered = (object) [
-            "thumbnail" => $photos[$i]->url_l,
-            "display" => $photos[$i]->url_o,
-            "caption" => $photos[$i]->title . " - " . $photos[$i]->description->_content,
-            "owner" => $photos[$i]->ownername,
-        ];
-
-        $res[] = $filtered;
-    }
-
-    return $res;
-});
 ?>
 
 <main>
@@ -38,30 +12,31 @@ $topPosts = getOrCache("flickr.photos.search.baiemontsaintmichel", 60 * 24, func
         <div>
             <h2> Traducteurs </h2>
             <ul>
-                <li></li>
+                <li>COEFFIER Yael pour l'anglais  🇬🇧</li>
+                <li> pour l'arabe</li>
             </ul>
         </div>
 
         <div>
             <h2> Voix Off </h2>
             <ul>
-                <li> Pierre-Alain de Garrigues</li>
-                <li> Ciel </li>
+                <li> Pierre-Alain de Garrigues, pour sa participation en prêtant sa voix pour les questions de la FAQ dans la video TikTok</li>
+                <li> @Ciel pour sa participation en prêtant sa voix pour les réponses de la FAQ dans la video TikTok</li>
             </ul>
         </div>
 
         <div>
             <h2> Dessinateurs</h2>
             <ul>
-                <li>Fengry (Aurore Remy)</li>
-                <li>Tamasukee</li>
+                <li>Fengry (Aurore Remy), pour les personnages visible dans la vidéo de Question/Réponses </li>
+                <li>@Tamasukee, pour les dessins de la vidéo TikTok</li>
             </ul>
         </div>
 
         <div>
             <h2> Charte Graphique </h2>
             <ul>
-                <li>Gaëlle Charpentier</li>
+                <li>Gaëlle Charpentier, pour son aide dans la confection de la Charte Graphique du site et sa validation.</li>
             </ul>
         </div>
 
