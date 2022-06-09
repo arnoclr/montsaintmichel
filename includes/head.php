@@ -1,18 +1,20 @@
+<!-- code source : arnocellarier.fr/lmek26 -->
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= isset($og) ? $og->title : t('og.title') ?></title>
 
-    <?php if (isset($og)): ?>
+    <?php if (isset($og)) : ?>
         <meta property="og:title" content="<?= $og->title ?>">
-        <?php if (isset($og->description)): ?>
-        <meta property="og:description" content="<?= $og->description ?>">
+        <?php if (isset($og->description)) : ?>
+            <meta property="og:description" content="<?= $og->description ?>">
         <?php endif; ?>
-        <?php if (isset($og->image)): ?>
-        <meta property="og:image" content="<?= $og->image ?>">
+        <?php if (isset($og->image)) : ?>
+            <meta property="og:image" content="<?= $og->image ?>">
         <?php endif; ?>
         <meta name="twitter:card" content="summary_large_image">
         <meta property="og:site_name" content="Mont-Saint-Michel UNESCO" />
@@ -32,9 +34,10 @@
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" type="image/jpg" href="../src/img/logos/logo_mont_saint_michel.png" />
 
-    <?php if (in_array(lang(), ['ar'])): ?>
+    <?php if (in_array(lang(), ['ar'])) : ?>
         <style>
-            html, body {
+            html,
+            body {
                 direction: rtl;
             }
         </style>
@@ -42,14 +45,20 @@
 
     <!-- TODO: retirer après la beta-test - Hotjar Tracking Code for https://montsaintmichel.christopherbeaurain.com/ -->
     <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:2939168,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 2939168,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
             a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 </head>
 
