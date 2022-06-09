@@ -73,6 +73,13 @@ switch ($request) {
         ];
         loadPage("vr");
         break;
+
+    case "/remerciement":
+        $og = (object) [
+            "title" => t('index.og.title'),
+        ];
+        loadPage("remerciement");
+
     case "/histoire":
         $og = (object) [
             "title" => t('nutshell.og.title'),
