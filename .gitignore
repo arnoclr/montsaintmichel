@@ -1,4 +1,5 @@
+.idea
+.rev
+dploy.yaml
 static/img
 tmp
-dploy.yaml
-.rev
