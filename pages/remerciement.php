@@ -29,10 +29,10 @@ $topPosts = getOrCache("flickr.photos.search.baiemontsaintmichel", 60 * 24, func
 ?>
 
 <main>
-    <div>
+    <div class="remerciements">
         <div>
-        <h1>Remerciement</h1>
-        <p>Blabla</p>
+        <h1>Remerciements</h1>
+        <p>Pour réaliser ce projet nous avons fortement été aidé par des personnes exterieure à notre équipe, que cela soit pour les voix que nous avons pu utiliser ou les dessins affichés, et même pour valider notre nouvelle Charte Graphique. Nous aimerions donc prendre un temps pour les remercier de leurs participations:</p>
         </div>
 
         <div>
@@ -45,33 +45,38 @@ $topPosts = getOrCache("flickr.photos.search.baiemontsaintmichel", 60 * 24, func
         <div>
             <h2> Voix Off </h2>
             <ul>
-                <li></li>
+                <li> Pierre-Alain de Garrigues</li>
+                <li> Ciel </li>
             </ul>
         </div>
 
         <div>
             <h2> Dessinateurs</h2>
             <ul>
-                <li></li>
+                <li>Fengry (Aurore Remy)</li>
+                <li>Tamasukee</li>
             </ul>
         </div>
 
         <div>
             <h2> Charte Graphique </h2>
             <ul>
-                <li></li>
+                <li>Gaëlle Charpentier</li>
             </ul>
         </div>
 
         <div>
             <h2> Bêta-Testeur </h2>
-            <p></p>
+            <p>Merci a tous ceux qui ont prit le temps de participer à la bêta-test de notre site, vos conseils ont été d'une aide precieuse pour l'améliorer</p>
         </div>
 
         <div>
             <h2> Professeurs </h2>
             <ul>
-                <li></li>
+                <li>David Cessy</li>
+                <li>Tewfik Ettayeb</li>
+                <li>Yann Reby</li>
+
             </ul>
         </div>
     </div>

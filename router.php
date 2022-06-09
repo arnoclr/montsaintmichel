@@ -79,6 +79,7 @@ switch ($request) {
             "title" => t('index.og.title'),
         ];
         loadPage("remerciement");
+        break;
 
     case "/histoire":
         $og = (object) [
