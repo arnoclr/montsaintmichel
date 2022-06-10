@@ -9,3 +9,15 @@
 .remerciements div:first-child {
     margin-bottom: 80px;
 }
+
+.partie ul {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.partie ul li {
+    margin-bottom: 30px;
+}
