@@ -7,7 +7,7 @@ include "./includes/components/navbar.php";
 
 <input id="copyInp" type="text" />
 <div class="dinogame">
-    <h1 class="aubert">Vas-y Aubert !</h1>
+    <h1 class="aubert"><?= t('dino.og.title') ?></h1>
     <div class="game-container">
 
         <div class="game">
@@ -17,11 +17,12 @@ include "./includes/components/navbar.php";
             <div id="score"></div>
             <div id="play">
                 <span class="material-symbols-outlined" id="play_icon">play_circle</span>
-                <p id="play_p">Lancer ?</p>
+                <p id="play_p"><?= t('dino.play.p') ?></p>
+                <p id="replay_p"><?= t('dino.replay.p') ?></p>
             </div>
             <div id="share">
                 <span class="material-symbols-outlined" id="share_icon">share</span>
-                <p id="share_p">Partager</p>
+                <p id="share_p"><?= t('dino.share.p') ?></p>
             </div>
             <div id="highscore">
                 <p class="highscore_p"></p>

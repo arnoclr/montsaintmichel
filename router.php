@@ -130,7 +130,7 @@ switch ($request) {
         break;
     case "/aubert":
         $og = (object) [
-            "title" => t('map.og.title'), // title à changer
+            "title" => t('dino.og.title'),
         ];
         loadPage("dino/aubert");
         break;

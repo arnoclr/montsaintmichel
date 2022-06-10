@@ -97,6 +97,10 @@ body, html {
     color: #ffffff;
 }
 
+#play #replay_p {
+    display: none;
+}
+
 #score {
     display: flex;
     justify-content: center;
@@ -145,6 +149,11 @@ canvas {
 }
 
 #canvasSheep, #canvasFence {
+    position: absolute;
+    z-index: 1;
+}
+
+#myCanvas {
     position: absolute;
     z-index: 1;
 }

@@ -1,6 +1,7 @@
 
 const playDiv = document.getElementById('play');
 const playDiv_p = document.getElementById('play_p');
+const playDiv_re_p = document.getElementById('replay_p');
 const playDiv_icon = document.getElementById('play_icon');
 const score = document.getElementById('score');
 const shareDiv = document.getElementById('share');
@@ -60,15 +61,30 @@ jumpSound.volume = 0.7;
 const hitSound = new Audio('https://cdn.arnocellarier.fr/s/iut/msm/mp3/aubert/hit.mp3') // '../../../sounds/dino/hit.mp3'
 hitSound.volume = 0.5;
 
+playDiv.style.display = 'none';
+score.style.display = 'none';
 
-ctxSheep.fillStyle = 'black';
-ctxSheep.font = "50px Arial";
-ctxSheep.fillText('Loading...', 300, 200);
-let load = new Image();
-load.src = 'https://i.imgur.com/AD3MbBi.jpeg';
+function load() {
+    ctxSheep.clearRect(0, 0, canvasSheepWidth, canvasSheepHeight);
+    ctxSheep.fillStyle = 'black';
+    ctxSheep.font = "bold 50px Ibarra Real Nova";
+    ctxSheep.textAlign = "center";
+    ctxSheep.fillText(loadingText, canvasSheepWidth / 2, canvasSheepHeight / 2);
+}
+
+let loading = true;
+let loadingText = "Loading";
 
 let waitForAllImages = setInterval(function () {
-    console.log(waitForAllImages);
+    if (loading) {
+
+        load();
+        if (loadingText == "Loading. . .") {
+            loadingText = "Loading";
+        }
+        loadingText = loadingText + " ."
+    }
+
     if (
         ciel0.complete &&
         ciel1.complete &&
@@ -81,13 +97,17 @@ let waitForAllImages = setInterval(function () {
         sheep1.complete &&
         sheep2.complete
     ) {
+        playDiv.style.display = 'flex';
+        score.style.display = 'flex';
         ctxSheep.clearRect(0, 0, canvasSheepWidth, canvasSheepHeight);
         init();
+
+        loading = false;
+
         clearInterval(waitForAllImages);
         return true;
     }
-}, 10);
-
+}, 750);
 
 
 score.innerHTML = '0';
@@ -106,7 +126,7 @@ window.addEventListener('keydown', function (e) {
 });
 
 document.addEventListener('keydown', function (e) {
-    if (playDiv.innerHTML == 'Rejouer ?' && !isPlaying) {
+    if (playDiv_p.innerHTML == playDiv_re_p.innerHTML && !isPlaying) {
         if (e.key === ' ') { play(); }
     }
 });
@@ -419,7 +439,7 @@ shareDiv.onclick = function () {
 }
 
 function stop() {
-    playDiv_p.innerHTML = 'Rejouer ?';
+    playDiv_p.innerHTML = playDiv_re_p.innerHTML;
     playDiv_icon.innerHTML = 'replay';
     playDiv.style.display = 'flex';
     playDiv.style.top = '55%';
