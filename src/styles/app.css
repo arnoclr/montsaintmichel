@@ -1415,6 +1415,7 @@ progress::-webkit-progress-value {
 }
 
 .copy {
+    font-family: 'Noto Sans', sans-serif;
     width: fit-content;
     padding: 15px 20px;
     background: #f4e5d7;
