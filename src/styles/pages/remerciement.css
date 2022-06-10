@@ -19,5 +19,8 @@
 }
 
 .partie ul li {
+    display: flex;
     margin-bottom: 30px;
+    align-items: center;
+    grid-column-gap: 10px;
 }

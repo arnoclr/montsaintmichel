@@ -74,7 +74,7 @@ switch ($request) {
         loadPage("vr");
         break;
 
-    case "/remerciement":
+    case "/remerciements":
         $og = (object) [
             "title" => t('index.og.title'),
         ];
