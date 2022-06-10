@@ -73,12 +73,8 @@ switch ($request) {
         ];
         loadPage("vr");
         break;
-<<<<<<< HEAD
 
     case "/remerciements":
-=======
-    case "/remerciement":
->>>>>>> 6ddc59431643b686fca91d940f2e4e983d1089d4
         $og = (object) [
             "title" => t('index.og.title'),
         ];
