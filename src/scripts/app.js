@@ -36,6 +36,15 @@ function fancyAlert(message, icon, type) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    // favicon suivant le thème préféré
+    const favicon = document.getElementById("js-favicon");
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        favicon.href = "../src/img/logos/logo_mont_saint_michel_black.png";
+    } else {
+        favicon.href = "../src/img/logos/logo_mont_saint_michel.png";
+    }
+
     // initialiser les menus
 
     // trouver les boutons qui activent les menus
