@@ -73,14 +73,12 @@ switch ($request) {
         ];
         loadPage("vr");
         break;
-
     case "/remerciement":
         $og = (object) [
             "title" => t('index.og.title'),
         ];
         loadPage("remerciement");
         break;
-
     case "/histoire":
         $og = (object) [
             "title" => t('nutshell.og.title'),
@@ -128,6 +126,12 @@ switch ($request) {
             "title" => t('map.og.title'),
         ];
         loadPage("map");
+        break;
+    case "/aubert":
+        $og = (object) [
+            "title" => t('map.og.title'), // title à changer
+        ];
+        loadPage("dino/aubert");
         break;
     case "/ajax/map":
         include "includes/ajax/map.php";
