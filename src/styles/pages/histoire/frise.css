@@ -1,3 +1,7 @@
+:root {
+    color-scheme: dark;
+}
+
 html, body {
     background-color: #000;
 }
@@ -34,9 +38,14 @@ main {
 .frise__content-century {
     position: sticky;
     top: 72px;
+    scroll-margin-top: 72px;
     left: 0;
     font: 500 5rem Montserrat, Arial, sans-serif;
     color: #ddd;
+}
+
+.frise__content-date {
+    scroll-margin-top: 92px;
 }
 
 .frise__content-details {
@@ -48,6 +57,66 @@ main {
 }
 
 .frise__content:first-child .frise__content-details {
+    margin-top: 0;
+}
+
+.frise__audio {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 var(--padding);
+    background-color: #212121;
+    border-top: 1px solid #383838;
+}
+
+.frise__audio-flag {
+    height: 24px;
+    width: auto;
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+.frise__audio-text {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    font: 400 16px Noto Sans, Arial, sans-serif;
+}
+
+.frise__audio span {
+    text-overflow: ellipsis;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.frise__audio-author {
+    color: #ddd;
+    font-size: 12px;
+}
+
+.frise__audio-player {
+    width: 100%;
+}
+
+audio::-webkit-media-controls-enclosure {
+    background-color: transparent;
+}
+
+input::-internal-track-segment-highlight-before {
+    background-color: var(--primary-color);
+}
+
+audio:focus, audio:active {
+    outline: none;
+}
+
+footer.footer {
     margin-top: 0;
 }
 
@@ -107,5 +176,15 @@ main p {
 
     .frise__content-text {
         padding: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .frise__audio-flag {
+        display: none;
+    }
+
+    .frise__audio-text {
+        max-width: 183px;
     }
 }

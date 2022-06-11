@@ -75,4 +75,16 @@ include "./includes/components/navbar.php";
 
 </main>
 
+<div class="frise__audio">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="French flag" class="frise__audio-flag">
+    <div class="frise__audio-text">
+        <span class="frise__audio-title">Les dates clés du Mont Saint-Michel</span>
+        <span class="frise__audio-author">Pierre-Alain de Garrigues</span>
+    </div>
+    <audio class="frise__audio-player js-audio" controls>
+        <source src="https://cdn.arnocellarier.fr/s/iut/msm/mp3/rep_dates_cles.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
 <?php include "./includes/components/footer.php"; ?>
