@@ -159,6 +159,63 @@ function card_load($link_desc) {
     <h2>Avant de partir</h2>
     <p>Venez essayer la visite virtuelle pour découvrir l'abbaye du Mont Saint Michel.</p>
     <a id="skip-content" href="/visite-virtuelle" class="btn btn--primary btn--large"><?= t('index.hero.visit') ?></a>
+    <br><br><br><br>
+    <!--- ----- Other activities ----- -->
+
+    <h2>Autres activités a découvir autour du Mont</h2>
+
+    <p class="card__media-text"> Il existe aussi beaucoup d'activités autour du Mont Saint Michel, notamment des randonnées. Vous pourrez trouver ci dessous deux randonées ainsi que le site pour en savoir plus.</p>
+    <div class="card__media-content">
+        <h5>Le Grouin du Sud et le Prieuré Saint-Léonard</h5>
+        <ul>
+            <li>
+                <p>
+                    <b>Durée: 3h25</b> 
+                </p>
+            </li>
+            <li>
+                <p> 
+                    <b>Distance: 11,58km</b>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>Difficulté: Moyenne</b>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b> Départ à Genêts - 50 - Manche</b>
+                </p>
+            </li>
+    </div>
+
+    <div class="card__media-content">
+        <h5>De Bacilly au Bec d'Andaine par les sentiers ruraux</h5>
+        <ul>
+            <li>
+                <p>
+                    <b>Durée: 3h10</b> 
+                </p>
+            </li>
+            <li>
+                <p> 
+                    <b>Distance: 11,79km</b>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b>Difficulté: Facile</b>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <b> Départ à Bacilly - 50 - Manche</b>
+                </p>
+            </li>
+    </div>
+    <p class="card__media-text"> Pour en savoir plus sur ces randonnées et en découvrir beaucoup d'autre, visitez le site: <a href="https://www.visorando.com/randonnee-le-mont-saint-michel.html">www.visorando.com/randonnee-le-mont-saint-michel.com</a></p>
+
 
 
 
