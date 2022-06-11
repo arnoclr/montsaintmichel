@@ -62,7 +62,7 @@ $articles = getOrCache("index.articles.$lang", 60 * 12, function () use ($lang) 
 
 <!-- Différents jeux -->
 <div class="main-padding Games">
-    <h1 class="articles__title Games-h1">Découvrez nos jeux</h1>
+    <h1 class="articles__title Games-h1"><?= t('index.games.title') ?></h1>
     <?php include "./includes/components/games.php"; ?>
 </div>
 
@@ -70,7 +70,7 @@ $articles = getOrCache("index.articles.$lang", 60 * 12, function () use ($lang) 
 
 <!-- Galerie d'images mouvantes -->
 <div class="collections">
-    <h1 class="articles__title collection-h1">Gallerie d'images</h1>
+    <h1 class="articles__title collection-h1"><?= t('index.collection.title') ?></h1>
     <?php include "./includes/components/collections.php"; ?>
 </div>
 
