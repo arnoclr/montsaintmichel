@@ -5,6 +5,6 @@
     <div class="card__shadow"></div>
     <div class="card__text">
         <span class="card__text-label"><?= $activity->label ?></span>
-        <h2 class="card__text-title"><?= $activity->title ?></h2>
+        <h2 class="card__text-title" title="<?= $activity->title ?>"><?= $activity->title ?></h2>
     </div>
 </a>
