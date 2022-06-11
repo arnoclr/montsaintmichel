@@ -414,22 +414,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const imageGallery = document.querySelector('.js-collection__img-wrap');
     const inner = document.querySelector('.modal-inner');
 
-    document.addEventListener('mouseover', function (event) {
-        if (imageGallery !== event.target && !imageGallery.contains(event.target)) {
-            imageGallery.classList.remove('pause');
+    if (imageGallery) {
+        imageGallery.addEventListener('mouseover', () => {
+            imageGallery.classList.add('pause');
+        });
 
-        } else {
-            setTimeout(() => {
-                imageGallery.classList.add('pause');
-            }, 50);
-        }
-    }, true);
+        imageGallery.addEventListener('mouseleave', () => {
+            imageGallery.classList.remove('pause');
+        });
+    }
 
     function setupModal() {
         const el = {
             wrapper: document.getElementById('modal-wrapper'),
             modal: document.getElementById('modal')
         };
+        if (el.modal == null) return;
         el.image = el.modal.getElementsByTagName('img')[0];
         el.caption = el.modal.getElementsByClassName('caption')[0];
         el.close = el.modal.querySelector('button.close');

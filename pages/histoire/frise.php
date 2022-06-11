@@ -42,12 +42,12 @@ foreach ($lines as $line) {
 }
 ?>
 
-<?php 
-$navbar_classes = "navbar--open navbar--open-black navbar--white"; 
+<?php
+$navbar_classes = "navbar--open navbar--open-black navbar--white";
 $selector_classes = "locale-selector--black";
 $region_name = "locale-selector__region-name--black";
 $selector_region = "locale-selector__region--black";
-include "./includes/components/navbar.php"; 
+include "./includes/components/navbar.php";
 ?>
 
 <div id="js-scroll_indicator"></div>
@@ -55,11 +55,11 @@ include "./includes/components/navbar.php";
 
     <div class="frise__timeline frise__timeline--content js-content-scroller">
 
-        <?php foreach ($frise as $century => $events): ?>
+        <?php foreach ($frise as $century => $events) : ?>
             <div class="frise__content">
                 <span id="<?= $century ?>" class="frise__content-century"><?= $century ?></span>
                 <div class="frise__content-details">
-                    <?php foreach ($events as $event): ?>
+                    <?php foreach ($events as $event) : ?>
                         <div class="frise__content-text">
                             <span id="<?= $event->year ?>" class="frise__content-date js-date"><?= $event->year ?></span>
                             <p><?= $event->text ?></p>
@@ -72,7 +72,7 @@ include "./includes/components/navbar.php";
     </div>
 
     <button title="Revenir en haut" class="back-to-top js-btt"><i class="material-icons-sharp">arrow_upward</i></button>
-        
+
 </main>
-<script src="../../src/scripts/app.js"></script>
+
 <?php include "./includes/components/footer.php"; ?>
