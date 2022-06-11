@@ -254,6 +254,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // images caroussel
+    let imagesLoaded = [];
+
     document.querySelectorAll('.image-carousel').forEach(carousel => {
         let currentImage = 0;
         const images = JSON.parse(carousel.dataset.images);
@@ -311,6 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     };
 
                     img.onload = function () {
+                        imagesLoaded.push(img.src);
                         onloadEvent = true;
                         if (timeoutEvent) {
                             onloadHandler();
@@ -325,8 +328,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 300);
 
                     img.offsetWidth;
-                    img.src = images[currentImage].src;
                     attributionSpan.innerText = images[currentImage].attr || '';
+
+                    const inCache = imagesLoaded.includes(images[currentImage].src);
+                    setTimeout(() => {
+                        img.src = images[currentImage].src;
+                    }, inCache ? 300 : 0);
                 }
 
                 prev.addEventListener('click', () => {
