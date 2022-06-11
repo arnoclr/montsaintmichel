@@ -280,7 +280,7 @@ html {
 
 /* scroll indicator */
 #js-scroll_indicator {
-    background: var(--primary-color);
+    background: var(--navbar-link);
 }
 
 @keyframes bar-enter {
