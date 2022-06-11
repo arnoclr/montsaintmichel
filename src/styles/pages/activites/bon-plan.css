@@ -1,0 +1,12 @@
+.randonnee {
+    display: flex;
+    flex-direction: row;
+    gap: 122px;
+}
+
+@media (max-width: 768px) {
+    .randonnee {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
