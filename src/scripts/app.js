@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.caption.innerText = caption;
 
         if (window.innerWidth >= 800) {
-            el.image.setAttribute("style", "height: 40vh;");
+            el.image.setAttribute("style", "height: 50vh;");
         } else {
             el.image.setAttribute("style", "");
         }
