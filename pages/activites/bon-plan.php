@@ -120,7 +120,8 @@ function card_load($link_desc) {
     <!-- ----- End of the table ----- -->
 
     
-    <img loading="lazy" src="./static/img/@1024__1c071647d838cf95615472d5b569ab3daec018c57dd1d07324052442914ab322.webp" class="card__media-img">
+    <img loading="lazy" src="<?= i('activites/abbaye.jpg', 'medium') ?>" class="card__media-img">
+    
 
     <div class="card__media-content">
         <p class="card__media-text"><br>
