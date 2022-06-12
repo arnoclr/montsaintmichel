@@ -160,7 +160,7 @@ include "./includes/components/navbar.php"; ?>
             : correctAnswers / total >= 0.7
             ? "Félicitations ! Vous semblez bien connaître le Mont-Saint-Michel. Partagez ce score avec vos amis !"
             : correctAnswers / total >= 0.5
-            ? "Ce n'est pas mal ! Vous connaissez le Mont-Saint-Michel, mais vous pouvez en faire mieux."
+            ? "Ce n'est pas mal ! Vous connaissez le Mont-Saint-Michel, mais vous pouvez faire mieux."
             : correctAnswers / total < 0.5
             ? "Aïe ... Continuez à parcourir notre site pour trouver vos réponses."
             : "";
