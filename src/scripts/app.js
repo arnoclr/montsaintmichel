@@ -133,6 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Carte",
             icon: "map",
         },
+        "/aubert": {
+            title: "Aubert",
+            icon: "videogame_asset",
+        }
     };
 
     searchBarInput.addEventListener('keyup', e => {
@@ -477,7 +481,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Toute image possédant la classe "imgs" se verra cliquable avec un modal.
         // NOTE : Ne pas oublier d'include modal.php an haut de la page include <?php include 'includes/components/modal.php' ?>
-        document.querySelectorAll('img.imgs') 
+        document.querySelectorAll('img.imgs')
             .forEach((img) => {
                 img.addEventListener('click', (e) => {
                     console.log(e.src);
