@@ -10,12 +10,29 @@
     border-radius: 4px;
     border: 1px solid var(--primary-color-light);
     align-content: center;
+    max-width: 50%;
 }
 .rando h5 {
     margin-left: 40px;
 }
 .rando ul {
     list-style: none;
+}
+
+.picture_gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-top: 20px;
+}
+
+.picture_gallery_img {
+    position: relative;
+    height: 500px;
+    max-width: 100vw;
+    cursor:zoom-in;
 }
 
 @media (max-width: 1000px) {

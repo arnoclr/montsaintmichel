@@ -190,7 +190,20 @@ function card_load($link_desc) {
                         <b> Départ à Genêts - 50 - Manche</b>
                     </p>
                 </li>
-            <img class="imgs" src="<?= i('activites/carte_rando_1.png', 'small') ?>" alt="">
+                <div class="picture_gallery">
+                    <div class="picture_gallery_img"> 
+                        <img class="imgs" src="<?= i('activites/carte_rando_1.png', 'small') ?>" alt="">
+                    </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando1/m-mont-saint-michel-visorando-230077.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando1/m-la-pointe-du-grouin-du-sud-visorando-127396.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando1/m-un-echalier-visorando-89287.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+            </div>
         </div>
 
         <div class="rando">
@@ -216,7 +229,20 @@ function card_load($link_desc) {
                         <b> Départ à Bacilly - 50 - Manche</b>
                     </p>
                 </li>
-            <img class="imgs" src="<?= i('activites/carte_rando_2.png', 'small') ?>" alt="">
+                <div class="picture_gallery">
+                    <div class="picture_gallery_img"> 
+                        <img class="imgs" src="<?= i('activites/carte_rando_2.png', 'medium') ?>" alt="">
+                    </div>    
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando2/m-lever-de-soleil-sur-la-baie-du-mont-saint-michel-1-visorando-48478.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando2/m-lever-de-soleil-sur-la-baie-du-mont-saint-michel-2-visorando-48479.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando2/m-lever-de-soleil-sur-la-baie-du-mont-saint-michel-3-visorando-48480.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+            </div>
         </div>
     </div>
     <p class="card__media-text"> Pour en savoir plus sur ces randonnées et en découvrir beaucoup d'autre, visitez le site: <a href="https://www.visorando.com/randonnee-le-mont-saint-michel.html">www.visorando.com/randonnee-le-mont-saint-michel.com</a></p>
