@@ -254,8 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // images caroussel
-    let imagesLoaded = [];
-
     document.querySelectorAll('.image-carousel').forEach(carousel => {
         let currentImage = 0;
         const images = JSON.parse(carousel.dataset.images);
@@ -298,9 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.style.opacity = 0;
                     img.style.transition = "height .3s ease-out, transform .3s ease-in-out, opacity .3s ease";
 
-                    let onloadEvent = false;
-                    let timeoutEvent = false;
-
                     let onloadHandler = function () {
                         img.style.height = 'auto';
                         const newHeight = img.clientHeight;
@@ -313,27 +308,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     };
 
                     img.onload = function () {
-                        imagesLoaded.push(img.src);
-                        onloadEvent = true;
-                        if (timeoutEvent) {
-                            onloadHandler();
-                        }
+                        onloadHandler();
                     };
 
                     setTimeout(() => {
-                        timeoutEvent = true;
-                        if (onloadEvent) {
-                            onloadHandler();
-                        }
+                        img.src = images[currentImage].src;
+                        img.style.opacity = 0;
                     }, 300);
 
                     img.offsetWidth;
                     attributionSpan.innerText = images[currentImage].attr || '';
-
-                    const inCache = imagesLoaded.includes(images[currentImage].src);
-                    setTimeout(() => {
-                        img.src = images[currentImage].src;
-                    }, inCache ? 300 : 0);
                 }
 
                 prev.addEventListener('click', () => {
