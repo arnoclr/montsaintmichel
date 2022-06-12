@@ -14,7 +14,7 @@
     background-color: var(--modal-surface);
     border: none;
     border-radius: 50%;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.20);
     z-index: 10000;
     cursor: pointer;
 
@@ -24,6 +24,7 @@
 .map-back-button:hover {
     background-color: #eeeeee;
 }
+
 .map-back-button:active {
     background-color: #d5d5d5;
 }
@@ -45,18 +46,26 @@
     bottom: 0;
     left: 0;
     width: 350px;
-    background-color: var(--modal-surface);
-    box-shadow: 0 0 0 rgba(0,0,0,0.5);
     transform: translateX(-100%) rotate(10deg) scale(0.8);
     transform-origin: top left;
-    transition: transform 0.35s cubic-bezier(.21,.03,0,.96);
+    transition: transform 0.35s cubic-bezier(.21, .03, 0, .96);
     z-index: 9999;
     border-radius: 0 10px 10px 0;
 }
 
 .map-modal--open {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transform: translateX(0) rotate(0deg) scale(1);
+}
+
+.map-modal__inner {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+    background-color: var(--modal-surface);
+    scroll-snap-align: start;
+    height: 100%;
+}
+
+.map-modal--open .map-modal__inner {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .map-modal__images {
@@ -64,35 +73,6 @@
     overflow-x: scroll;
     height: 220px;
     border-radius: 0 10px 0 0;
-}
-
-.map-modal__images::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
-}
-
-.map-modal__images::-webkit-scrollbar
-{
-	height: 10px;
-	background-color: #F5F5F5;
-}
-
-.map-modal__images::-webkit-scrollbar-thumb
-{
-    border-radius: 10px;
-    background: -webkit-linear-gradient(0deg, rgb(158, 158, 158), rgb(92, 92, 92) );
-}
-
-.map-modal__images::-webkit-scrollbar-thumb:hover
-{
-    background: -webkit-linear-gradient(0deg, rgb(138, 138, 138), rgb(73, 73, 73) );
-}
-
-.map-modal__images::-webkit-scrollbar-thumb:active
-{
-    background: -webkit-linear-gradient(0deg, rgb(124, 124, 124), rgb(61, 61, 61) );
 }
 
 .map-modal__image {
@@ -136,7 +116,7 @@
 }
 
 .map-modal__star {
-    color: rgba(150,150,150,.2);
+    color: rgba(150, 150, 150, .2);
     font-size: 12px;
 }
 
@@ -172,9 +152,9 @@
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     background-color: var(--modal-surface);
-    box-shadow: 0 -2px 2px 0 rgba(0,0,0,0.14), 0 -3px 1px -2px rgba(0,0,0,0.12), 0 -1px 5px 0 rgba(0,0,0,0.20);
+    box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.14), 0 -3px 1px -2px rgba(0, 0, 0, 0.12), 0 -1px 5px 0 rgba(0, 0, 0, 0.20);
     transform: translateY(110%);
-    transition: transform 0.35s cubic-bezier(.21,.03,0,.96);
+    transition: transform 0.35s cubic-bezier(.21, .03, 0, .96);
     z-index: 9999;
 }
 
@@ -258,7 +238,9 @@
     font-size: 14px;
 }
 
-.it__review, .it__icon-table, .it__desc {
+.it__review,
+.it__icon-table,
+.it__desc {
     margin: 12px 16px;
 }
 
@@ -280,7 +262,7 @@
     .map-back-button:hover {
         background-color: #161414;
     }
-    
+
     .map-back-button:active {
         background-color: var(--footer-background);
     }
@@ -293,14 +275,47 @@
     }
 
     .map-modal {
-        top: 340px;
+        top: 0;
         bottom: 0;
         width: 100%;
         transform: translateY(100%);
+        overflow-y: auto;
+        scroll-snap-type: y mandatory;
+    }
+
+    .map-modal__mobileplaceholder {
+        scroll-snap-align: start;
+        height: 340px;
     }
 
     .map-modal--open {
         transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .map-modal__images::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #F5F5F5;
+    }
+
+    .map-modal__images::-webkit-scrollbar {
+        height: 10px;
+        background-color: #F5F5F5;
+    }
+
+    .map-modal__images::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: -webkit-linear-gradient(0deg, rgb(158, 158, 158), rgb(92, 92, 92));
+    }
+
+    .map-modal__images::-webkit-scrollbar-thumb:hover {
+        background: -webkit-linear-gradient(0deg, rgb(138, 138, 138), rgb(73, 73, 73));
+    }
+
+    .map-modal__images::-webkit-scrollbar-thumb:active {
+        background: -webkit-linear-gradient(0deg, rgb(124, 124, 124), rgb(61, 61, 61));
     }
 }
 
