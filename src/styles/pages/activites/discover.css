@@ -3,7 +3,14 @@
 .top_img {
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 480px;
+}
+
+.top_img__navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .img_bay_top {
