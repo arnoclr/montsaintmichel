@@ -2,7 +2,7 @@ const backToTopButton = document.querySelector('.js-btt');
 const dates = document.querySelectorAll('.js-date');
 
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', debounce(() => {
 
     scrollIndicator();
 
@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
     });
 
 
-});
+}, 50));
 
 backToTopButton.addEventListener('click', () => {
     window.scrollTo({
