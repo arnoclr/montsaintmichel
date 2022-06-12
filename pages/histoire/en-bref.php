@@ -1,93 +1,32 @@
 <?php include "./includes/components/navbar.php"; ?>
 
-<div class="faq">
-    <div class="faq__qst">
-        <h2><?= t('nutshell.whyMsm.question') ?></h2>
-        <p><?= t('nutshell.whyMsm.answer') ?></p>
-    </div>
+<?= t('nutshell.whyMsm.question') ?>
+<?= t('nutshell.whyMsm.answer') ?>
 
-    <div class="faq__qst">
-        <h2><?= t('nutshell.whenBuilt.question') ?></h2>
-        <p><?= t('nutshell.whenBuilt.answer') ?></p>
-        <details id="skip-content">
-            <summary>
-                <i class="material-icons-sharp">chevron_right</i>
-                <?= t('nutshell.more') ?>
-            </summary>
-            <p class="faq__qst-details"><?= t('nutshell.whenBuilt.answer.more') ?></p>
-        </details>
-    </div>
+<img src="<?= i('nutshell/mont tombe.jpg') ?>" alt="Page d'un livre">
+<img src="<?= i('nutshell/construction.jpg') ?>" alt="Construction du Mont">
+<img src="<?= i('nutshell/charlemagne.jpg') ?>" alt="Portrait de Charlemagne">
 
-    <div class="faq__qst">
-        <h2><?= t('nutshell.whyBuilt.question') ?></h2>
-        <p><?= t('nutshell.whyBuilt.answer') ?></p>
-        <details>
-            <summary>
-                <i class="material-icons-sharp">chevron_right</i>
-                <?= t('nutshell.more') ?>
-            </summary>
-            <p class="faq__qst-details"><?= t('nutshell.whyBuilt.answer.more') ?></p>
-        </details>
-    </div>
+<?= t('nutshell.whenBuilt.question') ?>
+<?= t('nutshell.whenBuilt.answer') ?>
+<?= t('nutshell.whenBuilt.answer.more') ?>
 
-    <div class="faq__qst">
-        <h2><?= t('nutshell.whoBuilt.question') ?></h2>
-        <p><?= t('nutshell.whoBuilt.answer') ?></p>
-        <details>
-            <summary>
-                <i class="material-icons-sharp">chevron_right</i>
-                <?= t('nutshell.more') ?>
-            </summary>
-            <p class="faq__qst-details"><?= t('nutshell.whoBuilt.answer.more') ?></p>
-        </details>
-    </div>
-    
-    <div class="faq__qst">
-        <h2><?= t('nutshell.whatPurpose.question') ?></h2>
-        <p><?= t('nutshell.whatPurpose.answer') ?></p>
-        <details>
-            <summary>
-                <i class="material-icons-sharp">chevron_right</i>
-                <?= t('nutshell.more') ?>
-            </summary>
-            <p class="faq__qst-details"><?= t('nutshell.whatPurpose.answer.more') ?></p>
-        </details>
-    </div>
+<?= t('nutshell.whyBuilt.question') ?>
+<?= t('nutshell.whyBuilt.answer') ?>
+<?= t('nutshell.whyBuilt.answer.more') ?>
 
-    <div class="faq__qst">
-        <h2><?= t('nutshell.otherMonuments.question') ?></h2>
-        <p><?= t('nutshell.whatPurpose.answer') ?></p>
-        <!-- TODO: Lien vers la page wiki du Monte Gargano: 
+<?= t('nutshell.whoBuilt.question') ?>
+<?= t('nutshell.whoBuilt.answer') ?>
+<?= t('nutshell.whoBuilt.answer.more') ?>
 
-        https://fr.wikipedia.org/wiki/Sanctuaire_de_Saint_Michel_l%27Archange
+<?= t('nutshell.whatPurpose.question') ?>
+<?= t('nutshell.whatPurpose.answer') ?>
+<?= t('nutshell.whatPurpose.answer.more') ?>
 
-        Lien vers la page wiki de l’abbaye cistercienne d’Aubazine:
+<?= t('nutshell.otherMonuments.question') ?>
+<?= t('nutshell.whatPurpose.answer') ?>
 
-        https://fr.wikipedia.org/wiki/Abbaye_d%27Aubazine
-
-        Lien Maps Monte Gargano: 
-
-        https://duckduckgo.com/?q=Monte+Gargano&t=brave&ia=web&iaxm=maps
-
-        Lien Maps Abbaye d’Aubazine:
-
-        https://duckduckgo.com/?q=aubazine+abbaye&t=brave&ia=web&iaxm=maps -->
-    </div>
-    
-    <div class="faq__qst">
-        <h2><?= t('nutshell.howLong.question') ?></h2>
-        <p><?= t('nutshell.howLong.answer') ?></p>
-    </div>
-</div>
-
-<div class="feature-box">
-    <div class="feature-box__text">
-        <h3>Envie d'en savoir plus ?</h3>
-        <p>Découvrez toute l'histoire du Mont-Saint-Michel au travers d'une frise chronologique retracant les événements marquants de l'Île.</p>
-        <a href="/histoire/frise" class="btn btn--white">Voir la frise</a>
-    </div>
-</div>
-
-<?php include "./includes/components/activitiesRow.php"; ?>
+<?= t('nutshell.howLong.question') ?>
+<?= t('nutshell.howLong.answer') ?>
 
 <?php include "./includes/components/footer.php"; ?>
