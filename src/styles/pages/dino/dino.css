@@ -43,13 +43,9 @@ body, html {
     overflow: hidden;
 }
 
-.aubert {
-    z-index: 1;
-}
-
 #play,
 #share {
-    z-index: 2;
+    z-index: 1;
 }
 
 #play,
@@ -125,7 +121,7 @@ body, html {
     text-align: center;
     font-weight: normal;
 
-    z-index: 2;
+    z-index: 1;
 
     transition: all .1s ease;
 }
@@ -150,12 +146,7 @@ canvas {
 
 #canvasSheep, #canvasFence {
     position: absolute;
-    z-index: 1;
-}
-
-#myCanvas {
-    position: absolute;
-    z-index: 1;
+    z-index: 1; /* Je ne peux pas enlever le z-index, ici, cela cause des problèmes */
 }
 
 #copyInp {
