@@ -1,15 +1,16 @@
 <?php
 
 $keyPages = (object) [
-    "index" => "/",
-    "vv" => "/visite-virtuelle",
-    "nutshell" => "/histoire",
-    "frise" => "/histoire/frise",
     "archi" => "/architecture",
-    "tips" => "/bons-plans",
+    "dino" => "/aubert",
     "discover" => "/decouvrir-la-baie",
-    "quiz" => "/quiz",
+    "frise" => "/histoire/frise",
+    "index" => "/",
     "map" => "/map",
+    "nutshell" => "/histoire",
+    "quiz" => "/quiz",
+    "tips" => "/bons-plans",
+    "vv" => "/visite-virtuelle",
 ];
 
 function getPageFromSearchTerms($q)

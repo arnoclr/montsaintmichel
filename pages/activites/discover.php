@@ -1,6 +1,4 @@
 <?php
-include "./includes/components/navbar.php";
-
 $topPosts = getOrCache("flickr.photos.search.baiemontsaintmichel", 60 * 24, function () {
     $query = @file_get_contents("https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=fc6f7621fe47f79722ee89b615eb792c&text=Baie+Mont+Saint+Michel&license=10,9,7,5,4,3,2,1&format=json&nojsoncallback=1&extras=url_l,url_o,description,owner_name");
     $json = json_decode($query);
@@ -28,15 +26,20 @@ $topPosts = getOrCache("flickr.photos.search.baiemontsaintmichel", 60 * 24, func
 });
 ?>
 
+<div class="top_img">
+    <div class="top_img__navbar">
+        <?php $navbar_classes = "navbar--white";
+        include "./includes/components/navbar.php"; ?>
+    </div>
+    <img class="img_bay_top" src="<?= i('activites/baie.png', 'medium') ?>" alt="Vue satelitte de la baie du Mont-Saint-Michel">
+    <a class="button_map" href="/map">
+        <svg class="map-logo" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M9.65 38.35V28.15H13.05V34.95H19.85V38.35ZM9.65 19.85V9.65H19.85V13.05H13.05V19.85ZM28.15 38.35V34.95H34.95V28.15H38.35V38.35ZM34.95 19.85V13.05H28.15V9.65H38.35V19.85Z" />
+        </svg> </a>
+</div>
+
 <main>
     <div>
-        <div class="top_img">
-            <img class="img_bay_top" src="<?= i('activites/baie.png', 'medium') ?>" alt="Vue satelitte de la baie du Mont-Saint-Michel">
-            <a class="button_map" href="/map">
-                <svg class="map-logo" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-                    <path d="M9.65 38.35V28.15H13.05V34.95H19.85V38.35ZM9.65 19.85V9.65H19.85V13.05H13.05V19.85ZM28.15 38.35V34.95H34.95V28.15H38.35V38.35ZM34.95 19.85V13.05H28.15V9.65H38.35V19.85Z" />
-                </svg> </a>
-        </div>
 
         <div class="page_presentation">
             <h1> Découvrir la baie du mont-saint-Michel </h1>

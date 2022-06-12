@@ -19,7 +19,7 @@ $quizz->id = "quizz__" . md5($quizz->question);
     <div class="game_wrap">
         <div class="game_label__info"><?= t('index.games.quiz.label') ?></div>
         <?php if (isset($_open_quiz_btn) && $_open_quiz_btn) : ?>
-            <a href="/quiz?seed=<?= rand(0, 99999) ?>&from=index">
+            <a href="/quiz?seed=<?= rand(0, 99999) ?>&from=index" onclick="sessionStorage.clear();">
 
                 <div class="game_img-wrap">
                     <img src="https://i.imgur.com/IjgXJYrl.jpg" alt="Aubert">
