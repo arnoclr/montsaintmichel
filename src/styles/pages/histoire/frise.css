@@ -116,6 +116,28 @@ audio:focus, audio:active {
     outline: none;
 }
 
+.frise__defilauto {
+    position: fixed;
+    top: 86px;
+    right: var(--padding);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 32px;
+    padding: 0 22px;
+    border-radius: 32px;
+    background-color: #212121;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translateX(8%);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.frise__defilauto--open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 footer.footer {
     margin-top: 0;
 }
