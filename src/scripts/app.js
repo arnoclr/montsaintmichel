@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.caption.innerText = caption;
 
         if (window.innerWidth >= 800) {
-            el.image.setAttribute("style", "height: 40vh;");
+            el.image.setAttribute("style", "height: 50vh;");
         } else {
             el.image.setAttribute("style", "");
         }
@@ -490,12 +490,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.onload = function () {
         const modal = setupModal();
-        // console.log('modal', modal);
 
         document.querySelectorAll('img.imgs') // Toute image possédant la classe "imgs" se verra cliquable avec un modal.
             .forEach((img) => {
                 img.addEventListener('click', (e) => {
-                    console.log('click', e);
                     const img = e.target,
                         src = img.getAttribute('src'),
                         caption = img.getAttribute('alt');

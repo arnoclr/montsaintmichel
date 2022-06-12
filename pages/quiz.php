@@ -151,7 +151,6 @@ include "./includes/components/navbar.php"; ?>
         
     function WriteScore(correctAnswers, total, resultsString) {
         
-        console.log("Score total de " + correctAnswers / total);
         document.querySelector('.js-score').innerHTML = `${correctAnswers}/${total}`;
         document.querySelector('.js-streak').innerHTML = resultsString;
 
@@ -233,7 +232,6 @@ include "./includes/components/navbar.php"; ?>
         textarea.focus();
         textarea.select();
         document.execCommand('copy');
-        console.log("copy");
         
         fancyAlert("Copié dans le presse-papier", "done", "copy");
     });
