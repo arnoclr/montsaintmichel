@@ -288,6 +288,10 @@
         height: 340px;
     }
 
+    .map-modal__images {
+        border-radius: unset;
+    }
+
     .map-modal--open {
         transform: translateY(0);
     }
