@@ -490,12 +490,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.onload = function () {
         const modal = setupModal();
-        // console.log('modal', modal);
 
         document.querySelectorAll('img.imgs') // Toute image possédant la classe "imgs" se verra cliquable avec un modal.
             .forEach((img) => {
                 img.addEventListener('click', (e) => {
-                    console.log('click', e);
                     const img = e.target,
                         src = img.getAttribute('src'),
                         caption = img.getAttribute('alt');
