@@ -281,6 +281,7 @@ html {
 /* scroll indicator */
 #js-scroll_indicator {
     background: var(--navbar-link);
+    transition: width .2s ease;
 }
 
 @keyframes bar-enter {
