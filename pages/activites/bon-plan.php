@@ -76,10 +76,6 @@ function card_load($link_desc) {
 // require "./includes/components/preview.php";
 
 ?>
-
-<link rel="stylesheet" href="../../src/styles/preview.css">
-<link rel="stylesheet" href="../../src/styles/pages/activites/activites.css">
-
 <div class="architecture">
 
     <!-- ----- A table with the schedules of the activities ----- -->
