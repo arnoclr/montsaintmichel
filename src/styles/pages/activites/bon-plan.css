@@ -8,6 +8,7 @@
     background-color: var(--navbar-background);
     padding-right: 40px;
     border-radius: 4px;
+    border: 1px solid var(--primary-color-light);
     align-content: center;
 }
 .rando h5 {
@@ -17,7 +18,7 @@
     list-style: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .randonnee {
         flex-direction: column;
         gap: 10px;
