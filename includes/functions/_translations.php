@@ -20,19 +20,23 @@ if (isset($_GET[GET_LANG_PARAM]) && !empty($_GET[GET_LANG_PARAM])) {
     }
 }
 
-function t($translation_id) {
+function t($translation_id)
+{
     global $pdo, $lang;
     $stmt = $pdo->prepare('SELECT * FROM traductions WHERE id = :id LIMIT 1');
     $stmt->execute([':id' => $translation_id]);
-    return $stmt->fetch()->$lang ?? $translation_id;
+    $row = $stmt->fetch();
+    return $row->$lang ?? $row->en ?? $translation_id;
 }
 
-function lang() {
+function lang()
+{
     global $lang;
     return $lang;
 }
 
-function swicthLangTo($lang) {
+function swicthLangTo($lang)
+{
     $url = $_SERVER['REQUEST_URI'];
     $path = explode("?", $url)[0];
     $params = $_GET;
