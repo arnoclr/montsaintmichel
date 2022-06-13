@@ -2,7 +2,7 @@
 include "./includes/components/navbar.php"; ?>
 
 <main>
-    <div class="ns__tile">
+    <div class="ns__tile" id="pq_ca_sappelle_le_msm">
         <div class="ns__tile-text" style="width: 350px;">
             <h2 class="ns__tile-title"><?= t('nutshell.whyMsm.question') ?></h2>
             <p class="ns__tile-desc"><?= t('nutshell.whyMsm.answer') ?></p>
@@ -16,7 +16,7 @@ include "./includes/components/navbar.php"; ?>
 
     <img class="ns__parallax" src="<?= i('nutshell/parallax/1783.jpg') ?>" alt="Baie du Mont Saint-Michel en 1783">
 
-    <div class="ns__tile ns__tile--incendie">
+    <div class="ns__tile ns__tile--incendie" id="qd_a_t_il_ete_construit">
         <div class="ns__tile-text" style="width: 480px;">
             <h2 class="ns__tile-title"><?= t('nutshell.whenBuilt.question') ?></h2>
             <p class="ns__tile-desc"><?= t('nutshell.whenBuilt.answer') ?></p>
@@ -29,7 +29,7 @@ include "./includes/components/navbar.php"; ?>
         </div>
     </div>
 
-    <div class="ns__tile">
+    <div class="ns__tile" id="pq_a_t_il_ete_construit">
         <div class="ns__tile-text" style="width: 480px;">
             <h2 class="ns__tile-title"><?= t('nutshell.whyBuilt.question') ?></h2>
             <p class="ns__tile-desc"><?= t('nutshell.whyBuilt.answer') ?></p>
@@ -46,7 +46,7 @@ include "./includes/components/navbar.php"; ?>
 
     <img class="ns__parallax" src="<?= i('nutshell/parallax/christianisme.jpg') ?>" alt="Representation du Christianisme">
 
-    <div class="ns__tile">
+    <div class="ns__tile" id="par_qui_a_t_il_ete_construit">
         <div class="ns__tile-text" style="width: 480px;">
             <h2 class="ns__tile-title"><?= t('nutshell.whoBuilt.question') ?></h2>
             <p class="ns__tile-desc"><?= t('nutshell.whoBuilt.answer') ?></p>
@@ -63,7 +63,7 @@ include "./includes/components/navbar.php"; ?>
 
     <img class="ns__parallax" src="<?= i('nutshell/parallax/terres cotentin 1945.jpg') ?>" alt="Les terres du Cotentin en 1945">
 
-    <div class="ns__tile ns__tile--dark">
+    <div class="ns__tile ns__tile--dark" id="quel_role_rempli_t_il">
         <div class="ns__tile-text" style="width: 480px;">
             <h2 class="ns__tile-title"><?= t('nutshell.whatPurpose.question') ?></h2>
             <p class="ns__tile-desc"><?= t('nutshell.whatPurpose.answer') ?></p>
@@ -79,7 +79,7 @@ include "./includes/components/navbar.php"; ?>
 
     <img class="ns__parallax" src="<?= i('nutshell/parallax/revolution fr.jpg', 'xlarge') ?>" alt="Prise de la Bastille lors de la révolution française">
 
-    <div class="ns__tile ns__tile--colored">
+    <div class="ns__tile ns__tile--colored" id="d_autres_monuments_ds_ce_style">
         <div class="ns__tile-text" style="width: 480px;">
             <h2 class="ns__tile-title"><?= t('nutshell.otherMonuments.question') ?></h2>
             <p class="ns__tile-desc"><?= t('nutshell.otherMonuments.answer') ?></p>
@@ -91,7 +91,7 @@ include "./includes/components/navbar.php"; ?>
         </div>
     </div>
 
-    <div class="ns__tile">
+    <div class="ns__tile" id="cb_de_tps_pr_le_construire">
         <div class="ns__tile-text" style="width: 480px;">
             <h2 class="ns__tile-title"><?= t('nutshell.howLong.question') ?></h2>
             <p class="ns__tile-desc"><?= t('nutshell.howLong.answer') ?></p>
@@ -104,3 +104,8 @@ include "./includes/components/navbar.php"; ?>
 
     <?php include "./includes/components/footer.php"; ?>
 </main>
+
+<button class="unmute-btn">
+    <i class="material-icons-sharp">volume_off</i>
+    <span>Réactiver le son</span>
+</button>

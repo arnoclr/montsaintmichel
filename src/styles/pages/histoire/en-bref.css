@@ -90,3 +90,29 @@ footer.footer {
 .ns__parallax+.ns__tile {
     margin-left: -480px;
 }
+
+.unmute-btn {
+    display: flex;
+    position: fixed;
+    bottom: 32px;
+    left: 22px;
+    background-color: var(--navbar-background);
+    align-items: center;
+    gap: 12px;
+    height: 56px;
+    padding: 0 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    border: none;
+}
+
+.unmute-btn:active {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+    outline: none;
+}
+
+.unmute-btn span {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: Noto Sans, Arial, Helvetica, sans-serif;
+}
