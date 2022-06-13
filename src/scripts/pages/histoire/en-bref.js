@@ -25,8 +25,40 @@ let lastScrollX = 0;
 
 const tiles = document.querySelectorAll(".ns__tile");
 const unmute = document.querySelector(".unmute-btn");
+const playBtn = document.querySelector(".play");
 
 let currentPlayKey = tiles[0].id;
+
+function currentTile() {
+    // detect on what tile we are
+    for (let i = 0; i < tiles.length; i++) {
+        const tile = tiles[i];
+        const tileRect = tile.getBoundingClientRect();
+
+        if (tileRect.left < 200 && tileRect.right > 0) {
+            return tile;
+        }
+    }
+
+    return null;
+}
+
+function changeTile(direction) {
+    let currentTileIndex = 0;
+
+    for (let i = 0; i < tiles.length; i++) {
+        if (tiles[i] === currentTile()) {
+            currentTileIndex = i;
+            break;
+        }
+    }
+
+    const nextTileIndex = currentTileIndex + direction;
+    tiles[nextTileIndex].scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
 
 main.addEventListener("scroll", throttle(() => {
     const scrollX = main.scrollLeft;
@@ -41,18 +73,10 @@ main.addEventListener("scroll", throttle(() => {
 }, 150));
 
 main.addEventListener("scroll", debounce(() => {
-    // detect on what tile we are
-    for (let i = 0; i < tiles.length; i++) {
-        const tile = tiles[i];
-        const tileRect = tile.getBoundingClientRect();
-
-        if (tileRect.left < 200 && tileRect.right > 0) {
-            const key = tile.id;
-            if (key != currentPlayKey) {
-                playAudioKey(key);
-                currentPlayKey = key;
-            }
-        }
+    const key = currentTile().id;
+    if (key != currentPlayKey) {
+        playAudioKey(key);
+        currentPlayKey = key;
     }
 }, 350));
 
@@ -66,5 +90,20 @@ document.addEventListener("click", () => {
     if (audioEnabled) return;
     playAudioKey(currentPlayKey);
     unmute.style.display = "none";
+    playBtn.style.display = null;
     audioEnabled = true;
+});
+
+playBtn.addEventListener("click", e => {
+    const isPlaying = !audio.paused;
+
+    if (isPlaying) {
+        playBtn.classList.remove("playing");
+        audio.title = "Reprendre la lecture";
+        audio.pause();
+    } else {
+        playBtn.classList.add("playing");
+        audio.title = "Mettre en pause";
+        audio.play();
+    }
 });

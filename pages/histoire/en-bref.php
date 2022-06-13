@@ -105,7 +105,22 @@ include "./includes/components/navbar.php"; ?>
     <?php include "./includes/components/footer.php"; ?>
 </main>
 
-<button class="unmute-btn">
-    <i class="material-icons-sharp">volume_off</i>
-    <span>Réactiver le son</span>
+<button class="arrow-btn">
+    <i class="material-icons-sharp">arrow_backwards</i>
 </button>
+
+<button class="arrow-btn">
+    <i class="material-icons-sharp">arrow_forwards</i>
+</button>
+
+<div class="bottom-left">
+    <button class="unmute-btn">
+        <i class="material-icons-sharp">volume_off</i>
+        <span>Réactiver le son</span>
+    </button>
+
+    <button class="play playing" title="mettre en pause" style="display: none;">
+        <i class="material-icons-sharp before">play_arrow</i>
+        <i class="material-icons-sharp after">pause</i>
+    </button>
+</div>
