@@ -3,7 +3,10 @@
 
 <button onclick="window.history.back();" title="Retour" class="map-back-button"><span class="material-icons-sharp">arrow_back</span></button>
 <div id="map"></div>
-<div class="map-modal"></div>
+<div class="map-modal">
+    <div class="map-modal__mobileplaceholder"></div>
+    <div class="map-modal__inner"></div>
+</div>
 <button class="map-cta btn btn--primary btn--large"><?= t('map.route.btn') ?></button>
 
 <div class="bottom-sheat js-itinerary-modal">
@@ -25,12 +28,16 @@
 </div>
 
 <script>
-    let map = L.map('map', {zoomControl: false}).setView([
+    let map = L.map('map', {
+        zoomControl: false
+    }).setView([
         <?= isset($_GET['lat']) ? htmlspecialchars($_GET['lat']) : 48.6360 ?>,
         <?= isset($_GET['lng']) ? htmlspecialchars($_GET['lng']) : -1.5116 ?>
     ], <?= isset($_GET['zoom']) ? htmlspecialchars($_GET['zoom']) : 18 ?>);
 
     const mapModal = document.querySelector(".map-modal");
+    const mapModalInner = document.querySelector(".map-modal__inner");
+    const mapModalMobilePlaceholder = document.querySelector(".map-modal__mobileplaceholder");
     const itineraryModal = document.querySelector(".js-itinerary-modal");
     const itineraryCTA = document.querySelector(".map-cta");
     const itinerarySelect = document.querySelector(".js-itinerary-select");
@@ -116,15 +123,15 @@
                 </div>
             </summary>
             <div class="itinerary-place__content">`
-                
-                html += `<div class="it__photos">`
-                    place.photos.forEach(photo => {
-                    html += `<img height="120" src="${photo}" alt="">`
-                })
-                html += `</div>`
-                
-                if (place.note) {
-                    html += `<div class="it__review">
+
+        html += `<div class="it__photos">`
+        place.photos.forEach(photo => {
+            html += `<img height="120" src="${photo}" alt="">`
+        })
+        html += `</div>`
+
+        if (place.note) {
+            html += `<div class="it__review">
                         <span class="map-modal__review-note">${place.note}</span>
                         <div class="map-modal__stars">
                             <div class="map-modal__stars-row">
@@ -143,25 +150,25 @@
                             </div>
                         </div>
                     </div>`
-                }
+        }
 
-                html += `<p class="it__desc">${place.description}</p>`
+        html += `<p class="it__desc">${place.description}</p>`
 
-                if (place.pour == "enfants") {
-                    html += `<p class="it__icon-table">
+        if (place.pour == "enfants") {
+            html += `<p class="it__icon-table">
                         <i class="material-icons-sharp">escalator_warning</i>
                         <span>Adapté pour les enfants</span>
                     </p>`
-                }
+        }
 
-                if (place.horaires) {
-                    html += `<div class="it__icon-table">
+        if (place.horaires) {
+            html += `<div class="it__icon-table">
                         <i class="material-icons-sharp">access_time</i>
                         <span>${place.horaires.replaceAll('\n', '<br>')}</span>
                     </div>`
-                }
-                
-            html += `</div>
+        }
+
+        html += `</div>
         </details>`
         return html;
     }
@@ -207,7 +214,7 @@
         openedPlaceId = id;
         setMapView(id, event);
         var data = await loadPlaceDetails(id)
-        mapModal.innerHTML = htmlModal(data)
+        mapModalInner.innerHTML = htmlModal(data)
         mapModal.classList.add('map-modal--open')
     }
 
@@ -236,6 +243,10 @@
         loadItinerary(itinerarySelect.value * 60)
     })
 
+    mapModalMobilePlaceholder.addEventListener('click', () => {
+        closePlace()
+    })
+
     if (openedPlaceId) {
         loadPlaceDetails(openedPlaceId).then(data => {
             openPlace(openedPlaceId, {
@@ -249,15 +260,17 @@
     }
 
     fetch('/ajax/map?action=all')
-    .then(res => res.json())
-    .then(data => {
-        data.places.forEach(place => {
-            var marker = L.marker([place.lat, place.lng], {
-                title: place.nom,
-                riseOnHover: true
-            })
-            .on('click', e => { openPlace(place.id, e) })
-            .addTo(map);
+        .then(res => res.json())
+        .then(data => {
+            data.places.forEach(place => {
+                var marker = L.marker([place.lat, place.lng], {
+                        title: place.nom,
+                        riseOnHover: true
+                    })
+                    .on('click', e => {
+                        openPlace(place.id, e)
+                    })
+                    .addTo(map);
+            });
         });
-    });
 </script>

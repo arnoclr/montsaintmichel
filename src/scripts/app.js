@@ -10,6 +10,27 @@ function debounce(callback, delay) {
     };
 }
 
+function throttle(callback, delay) {
+    var last;
+    var timer;
+    return function () {
+        var context = this;
+        var now = +new Date();
+        var args = arguments;
+        if (last && now < last + delay) {
+            // le délai n'est pas écoulé on reset le timer
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                last = now;
+                callback.apply(context, args);
+            }, delay);
+        } else {
+            last = now;
+            callback.apply(context, args);
+        }
+    };
+}
+
 // fancy alert - à utiliser de la façon suivante :
 // yourActionButton.addEventListener('click', () => {
 // Your actions here
@@ -136,6 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Carte",
             icon: "map",
         },
+        "/aubert": {
+            title: "Aubert",
+            icon: "videogame_asset",
+        }
     };
 
     searchBarInput.addEventListener('keyup', e => {
@@ -299,9 +324,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.style.opacity = 0;
                     img.style.transition = "height .3s ease-out, transform .3s ease-in-out, opacity .3s ease";
 
-                    let onloadEvent = false;
-                    let timeoutEvent = false;
-
                     let onloadHandler = function () {
                         img.style.height = 'auto';
                         const newHeight = img.clientHeight;
@@ -314,21 +336,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     };
 
                     img.onload = function () {
-                        onloadEvent = true;
-                        if (timeoutEvent) {
-                            onloadHandler();
-                        }
+                        onloadHandler();
                     };
 
                     setTimeout(() => {
-                        timeoutEvent = true;
-                        if (onloadEvent) {
-                            onloadHandler();
-                        }
+                        img.src = images[currentImage].src;
+                        img.style.opacity = 0;
                     }, 300);
 
                     img.offsetWidth;
-                    img.src = images[currentImage].src;
                     attributionSpan.innerText = images[currentImage].attr || '';
                 }
 
@@ -458,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
         el.caption.innerText = caption;
 
         if (window.innerWidth >= 800) {
-            el.image.setAttribute("style", "height: 40vh;");
+            el.image.setAttribute("style", "height: 50vh;");
         } else {
             el.image.setAttribute("style", "");
         }
@@ -486,12 +502,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.onload = function () {
         const modal = setupModal();
-        // console.log('modal', modal);
 
-        document.querySelectorAll('img.imgs') // Toute image possédant la classe "imgs" se verra cliquable avec un modal.
+        // Toute image possédant la classe "imgs" se verra cliquable avec un modal.
+        // NOTE : Ne pas oublier d'include modal.php an haut de la page include <?php include 'includes/components/modal.php' ?>
+        document.querySelectorAll('img.imgs')
             .forEach((img) => {
                 img.addEventListener('click', (e) => {
-                    console.log('click', e);
+                    console.log(e.src);
                     const img = e.target,
                         src = img.getAttribute('src'),
                         caption = img.getAttribute('alt');

@@ -2,7 +2,7 @@ const backToTopButton = document.querySelector('.js-btt');
 const dates = document.querySelectorAll('.js-date');
 
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', debounce(() => {
 
     scrollIndicator();
 
@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
     });
 
 
-});
+}, 50));
 
 backToTopButton.addEventListener('click', () => {
     window.scrollTo({
@@ -57,6 +57,7 @@ function scrollIndicator() {
 }
 
 const audio = document.querySelector('.js-audio');
+const autoPlayLabel = document.querySelector('.js-auto-play');
 
 const audioDurationToDates = {
     0: 708,
@@ -102,4 +103,16 @@ audio.addEventListener('timeupdate', () => {
             });
         }
     }
+});
+
+audio.addEventListener('play', () => {
+    autoPlayLabel.classList.add('frise__defilauto--open');
+});
+
+audio.addEventListener('ended', () => {
+    autoPlayLabel.classList.remove('frise__defilauto--open');
+});
+
+audio.addEventListener('pause', () => {
+    autoPlayLabel.classList.remove('frise__defilauto--open');
 });

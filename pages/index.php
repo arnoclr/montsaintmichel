@@ -60,17 +60,23 @@ $articles = getOrCache("index.articles.$lang", 60 * 12, function () use ($lang) 
 <!-- Activités phares -->
 <?php include "./includes/components/activitiesRow.php"; ?>
 
+<!-- Différents jeux -->
+<div class="main-padding Games">
+    <h1 class="articles__title Games-h1"><?= t('index.games.title') ?></h1>
+    <?php include "./includes/components/games.php"; ?>
+</div>
+
 <div style="height: 64px;"></div>
+
+<!-- Galerie d'images mouvantes -->
+<div class="collections">
+    <h1 class="articles__title collection-h1"><?= t('index.collection.title') ?></h1>
+    <?php include "./includes/components/collections.php"; ?>
+</div>
 
 <!-- Petite partie du Quiz -->
 <div class="main-padding quiz-wrapper">
     <?php include "./includes/components/quizz.php"; ?>
-</div>
-
-<!-- Galerie d'images mouvantes -->
-<div class="collections">
-    <h1 class="articles__title collection-h1">Gallerie d'images</h1>
-    <?php include "./includes/components/collections.php"; ?>
 </div>
 
 <!-- Dernières actualités -->

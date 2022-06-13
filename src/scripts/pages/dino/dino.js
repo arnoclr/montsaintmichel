@@ -434,7 +434,6 @@ let isAlive = setInterval(function () {
 shareDiv.onclick = function () {
     copyInp.select();
     document.execCommand('copy');
-    console.log('vous avez copié ' + copyInp.value);
     fancyAlert("Copié dans le presse-papier", "done", "copy");
 }
 

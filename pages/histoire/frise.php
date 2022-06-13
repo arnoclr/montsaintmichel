@@ -73,6 +73,11 @@ include "./includes/components/navbar.php";
 
     <button title="Revenir en haut" class="back-to-top js-btt"><i class="material-icons-sharp">arrow_upward</i></button>
 
+    <div class="frise__defilauto js-auto-play">
+        <span>Défilement automatique activé</span>
+        <i class="material-icons-sharp">swipe_up</i>
+    </div>
+
 </main>
 
 <div class="frise__audio">

@@ -73,64 +73,73 @@ switch ($request) {
         ];
         loadPage("vr");
         break;
-
     case "/remerciements":
         $og = (object) [
-            "title" => t('index.og.title'),
+            "title" => t('credits.og.title'),
+            "description" => t('credits.og.description'),
         ];
         loadPage("remerciement");
         break;
     case "/histoire":
         $og = (object) [
             "title" => t('nutshell.og.title'),
+            "description" => t('nutshell.og.description'),
         ];
         loadPage("histoire/en-bref");
         break;
     case "/histoire/frise":
         $og = (object) [
-            "title" => "Frise chronologique",
+            "title" => t('frise.og.title'),
+            "description" => t('frise.og.description'),
         ];
         loadPage("histoire/frise");
         break;
     case "/architecture":
         $og = (object) [
             "title" => t('archi.og.title'),
+            "description" => t('archi.og.description'),
         ];
         loadPage("architecture/architecture");
         break;
     case "/bons-plans":
         $og = (object) [
             "title" => t('bonsplans.og.title'),
+            "description" => t('bonsplans.og.description'),
         ];
         loadPage("activites/bon-plan");
         break;
     case "/a-faire":
         $og = (object) [
-            "title" => t('bonsplans.og.title'),
+            "title" => t('afaire.og.title'),
+            "description" => t('afaire.og.description'),
         ];
         loadPage("activites/a-faire");
         break;
     case "/decouvrir-la-baie":
         $og = (object) [
-            "title" => t('bonsplans.og.title'),
+            "title" => t('discover.og.title'),
+            "description" => t('discover.og.description'),
         ];
         loadPage("activites/discover");
         break;
     case "/quiz":
         $og = (object) [
             "title" => t('quiz.og.title'),
+            "description" => t('quiz.og.description'),
         ];
         loadPage("quiz");
         break;
     case "/map":
         $og = (object) [
             "title" => t('map.og.title'),
+            "description" => t('map.og.description'),
         ];
         loadPage("map");
         break;
     case "/aubert":
         $og = (object) [
             "title" => t('dino.og.title'),
+            "description" => t('dino.og.description'),
         ];
         loadPage("dino/aubert");
         break;

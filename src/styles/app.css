@@ -281,6 +281,7 @@ html {
 /* scroll indicator */
 #js-scroll_indicator {
     background: var(--navbar-link);
+    transition: width .2s ease;
 }
 
 @keyframes bar-enter {
@@ -387,7 +388,7 @@ html {
     background-color: var(--navbar-background);
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.20);
     animation: navbar-enter .3s ease-in-out forwards;
-    z-index: 1;
+    z-index: 10;
 }
 
 .navbar--open+.js-navbar-placeholder {
@@ -1014,6 +1015,105 @@ html {
     gap: 32px;
 }
 
+/* aubert */
+.Games {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.games_container {
+    display: flex;
+    gap: 20px;
+}
+
+.game_label__info {
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 3px;
+    color: #ffffff;
+    padding: 3px 10px;
+    font: 400 12px Noto Sans, serif;
+    user-select: none;
+    background: #007AFF;
+}
+
+.game_wrap {
+    height: fit-content;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.game_wrap a {
+    text-decoration: none;
+}
+
+.game_wrap:hover .game_img-wrap {
+    transform: scale(1.1);
+}
+
+.game_img-wrap {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    transition: all .3s ease;
+}
+
+.game_img-wrap img {
+    width: -webkit-fill-available;
+    border-radius: 5px 5px 0 0;
+}
+
+.game_label {
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.game_label_aubert {
+    background: #ff4e4e;
+}
+
+.game_label_quiz {
+    background: #2ab521;
+}
+
+@media (prefers-color-scheme: dark) {
+    .game_label_aubert {
+        background: #810b0b;
+    }
+    
+    .game_label_quiz {
+        background: #186e12;
+    }
+}
+
+.game_label .game_label_title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+.game_label .game_label_small {
+    color: #fff;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
 .quizz__content {
     max-width: 560px;
 }
@@ -1033,8 +1133,9 @@ html {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 42px;
-    border-radius: 42px;
+    height: auto;
+    min-height: 42px;
+    border-radius: 21px;
     gap: 12px;
     background-color: transparent;
     color: var(--text-color);
@@ -1364,7 +1465,7 @@ progress::-webkit-progress-value {
 }
 
 .modal img {
-    margin: 2em;
+    margin: 0.5em;
     border-radius: 5px;
 }
 
@@ -1486,7 +1587,7 @@ progress::-webkit-progress-value {
     }
 
     .modal-inner img {
-        margin: 1em;
+        margin: 0.5em;
         /* width: -webkit-fill-available; */
     }
 
@@ -1506,7 +1607,7 @@ progress::-webkit-progress-value {
     }
 
     .modal-inner img {
-        margin: 1em;
+        margin: 0.5em;
         width: -webkit-fill-available;
     }
 
@@ -1539,7 +1640,7 @@ progress::-webkit-progress-value {
     }
 
     .modal-inner img {
-        margin: 1em;
+        margin: 0.5em;
         width: -webkit-fill-available;
     }
 

@@ -1,5 +1,6 @@
 <?php
-include "./includes/components/navbar.php"; 
+include "./includes/components/navbar.php";
+include  './includes/components/modal.php';
 
 
 function tags($url)
@@ -75,10 +76,6 @@ function card_load($link_desc) {
 // require "./includes/components/preview.php";
 
 ?>
-
-<link rel="stylesheet" href="../../src/styles/preview.css">
-<link rel="stylesheet" href="../../src/styles/pages/activites/activites.css">
-
 <div class="architecture">
 
     <!-- ----- A table with the schedules of the activities ----- -->
@@ -123,7 +120,8 @@ function card_load($link_desc) {
     <!-- ----- End of the table ----- -->
 
     
-    <img loading="lazy" src="./static/img/@1024__1c071647d838cf95615472d5b569ab3daec018c57dd1d07324052442914ab322.webp" class="card__media-img">
+    <img loading="lazy" src="<?= i('activites/abbaye.jpg', 'medium') ?>" class="card__media-img">
+    
 
     <div class="card__media-content">
         <p class="card__media-text"><br>
@@ -165,54 +163,84 @@ function card_load($link_desc) {
     <h2>Autres activités a découvir autour du Mont</h2>
 
     <p class="card__media-text"> Il existe aussi beaucoup d'activités autour du Mont Saint Michel, notamment des randonnées. Vous pourrez trouver ci dessous deux randonées ainsi que le site pour en savoir plus.</p>
-    <div class="card__media-content">
-        <h5>Le Grouin du Sud et le Prieuré Saint-Léonard</h5>
-        <ul>
-            <li>
-                <p>
-                    <b>Durée: 3h25</b> 
-                </p>
-            </li>
-            <li>
-                <p> 
-                    <b>Distance: 11,58km</b>
-                </p>
-            </li>
-            <li>
-                <p>
-                    <b>Difficulté: Moyenne</b>
-                </p>
-            </li>
-            <li>
-                <p>
-                    <b> Départ à Genêts - 50 - Manche</b>
-                </p>
-            </li>
-    </div>
+    <div class="randonnee">
+        <div class="rando">
+            <h5>Le Grouin du Sud et le Prieuré Saint-Léonard</h5>
+            <ul>
+                <li>
+                    <p>
+                        <b>Durée: 3h25</b> 
+                    </p>
+                </li>
+                <li>
+                    <p> 
+                        <b>Distance: 11,58km</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Difficulté: Moyenne</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Départ à Genêts - 50 - Manche</b>
+                    </p>
+                </li>
+                <div class="picture_gallery">
+                    <div class="picture_gallery_img"> 
+                        <img class="imgs" src="<?= i('activites/carte_rando_1.png', 'small') ?>" alt="">
+                    </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando1/m-mont-saint-michel-visorando-230077.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando1/m-la-pointe-du-grouin-du-sud-visorando-127396.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando1/m-un-echalier-visorando-89287.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+            </div>
+        </div>
 
-    <div class="card__media-content">
-        <h5>De Bacilly au Bec d'Andaine par les sentiers ruraux</h5>
-        <ul>
-            <li>
-                <p>
-                    <b>Durée: 3h10</b> 
-                </p>
-            </li>
-            <li>
-                <p> 
-                    <b>Distance: 11,79km</b>
-                </p>
-            </li>
-            <li>
-                <p>
-                    <b>Difficulté: Facile</b>
-                </p>
-            </li>
-            <li>
-                <p>
-                    <b> Départ à Bacilly - 50 - Manche</b>
-                </p>
-            </li>
+        <div class="rando">
+            <h5>De Bacilly au Bec d'Andaine par les sentiers ruraux</h5>
+            <ul>
+                <li>
+                    <p>
+                        <b>Durée: 3h10</b> 
+                    </p>
+                </li>
+                <li>
+                    <p> 
+                        <b>Distance: 11,79km</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b>Difficulté: Facile</b>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <b> Départ à Bacilly - 50 - Manche</b>
+                    </p>
+                </li>
+                <div class="picture_gallery">
+                    <div class="picture_gallery_img"> 
+                        <img class="imgs" src="<?= i('activites/carte_rando_2.png', 'medium') ?>" alt="">
+                    </div>    
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando2/m-lever-de-soleil-sur-la-baie-du-mont-saint-michel-1-visorando-48478.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando2/m-lever-de-soleil-sur-la-baie-du-mont-saint-michel-2-visorando-48479.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+                <div class="picture_gallery_img">
+                    <img class='imgs' src="<?= i('activites/Randonees/Rando2/m-lever-de-soleil-sur-la-baie-du-mont-saint-michel-3-visorando-48480.jpg', 'small') ?>" alt="" height=100% width=auto>
+                </div>
+            </div>
+        </div>
     </div>
     <p class="card__media-text"> Pour en savoir plus sur ces randonnées et en découvrir beaucoup d'autre, visitez le site: <a href="https://www.visorando.com/randonnee-le-mont-saint-michel.html">www.visorando.com/randonnee-le-mont-saint-michel.com</a></p>
 
