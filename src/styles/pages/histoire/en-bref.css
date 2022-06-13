@@ -1,152 +1,118 @@
-.faq {
-    padding: 32px var(--padding);
+body {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: flex-start;
 }
 
-.faq__qst {
-    margin-bottom: 86px;
+main {
+    height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    perspective: 10px;
+    transform-style: preserve-3d;
 }
 
-.faq__qst h2 {
-    font: 600 42px Montserrat, sans-serif;
+footer.footer {
+    margin-top: 0;
+    height: 100%;
 }
 
-.faq__qst-details {
-    color: #828282;
-    background: #f1f1f1;
-    padding: 16px;
-    border-radius: 2px;
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
 }
 
-.faq__qst details {
-    padding-top: 16px;
-}
-
-.faq__qst details i {
-    transform: rotate(0deg);
-    transition: transform .3s ease;
-}
-
-.faq__qst details[open] i {
-    transform: rotate(90deg);
-}
-
-.faq__qst details summary {
-    font: 400 20px Noto Sans, sans-serif;
-    cursor: pointer;
+.ns__tile {
+    height: 100%;
     display: flex;
     align-items: center;
+    gap: 92px;
+    padding: 48px;
+    background: var(--background-color);
+}
+
+.ns__tile--incendie {
+    background: #411D11 !important;
+}
+
+.ns__tile--dark {
+    background: #1D1D1D !important;
+}
+
+.ns__tile--colored {
+    background: var(--modal-surface);
+}
+
+.ns__tile--colored h2,
+.ns__tile--colored p {
+    color: var(--modal-surface-text);
+}
+
+.ns__tile--incendie h2,
+.ns__tile--dark h2 {
+    color: #eee !important;
+}
+
+.ns__tile--incendie p,
+.ns__tile--dark p {
+    color: #aaa !important;
+}
+
+.ns__tile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ns__tile-images {
+    height: 100%;
+    position: relative;
+}
+
+.ns__tile-images img {
+    position: absolute;
+}
+
+.ns__parallax {
+    height: 100%;
+    transform: translateX(-240px) translateZ(-10px) scale(2);
+    z-index: -1;
+}
+
+.ns__parallax+.ns__tile {
+    margin-left: -480px;
+}
+
+.unmute-btn {
+    display: flex;
+    position: fixed;
+    bottom: 32px;
+    left: 22px;
+    background-color: var(--navbar-background);
+    align-items: center;
     gap: 12px;
-    transition: color .15s ease;
-    width: fit-content;
+    height: 56px;
+    padding: 0 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    border: none;
 }
 
-.faq__qst details summary:hover {
-    color: var(--primary-color);
-}
-
-.faq__qst details summary:active {
-    color: #923600;
-}
-
-.faq__qst details summary:focus {
+.unmute-btn:active {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
     outline: none;
 }
 
-details > summary {
-    list-style: none;
-}
-
-details > summary::-webkit-details-marker {
-    display: none;
-}
-
-details[open] summary ~ * {
-    animation: sweep .4s cubic-bezier(.31,.03,.32,.9);
-}
-  
-@keyframes sweep {
-    0%    {opacity: 0; transform: translateY(-30px)}
-    100%  {opacity: 1; transform: translateY(0)}
-}
-
-.feature-box {
-    background-color: #000;
-    background-image: url('https://i.imgur.com/32g3723.jpg');
-    background-position: bottom right;
-}
-
-.feature-box__text {
-    padding: 32px var(--padding);
-    padding-right: 128px;
-    max-width: 40%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
-}
-
-.feature-box__text h3, .feature-box__text p {
-    color: #fff;
-}
-
-.feature-box__text .btn {
-    margin-top: 64px;
-}
-
-.activities {
-    padding: 32px var(--padding);
-}
-
-.activities__title {
-    font: 400 28px Ibarra Real Nova, serif;
+.unmute-btn span {
     text-transform: uppercase;
+    font-size: 16px;
+    font-family: Noto Sans, Arial, Helvetica, sans-serif;
 }
-
-.activities__grid {
-    display: grid;
-    grid-template-areas: 
-        "g0 g1 g2";
-    grid-template-rows: 30vw;
-    gap: 32px;
-}
-
-.articles__grid {
-    display: grid;
-    grid-template-areas: 
-        "g0 g0 g1"
-        "g2 g3 g4";
-    grid-template-rows: 20vw 20vw;
-    gap: 32px;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    .faq__qst details summary {
-        color: #fff;
-    }
-
-    .faq__qst details summary:active {
-        color: #ff9161;
-    }
-
-    .faq__qst-details {
-        color: #999;
-        background: var(--navbar-background);
-        padding: 16px;
-        border-radius: 2px;
-    }
-}
-
-@media (max-width: 768px) {
-    .feature-box__text {
-        padding: 32px var(--padding);
-        padding-right: 0;
-        max-width: 100%;
-    }
-
-    .activities__grid {
-        grid-template-rows: repeat(3, 180px);
-        grid-template-areas: 
-            "g0"
-            "g1"
-            "g2";
-    }
-}
-  
