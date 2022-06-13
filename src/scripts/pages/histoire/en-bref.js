@@ -37,6 +37,10 @@ main.addEventListener("scroll", throttle(() => {
         navbar.classList.add("navbar--open");
     }
 
+    lastScrollX = scrollX;
+}, 150));
+
+main.addEventListener("scroll", debounce(() => {
     // detect on what tile we are
     for (let i = 0; i < tiles.length; i++) {
         const tile = tiles[i];
@@ -50,9 +54,7 @@ main.addEventListener("scroll", throttle(() => {
             }
         }
     }
-
-    lastScrollX = scrollX;
-}, 150));
+}, 350));
 
 // bind trackpad and wheel scroll
 main.addEventListener("wheel", e => {
