@@ -120,7 +120,9 @@ include "./includes/components/navbar.php"; ?>
     </button>
 
     <button class="play playing" title="mettre en pause" style="display: none;">
-        <i class="material-icons-sharp before">play_arrow</i>
-        <i class="material-icons-sharp after">pause</i>
+        <svg class="icon before" xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+            <path d="M8 19V5L19 12Z" />
+        </svg>
+        <i class="material-icons-sharp icon after">pause</i>
     </button>
 </div>

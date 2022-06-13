@@ -60,6 +60,18 @@ function changeTile(direction) {
     });
 }
 
+function setButtonToPlaying() {
+    playBtn.classList.add("playing");
+    audio.title = "Mettre en pause";
+    audio.play();
+}
+
+function setButtonToPause() {
+    playBtn.classList.remove("playing");
+    audio.title = "Reprendre la lecture";
+    audio.pause();
+}
+
 main.addEventListener("scroll", throttle(() => {
     const scrollX = main.scrollLeft;
 
@@ -76,6 +88,7 @@ main.addEventListener("scroll", debounce(() => {
     const key = currentTile().id;
     if (key != currentPlayKey) {
         playAudioKey(key);
+        setButtonToPlaying();
         currentPlayKey = key;
     }
 }, 350));
@@ -98,12 +111,8 @@ playBtn.addEventListener("click", e => {
     const isPlaying = !audio.paused;
 
     if (isPlaying) {
-        playBtn.classList.remove("playing");
-        audio.title = "Reprendre la lecture";
-        audio.pause();
+        setButtonToPause();
     } else {
-        playBtn.classList.add("playing");
-        audio.title = "Mettre en pause";
-        audio.play();
+        setButtonToPlaying();
     }
 });
