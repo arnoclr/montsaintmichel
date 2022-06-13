@@ -61,12 +61,13 @@ $articles = getOrCache("index.articles.$lang", 60 * 12, function () use ($lang) 
 <?php include "./includes/components/activitiesRow.php"; ?>
 
 <!-- Différents jeux -->
-<div class="main-padding Games">
-    <h1 class="articles__title Games-h1"><?= t('index.games.title') ?></h1>
+<div class="games-section">
+    <div class="games-section__text">
+        <h3 class="games-section__title"><?= t('index.games.title') ?></h3>
+        <p>Découvrez une séléction de jeux informatifs et divertissants sur le thème du Mont Saint-Michel.</p>
+    </div>
     <?php include "./includes/components/games.php"; ?>
 </div>
-
-<div style="height: 64px;"></div>
 
 <!-- Galerie d'images mouvantes -->
 <div class="collections">

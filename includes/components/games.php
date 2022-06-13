@@ -1,34 +1,46 @@
 <?php
-$quizz->id = "quizz__" . md5($quizz->question);
+$games = [
+    (object) [
+        "name" => t('index.games.aubert.title'),
+        "text" => t('index.games.aubert.small'),
+        "category" => t('index.games.aubert.label'),
+        "link" => "/aubert",
+        "banner" => i('games/banner aubert.png'),
+        "logo" => i('games/logo aubert.png'),
+    ],
+    (object) [
+        "name" => t('index.games.quiz.title'),
+        "text" => t('index.games.quiz.small'),
+        "category" => t('index.games.quiz.label'),
+        "link" => "/quiz?seed=" . rand(0, 99999) . "&from=game_container",
+        "banner" => i('games/banner quiz.png'),
+        "logo" => i('games/logo quiz.png'),
+    ],
+    (object) [
+        "name" => "GeoGuessr",
+        "text" => "Vous attérissez sur le Mont et vous devez trouver où vous êtes !",
+        "category" => "Réaliste",
+        "link" => "https://www.geoguessr.com/maps/62a78139611055080ed910c4/play",
+        "banner" => i('games/banner geoguessr.png'),
+        "logo" => i('games/logo geoguessr.png'),
+    ]
+];
+
+shuffle($games);
 ?>
 
-<div class="games_container">
-    <div class="game_wrap">
-        <div class="game_label__info"><?= t('index.games.aubert.label') ?></div>
-        <a href="/aubert">
-            <div class="game_img-wrap">
-                <img src="https://i.imgur.com/AXscBDQ.png" alt="Aubert">
-            </div>
-            <div class="game_label game_label_aubert">
-                <p class="game_label_title"><?= t('index.games.aubert.title') ?></p>
-                <p class="game_label_small"><?= t('index.games.aubert.small') ?></p>
+<div class="games">
+    <?php foreach ($games as $game) : ?>
+        <a class="game-card" href="<?= $game->link ?>">
+            <img src="<?= $game->banner ?>" alt="<?= $game->text ?>" class="game-card__banner">
+            <div class="game-card__details">
+                <img src="<?= $game->logo ?>" alt="Logo <?= $game->name ?>" class="game-card__logo">
+                <div class="game-card__text">
+                    <span class="game-card__category"><?= $game->category ?></span>
+                    <span class="game-card__title"><?= $game->name ?></span>
+                    <small class="game-card__desc"><?= $game->text ?></small>
+                </div>
             </div>
         </a>
-    </div>
-
-    <div class="game_wrap">
-        <div class="game_label__info"><?= t('index.games.quiz.label') ?></div>
-        <?php if (isset($_open_quiz_btn) && $_open_quiz_btn) : ?>
-            <a href="/quiz?seed=<?= rand(0, 99999) ?>&from=index" onclick="sessionStorage.clear();">
-
-                <div class="game_img-wrap">
-                    <img src="https://i.imgur.com/IjgXJYrl.jpg" alt="Aubert">
-                </div>
-                <div class="game_label game_label_quiz">
-                    <p class="game_label_title"><?= t('index.games.quiz.title') ?></p>
-                    <p class="game_label_small"><?= t('index.games.quiz.small') ?></p>
-                </div>
-            </a>
-        <?php endif; ?>
-    </div>
+    <?php endforeach; ?>
 </div>
