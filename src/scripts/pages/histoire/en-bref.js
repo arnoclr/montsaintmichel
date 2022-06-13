@@ -58,7 +58,8 @@ function changeTile(direction) {
     const nextTileIndex = currentTileIndex + direction;
     tiles[nextTileIndex].scrollIntoView({
         behavior: "smooth",
-        block: "center"
+        block: "start",
+        inline: "start"
     });
 }
 
