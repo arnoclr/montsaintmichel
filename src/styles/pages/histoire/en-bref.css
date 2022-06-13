@@ -167,6 +167,61 @@ footer.footer {
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
 }
 
+.left,
+.right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 30vw;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.left:hover button,
+.right:hover button {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+}
+
+.arrow-btn {
+    position: fixed;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    transform: translateY(-50%) scale(0);
+    height: 56px;
+    width: 56px;
+    border-radius: 56px;
+    background-color: #454545;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    transition: all 0.3s cubic-bezier(.43, 1.48, .81, .87);
+    cursor: pointer;
+}
+
+.arrow-btn .material-icons-sharp {
+    color: #eee;
+}
+
+.arrow-btn:active,
+.arrow-btn:focus {
+    outline: unset;
+}
+
+.prev {
+    left: var(--padding);
+}
+
+.next {
+    right: var(--padding);
+}
+
 @keyframes scale-in {
     0% {
         transform: scale(0);

@@ -26,6 +26,8 @@ let lastScrollX = 0;
 const tiles = document.querySelectorAll(".ns__tile");
 const unmute = document.querySelector(".unmute-btn");
 const playBtn = document.querySelector(".play");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
 
 let currentPlayKey = tiles[0].id;
 
@@ -115,4 +117,12 @@ playBtn.addEventListener("click", e => {
     } else {
         setButtonToPlaying();
     }
+});
+
+prevBtn.addEventListener("click", e => {
+    changeTile(-1);
+});
+
+nextBtn.addEventListener("click", e => {
+    changeTile(1);
 });

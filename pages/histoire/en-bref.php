@@ -105,13 +105,17 @@ include "./includes/components/navbar.php"; ?>
     <?php include "./includes/components/footer.php"; ?>
 </main>
 
-<button class="arrow-btn">
-    <i class="material-icons-sharp">arrow_backwards</i>
-</button>
+<aside class="left">
+    <button class="arrow-btn prev" title="Section précédente">
+        <i class="material-icons-sharp">arrow_back_ios_new</i>
+    </button>
+</aside>
 
-<button class="arrow-btn">
-    <i class="material-icons-sharp">arrow_forwards</i>
-</button>
+<aside class="right">
+    <button class="arrow-btn next" title="Section suivante">
+        <i class="material-icons-sharp">arrow_forward_ios</i>
+    </button>
+</aside>
 
 <div class="bottom-left">
     <button class="unmute-btn">
