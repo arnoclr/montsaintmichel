@@ -119,6 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "/architecture": {
             title: "Architecture",
         },
+        "/a-faire": {
+            title: "A faire",
+        },
         "/bons-plans": {
             title: "Bons plans",
         },

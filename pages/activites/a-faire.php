@@ -89,6 +89,15 @@ function card_load($link_desc) {
     <img src="../../src/img/activites/train_marin.jpg" alt="">
     <p>Au départ de Cherrueix, le Train Marin vous permet de découvrir de façon unique les richesses de l’exceptionnelle Baie du Mont Saint-Michel. Les jours et horaires des visites sont rythmés par les marées. Nos « chauffeurs-guides » vous emmènent jusqu’à 5 kilomètres du rivage pour une visite commentée de 2 heures. Vous y découvrirez les pêches traditionnelles et le métier de mytiliculteur (éleveur de moules).</p>
     <h5 class="txt-title">Horaires d'ouverture: (irrégulières)</h5>
+
+    <?php
+        $today = date('Y-m-d');
+
+        echo '<div class="calendar">';
+        echo '<input type="date" class="dateSchedule" id="date" name="date" value="'.$today.'" min="2022-01-01" max="9999-12-31">';
+        echo '</div>';
+    ?>
+
     <?php
 
         $json = file_get_contents("src/scripts/horaires.json");
@@ -107,7 +116,7 @@ function card_load($link_desc) {
                 }
             }
         }
-        echo '<p class="">' . $dayweek . ' '.$day.' '.$month.' : '. $schedule . '</p>';
+        echo '<p class="scheduleContainer">Horaires : '. $schedule . '</p>';
 
     ?>
     <div class="ticketing">

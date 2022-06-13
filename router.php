@@ -143,6 +143,9 @@ switch ($request) {
     case "/ajax/search":
         include "includes/ajax/search.php";
         break;
+    case "/ajax/horairesTrain":
+        include "includes/ajax/horairesTrain.php";
+        break;
     default:
         // retourner le fichier par défaut
         return false;
