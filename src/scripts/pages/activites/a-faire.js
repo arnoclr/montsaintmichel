@@ -13,9 +13,13 @@ userDateInput.addEventListener("input", async (e)=>{
     
     const schedule = await getScheduleAsync(myInputTextWithoutYear);
 
-    console.log(schedule);
-
     var el = document.querySelector(".scheduleContainer");
     el.innerHTML = "Horaires : " + schedule.horaires;
+
+    if (schedule.horaires == "Fermé") {
+        el.style.color = "red";
+    } else {
+        el.style.color = "black";
+    }
 
 })
