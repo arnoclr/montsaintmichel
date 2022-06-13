@@ -12,6 +12,9 @@ const steps = [
 
 const audio = new Audio();
 
+const navbar = document.querySelector(".js-navbar");
+const main = document.querySelector("main");
+
 let currentStep = 0;
 
 function changeStep(increment) {
@@ -28,3 +31,15 @@ function changeStep(increment) {
         audio.play();
     });
 }
+
+let lastScrollX = 0;
+
+main.addEventListener("scroll", () => {
+    const scrollX = main.scrollLeft;
+    if (scrollX > lastScrollX) {
+        navbar.classList.remove("navbar--open");
+    } else {
+        navbar.classList.add("navbar--open");
+    }
+    lastScrollX = scrollX;
+});
