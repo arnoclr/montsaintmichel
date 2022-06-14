@@ -1,0 +1,25 @@
+
+.team {
+    display: table;
+    margin: 0 auto;
+    border: 0px;
+}
+
+.team div {
+    margin-bottom: 50px;
+}
+
+.box-content ul {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+.box-content ul li {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    grid-column-gap: 10px;
+}

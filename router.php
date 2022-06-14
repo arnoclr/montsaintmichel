@@ -80,6 +80,13 @@ switch ($request) {
         ];
         loadPage("remerciement");
         break;
+    case "/equipe":
+        $og = (object) [
+            "title" => t('team.og.title'),
+            "description" => t('team.og.description'),
+        ];
+        loadPage("team");
+        break;
     case "/histoire":
         $og = (object) [
             "title" => t('nutshell.og.title'),

@@ -1,6 +1,7 @@
 <?php
 
-function parseXML($url, $results = 5) {
+function parseXML($url, $results = 5)
+{
     $i = 0;
     $rss = simplexml_load_file($url);
 
@@ -13,15 +14,15 @@ function parseXML($url, $results = 5) {
             )
         )
     );
-    
-    foreach($rss->channel->item as $item) {
+
+    foreach ($rss->channel->item as $item) {
         if ($i < $results) {
             $image = null;
             $html = @file_get_contents($item->link, false, $context);
-            
+
             if ($html) {
                 preg_match('/<meta property="og:image" content="(.*?)"/', $html, $matches);
-                $image = count($matches) > 0 ? $matches[1] : null;
+                $image = count($matches) > 0 ? $matches[1] : "https://i.imgur.com/ONaqKlp.png";
             }
 
             $articles[] = (object) [
@@ -33,7 +34,7 @@ function parseXML($url, $results = 5) {
                 "guid" => (string) $item->guid
             ];
         }
-    
+
         $i++;
     }
 

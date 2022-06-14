@@ -136,9 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         "/histoire": {
             title: "Histoire",
+            icon: "volume_up",
         },
         "/histoire/frise": {
             title: "Frise chronologique",
+            icon: "volume_up",
         },
         "/architecture": {
             title: "Architecture",
@@ -194,9 +196,9 @@ document.addEventListener('DOMContentLoaded', () => {
             </li>`;
         }
 
-        const words = value.split(/\s+/);
+        const words = value.trim().split(/\s+/);
 
-        const lastWord = words[words.length - 1] || words[words.length - 2];
+        const lastWord = words[words.length - 1];
 
         const autoCompleteQuery = await fetch(`/ajax/search?action=autoComplete&word=${lastWord}`);
         const autoComplete = await autoCompleteQuery.json();
@@ -208,11 +210,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 350));
 
+    function autoCompleteSearch() {
+        searchBarInput.value = searchBarInput.value + searchBarNextWord.innerText;
+        searchBarNextWord.innerText = '';
+        searchBarInput.focus();
+    }
+
+    searchBarNextWord.addEventListener('click', autoCompleteSearch);
+
     document.addEventListener('keydown', e => {
         if (searchBarInput === document.activeElement) {
             if (e.key === 'Tab') {
                 e.preventDefault();
-                searchBarInput.value = searchBarInput.value + searchBarNextWord.innerText;
+                autoCompleteSearch();
             }
         }
 
