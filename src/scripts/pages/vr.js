@@ -29,10 +29,13 @@ const videos = {
     ]
 };
 
+const main = document.querySelector('main');
 const video = document.querySelector('.js-video');
 const source = document.querySelector('.js-source');
 const modal = document.querySelector('.vr__modal');
 const loader = document.querySelector('.vr__loader');
+const streetViewIframe = document.querySelector('.js-streetview');
+const exitStreetViewBtn = document.querySelector('.js-exit-streetview');
 
 let currentLocation = 0;
 let inAnimation = false;
@@ -112,6 +115,38 @@ const loaderFadeOut = () => {
     }, 200);
 };
 
+const openStreetViewForCurrentView = () => {
+    const embedUrl = LOCATIONS[currentLocation - 1]?.streetView;
+
+    if (!embedUrl) return;
+
+    window.history.replaceState(null, null, `?step=${currentLocation}&streetview=1`);
+
+    if (streetViewIframe != embedUrl) {
+        streetViewIframe.src = embedUrl;
+    }
+    streetViewIframe.style.display = null;
+
+    exitStreetViewBtn.style.display = 'flex';
+
+    video.classList.add('zoomed');
+
+    setTimeout(() => {
+        streetViewIframe.classList.remove('hidden');
+    }, 200);
+};
+
+const exitStreetView = () => {
+    window.history.replaceState(null, null, `?step=${currentLocation}`);
+    exitStreetViewBtn.style.display = 'none';
+    video.classList.remove('zoomed');
+    streetViewIframe.classList.add('hidden');
+
+    setTimeout(() => {
+        streetViewIframe.style.display = 'none';
+    }, 600);
+};
+
 video.addEventListener('ended', () => {
     inAnimation = false;
     source.src = "";
@@ -150,7 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    var step = urlParams.get('step') || 1;
+    const step = urlParams.get('step') || 1;
+    const streetview = urlParams.get('streetview') || false;
 
     if (step < 1 || step > LOCATIONS.length) {
         step = 1;
@@ -161,4 +197,11 @@ document.addEventListener('DOMContentLoaded', () => {
     switchLocation(1);
     updateModalUI(currentLocation);
     modal.classList.add('show');
+
+    if (streetview) {
+        openStreetViewForCurrentView();
+    }
 });
+
+video.addEventListener('click', openStreetViewForCurrentView);
+exitStreetViewBtn.addEventListener('click', exitStreetView);
