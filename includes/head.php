@@ -41,6 +41,11 @@
                 direction: rtl;
             }
 
+            .locale-selector {
+                left: 0;
+                right: unset;
+            }
+
             .hero__content {
                 left: unset;
                 right: var(--padding);
