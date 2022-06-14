@@ -9,7 +9,7 @@
     margin-bottom: 50px;
 }
 
-.box-content ul {
+.box-content-left ul {
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
@@ -17,9 +17,26 @@
     color: var(--text-color);
 }
 
-.box-content ul li {
+.box-content-left ul li {
     display: flex;
     margin-bottom: 30px;
     align-items: center;
     grid-column-gap: 10px;
+}
+
+.box-content-right ul {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--text-color);
+    text-align: right
+}
+
+.box-content-right ul li {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    grid-column-gap: 10px;
+    text-align: right
 }
