@@ -136,9 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         "/histoire": {
             title: "Histoire",
+            icon: "volume_up",
         },
         "/histoire/frise": {
             title: "Frise chronologique",
+            icon: "volume_up",
         },
         "/architecture": {
             title: "Architecture",
@@ -167,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     searchBarInput.addEventListener('keyup', e => {
-        searchBarNextPlaceholder.innerText = e.target.value;
+        searchBarNextPlaceholder.innerText = e.target.value.replaceAll(' ', '-');
     });
 
     searchBarInput.addEventListener('keyup', debounce(async function (e) {
@@ -194,24 +196,33 @@ document.addEventListener('DOMContentLoaded', () => {
             </li>`;
         }
 
-        const words = value.split(' ');
+        const words = value.trim().split(/\s+/);
+
         const lastWord = words[words.length - 1];
 
         const autoCompleteQuery = await fetch(`/ajax/search?action=autoComplete&word=${lastWord}`);
         const autoComplete = await autoCompleteQuery.json();
 
         if (searchBarInput.value.length > 0) {
-            searchBarNextWord.innerHTML = autoComplete[0] || '';
+            searchBarNextWord.innerHTML = autoComplete[0].replaceAll(' ', '&nbsp;') || '';
         } else {
             searchBarNextWord.innerHTML = '';
         }
     }, 350));
 
+    function autoCompleteSearch() {
+        searchBarInput.value = searchBarInput.value + searchBarNextWord.innerText;
+        searchBarNextWord.innerText = '';
+        searchBarInput.focus();
+    }
+
+    searchBarNextWord.addEventListener('click', autoCompleteSearch);
+
     document.addEventListener('keydown', e => {
         if (searchBarInput === document.activeElement) {
             if (e.key === 'Tab') {
                 e.preventDefault();
-                searchBarInput.value = searchBarInput.value + " " + searchBarNextWord.innerText;
+                autoCompleteSearch();
             }
         }
 

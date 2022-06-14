@@ -228,4 +228,19 @@
     .articles__grid::-webkit-scrollbar-thumb:hover {
         background: var(--primary-color-light-transparent);
     }
+
+    .games-section {
+        scroll-snap-type: x mandatory;
+    }
+
+    .games-section__text {
+        scroll-snap-align: start;
+    }
+
+    .game-card {
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        min-width: 100vw;
+        padding: 0 var(--padding);
+    }
 }

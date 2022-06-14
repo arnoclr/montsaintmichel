@@ -6,6 +6,7 @@ const navbar = document.querySelector(".js-navbar");
 const main = document.querySelector("main");
 
 let lastScrollX = 0;
+let audioEnabled = false;
 
 const tiles = document.querySelectorAll(".ns__tile");
 const unmute = document.querySelector(".unmute-btn");
@@ -21,6 +22,8 @@ function showPlayBtn() {
 }
 
 function tryToPlayAudio() {
+    if (!audioEnabled) return;
+
     let resp = audio.play();
 
     if (resp !== undefined) {
@@ -118,7 +121,6 @@ main.addEventListener("wheel", e => {
     main.scrollLeft += e.deltaY;
 });
 
-let audioEnabled = false;
 document.addEventListener("click", () => {
     if (audioEnabled) return;
     playAudioKey(currentPlayKey);
