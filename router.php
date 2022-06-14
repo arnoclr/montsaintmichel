@@ -168,6 +168,13 @@ switch ($request) {
         ];
         loadPage("dino/aubert");
         break;
+    case "/legal":
+        $og = (object) [
+            "title" => "Mentions légales",
+            "description" => "Informations légales sur le site",
+        ];
+        loadPage("legal");
+        break;
     case "/ajax/map":
         include "includes/ajax/map.php";
         break;
