@@ -14,11 +14,18 @@
     .edited-at p {
         color: var(--navbar-link);
     }
+
+    p,
+    li {
+        word-break: break-word;
+    }
 </style>
 
 <main style="margin: 0 var(--padding);">
-    <p style="font-size: 12px;">This page is only available in french.</p>
 
+    <h2>Mentions Légales</h2>
+
+    <p style="font-size: 12px;">This page is only available in french.</p>
     <h3>Informations sur l'hébergement du site</h3>
 
     <p>Ce site est hebergé chez IONOS Cloud
