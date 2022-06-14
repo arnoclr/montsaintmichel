@@ -463,7 +463,13 @@ html {
 }
 
 .navbar__icon {
+    all: unset;
     position: relative;
+}
+
+.navbar__icon:focus {
+    outline: 2px dashed var(--text-color);
+    outline-offset: 6px;
 }
 
 .navbar__icons i {
@@ -707,7 +713,8 @@ html {
     text-decoration: none;
 }
 
-.locale-selector__region:hover {
+.locale-selector__region:hover,
+.locale-selector__clickable:focus .locale-selector__region {
     background-color: var(--navbar-locale-hover);
 }
 

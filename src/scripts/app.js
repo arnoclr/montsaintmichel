@@ -108,18 +108,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBarNextWord = document.querySelector('.js-search-autocompleted');
     const searchBarNextPlaceholder = document.querySelector('.js-search-placeholder');
 
-    searchBarTrigger.addEventListener('click', () => {
+    function openSearchBar() {
+        searchBarInput.setAttribute('tabindex', '0');
         searchBar.classList.add('search--open');
         searchBarInput.focus();
         searchBarBackdrop.style.display = 'block';
-    });
+    }
 
     function closeSearchBar() {
+        searchBarInput.setAttribute('tabindex', '-1');
         searchBar.classList.remove('search--open');
         searchBarInput.blur();
         searchBarBackdrop.style.display = 'none';
     };
 
+    searchBarTrigger.addEventListener('click', openSearchBar);
     searchBarBackdrop.addEventListener('click', closeSearchBar);
     searchBarButton.addEventListener('click', closeSearchBar);
 

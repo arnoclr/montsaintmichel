@@ -15,7 +15,7 @@ $data = json_decode($json);
 $questions = [];
 foreach ($data as $key => $array) {
     seededShuffle($array, $seed);
-    array_push($questions, $array[random_int(0,count($array)-1)]);
+    array_push($questions, $array[random_int(0, count($array) - 1)]);
     // dd($array);
 }
 
@@ -49,7 +49,7 @@ include "./includes/components/navbar.php"; ?>
     <?php
     }
     ?>
-    
+
     <div class="quiz-box__section">
         <div class="quiz__results" id="quiz__results">
             <span class="quiz__results-score js-score"></span>
@@ -79,7 +79,9 @@ include "./includes/components/navbar.php"; ?>
     const copyBtn = document.querySelector(".js-copy");
     const questId = document.querySelectorAll(".js-quizz");
 
-    
+    const firstQuizBtn = quizBox.querySelector('.js-quizz-button');
+
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
             quizProgressAside.style.cssText = `
@@ -94,13 +96,13 @@ include "./includes/components/navbar.php"; ?>
                 max-width: 100%;
                 animation: bar-enter .3s ease-in-out forwards;
             `;
-            
+
         } else {
             quizProgressAside.style.cssText = ``;
             quizProgressBar.style.cssText = ``;
         }
     });
-    
+
 
     function processScores() {
         let resultsString = '';
@@ -148,22 +150,22 @@ include "./includes/components/navbar.php"; ?>
         }
         WriteScore(correctAnswers, total, resultsString);
     }
-        
+
     function WriteScore(correctAnswers, total, resultsString) {
-        
+
         document.querySelector('.js-score').innerHTML = `${correctAnswers}/${total}`;
         document.querySelector('.js-streak').innerHTML = resultsString;
 
-        document.querySelector('.js-rtext').innerHTML = 
-              correctAnswers / total >= 1
-            ? "Vous connaissez le Mont-Saint-Michel sur le bout des doigts ! N'hésitez pas à partager ce score avec vos amis !" 
-            : correctAnswers / total >= 0.7
-            ? "Félicitations ! Vous semblez bien connaître le Mont-Saint-Michel. Partagez ce score avec vos amis !"
-            : correctAnswers / total >= 0.5
-            ? "Ce n'est pas mal ! Vous connaissez le Mont-Saint-Michel, mais vous pouvez faire mieux."
-            : correctAnswers / total < 0.5
-            ? "Aïe ... Continuez à parcourir notre site pour trouver vos réponses."
-            : "";
+        document.querySelector('.js-rtext').innerHTML =
+            correctAnswers / total >= 1 ?
+            "Vous connaissez le Mont-Saint-Michel sur le bout des doigts ! N'hésitez pas à partager ce score avec vos amis !" :
+            correctAnswers / total >= 0.7 ?
+            "Félicitations ! Vous semblez bien connaître le Mont-Saint-Michel. Partagez ce score avec vos amis !" :
+            correctAnswers / total >= 0.5 ?
+            "Ce n'est pas mal ! Vous connaissez le Mont-Saint-Michel, mais vous pouvez faire mieux." :
+            correctAnswers / total < 0.5 ?
+            "Aïe ... Continuez à parcourir notre site pour trouver vos réponses." :
+            "";
 
 
         textarea.innerHTML = `Quiz sur le Mont-Saint-Michel\n${correctAnswers}/${total} ${resultsString}\n\nhttps://arnocellarier.fr/tlei62?seed=${seed}`;
@@ -187,11 +189,11 @@ include "./includes/components/navbar.php"; ?>
     }
 
     function runFunctionXTimes(callback, param, interval, repeatTimes) {
-    let repeated = 0;
-    const intervalTask = setInterval(doTask, interval)
+        let repeated = 0;
+        const intervalTask = setInterval(doTask, interval)
 
         function doTask() {
-            if ( repeated < repeatTimes ) {
+            if (repeated < repeatTimes) {
                 callback(param)
                 repeated += 1
             } else {
@@ -224,6 +226,8 @@ include "./includes/components/navbar.php"; ?>
             });
             ScoreReload();
         }
+
+        firstQuizBtn.id = 'skip-content';
     });
 
     // sessionStorage.clear(); // ((((((((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))))))
@@ -232,7 +236,7 @@ include "./includes/components/navbar.php"; ?>
         textarea.focus();
         textarea.select();
         document.execCommand('copy');
-        
+
         fancyAlert("Copié dans le presse-papier", "done", "copy");
     });
 
@@ -246,7 +250,7 @@ include "./includes/components/navbar.php"; ?>
             quizProgress.value = quizProgress.value + 1;
             sessionStorage.setItem("quizProgress", quizProgress.value);
 
-            sessionStorage.setItem("questionId", parseInt(sessionStorage.questionId)+ 1);
+            sessionStorage.setItem("questionId", parseInt(sessionStorage.questionId) + 1);
 
             if (parseInt(sessionStorage.questionId) >= quizProgress.max) {
                 processScores();
