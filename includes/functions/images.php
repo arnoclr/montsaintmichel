@@ -13,10 +13,11 @@ function i($filename, $size = "default", $format = "webp")
 
     $input = "./src/img/$filename";
     $hashfile = hash_file('sha256', $input);
-    $outputname = "/static/img/@{$sizes[$size]}__{$hashfile}.$format";
+    $url = "/static/img/@{$sizes[$size]}__{$hashfile}.$format";
+    $outputname = "." . $url;
 
-    if (!file_exists('/static/img/')) {
-        mkdir('/static/img/', 0777, true);
+    if (!file_exists('./static/img/')) {
+        mkdir('./static/img/', 0777, true);
     }
 
     if (!file_exists($outputname)) {
@@ -54,5 +55,5 @@ function i($filename, $size = "default", $format = "webp")
         }
     }
 
-    return $outputname;
+    return $url;
 }
