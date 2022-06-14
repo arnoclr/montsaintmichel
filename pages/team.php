@@ -1,16 +1,17 @@
 <?php
-    include "./includes/components/navbar.php";
+include "./includes/components/navbar.php";
 ?>
 
 <main>
     <div class="team-main">
         <div class="team">
             <div>
-            <h1>L'équipe</h1>
-            <p>Nous sommes une équipe constitué de cinq personnes. Nous avions chacun un rôle important à jouer au sein de l'équipe:</p>
+                <h1>L'équipe</h1>
+                <p>Nous sommes une équipe constitué de cinq personnes. Nous avions chacun un rôle important à jouer au sein de l'équipe:</p>
             </div>
 
-            <div class="contenair"> <!-- container -->
+            <div class="contenair">
+                <!-- container -->
                 <div class="box-content-left">
                     <h2> Arno </h2>
                     <h4>Chef de Projet</h4>
@@ -28,7 +29,8 @@
                 <div class="bloc"></div>
             </div>
 
-            <div class="contenair"> <!-- container -->
+            <div class="contenair">
+                <!-- container -->
                 <div class="bloc"></div>
                 <div class="box-content-right">
                     <h2> Yaël </h2>
@@ -48,7 +50,8 @@
                 </div>
             </div>
 
-            <div class="contenair"> <!-- container -->
+            <div class="contenair">
+                <!-- container -->
                 <div class="box-content-left">
                     <h2> Gabriel </h2>
                     <h4>Développeur et chercheur</h4>
@@ -66,7 +69,8 @@
                 <div class="bloc"></div>
             </div>
 
-            <div class="contenair"> <!-- container -->
+            <div class="contenair">
+                <!-- container -->
                 <div class="bloc"></div>
                 <div class="box-content-right">
                     <h2> Clément </h2>
@@ -83,7 +87,8 @@
                 </div>
             </div>
 
-            <div class="contenair"> <!-- container -->
+            <div class="contenair">
+                <!-- container -->
                 <div class="box-content-left">
                     <h2> Christopher </h2>
                     <h4>Ancien Chef de Projet</h4>
@@ -98,7 +103,7 @@
                 </div>
                 <div class="bloc"></div>
             </div>
-        
+
         </div>
     </div>
 </main>

@@ -22,6 +22,7 @@ body, html {
     width: 100%;
     gap: 50px;
     background-color: var(--background-color);
+    margin-bottom: 150px;
 }
 
 .game-container {
@@ -32,8 +33,6 @@ body, html {
 }
 
 .game {
-    /* border: 1px solid rgb(29, 214, 5); */
-
     width: 800px;
     height: 300px;
     position: relative;
@@ -146,7 +145,7 @@ canvas {
 
 #canvasSheep, #canvasFence {
     position: absolute;
-    z-index: 1; /* Je ne peux pas enlever le z-index, ici, cela cause des problèmes */
+    z-index: 1;
 }
 
 #copyInp {
@@ -157,7 +156,6 @@ canvas {
     top: 0;
     left: 0;
 }
-
 
 @media screen and (max-width: 820px) {
     .game {
