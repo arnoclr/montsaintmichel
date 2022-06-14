@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     searchBarInput.addEventListener('keyup', e => {
-        searchBarNextPlaceholder.innerText = e.target.value;
+        searchBarNextPlaceholder.innerText = e.target.value.replaceAll(' ', '-');
     });
 
     searchBarInput.addEventListener('keyup', debounce(async function (e) {
@@ -194,14 +194,15 @@ document.addEventListener('DOMContentLoaded', () => {
             </li>`;
         }
 
-        const words = value.split(' ');
-        const lastWord = words[words.length - 1];
+        const words = value.split(/\s+/);
+
+        const lastWord = words[words.length - 1] || words[words.length - 2];
 
         const autoCompleteQuery = await fetch(`/ajax/search?action=autoComplete&word=${lastWord}`);
         const autoComplete = await autoCompleteQuery.json();
 
         if (searchBarInput.value.length > 0) {
-            searchBarNextWord.innerHTML = autoComplete[0] || '';
+            searchBarNextWord.innerHTML = autoComplete[0].replaceAll(' ', '&nbsp;') || '';
         } else {
             searchBarNextWord.innerHTML = '';
         }
@@ -211,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (searchBarInput === document.activeElement) {
             if (e.key === 'Tab') {
                 e.preventDefault();
-                searchBarInput.value = searchBarInput.value + " " + searchBarNextWord.innerText;
+                searchBarInput.value = searchBarInput.value + searchBarNextWord.innerText;
             }
         }
 

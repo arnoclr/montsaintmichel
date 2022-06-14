@@ -503,6 +503,10 @@ html {
     background-color: transparent;
 }
 
+.search__input:focus {
+    outline: none;
+}
+
 .search__btn {
     width: 56px;
     height: 56px;
@@ -531,6 +535,7 @@ html {
 
 .search__nextword {
     position: absolute;
+    display: flex;
     top: 16px;
     left: 0;
     font: 400 16px Noto Sans, sans-serif;
