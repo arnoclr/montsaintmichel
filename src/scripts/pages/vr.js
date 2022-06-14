@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lotOfDataMessage = "Attention, la visite virtuelle peut consommer beaucoup de données, des frais de connexion peuvent s'appliquer. \n\nTaille estimée : 40 Mo. \n\nVoulez-vous continuer ?";
 
     if (connection) {
-        if (connection.effectiveType === 'cellular') {
+        if (connection.type === 'cellular' || connection.saveData) {
             if (localStorage.getItem('vr__data_confirmed') != 1 && !confirm(lotOfDataMessage)) {
                 return history.back();
             } else {
