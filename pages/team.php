@@ -1,5 +1,5 @@
 <?php
-include "./includes/components/navbar.php";
+    include "./includes/components/navbar.php";
 ?>
 
 <main>
@@ -9,7 +9,7 @@ include "./includes/components/navbar.php";
         <p>Nous sommes une équipe constitué de cinq personnes. Nous avions chacun un rôle important à jouer au sein de l'équipe:</p>
         </div>
 
-        <div class="Arno">
+        <div class="box-content">
             <h2> Arno </h2>
             <h4>Chef de Projet</h4>
             <ul>
@@ -22,7 +22,7 @@ include "./includes/components/navbar.php";
 
         <br>
 
-        <div class="Yael">
+        <div class="box-content">
             <h2> Yael </h2>
             <h4>Développeur & Traducteur</h4>
             <ul>
@@ -37,32 +37,32 @@ include "./includes/components/navbar.php";
 
         <br>
 
-        <div class="Gabriel">
+        <div class="box-content">
             <h2> Gabriel </h2>
-            <h4>Développeur && Rechercheur</h4>
+            <h4>Développeur et chercheur</h4>
             <ul>
                 <li> - Développeur du site </li>
                 <li> - Manager de la Bêta-Test</li>
-                <li> - Rechercheur des textes architecture et biodiversité </li>
-                <li> - Rechercheur des images </li>
+                <li> - En charge des recherches des textes en architecture et biodiversité </li>
+                <li> - En charge des recherches des images </li>
             </ul>
         </div>
 
         <br>
 
-        <div class="Clement">
+        <div class="box-content">
             <h2> Clément </h2>
-            <h4>Développeur && Rechercheur</h4>
+            <h4>Développeur et chercheur</h4>
             <ul>
                 <li> - Développeur du site </li>
-                <li> - Rechercheur des textes histoire </li>
+                <li> - En charge des recherches des textes en histoire </li>
                 <li> - Gestion de la base de données </li>
             </ul>
         </div>
 
         <br>
 
-        <div class="Christopher">
+        <div class="box-content">
             <h2> Christopher </h2>
             <h4>Ancien Chef de Projet</h4>
             <ul>

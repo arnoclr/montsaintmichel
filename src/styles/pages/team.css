@@ -9,7 +9,7 @@ div {
     margin-bottom: 50px;
 }
 
-ul {
+.box-content ul {
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
@@ -17,7 +17,7 @@ ul {
     color: var(--text-color);
 }
 
-ul li {
+.box-content ul li {
     display: flex;
     margin-bottom: 30px;
     align-items: center;
