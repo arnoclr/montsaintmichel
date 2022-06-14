@@ -9,14 +9,14 @@
         <p>Nous sommes une équipe constitué de cinq personnes. Nous avions chacun un rôle important à jouer au sein de l'équipe:</p>
         </div>
 
-        <div class="box-content">
+        <div class="box-content-left">
             <h2> Arno </h2>
             <h4>Chef de Projet</h4>
             <ul>
                 <li> - Chef de l'équipe </li>
                 <li> - Designer du wireframing </li>
                 <li> - Développeur et designer du site principale </li>
-                <li> - Manager de la base de données </li>
+                <li> - En charge de la base de données </li>
             </ul>
             <ul>
                 <li><u><b>Mail :</b></u><a href="mailto:msm@arnocellarier.fr"> msm@arnocellarier.fr</a></li>
@@ -27,7 +27,7 @@
 
         <br>
 
-        <div class="box-content">
+        <div class="box-content-right">
             <h2> Yael </h2>
             <h4>Développeur et Traducteur</h4>
             <ul>
@@ -46,12 +46,12 @@
 
         <br>
 
-        <div class="box-content">
+        <div class="box-content-left">
             <h2> Gabriel </h2>
             <h4>Développeur et chercheur</h4>
             <ul>
                 <li> - Développeur du site </li>
-                <li> - Manager de la Bêta-Test</li>
+                <li> - En charge de la Bêta-Test</li>
                 <li> - En charge des recherches des textes en architecture et biodiversité </li>
                 <li> - En charge des des images </li>
             </ul>
@@ -63,7 +63,7 @@
 
         <br>
 
-        <div class="box-content">
+        <div class="box-content-right">
             <h2> Clément </h2>
             <h4>Développeur et chercheur</h4>
             <ul>
@@ -79,7 +79,7 @@
 
         <br>
 
-        <div class="box-content">
+        <div class="box-content-left">
             <h2> Christopher </h2>
             <h4>Ancien Chef de Projet</h4>
             <ul>
