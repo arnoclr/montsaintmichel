@@ -1,8 +1,12 @@
 
+.team-main {
+    background-color: var(--primary-color);
+}
+
 .team {
-    display: table;
     margin: 0 auto;
     border: 0px;
+    margin-left: var(--padding);
 }
 
 .team div {
@@ -18,6 +22,11 @@
     display: flex;
     flex-direction: row;
     grid-column-gap: 20px;
+}
+
+.box-shadow-img {
+    width: 15px;
+    height: 15px;
 }
 
 /*
@@ -41,6 +50,7 @@
     margin-bottom: 30px;
     align-items: center;
     grid-column-gap: 10px;
+    color: rgb(234, 234, 234);
 }
 
 .box-content-right ul {
