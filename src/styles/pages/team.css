@@ -9,12 +9,31 @@
     margin-bottom: 50px;
 }
 
+.contenair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bloc {
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 20px;
+}
+
+/*
+.box-content-left, .box-content-right {
+    text-align: center;
+}
+*/
+
 .box-content-left ul {
     font-family: 'Noto Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     color: var(--text-color);
+    text-align: center;
+    justify-content: center;
 }
 
 .box-content-left ul li {
@@ -30,7 +49,7 @@
     font-weight: 400;
     font-size: 15px;
     color: var(--text-color);
-    text-align: right
+    justify-content: center;
 }
 
 .box-content-right ul li {
@@ -38,5 +57,4 @@
     margin-bottom: 30px;
     align-items: center;
     grid-column-gap: 10px;
-    text-align: right
 }
