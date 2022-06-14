@@ -288,6 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.js-navbar');
 
     window.addEventListener('scroll', () => {
+        if (navbar.classList.contains('js-fixed')) return;
+
         if (window.scrollY > 100) {
             navbar.classList.add('navbar--open');
         } else {
