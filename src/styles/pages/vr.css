@@ -106,15 +106,20 @@
     margin-top: 22px;
     display: flex;
     align-items: center;
-    height: 320px;
+    height: 240px;
     width: 100%;
-    overflow-x: scroll;
-    border-radius: 6px;
+    overflow-x: auto;
+    gap: 8px;
+}
+
+.vrslider::-webkit-scrollbar {
+    display: none;
 }
 
 .vrslider__img {
     height: 100%;
     width: auto;
+    border-radius: 4px;
 }
 
 .vr__loader {

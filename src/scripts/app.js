@@ -531,8 +531,4 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
     };
-
-    document.querySelectorAll('.js-draggable').forEach(el => {
-        const draggable = new DraggableScrollArea(el);
-    });
 });
