@@ -32,7 +32,7 @@ foreach ($functions as $function) {
 const CANONICAL_QUERY_STRINGS = ['seed'];
 
 $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
-$url = $protocol . $_SERVER['HTTP_HOST'] . explode($_SERVER['REQUEST_URI'], '?')[0];
+$url = $protocol . $_SERVER['HTTP_HOST'] . $request;
 $queryStrings = explode('&', $_SERVER['QUERY_STRING']);
 $canonicalQueryStrings = [];
 
@@ -43,7 +43,7 @@ foreach ($queryStrings as $key => $queryString) {
     }
 }
 
-$canonical = $url . "hl=" . lang() . (sizeof($canonicalQueryStrings) > 0 ? "&" . implode('&', $canonicalQueryStrings) : '');
+$canonical = $url . "?hl=" . lang() . (sizeof($canonicalQueryStrings) > 0 ? "&" . implode('&', $canonicalQueryStrings) : '');
 
 function loadAsset($page, $type)
 {
