@@ -1,5 +1,3 @@
-
-
 .vr {
     height: 100vh;
     width: 100vw;
@@ -75,7 +73,6 @@
     display: grid;
     place-items: center;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: opacity .2s ease;
     z-index: 1;
@@ -97,7 +94,8 @@
     gap: 22px;
 }
 
-.vr__buttons-button, .vr__back-button {
+.vr__buttons-button,
+.vr__back-button {
     font-size: 32px;
     color: #fff;
     background-color: #343434;
@@ -120,7 +118,8 @@
     outline: none;
 }
 
-.vr__buttons-button:active, .vr__buttons-button:focus {
+.vr__buttons-button:active,
+.vr__buttons-button:focus {
     background-color: #777;
     outline: none;
 }
@@ -158,7 +157,8 @@
         display: none;
     }
 
-    .vr__modal, .vr__modal.show {
+    .vr__modal,
+    .vr__modal.show {
         top: unset;
         left: 0;
         bottom: 0;
@@ -171,7 +171,9 @@
         transform: translateY(calc(100% - 64px));
     }
 
-    .vr__modal.show:hover, .vr__modal.show:active, .vr__modal.show:focus {
+    .vr__modal.show:hover,
+    .vr__modal.show:active,
+    .vr__modal.show:focus {
         transform: translateY(0);
     }
 
