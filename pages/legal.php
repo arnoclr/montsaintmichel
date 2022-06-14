@@ -5,11 +5,27 @@
         font-family: Noto Sans, Arial, sans-serif;
         color: var(--text-color);
     }
+
+    .edited-at {
+        padding: 16px var(--padding);
+        background-color: var(--modal-surface);
+    }
+
+    .edited-at p {
+        color: var(--navbar-link);
+    }
+
+    p,
+    li {
+        word-break: break-word;
+    }
 </style>
 
 <main style="margin: 0 var(--padding);">
-    <p style="font-size: 12px;">This page is only available in french.</p>
 
+    <h2>Mentions Légales</h2>
+
+    <p style="font-size: 12px;">This page is only available in french.</p>
     <h3>Informations sur l'hébergement du site</h3>
 
     <p>Ce site est hebergé chez IONOS Cloud
@@ -77,10 +93,10 @@
     <h3>Contact</h3>
     <p>Pour toute remarque, merci de nous contacter sur cette adresse : unesco.montsaintmichel@gmail.com</p>
 
-    <hr>
-
-    <p>Le présent document peut être modifié à tout moment, dernière modification le 14 juin 2022 à 18h.</p>
-
 </main>
+
+<aside class="edited-at">
+    <p>Le présent document peut être modifié à tout moment, <ins>dernière modification le 14 juin 2022 à 18h.</ins></p>
+</aside>
 
 <?php include "./includes/components/footer.php"; ?>
