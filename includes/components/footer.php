@@ -4,7 +4,7 @@
         <div class="footer__col col1">
             <h3 class="footer_section"><?= t('footer.title.link') ?></h3>
             <div class="footer__links">
-                <a href="/equipe" target="_blank" class="footer__col-link"><?= t('footer.project.team') ?></a>
+                <a href="/equipe" class="footer__col-link"><?= t('footer.project.team') ?></a>
                 <a href="https://www.unesco.org" target="_blank" class="footer__col-link"><?= t('footer.project.website') ?></a>
                 <a href="https://www.univ-gustave-eiffel.fr/" target="_blank" class="footer__col-link"><?= t('footer.project.eiffel') ?></a>
                 <a href="/legal" class="footer__col-link"><?= t('footer.project.about') ?> - <?= t('footer.project.policy') ?></a>
