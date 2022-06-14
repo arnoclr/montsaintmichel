@@ -34,9 +34,9 @@
     </div>
 
     <div class="vr__buttons hide-on-small">
-        <button class="vr__buttons-button material-icons-sharp" onclick="switchLocation(-1);" title="Naviguer vers l'endroit précédent">navigate_before
+        <button class="vr__buttons-button js-prev material-icons-sharp" onclick="switchLocation(-1);" title="Naviguer vers l'endroit précédent">navigate_before
         </button>
-        <button id="skip-content" class="vr__buttons-button material-icons-sharp" onclick="switchLocation(1);" title="Naviguer vers l'endroit suivant">navigate_next
+        <button id="skip-content" class="vr__buttons-button js-next material-icons-sharp" onclick="switchLocation(1);" title="Naviguer vers l'endroit suivant">navigate_next
         </button>
     </div>
 

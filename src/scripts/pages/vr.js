@@ -36,6 +36,8 @@ const modal = document.querySelector('.vr__modal');
 const loader = document.querySelector('.vr__loader');
 const streetViewIframe = document.querySelector('.js-streetview');
 const exitStreetViewBtn = document.querySelector('.js-exit-streetview');
+const prev = document.querySelector('.js-prev');
+const next = document.querySelector('.js-next');
 
 let currentLocation = 0;
 let inAnimation = false;
@@ -53,6 +55,22 @@ const updateModalUI = (locId) => {
     document.getElementById("js-vr-modal-progress").innerText = `${locId + 1}/${LOCATIONS.length}`;
 };
 
+const updateButtonsUI = () => {
+    prev.classList.remove('hidden');
+    next.classList.remove('hidden');
+
+    console.log(currentLocation);
+
+    if (currentLocation === 0) {
+        prev.classList.add('hidden');
+    }
+
+    if (currentLocation >= LOCATIONS.length) {
+        next.classList.add('hidden');
+    }
+};
+
+
 const switchLocation = async (increment) => {
     if (inAnimation) return;
 
@@ -68,6 +86,8 @@ const switchLocation = async (increment) => {
     if (currentLocation > 0 && currentLocation <= LOCATIONS.length) {
         updateModalUI(currentLocation);
     }
+
+    updateButtonsUI();
 
     const url = videos[increment][currentLocation - Math.max(0, increment)];
 
@@ -185,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const step = urlParams.get('step') || 1;
+    let step = urlParams.get('step') || 1;
     const streetview = urlParams.get('streetview') || false;
 
     if (step < 1 || step > LOCATIONS.length) {
