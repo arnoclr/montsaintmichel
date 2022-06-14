@@ -18,6 +18,11 @@
                 <li> - Développeur et designer du site principale </li>
                 <li> - Manager de la base de données </li>
             </ul>
+            <ul>
+                <li> <u><b>Mail :</b></u> <a href="mailto:bonjour@arnocellarier.fr"> bonjour@arnocellarier.fr </a> </li>
+                <li> <u><b>LinkedIn</b></u> : <a href="https://www.linkedin.com/in/arno-cellarier/" target="_blank"> linkedin.com/arno-cellarier </a> </li>
+            </ul>
+                    
         </div>
 
         <br>
@@ -33,6 +38,10 @@
                 <li> - Designer du site </li>
                 <li> - Gestion de la base de données </li>
             </ul>
+            <ul>
+                <li> <u><b>Mail :</b></u> <a href="mailto:yael.coeffier@gmail.com"> yael.coeffier@gmail.com </a> </li>
+                <li> <u><b>LinkedIn</b></u> : <a href="https://www.linkedin.com/in/ya%C3%ABl-co%C3%ABffier-12a633227/" target="_blank"> linkedin.com/yaël-coëffier </a> </li>
+            </ul>
         </div>
 
         <br>
@@ -44,7 +53,11 @@
                 <li> - Développeur du site </li>
                 <li> - Manager de la Bêta-Test</li>
                 <li> - En charge des recherches des textes en architecture et biodiversité </li>
-                <li> - En charge des recherches des images </li>
+                <li> - En charge des des images </li>
+            </ul>
+            <ul>
+                <li> <u><b>Mail :</b></u> <a href="mailto:gfrancois2003@gmail.com"> gfrancois2003@gmail.com </a> </li>
+                <li> <u><b>LinkedIn</b></u> : <a href="https://www.linkedin.com/in/gabriel-fran%C3%A7ois-855988222/" target="_blank"> linkedin.com/gabriel-françois </a> </li>
             </ul>
         </div>
 
@@ -58,6 +71,10 @@
                 <li> - En charge des recherches des textes en histoire </li>
                 <li> - Gestion de la base de données </li>
             </ul>
+            <ul>
+                <li> <u><b>Mail :</b></u> <a href="mailto:clement.desimon@gmail.com"> clement.desimon@gmail.com </a> </li>
+                <li> <u><b>LinkedIn</b></u> : <a href="https://www.linkedin.com/in/cl%C3%A9ment-de-simon-71b632227/" target="_blank"> linkedin.com/clément-de-simon </a> </li>
+            </ul>
         </div>
 
         <br>
@@ -69,6 +86,9 @@
                 <li> - Développeur et designer du site </li>
                 <li> - Designer du wireframing </li>
                 <li> - Community manager </li>
+            </ul>
+            <ul>
+                <li> <u><b>LinkedIn</b></u> : <a href="https://www.linkedin.com/in/christopher-beaurain-a464b0173/" target="_blank"> linkedin.com/christopher-beaurain </a> </li>
             </ul>
         </div>
     
