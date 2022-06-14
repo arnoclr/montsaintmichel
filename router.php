@@ -27,6 +27,24 @@ foreach ($functions as $function) {
     require_once $function;
 }
 
+// generate canonical link of the requested page
+
+const CANONICAL_QUERY_STRINGS = ['seed'];
+
+$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$url = $protocol . $_SERVER['HTTP_HOST'] . $request;
+$queryStrings = explode('&', $_SERVER['QUERY_STRING']);
+$canonicalQueryStrings = [];
+
+foreach ($queryStrings as $key => $queryString) {
+    $queryString = explode('=', $queryString);
+    if (in_array($queryString[0], CANONICAL_QUERY_STRINGS)) {
+        $canonicalQueryStrings[] = $queryString[0] . '=' . $queryString[1];
+    }
+}
+
+$canonical = $url . "?hl=" . lang() . (sizeof($canonicalQueryStrings) > 0 ? "&" . implode('&', $canonicalQueryStrings) : '');
+
 function loadAsset($page, $type)
 {
     global $basepath;
@@ -41,7 +59,7 @@ function loadAsset($page, $type)
 
 function loadPage($page, $with_head = true)
 {
-    global $basepath, $og;
+    global $basepath, $og, $canonical;
     $path =  "pages" . DIRECTORY_SEPARATOR . $page . ".php";
     if (file_exists($path)) {
         if ($with_head) {

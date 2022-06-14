@@ -221,6 +221,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (streetview) {
         openStreetViewForCurrentView();
     }
+
+    new DraggableScrollArea(document.querySelector('.js-draggable'));
 });
 
 video.addEventListener('click', openStreetViewForCurrentView);

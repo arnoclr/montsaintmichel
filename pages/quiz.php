@@ -228,6 +228,13 @@ include "./includes/components/navbar.php"; ?>
         }
 
         firstQuizBtn.id = 'skip-content';
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const seedFromParams = urlParams.get('seed');
+
+        if (!seedFromParams) {
+            window.history.pushState(null, null, `?seed=${seed}&hl=<?= lang() ?>`);
+        }
     });
 
     // sessionStorage.clear(); // ((((((((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))))))

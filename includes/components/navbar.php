@@ -7,29 +7,31 @@
         <a href="/architecture" class="navbar__links-link"><?= t('navbar.tab.architecture') ?></a>
     </div>
     <div class="navbar__icons">
-        <button class="navbar__icon js-open-locale-selector">
-            <i class="material-icons-sharp translation-icon">translate</i>
+        <div class="navbar__icon">
+            <button class=" js-open-locale-selector">
+                <i class="material-icons-sharp translation-icon">translate</i>
+            </button>
             <ul id="js-locale-selector" class="locale-selector <?= $selector_classes ?? '' ?>">
-                <a tabindex="0" href="<?= swicthLangTo('fr') ?>" class="locale-selector__clickable">
+                <a href="<?= swicthLangTo('fr') ?>" class="locale-selector__clickable">
                     <li class="locale-selector__region <?= $selector_region ?? '' ?>">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="French flag" class="locale-selector__region-flag">
                         <span class="locale-selector__region-name  <?= $region_name ?? '' ?>">Français</span>
                     </li>
                 </a>
-                <a tabindex="0" href="<?= swicthLangTo('en') ?>" class="locale-selector__clickable">
+                <a href="<?= swicthLangTo('en') ?>" class="locale-selector__clickable">
                     <li class="locale-selector__region <?= $selector_region ?? '' ?>">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="British flag" class="locale-selector__region-flag">
                         <span class="locale-selector__region-name  <?= $region_name ?? '' ?>">English</span>
                     </li>
                 </a>
-                <a tabindex="0" href="<?= swicthLangTo('ar') ?>" class="locale-selector__clickable">
+                <a href="<?= swicthLangTo('ar') ?>" class="locale-selector__clickable">
                     <li class="locale-selector__region <?= $selector_region ?? '' ?>">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Flag_of_the_Arabic_language.svg" alt="Arabic flag" class="locale-selector__region-flag">
                         <span class="locale-selector__region-name  <?= $region_name ?? '' ?>">العربية</span>
                     </li>
                 </a>
             </ul>
-        </button>
+        </div>
         <button class="navbar__icon js-search-trigger">
             <i class="material-icons-sharp search-icon">search</i>
         </button>

@@ -25,6 +25,8 @@
     <meta name="theme-color" content="#B94503">
     <meta name="apple-mobile-web-app-status-bar-style" content="#B94503">
 
+    <link rel="canonical" href="<?= $canonical ?>">
+
     <link rel="stylesheet" href="<?= $basepath ?>/src/styles/app.css?v=<?= md5_file("./src/styles/app.css") ?>">
     <?= $appendHead ?>
 
