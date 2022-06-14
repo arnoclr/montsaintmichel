@@ -540,17 +540,17 @@ html {
     left: 0;
     font: 400 16px Noto Sans, sans-serif;
     color: var(--navbar-link);
-    z-index: 100;
+    z-index: 102;
 }
 
 .search__placeholder {
     opacity: 0;
     display: inline-block;
+    pointer-events: none;
 }
 
-.search__nextword i {
-    font-size: 16px;
-    opacity: 0.7;
+.search__nextword {
+    cursor: default;
 }
 
 .search__dropdown {

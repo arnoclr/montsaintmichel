@@ -10,6 +10,7 @@ $keyPages = (object) [
     "nutshell" => "/histoire",
     "quiz" => "/quiz",
     "tips" => "/bons-plans",
+    "vr" => "/visite-virtuelle",
     "vv" => "/visite-virtuelle",
 ];
 
