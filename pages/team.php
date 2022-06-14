@@ -31,7 +31,7 @@
             <div class="contenair"> <!-- container -->
                 <div class="bloc"></div>
                 <div class="box-content-right">
-                    <h2> Yael </h2>
+                    <h2> Yaël </h2>
                     <h4>Développeur et Traducteur</h4>
                     <ul>
                         <li> - En charge des traductions du site </li>
