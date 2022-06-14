@@ -984,7 +984,7 @@ html {
     bottom: 18px;
     left: 18px;
     color: #fff;
-    font: 400 36px Ibarra Real Nova, serif;
+    font: 400 28px Ibarra Real Nova, serif;
     white-space: normal;
     text-transform: uppercase;
     text-align: left;
@@ -1125,6 +1125,18 @@ progress::-webkit-progress-value {
     .quizz__image {
         grid-column-start: 1;
         grid-row-start: 1;
+    }
+
+    .menu {
+        height: 200px;
+    }
+
+    .menu__list-item {
+        width: 240px;
+    }
+
+    .menu__list-item-title {
+        font-size: 16px;
     }
 }
 

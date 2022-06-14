@@ -1,6 +1,7 @@
 <?php
 
-function i($filename, $size = "default", $format = "webp") {
+function i($filename, $size = "default", $format = "webp")
+{
 
     $sizes = [
         "small" => 340,
@@ -12,28 +13,28 @@ function i($filename, $size = "default", $format = "webp") {
 
     $input = "./src/img/$filename";
     $hashfile = hash_file('sha256', $input);
-    $outputname = "./static/img/@{$sizes[$size]}__{$hashfile}.$format";
+    $outputname = "/static/img/@{$sizes[$size]}__{$hashfile}.$format";
 
-    if (!file_exists('./static/img/')) {
-        mkdir('./static/img/', 0777, true);
+    if (!file_exists('/static/img/')) {
+        mkdir('/static/img/', 0777, true);
     }
 
-    if (!file_exists($outputname)) {   
+    if (!file_exists($outputname)) {
         $info = getimagesize($input);
 
-        if ($info['mime'] == 'image/jpeg') 
+        if ($info['mime'] == 'image/jpeg')
             $image = imagecreatefromjpeg($input);
 
-        elseif ($info['mime'] == 'image/gif') 
+        elseif ($info['mime'] == 'image/gif')
             $image = imagecreatefromgif($input);
 
-        elseif ($info['mime'] == 'image/png') 
+        elseif ($info['mime'] == 'image/png')
             $image = imagecreatefrompng($input);
 
         // resize image with given width size
         $width = imagesx($image);
         $height = imagesy($image);
-        
+
         if ($size == "default") {
             $new_width = imagesx($image);
             $new_height = imagesy($image);
