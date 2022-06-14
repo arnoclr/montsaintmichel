@@ -177,8 +177,8 @@ footer.footer {
 .left,
 .right {
     position: fixed;
-    top: 0;
-    bottom: 0;
+    top: 30%;
+    bottom: 30%;
     width: 30vw;
 }
 
