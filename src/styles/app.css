@@ -482,6 +482,12 @@ html {
     transition: transform .25s ease-in-out;
 }
 
+@media (prefers-color-scheme: light) {
+    .search {
+        color-scheme: light;
+    }
+}
+
 .search--open {
     transform: translateY(0);
 }
@@ -576,6 +582,7 @@ html {
 .search__dropdown .not-found {
     display: block;
     padding: 12px var(--padding);
+    color: var(--text-color);
 }
 
 .search__dropdown a:hover,
