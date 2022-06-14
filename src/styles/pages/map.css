@@ -258,6 +258,10 @@
     background: var(--input-surface);
 }
 
+.leaflet-marker-pane img {
+    filter: hue-rotate(-190deg);
+}
+
 @media (prefers-color-scheme: dark) {
     .map-back-button:hover {
         background-color: #161414;
