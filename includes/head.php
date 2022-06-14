@@ -45,6 +45,16 @@
                 left: unset;
                 right: var(--padding);
             }
+
+            .frise {
+                padding-left: unset;
+                padding-right: 22px;
+            }
+
+            .frise__content-details {
+                margin-left: unset;
+                margin-right: 15rem;
+            }
         </style>
     <?php endif; ?>
 </head>
