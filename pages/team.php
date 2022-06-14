@@ -4,7 +4,6 @@ include "./includes/components/navbar.php";
 ?>
 
 <main>
-
     <h1>Notre équipe.</h1>
 
     <div class="cols">
