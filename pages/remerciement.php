@@ -81,14 +81,14 @@ include "./includes/components/navbar.php";
             <h2> Voix Off </h2>
             <ul>
                 <li> - Pierre-Alain de Garrigues, pour sa participation en prêtant sa voix pour les questions de la FAQ dans la video TikTok</li>
-                <li> - @Ciel pour sa participation en prêtant sa voix pour les réponses de la FAQ dans la video TikTok</li>
+                <li> - @cyeluu (TikTok) pour sa participation en prêtant sa voix pour les réponses de la FAQ dans la video TikTok</li>
             </ul>
         </div>
 
         <div class="partie">
             <h2> Dessinateurs</h2>
             <ul>
-                <li>- Fengry (Aurore REMY), pour les personnages visibles dans la vidéo de Question/Réponses </li>
+                <li>- @Fengry (Aurore REMY), pour les personnages visibles dans la vidéo de Question/Réponses </li>
                 <li>- @Tamasukee, pour les dessins de la vidéo TikTok</li>
             </ul>
         </div>
