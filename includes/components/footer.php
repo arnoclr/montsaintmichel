@@ -29,13 +29,13 @@
         <h3 class="footer_section footer__row-title"><?= t('footer.title.partners') ?></h3>
         <div class="partnersflex">
             <div class="img_row">
-                <a href="http://idea.univ-paris-est.fr/fr" target="_blank"><img src="../../src/img/partners/idea.png" class="noir" alt="idea" height="80"></a>
-                <a href="https://www.univ-gustave-eiffel.fr/" target="_blank"><img src="../../src/img/partners/gustave_eiffel.png" alt="Université Gustave Eiffel" height="80"></a>
-                <img src="../../src/img/partners/mcn_logo.png" alt="Médiation Culturelle Numérique" height="80">
-                <a href="https://anr.fr/" target="_blank"><img src="../../src/img/partners/anr_logo.png" alt="Agence nationale de la Recherche" height="80"></a>
-                <a href="https://www.icomos.org/" target="_blank"><img src="../../src/img/partners/icomos.png" alt="ICOMOS" height="100" width="90"></a>
-                <a href="https://en.unesco.org/forum" target="_blank"><img src="../../src/img/partners/forum.png" class="noir" alt="Forum Unesco" height="120"></a>
-                <a href="https://www.unesco.org" target="_blank"><img src="../../src/img/partners/unesco.png" alt="UNESCO" height="80"></a>
+                <a href="http://idea.univ-paris-est.fr/fr" target="_blank"><img loading="lazy" src="../../src/img/partners/idea.png" class="noir" alt="idea" height="80"></a>
+                <a href="https://www.univ-gustave-eiffel.fr/" target="_blank"><img loading="lazy" src="../../src/img/partners/gustave_eiffel.png" alt="Université Gustave Eiffel" height="80"></a>
+                <img loading="lazy" src="../../src/img/partners/mcn_logo.png" alt="Médiation Culturelle Numérique" height="80">
+                <a href="https://anr.fr/" target="_blank"><img loading="lazy" src="../../src/img/partners/anr_logo.png" alt="Agence nationale de la Recherche" height="80"></a>
+                <a href="https://www.icomos.org/" target="_blank"><img loading="lazy" src="../../src/img/partners/icomos.png" alt="ICOMOS" height="100" width="90"></a>
+                <a href="https://en.unesco.org/forum" target="_blank"><img loading="lazy" src="../../src/img/partners/forum.png" class="noir" alt="Forum Unesco" height="120"></a>
+                <a href="https://www.unesco.org" target="_blank"><img loading="lazy" src="../../src/img/partners/unesco.png" alt="UNESCO" height="80"></a>
             </div>
         </div>
     </div>
