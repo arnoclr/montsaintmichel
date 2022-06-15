@@ -66,6 +66,7 @@
         <li>Visuels (jeux) : Arno Cellarier, Yaël Coëffier.</li>
         <li>Audios : Pierre-Alain de Garrigues, @cyeluu (TikTok).</li>
         <li>Code : Arno Cellarier, Yaël Coëffier, Gabriel François, Clément De Simon.</li>
+        <li> Dessin sur la page Histoire: @Tamasukee.</li>
     </ul>
 
     <h3>Données personnelles</h3>
@@ -96,7 +97,7 @@
 </main>
 
 <aside class="edited-at">
-    <p>Le présent document peut être modifié à tout moment, <ins>dernière modification le 14 juin 2022 à 18h.</ins></p>
+    <p>Le présent document peut être modifié à tout moment, <ins>dernière modification le 15 juin 2022 à 14h.</ins></p>
 </aside>
 
 <?php include "./includes/components/footer.php"; ?>
