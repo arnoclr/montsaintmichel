@@ -127,6 +127,12 @@ document.addEventListener("click", () => {
     audioEnabled = true;
 });
 
+unmute.addEventListener("click", () => {
+    audioEnabled = true;
+    playAudioKey(currentPlayKey);
+    setButtonToPlaying();
+});
+
 playBtn.addEventListener("click", e => {
     const isPlaying = !audio.paused;
 
