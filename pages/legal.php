@@ -66,16 +66,17 @@
         <li>Visuels (jeux) : Arno Cellarier, Yaël Coëffier.</li>
         <li>Audios : Pierre-Alain de Garrigues, @cyeluu (TikTok).</li>
         <li>Code : Arno Cellarier, Yaël Coëffier, Gabriel François, Clément De Simon.</li>
-        <li> Dessin sur la page Histoire: @Tamasukee.</li>
+        <li>Dessins sur la page Histoire : @Tamasukee.</li>
     </ul>
 
     <h3>Données personnelles</h3>
     <p>Notre site ne collete pas d'informations personnelles. Nous analysons les statisiques d'utilisation à l'aide des analyses Cloudflare, en ne prennant en considération que :</p>
     <ul>
-        <li>la page que vous visitez</li>
-        <li>votre pays</li>
-        <li>d'où vous venez (si disponible ; il s'agit de l'url du site que vous avez consulté avant d'arriver sur notre page)</li>
-        <li>la platforme sur laquelle vous naviguez</li>
+        <li>La page que vous visitez</li>
+        <li>Votre pays</li>
+        <li>D'où vous venez (si disponible ; il s'agit de l'url du site que vous avez consulté avant d'arriver sur notre page)</li>
+        <li>La platforme sur laquelle vous naviguez</li>
+        <li>Le type d'appareil utilisé</li>
         <li>Votre adresse IP (anonymisée)</li>
     </ul>
     <p>A noter que ces informations sont groupées, et qu'il n'est pas possible de retracer un utilisateur individuellement. Le but est uniquement d'analyser le traffic et de pouvoir filtrer les utilisateurs en groupes.</p>
