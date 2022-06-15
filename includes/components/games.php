@@ -18,8 +18,8 @@ $games = [
     ],
     (object) [
         "name" => "GeoGuessr",
-        "text" => "Vous attérissez sur le Mont et vous devez trouver où vous êtes !",
-        "category" => "Réaliste",
+        "text" => t('index.games.geo.small'),
+        "category" => t('index.games.geo.label'),
         "link" => "https://www.geoguessr.com/maps/62a78139611055080ed910c4/play",
         "banner" => i('games/banner geoguessr.png'),
         "logo" => i('games/logo geoguessr.png'),
