@@ -39,7 +39,7 @@ Découvrez le Mont Saint-Michel, son histoire et ses monuments emblématiques à
             ______________________________________________
         </td>
     </tr>
-</div>
+</table>
 
 <br>
 
