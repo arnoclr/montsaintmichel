@@ -8,14 +8,37 @@ Découvrez le Mont Saint-Michel, son histoire et ses monuments emblématiques à
 
 <br>
 
-<div style="display: flex; align-items: flex-start; gap: 8px; overflow-x: auto;">
-    <img height="360" src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(1).png">
-    <img height="360" src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(2).png">
-    <img height="360" src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(3).png">
-    <img height="360" src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(4).png">
-    <img height="360" src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(5).png">
-    <img height="360" src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(6).png">
-    <img height="360" src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(7).png">
+<table border="0">
+    <tr>
+        <td>
+            <img src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(1).png">
+            ______________________________________________
+        </td>
+        <td>
+            <img src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(2).png">
+            ______________________________________________
+        </td>
+        <td>
+            <img src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(3).png">
+            ______________________________________________
+        </td>
+        <td>
+            <img src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(4).png">
+            ______________________________________________
+        </td>
+        <td>
+            <img src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(5).png">
+            ______________________________________________
+            </td>
+        <td>
+            <img src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(6).png">
+            ______________________________________________
+        </td>
+        <td>
+            <img src="https://cdn.arnocellarier.fr/s/iut/msm/gh-rm/msm_screenshot%20(7).png">
+            ______________________________________________
+        </td>
+    </tr>
 </div>
 
 <br>
