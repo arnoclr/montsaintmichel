@@ -1,6 +1,7 @@
 <?php
 
-function dd($obj) {
+function dd($obj)
+{
     echo '<pre>';
     var_dump($obj);
     echo '</pre>';

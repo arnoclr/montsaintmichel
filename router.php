@@ -57,9 +57,11 @@ function loadPage($page, $with_head = true)
 {
     global $basepath, $og, $canonical;
     $path =  "pages" . DIRECTORY_SEPARATOR . $page . ".php";
+    $headPath = "pages" . DIRECTORY_SEPARATOR . $page . ".head.php";
     if (file_exists($path)) {
         if ($with_head) {
             $appendHead = loadAsset($page, 'css');
+            $externalHeadFile = file_exists($headPath) ? $headPath : false;
             include "includes/head.php";
         }
         include($path);
