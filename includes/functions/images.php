@@ -53,6 +53,9 @@ function i($filename, $size = "default", $format = "webp")
         } else if ($format == "png") {
             copy($input, $outputname);
         }
+
+        imagedestroy($image);
+        imagedestroy($new_image);
     }
 
     return $url;
